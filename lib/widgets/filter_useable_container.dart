@@ -8,7 +8,8 @@ class FilterUseableContainer extends StatelessWidget {
   final bool isSelected;
   final String text;
   final VoidCallback onTap;
-  const FilterUseableContainer({super.key, required this.isSelected, required this.text, required this.onTap});
+  final double?fontSze;
+  const FilterUseableContainer({super.key, required this.isSelected, required this.text, required this.onTap, this.fontSze});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class FilterUseableContainer extends StatelessWidget {
                     child:isSelected? Icon(Icons.check,color: AppColors.whiteColor,size: 15,):SizedBox(),
                     ),
                     SizedBox(width: 14,),
-                    MainText(text: text,fontSize: 14,)
+                    MainText(text: text,fontSize:fontSze?? 14,)
                       ],
                     ),
                   ),
