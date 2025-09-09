@@ -1,0 +1,56 @@
+
+import 'package:flutter/material.dart';
+import 'package:scorer/constants/appcolors.dart';
+import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/widgets/custom_dashboard_container.dart';
+
+class AdminScheduleSession extends StatelessWidget {
+  const AdminScheduleSession({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // Get screen dimensions for scaling
+    final Size screenSize = MediaQuery.of(context).size;
+    final double baseHeight = 812.0;
+    final double heightScaleFactor = screenSize.height / baseHeight;
+
+    return Column(
+      children: [
+        SizedBox(height: 12 * heightScaleFactor),
+        CustomDashboardContainer(
+          width2: 78,
+          color2: AppColors.scheColor,
+          heading: "Eranove Odyssey – Team A",
+          text1: "Phase 2",
+          ishow: false,
+          text2: "Scheduled",
+          description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
+          text3: "Pause",
+          text7: "Start Early",
+          icon3: Icons.fast_forward,
+          color3: AppColors.forwardColor,
+          text5: "12 Players",
+          text6: "Starts in 2h",
+        ),
+        SizedBox(height: 12 * heightScaleFactor),
+        CustomDashboardContainer(
+          height: 27,
+          ishow: false,
+          width2: 78,
+          color2: AppColors.scheColor,
+          heading: "Leadership Assessment",
+          text1: "Phase 1",
+          color1: AppColors.phaseColor,
+          text2: "Scheduled",
+          description: "Leadership Assessment strengthens teamwork through interactive activities.",
+          text3: "Resume",
+          text4: "Next Phase",
+          svg: Appimages.edit,
+          text7: "Edit Session",
+          text6: "Friday 2:00 PM",
+        ),
+        SizedBox(height: 20 * heightScaleFactor)
+      ],
+    );
+  }
+}

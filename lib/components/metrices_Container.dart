@@ -1,0 +1,219 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_switch/flutter_switch.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:scorer/components/filter_drop_down_container.dart';
+import 'package:scorer/components/players_Row.dart';
+import 'package:scorer/constants/appcolors.dart';
+import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/routename.dart';
+import 'package:scorer/main.dart';
+import 'package:scorer/widgets/bold_text.dart';
+import 'package:scorer/widgets/create_container.dart';
+import 'package:scorer/widgets/login_button.dart';
+import 'package:scorer/widgets/main_text.dart';
+import 'package:scorer/widgets/players_container.dart';
+class MetricesContainer extends StatelessWidget {
+  const MetricesContainer({
+    super.key,
+    required this.screenWidth,
+    required this.screenHeight,
+  });
+
+  final double screenWidth;
+  final double screenHeight;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: screenWidth * 0.9,
+      height: screenHeight * 0.35,
+      decoration: BoxDecoration(
+        border: Border.all(color: AppColors.greyColor, width: 1.7),
+        borderRadius: BorderRadius.circular(24),
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
+        child: Column(
+          children: [
+            SizedBox(height: screenHeight * 0.025),
+            BoldText(
+              text: "Engagement Metrics",
+              fontSize: screenWidth * 0.04,
+              selectionColor: AppColors.blueColor,
+            ),
+            SizedBox(height: screenHeight * 0.02),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    BoldText(
+                      text: "85%",
+                      fontSize: screenWidth * 0.06,
+                      selectionColor: AppColors.forwardColor,
+                    ),
+                    BoldText(
+                      text: "Participation",
+                      fontSize: screenWidth * 0.04,
+                      selectionColor: AppColors.blueColor,
+                    ),
+                  ],
+                ),
+                SizedBox(width: screenWidth * 0.08),
+                Column(
+                  children: [
+                    BoldText(
+                      text: "85%",
+                      fontSize: screenWidth * 0.06,
+                      selectionColor: AppColors.forwardColor,
+                    ),
+                    BoldText(
+                      text: "Participation",
+                      fontSize: screenWidth * 0.04,
+                      selectionColor: AppColors.blueColor,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: screenHeight * 0.025),
+           Row(
+              children: [
+                Expanded(
+                              flex:  3 ,
+                  
+                  child: Container(
+                    height: screenHeight * 0.006,
+                    width: screenWidth * 0.38,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomLeft: Radius.circular(20),
+                      ),
+                      color: AppColors.forwardColor,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    height: screenHeight * 0.006,
+                    width: screenWidth * 0.25,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
+                      color: AppColors.greyColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),  SizedBox(height: screenHeight * 0.02),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                MainText(
+                  text: "Active Players",
+                  fontSize: screenWidth * 0.035,
+                ),
+                BoldText(
+                  text: "10/12",
+                  fontSize: screenWidth * 0.04,
+                  selectionColor: AppColors.blueColor,
+                )
+              ],
+            ),
+            SizedBox(height: screenHeight * 0.02),
+            Row(
+              children: [
+                Expanded(
+                              flex:  3 ,
+                  
+                  child: Container(
+                    height: screenHeight * 0.006,
+                    width: screenWidth * 0.38,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomLeft: Radius.circular(20),
+                      ),
+                      color: AppColors.forwardColor,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    height: screenHeight * 0.006,
+                    width: screenWidth * 0.25,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
+                      color: AppColors.greyColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: screenHeight * 0.02),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                MainText(
+                  text: "Avg Response Time",
+                  fontSize: screenWidth * 0.035,
+                ),
+                BoldText(
+                  text: "32s",
+                  fontSize: screenWidth * 0.04,
+                  selectionColor: AppColors.blueColor,
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+Future<T?> showCustomBottomSheet<T>({
+  
+  required BuildContext context,
+  bool isDismissible = true,
+  bool enableDrag = true,
+  double? height,
+  Color backgroundColor = Colors.white,
+}) {
+  return showModalBottomSheet<T>(
+    context: context,
+    isScrollControlled: true,
+    isDismissible: isDismissible,
+    enableDrag: false,
+    showDragHandle: true,
+    backgroundColor: Colors.transparent,
+    builder: (context) {
+      double screenHeight = MediaQuery.of(context).size.height;
+      double screenWidth = MediaQuery.of(context).size.width;
+      return Container(
+        height: screenHeight * 0.89, // 750/844 = 0.888
+        width: screenWidth * 1.12, // 440/390 = 1.128
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(32),
+            topRight: Radius.circular(32),
+          ),
+        ),
+        child: FilterDropDownContainer(),
+      );
+    },
+  );
+}

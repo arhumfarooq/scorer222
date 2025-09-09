@@ -1,0 +1,92 @@
+
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:scorer/components/stages_row.dart';
+import 'package:scorer/constants/appcolors.dart';
+import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/routename.dart';
+import 'package:scorer/controllers/stage_controllers.dart';
+import 'package:scorer/widgets/bold_text.dart';
+import 'package:scorer/widgets/create_container.dart';
+import 'package:scorer/widgets/custom_stratgy_container.dart';
+import 'package:scorer/widgets/login_button.dart';
+import 'package:scorer/widgets/main_text.dart';
+import 'package:scorer/widgets/pause_container.dart';
+import 'package:scorer/widgets/players_container.dart';
+import 'package:scorer/widgets/useable_container.dart';
+import 'package:scorer/widgets/useable_textrow.dart';
+class PhaseContainer extends StatelessWidget {
+  const PhaseContainer({
+    super.key,
+    required this.horizontalPadding,
+    required this.contentWidth,
+    required this.screenHeight,
+    required this.screenWidth,
+  });
+
+  final double horizontalPadding;
+  final double contentWidth;
+  final double screenHeight;
+  final double screenWidth;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+      child: Container(
+        width: contentWidth,
+        height: screenHeight * 0.13,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(screenWidth * 0.03),
+          border: Border.all(
+              color: AppColors.selectLangugaeColor,
+              width: screenWidth * 0.004),
+        ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: screenWidth * 0.025),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SvgPicture.asset(Appimages.div,
+                          width: screenWidth * 0.05),
+                      SizedBox(width: screenWidth * 0.02),
+                      UseableContainer(
+                        text: "Phase 2",
+                        color: AppColors.orangeColor,
+                      ),
+                      SizedBox(width: screenWidth * 0.02),
+                      MainText(
+                          text: "Strategy Building",
+                          fontSize: screenWidth * 0.04),
+                    ],
+                  ),
+                  UseableContainer(
+                      text: "Active",
+                      color: AppColors.selectLangugaeColor),
+                ],
+              ),
+              SizedBox(height: screenHeight * 0.01),
+              Padding(
+                padding:
+                    EdgeInsets.only(left: screenWidth * 0.08),
+                child: MainText(
+                  height: 1.5,
+                  text:
+                      "Team collaboration and strategic planning phase",
+                  color: AppColors.teamColor,
+                  fontSize: screenWidth * 0.035,
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
