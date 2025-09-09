@@ -41,7 +41,8 @@ class UseableTextrow extends StatelessWidget {
   final Color color;
   final String text;
   final String? text1;
-  const UseableTextrow({super.key, required this.color, required this.text, this.text1});
+  final double?height;
+  const UseableTextrow({super.key, required this.color, required this.text, this.text1, this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +70,7 @@ class UseableTextrow extends StatelessWidget {
               text: text,
               color: AppColors.teamColor,
               fontSize: fontSize,
-              height: 1,
+              height:height?? 1,
             )
           ],
         ),

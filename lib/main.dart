@@ -114,6 +114,8 @@ import 'package:scorer/view/playerfolder/game_start1_screen.dart';
 import 'package:scorer/view/playerfolder/player_dashboard.dart';
 import 'package:scorer/view/playerfolder/player_dashboard_Screen2.dart';
 import 'package:scorer/view/playerfolder/player_login_play_side.dart';
+import 'package:scorer/view/playerfolder/submit_response_Screen.dart';
+import 'package:scorer/view/playerfolder/submit_response_Screen2.dart';
 // import 'package:scorer/view/startscreen/start_screen.dart';
 // import 'translation_service.dart';
 // import 'app_translations.dart';
@@ -137,7 +139,7 @@ class MyApp extends StatelessWidget {
       locale: locale,
       getPages: AppRoutes.getAppRoutes(),
       fallbackLocale: const Locale('en', 'US'),
-      home:   GameStart1Screen(),
+      home:   SubmitResponseScreen2(),
     );
   }
 }

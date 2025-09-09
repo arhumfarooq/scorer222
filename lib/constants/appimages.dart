@@ -67,6 +67,9 @@ static const String option= "assets/svg/option.svg";
 static const String person= "assets/svg/person.svg";
 static const String bulb= "assets/svg/bulb.svg";
 static const String leave= "assets/svg/leave.svg";
+static const String submit= "assets/svg/submit.svg";
+static const String king= "assets/svg/king.svg";
+static const String tropy1= "assets/svg/tropy1.svg";
 
 
 
@@ -83,6 +86,7 @@ static const String leave= "assets/svg/leave.svg";
 
 // static const String forward= "assets/svg/forward.svg";
 // static const String forward= "assets/svg/forward.svg";
+static const String ok= "assets/png/ok.png";
 
 static const String glass= "assets/png/glasses.png";
 static const String aa= "assets/png/aa.png";
@@ -113,12 +117,15 @@ static const String player2= "assets/png/player2.png";
 static const String prince2= "assets/png/prince2.png";
 static const String facil2= "assets/png/facil2.png";
 static const String timeout2= "assets/png/timeout.png";
+static const String timeout3= "assets/png/timeout3.png";
+
 static const String house1= "assets/png/house1.png";
 static const String group= "assets/png/group.png";
 static const String win1= "assets/png/win1.png";
 static const String win2= "assets/png/win2.png";
 
 static const String win3= "assets/png/win3.png";
+
 
 
 
