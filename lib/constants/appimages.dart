@@ -70,6 +70,7 @@ static const String leave= "assets/svg/leave.svg";
 static const String submit= "assets/svg/submit.svg";
 static const String king= "assets/svg/king.svg";
 static const String tropy1= "assets/svg/tropy1.svg";
+static const String maingame= "assets/svg/maingame.svg";
 
 
 
@@ -87,6 +88,8 @@ static const String tropy1= "assets/svg/tropy1.svg";
 // static const String forward= "assets/svg/forward.svg";
 // static const String forward= "assets/svg/forward.svg";
 static const String ok= "assets/png/ok.png";
+static const String main= "assets/png/main.png";
+
 
 static const String glass= "assets/png/glasses.png";
 static const String aa= "assets/png/aa.png";

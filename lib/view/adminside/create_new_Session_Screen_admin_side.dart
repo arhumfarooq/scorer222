@@ -99,9 +99,7 @@ class CreateNewSessionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // These are placeholder values since the original constants were not provided
-    const Color blueColor = Color(0xFF142B6A);
-    const Color forwardColor = Color(0xFF65AC37);
-    const Color whiteColor = Colors.white;
+
 
     return Scaffold(
       body: GradientBackground(

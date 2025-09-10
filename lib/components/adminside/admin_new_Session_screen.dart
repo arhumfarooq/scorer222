@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -22,6 +23,8 @@ class AdminNewSessionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+      final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
   
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16 * widthScaleFactor),
@@ -154,7 +157,7 @@ class AdminNewSessionScreen extends StatelessWidget {
           ),
           SizedBox(height: 20 * heightScaleFactor),
           Container(
-            height: 272 * heightScaleFactor,
+            height: 280 * heightScaleFactor,
             width: 376 * widthScaleFactor,
             decoration: BoxDecoration(
               border: Border.all(color: AppColors.greyColor, width: 1.5),
@@ -197,9 +200,29 @@ class AdminNewSessionScreen extends StatelessWidget {
                               )
                             ],
                           ),
-                          SvgPicture.asset(Appimages.time,
-                              height: 76 * heightScaleFactor,
-                              width: 76* widthScaleFactor)
+                         CircularPercentIndicator(
+        radius: 40.0, // circle ka size
+        lineWidth: 4.0, // border ki thickness
+        percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
+        animation: true,
+        animationDuration: 500,
+        circularStrokeCap: CircularStrokeCap.round,
+        backgroundColor: Colors.transparent,
+        progressColor: AppColors.forwardColor,
+        center: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+             BoldText(
+                  text: "12:32",
+                  fontSize: screenWidth * 0.04,
+                  selectionColor: AppColors.blueColor),
+              MainText(
+                  text: "Remaining",
+                  fontSize: screenWidth * 0.027,
+                  height: 1),
+          ],
+        ),
+      ),
                         ],
                       ),
                       SizedBox(height: 20 * heightScaleFactor),
@@ -259,25 +282,25 @@ class AdminNewSessionScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Positioned(
-                  top: 36 * heightScaleFactor,
-                  left: 280 * widthScaleFactor,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      BoldText(
-                        text: "12:32",
-                        fontSize: 16 * heightScaleFactor,
-                        selectionColor: AppColors.blueColor,
-                      ),
-                      MainText(
-                        text: "Remaining",
-                        fontSize: 10 * heightScaleFactor,
-                        height: 1,
-                      )
-                    ],
-                  ),
-                )
+                // Positioned(
+                //   top: 36 * heightScaleFactor,
+                //   left: 280 * widthScaleFactor,
+                //   child: Column(
+                //     mainAxisAlignment: MainAxisAlignment.center,
+                //     children: [
+                //       BoldText(
+                //         text: "12:32",
+                //         fontSize: 16 * heightScaleFactor,
+                //         selectionColor: AppColors.blueColor,
+                //       ),
+                //       MainText(
+                //         text: "Remaining",
+                //         fontSize: 10 * heightScaleFactor,
+                //         height: 1,
+                //       )
+                //     ],
+                //   ),
+                // )
               ],
             ),
           ),
