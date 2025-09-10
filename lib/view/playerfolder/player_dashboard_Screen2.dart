@@ -196,8 +196,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/utils.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/create_container.dart';
@@ -461,6 +464,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                       ),
                       SizedBox(height: 15 * heightScaleFactor),
                       LoginButton(
+                        onTap: ()=>Get.toNamed(RouteName.gameStart1Screen),
                         text: "Leave Session",
                         ishow: true,
                         image: Appimages.leave,

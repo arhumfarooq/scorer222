@@ -133,8 +133,11 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/instance_manager.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/create_container.dart';
@@ -277,6 +280,7 @@ class PlayerDashboard extends StatelessWidget {
                    
                   // ),
                     CustomDashboardContainer(
+                      onTap: ()=>Get.toNamed(RouteName.playerLoginPlaySide),
           // onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
 arrowshow: false,
 horizontal: 0,
@@ -291,33 +295,35 @@ horizontal: 0,
 
           // description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
           text3: "Pause",
-          text7: "Start Early",
+          text7: "Join Session",
           icon3: Icons.fast_forward,
           color3: AppColors.forwardColor,
           text5: "12 Players",
           text6: "Starts in 2h",
         ),
         SizedBox(height: 12 * heightScaleFactor),
-        CustomDashboardContainer(
-          horizontal: 0,
+         CustomDashboardContainer(
+                      onTap: ()=>Get.toNamed(RouteName.playerLoginPlaySide),
           // onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
 arrowshow: false,
-          height: 10,
-          ishow: false,
+horizontal: 0,
+          // height: 0,
           width2: 78,
           color2: AppColors.scheColor,
-          heading: "Leadership Assessment",
-          text1: "Phase 1",
-          color1: AppColors.phaseColor,
+          heading: "Eranove Odyssey – Team A",
+          text1: "Phase 2",
+          ishow: false,
           text2: "Scheduled",
           description: "Leadership Assessment strengthens teamwork through interactive activities.",
-          text3: "Resume",
-          text4: "Next Phase",
-          svg: Appimages.edit,
-          text7: "Edit Session",
-          text6: "Friday 2:00 PM",
-        ),
-        SizedBox(height: 20 * heightScaleFactor)
+
+          // description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
+          text3: "Pause",
+          text7: "Join Session",
+          icon3: Icons.fast_forward,
+          color3: AppColors.forwardColor,
+          text5: "12 Players",
+          text6: "Starts in 2h",
+        ), SizedBox(height: 20 * heightScaleFactor)
                 ],
               ),
             ),

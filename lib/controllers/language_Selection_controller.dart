@@ -23,7 +23,7 @@ class LanguageSelectionController extends GetxController {
     {'lang': 'it', 'country': 'IT'},
     {'lang': 'ar', 'country': 'AR'},
     // Agar African add karna ho
-    {'lang': 'af', 'country': 'AF'},
+    {'lang': 'af', 'country': 'ZA'},
   ];
 
   void select(int index) {

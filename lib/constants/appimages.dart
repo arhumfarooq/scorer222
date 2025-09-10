@@ -91,6 +91,7 @@ static const String ok= "assets/png/ok.png";
 static const String main= "assets/png/main.png";
 static const String bottom1= "assets/png/bottom.png";
 static const String buttonplus= "assets/png/buttonplus.png";
+static const String southAfrica= "assets/png/africa.png";
 
 
 

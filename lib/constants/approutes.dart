@@ -1,4 +1,5 @@
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:scorer/bottom_navigation.dart';
 import 'package:scorer/constants/routename.dart';
 import 'package:scorer/view/FacilitateFolder/admin_login_screen.dart';
 import 'package:scorer/view/FacilitateFolder/choose_your_role_Screen.dart';
@@ -27,6 +28,14 @@ import 'package:scorer/view/adminside/user_admin_detailed_scree.dart';
 import 'package:scorer/view/adminside/user_facilitate_detailed_scree.dart';
 import 'package:scorer/view/adminside/user_management_Screen.dart';
 import 'package:scorer/view/adminside/user_player_detailed_scree.dart';
+import 'package:scorer/view/playerfolder/game_start1_screen.dart';
+import 'package:scorer/view/playerfolder/player_dashboard.dart';
+import 'package:scorer/view/playerfolder/player_dashboard_Screen2.dart';
+import 'package:scorer/view/playerfolder/player_leader_board_Screen2.dart';
+import 'package:scorer/view/playerfolder/player_leaderboard_screen.dart';
+import 'package:scorer/view/playerfolder/player_login_play_side.dart';
+import 'package:scorer/view/playerfolder/submit_response_Screen.dart';
+import 'package:scorer/view/playerfolder/submit_response_Screen2.dart';
 // import 'package:scorer/view/startscreen/evaluate_response_Screen2.dart';
 // import 'package:scorer/view/startscreen/start_Screen1.dart';
 // import 'package:scorer/view/startscreen/start_screen.dart';
@@ -129,6 +138,51 @@ GetPage(
   page: () => UserPlayerDetailedScree(),
   transition: Transition.cupertino,
 ),
+GetPage(
+      name: RouteName.gameStart1Screen,
+      page: () => GameStart1Screen(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: RouteName.playerDashboardScreen2,
+      page: () => PlayerDashboardScreen2(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: RouteName.playerDashboard,
+      page: () => PlayerDashboard(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: RouteName.playerLeaderBoardScreen2,
+      page: () => PlayerLeaderBoardScreen2(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: RouteName.playerLeaderboardScreen,
+      page: () => PlayerLeaderboardScreen(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: RouteName.playerLoginPlaySide,
+      page: () => PlayerLoginPlaySide(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: RouteName.submitResponseScreen,
+      page: () => SubmitResponseScreen(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: RouteName.submitResponseScreen2,
+      page: () => SubmitResponseScreen2(),
+      transition: Transition.cupertino,
+    ),
+     GetPage(
+      name: RouteName.bottomNavigation,
+      page: () => BottomNavigation(),
+      transition: Transition.cupertino,
+    ),
 
 ];
 

@@ -209,7 +209,7 @@ class PlayerLoginScreen extends StatelessWidget {
                 LoginButton(text: "Login",
                 fontSize: 20,
                 onTap: (){
-                  Get.toNamed(RouteName.adminLoginScreen);
+                  Get.toNamed(RouteName.playerDashboard);
                 },
                 ),
                 SizedBox(height: 18 * heightScaleFactor),

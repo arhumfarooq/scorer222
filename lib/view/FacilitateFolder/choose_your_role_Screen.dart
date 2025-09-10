@@ -187,6 +187,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
+import 'package:scorer/controllers/role_selection_controller.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 // import 'package:scorer/view/startscreen/aa.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -196,7 +197,8 @@ import 'package:scorer/widgets/role_selection_container.dart';
 import 'package:scorer/widgets/role_text_container.dart';
 
 class ChooseYourRoleScreen extends StatelessWidget {
-  const ChooseYourRoleScreen({super.key});
+  final RoleSelectionController controller = Get.put(RoleSelectionController());
+   ChooseYourRoleScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -254,42 +256,73 @@ class ChooseYourRoleScreen extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        RoleSelectionContainer(
-                          isSelected: false,
+                       Obx(()=> RoleSelectionContainer(
+                          onTap: () {
+                             controller.changeTab(0);
+                          },
+                          isSelected: controller.selectedIndex.value==0 ,
                           image: Appimages.prince1,
                           image2: Appimages.admin,
                           text: "Administrator",
                           text2: 'Full system access\nand control',
-                        ),
+                        ),),
                     SizedBox(height: 10 * heightScaleFactor),
 
-                        RoleSelectionContainer(
-                          isSelected: true,
+                       Obx(()=> RoleSelectionContainer(
+                          // isSelected: true,
+                           onTap: () {
+                             controller.changeTab(1);
+                          },
+                          isSelected: controller.selectedIndex.value==1 ,
                           image: Appimages.blackman,
                           image2: Appimages.facil,
                           text: "Facilitator",
                           text2: 'Manage sessions and\nguide activities',
                           width: 169,
-                        ),
+                        ),),
                     SizedBox(height: 10 * heightScaleFactor),
 
-                        RoleSelectionContainer(
+                      Obx(()=>  RoleSelectionContainer(
+                           onTap: () {
+                             controller.changeTab(2);
+                          },
+                          isSelected: controller.selectedIndex.value==2,
                           image: Appimages.blackgirl,
                           image2: Appimages.player,
                           text: "Player",
                           text2: 'Participate in games\nand activities',
-                          width: 160,
-                        ),
+                          width: 160, 
+                        ),)
                       ],
                     ),
                     Spacer(),
                     // SizedBox(height: 30 * heightScaleFactor),
-                    ForwardButtonContainer(
+                  ForwardButtonContainer(
+  onTap: () {
+    final controller = Get.find<RoleSelectionController>();
 
-                        onTap:(){
-                        Get.toNamed(RouteName.playerLoginScreen);
-                      },
-                    ),
+    if (controller.selectedIndex.value == 0) {
+      // Agar pehla option select hai
+      Get.toNamed(RouteName.adminLoginScreen);
+    } else if (controller.selectedIndex.value == 1) {
+      // Agar dusra option select hai
+      Get.toNamed(RouteName.facilLoginScreen);
+    } 
+    else if (controller.selectedIndex.value == 2) {
+      // Agar dusra option select hai
+      Get.toNamed(RouteName.playerLoginScreen);
+    } 
+    else {
+      // Agar koi select hi na kare
+      Get.snackbar("Selection Required", "Please select a role first!",
+      backgroundColor: AppColors.forwardColor,
+      colorText: AppColors.whiteColor
+      
+      );
+    }
+  },
+),
+
                     SizedBox(height: 10 * heightScaleFactor),
                   ],
                 ),

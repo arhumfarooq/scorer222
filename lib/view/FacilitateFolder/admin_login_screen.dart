@@ -194,7 +194,7 @@ class AdminLoginScreen extends StatelessWidget {
               fontSize: 20,
 
                 onTap:(){
-                        Get.toNamed(RouteName.facilLoginScreen);
+                        Get.toNamed(RouteName.bottomNavigation);
                       },
               ),
               SizedBox(height: 18 * heightScaleFactor),

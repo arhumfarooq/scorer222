@@ -1,3 +1,217 @@
+// import 'package:flutter/material.dart';
+// import 'package:flutter_switch/flutter_switch.dart';
+// import 'package:get/get_rx/src/rx_types/rx_types.dart';
+// import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+// import 'package:scorer/components/players_Row.dart';
+// import 'package:scorer/constants/appcolors.dart';
+// import 'package:scorer/constants/appimages.dart';
+// import 'package:scorer/view/FacilitateFolder/aa.dart';
+// import 'package:scorer/widgets/bold_text.dart';
+// import 'package:scorer/widgets/create_container.dart';
+// import 'package:scorer/widgets/login_button.dart';
+// import 'package:scorer/widgets/main_text.dart';
+// import 'package:scorer/widgets/players_container.dart' show PlayersContainers;
+
+// class PlayerLeaderboardScreen extends StatelessWidget {
+//   final RxBool isTeamSelected = false.obs;
+
+//    PlayerLeaderboardScreen({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//       final screenWidth = MediaQuery.of(context).size.width;
+//     final screenHeight = MediaQuery.of(context).size.height;
+//     return Scaffold(
+//       body: GradientBackground(child: SafeArea(child: SingleChildScrollView(
+//         child: Column(
+//           children: [
+//              Padding(
+//                           padding: const EdgeInsets.only(left: 30,right: 10),
+//                           child: Row(
+//                             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                             children: [
+//                               Image.asset(Appimages.player2,height: 63,width: 50, ),
+//                               Expanded(child: Center(child: BoldText(text: "Team Alpha",fontSize: 22,))),
+//                               Image.asset(Appimages.house1,height: 63,width: 80 ),
+                    
+                            
+                                
+//                             ],
+//                           ),
+//                         ),
+        
+//         SizedBox(height: 50,),
+//                         Obx(
+//                     () => Row(
+//                       mainAxisAlignment: MainAxisAlignment.center,
+//                       children: [
+//                         BoldText(
+//                           text: "Players",
+//                           selectionColor: isTeamSelected.value
+//                               ? AppColors.playerColo1r
+//                               : AppColors.blueColor,
+//                           fontSize: screenWidth * 0.04,
+//                         ),
+//                         SizedBox(width: screenWidth * 0.025),
+//                         FlutterSwitch(
+//                           value: isTeamSelected.value,
+//                           onToggle: (val) {
+//                             isTeamSelected.value = val;
+//                           },
+//                           height: screenHeight * 0.03,
+//                           width: screenWidth * 0.1,
+//                           activeColor: AppColors.forwardColor,
+//                           inactiveColor: AppColors.forwardColor,
+//                         ),
+//                         SizedBox(width: screenWidth * 0.025),
+//                         BoldText(
+//                           text: "Teams",
+//                           selectionColor: isTeamSelected.value
+//                               ? AppColors.blueColor
+//                               : AppColors.playerColo1r,
+//                           fontSize: screenWidth * 0.04,
+//                         ),
+//                       ],
+//                     ),
+//                   ),
+//                   SizedBox(height: 17,),
+//                    Row(
+//                     mainAxisAlignment: MainAxisAlignment.center,
+//                     children: [
+//                       Container(
+//                         width: screenWidth * 0.035,
+//                         height: screenWidth * 0.035,
+//                         decoration: BoxDecoration(
+//                           shape: BoxShape.circle,
+//                           color: AppColors.visitingColor,
+//                         ),
+//                       ),
+//                       SizedBox(width: screenWidth * 0.02),
+//                       MainText(
+//                         text: "Live Updates....",
+//                         color: AppColors.visitingColor,
+//                         fontSize: screenWidth * 0.035,
+//                       )
+//                     ],
+//                   ),
+//                   SizedBox(height: 20,),
+//             // CreateContainer(text: isTeamSelected.value? "Your Team Rank 2nd ":"Your Rank 2nd ",width:isTeamSelected.value ?125:168,)
+// // : CreateContainer(text: "Your Rank 2nd ",width: 125,),
+                 
+                 
+//                   // final RxBool isTeamSelected = false.obs;
+
+// Obx(() => CreateContainer(
+//       text: isTeamSelected.value
+//           ? "Your Team Rank 2nd "
+//           : "Your Rank 2nd ",
+//       width: isTeamSelected.value ? 168 :125 ,
+//     ),
+// )
+
+
+//                  , SizedBox(height: 90,),
+//         Padding(
+//           padding: const EdgeInsets.symmetric(horizontal: 30),
+//           child: Column(
+//             children: [
+//             Obx(() => PlayersRow(isTeamSelected: isTeamSelected.value)),
+//             SizedBox(height: 30,),
+//         Obx(
+//                 () => PlayersContainers(
+//                   text1: "1",
+//                   text2: isTeamSelected.value ? "Team Alpha" : "Alex M.",
+//                   image: Appimages.facil2,
+//                   icon: Icons.keyboard_arrow_up_outlined,
+//                   iconColor: AppColors.arrowColor,
+//                   text4: "2,890 pts",
+//                   ishow: true,
+//                   containerColor: AppColors.yellowColor,
+//                   leftPadding: screenWidth * 0.05,
+//                 ),
+//               ),
+//               SizedBox(height: screenHeight * 0.018),
+//               Obx(
+//                 () => PlayersContainers(
+//                   text1: "2",
+//                   text2: isTeamSelected.value ? "Team Rock" : "Sarah J.",
+//                   image: Appimages.play2,
+//                   icon: Icons.keyboard_arrow_down_outlined,
+//                   iconColor: AppColors.brownColor,
+//                   text4: "2,890 pts",
+//                   ishow: true,
+//                   containerColor: AppColors.greyColor,
+//                   leftPadding: screenWidth * 0.05,
+//                 ),
+//               ),
+//               SizedBox(height: screenHeight * 0.018),
+//               Obx(
+//                 () => PlayersContainers(
+//                   text1: "3",
+//                   text2: isTeamSelected.value ? "Team Beta" : "Mike C.",
+//                   image: Appimages.play5,
+//                   icon: Icons.keyboard_arrow_down_outlined,
+//                   iconColor: AppColors.brownColor,
+//                   text4: "2,180 pts",
+//                   ishow: true,
+//                   containerColor: AppColors.orangeColor,
+//                   leftPadding: screenWidth * 0.05,
+//                 ),
+//               ),
+//               SizedBox(height: screenHeight * 0.018),
+//               PlayersContainers(
+//                 text1: "4",
+//                 text2: "Mike C.",
+//                 image: Appimages.play3,
+//                 icon: Icons.keyboard_arrow_down_outlined,
+//                 iconColor: AppColors.brownColor,
+//                 text4: "1,760 pts",
+//                 ishow: true,
+//                 containerColor: AppColors.playerColor,
+//                 leftPadding: screenWidth * 0.05,
+//               ),
+//               SizedBox(height: screenHeight * 0.018),
+//               PlayersContainers(
+//                 text1: "5",
+//                 text2: "Mike C.",
+//                 image: Appimages.play4,
+//                 icon: Icons.keyboard_arrow_up_outlined,
+//                 iconColor: AppColors.forwardColor,
+//                 text4: "1,760 pts",
+//                 ishow: true,
+//                 containerColor: AppColors.playerColor,
+//                 leftPadding: screenWidth * 0.05,
+//               ),
+//               SizedBox(height: screenHeight * 0.025),
+//                 // SizedBox(height: 30,),
+//                              LoginButton(text: "Move to Phase 3",color: AppColors.forwardColor,ishow: true,
+//                              image: Appimages.submit,
+//                              ),
+//                              SizedBox(height: 10,),
+                       
+//                                 // SizedBox(height: 10,),
+//                                LoginButton(text: "Share Results",ishow: true,color: AppColors.redColor,
+//                              image: Appimages.move,
+//                              ),
+//                                 SizedBox(height: 10,),
+
+//                                LoginButton(text: "Export Data",ishow: true,
+//                              image: Appimages.export,
+//                              ),
+//                              SizedBox(height: 40,)
+            
+//             ],
+//           ),
+//         )
+                 
+                  
+             
+//           ],
+//         ),
+//       ))),
+//     );
+//   }
+// }
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
@@ -15,200 +229,205 @@ import 'package:scorer/widgets/players_container.dart' show PlayersContainers;
 class PlayerLeaderboardScreen extends StatelessWidget {
   final RxBool isTeamSelected = false.obs;
 
-   PlayerLeaderboardScreen({super.key});
+  PlayerLeaderboardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-      final screenWidth = MediaQuery.of(context).size.width;
+    final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
-      body: GradientBackground(child: SafeArea(child: SingleChildScrollView(
-        child: Column(
-          children: [
-             Padding(
-                          padding: const EdgeInsets.only(left: 30,right: 10),
-                          child: Row(
-                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Image.asset(Appimages.player2,height: 63,width: 50, ),
-                              Expanded(child: Center(child: BoldText(text: "Team Alpha",fontSize: 22,))),
-                              Image.asset(Appimages.house1,height: 63,width: 80 ),
-                    
-                            
-                                
-                            ],
-                          ),
-                        ),
-        
-        SizedBox(height: 50,),
-                        Obx(
-                    () => Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        BoldText(
-                          text: "Players",
-                          selectionColor: isTeamSelected.value
-                              ? AppColors.playerColo1r
-                              : AppColors.blueColor,
-                          fontSize: screenWidth * 0.04,
-                        ),
-                        SizedBox(width: screenWidth * 0.025),
-                        FlutterSwitch(
-                          value: isTeamSelected.value,
-                          onToggle: (val) {
-                            isTeamSelected.value = val;
-                          },
-                          height: screenHeight * 0.03,
-                          width: screenWidth * 0.1,
-                          activeColor: AppColors.forwardColor,
-                          inactiveColor: AppColors.forwardColor,
-                        ),
-                        SizedBox(width: screenWidth * 0.025),
-                        BoldText(
-                          text: "Teams",
-                          selectionColor: isTeamSelected.value
-                              ? AppColors.blueColor
-                              : AppColors.playerColo1r,
-                          fontSize: screenWidth * 0.04,
-                        ),
-                      ],
-                    ),
+      body: GradientBackground(
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Padding(
+                  // Converted fixed horizontal padding to be responsive
+                  padding: EdgeInsets.symmetric(
+                    horizontal: screenWidth * 0.05,
+                    vertical: screenHeight * 0.02,
                   ),
-                  SizedBox(height: 17,),
-                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  child: Row(
                     children: [
-                      Container(
-                        width: screenWidth * 0.035,
-                        height: screenWidth * 0.035,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: AppColors.visitingColor,
+                      Image.asset(Appimages.player2, height: 63, width: 50),
+                      Expanded(
+                        child: Center(
+                          child: BoldText(text: "Team Alpha", fontSize: 22),
                         ),
                       ),
-                      SizedBox(width: screenWidth * 0.02),
-                      MainText(
-                        text: "Live Updates....",
-                        color: AppColors.visitingColor,
-                        fontSize: screenWidth * 0.035,
-                      )
+                      Image.asset(Appimages.house1, height: 63, width: 80),
                     ],
                   ),
-                  SizedBox(height: 20,),
-            // CreateContainer(text: isTeamSelected.value? "Your Team Rank 2nd ":"Your Rank 2nd ",width:isTeamSelected.value ?125:168,)
-// : CreateContainer(text: "Your Rank 2nd ",width: 125,),
-                 
-                 
-                  // final RxBool isTeamSelected = false.obs;
-
-Obx(() => CreateContainer(
-      text: isTeamSelected.value
-          ? "Your Team Rank 2nd "
-          : "Your Rank 2nd ",
-      width: isTeamSelected.value ? 168 :125 ,
-    ),
-)
-
-
-                 , SizedBox(height: 90,),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: Column(
-            children: [
-            Obx(() => PlayersRow(isTeamSelected: isTeamSelected.value)),
-            SizedBox(height: 30,),
-        Obx(
-                () => PlayersContainers(
-                  text1: "1",
-                  text2: isTeamSelected.value ? "Team Alpha" : "Alex M.",
-                  image: Appimages.facil2,
-                  icon: Icons.keyboard_arrow_up_outlined,
-                  iconColor: AppColors.arrowColor,
-                  text4: "2,890 pts",
-                  ishow: true,
-                  containerColor: AppColors.yellowColor,
-                  leftPadding: screenWidth * 0.05,
                 ),
-              ),
-              SizedBox(height: screenHeight * 0.018),
-              Obx(
-                () => PlayersContainers(
-                  text1: "2",
-                  text2: isTeamSelected.value ? "Team Rock" : "Sarah J.",
-                  image: Appimages.play2,
-                  icon: Icons.keyboard_arrow_down_outlined,
-                  iconColor: AppColors.brownColor,
-                  text4: "2,890 pts",
-                  ishow: true,
-                  containerColor: AppColors.greyColor,
-                  leftPadding: screenWidth * 0.05,
+                SizedBox(height: screenHeight * 0.06), // Converted fixed height to be responsive
+                Obx(
+                  () => Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      BoldText(
+                        text: "Players",
+                        selectionColor: isTeamSelected.value
+                            ? AppColors.playerColo1r
+                            : AppColors.blueColor,
+                        fontSize: screenWidth * 0.04,
+                      ),
+                      SizedBox(width: screenWidth * 0.025),
+                      FlutterSwitch(
+                        value: isTeamSelected.value,
+                        onToggle: (val) {
+                          isTeamSelected.value = val;
+                        },
+                        height: screenHeight * 0.03,
+                        width: screenWidth * 0.1,
+                        activeColor: AppColors.forwardColor,
+                        inactiveColor: AppColors.forwardColor,
+                      ),
+                      SizedBox(width: screenWidth * 0.025),
+                      BoldText(
+                        text: "Teams",
+                        selectionColor: isTeamSelected.value
+                            ? AppColors.blueColor
+                            : AppColors.playerColo1r,
+                        fontSize: screenWidth * 0.04,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(height: screenHeight * 0.018),
-              Obx(
-                () => PlayersContainers(
-                  text1: "3",
-                  text2: isTeamSelected.value ? "Team Beta" : "Mike C.",
-                  image: Appimages.play5,
-                  icon: Icons.keyboard_arrow_down_outlined,
-                  iconColor: AppColors.brownColor,
-                  text4: "2,180 pts",
-                  ishow: true,
-                  containerColor: AppColors.orangeColor,
-                  leftPadding: screenWidth * 0.05,
+                SizedBox(height: screenHeight * 0.02), // Converted fixed height to be responsive
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: screenWidth * 0.035,
+                      height: screenWidth * 0.035,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: AppColors.visitingColor,
+                      ),
+                    ),
+                    SizedBox(width: screenWidth * 0.02),
+                    MainText(
+                      text: "Live Updates....",
+                      color: AppColors.visitingColor,
+                      fontSize: screenWidth * 0.035,
+                    )
+                  ],
                 ),
-              ),
-              SizedBox(height: screenHeight * 0.018),
-              PlayersContainers(
-                text1: "4",
-                text2: "Mike C.",
-                image: Appimages.play3,
-                icon: Icons.keyboard_arrow_down_outlined,
-                iconColor: AppColors.brownColor,
-                text4: "1,760 pts",
-                ishow: true,
-                containerColor: AppColors.playerColor,
-                leftPadding: screenWidth * 0.05,
-              ),
-              SizedBox(height: screenHeight * 0.018),
-              PlayersContainers(
-                text1: "5",
-                text2: "Mike C.",
-                image: Appimages.play4,
-                icon: Icons.keyboard_arrow_up_outlined,
-                iconColor: AppColors.forwardColor,
-                text4: "1,760 pts",
-                ishow: true,
-                containerColor: AppColors.playerColor,
-                leftPadding: screenWidth * 0.05,
-              ),
-              SizedBox(height: screenHeight * 0.025),
-                // SizedBox(height: 30,),
-                             LoginButton(text: "Move to Phase 3",color: AppColors.forwardColor,ishow: true,
-                             image: Appimages.submit,
-                             ),
-                             SizedBox(height: 10,),
-                       
-                                // SizedBox(height: 10,),
-                               LoginButton(text: "Share Results",ishow: true,color: AppColors.redColor,
-                             image: Appimages.move,
-                             ),
-                                SizedBox(height: 10,),
+                SizedBox(height: screenHeight * 0.025), // Converted fixed height to be responsive
+                Obx(
+                  () => CreateContainer(
+                    text: isTeamSelected.value ? "Your Team Rank 2nd " : "Your Rank 2nd ",
+                    // Converted fixed width to a responsive value based on screen width
+                    width: isTeamSelected.value ? screenWidth * 0.466 : screenWidth * 0.347,
+                  ),
+                ),
+                SizedBox(height: screenHeight * 0.15), // Converted fixed height to be responsive
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.08), // Converted fixed padding to be responsive
+                  child: Column(
+                    children: [
+                      Obx(() => PlayersRow(isTeamSelected: isTeamSelected.value)),
+                      SizedBox(height: screenHeight * 0.035), // Converted fixed height to be responsive
+                      Obx(
+                        () => PlayersContainers(
+                          text1: "1",
+                          text2: isTeamSelected.value ? "Team Alpha" : "Alex M.",
+                          image: Appimages.facil2,
+                          icon: Icons.keyboard_arrow_up_outlined,
+                          iconColor: AppColors.arrowColor,
+                          text4: "2,890 pts",
+                          ishow: true,
+                          containerColor: AppColors.yellowColor,
+                          leftPadding: screenWidth * 0.05,
+                        ),
+                      ),
+                      SizedBox(height: screenHeight * 0.018),
+                      Obx(
+                        () => PlayersContainers(
+                          text1: "2",
+                          text2: isTeamSelected.value ? "Team Rock" : "Sarah J.",
+                          image: Appimages.play2,
+                          icon: Icons.keyboard_arrow_down_outlined,
+                          iconColor: AppColors.brownColor,
+                          text4: "2,890 pts",
+                          ishow: true,
+                          containerColor: AppColors.greyColor,
+                          leftPadding: screenWidth * 0.05,
+                        ),
+                      ),
+                      SizedBox(height: screenHeight * 0.018),
+                      Obx(
+                        () => PlayersContainers(
+                          text1: "3",
+                          text2: isTeamSelected.value ? "Team Beta" : "Mike C.",
+                          image: Appimages.play5,
+                          icon: Icons.keyboard_arrow_down_outlined,
+                          iconColor: AppColors.brownColor,
+                          text4: "2,180 pts",
+                          ishow: true,
+                          containerColor: AppColors.orangeColor,
+                          leftPadding: screenWidth * 0.05,
+                        ),
+                      ),
+                      SizedBox(height: screenHeight * 0.018),
+                      PlayersContainers(
+                        text1: "4",
+                        text2: "Mike C.",
+                        image: Appimages.play3,
+                        icon: Icons.keyboard_arrow_down_outlined,
+                        iconColor: AppColors.brownColor,
+                        text4: "1,760 pts",
+                        ishow: true,
+                        containerColor: AppColors.playerColor,
+                        leftPadding: screenWidth * 0.05,
+                      ),
+                      SizedBox(height: screenHeight * 0.018),
+                      PlayersContainers(
+                        text1: "5",
+                        text2: "Mike C.",
+                        image: Appimages.play4,
+                        icon: Icons.keyboard_arrow_up_outlined,
+                        iconColor: AppColors.forwardColor,
+                        text4: "1,760 pts",
+                        ishow: true,
+                        containerColor: AppColors.playerColor,
+                        leftPadding: screenWidth * 0.05,
+                      ),
+                      SizedBox(height: screenHeight * 0.025),
+                      LoginButton(
+                        fontSize: 19,
 
-                               LoginButton(text: "Export Data",ishow: true,
-                             image: Appimages.export,
-                             ),
-                             SizedBox(height: 40,)
-            
-            ],
+                        text: "Move to Phase 3",
+                        color: AppColors.forwardColor,
+                        ishow: true,
+                        image: Appimages.submit,
+                      ),
+                      SizedBox(height: screenHeight * 0.012), // Converted fixed height to be responsive
+                      LoginButton(
+                        fontSize: 19,
+
+                        text: "Share Results",
+                        ishow: true,
+                        color: AppColors.redColor,
+                        image: Appimages.move,
+                      ),
+                      SizedBox(height: screenHeight * 0.012), // Converted fixed height to be responsive
+                      LoginButton(
+                        fontSize: 19,
+                        text: "Export Data",
+                        ishow: true,
+                        image: Appimages.export,
+                      ),
+                      SizedBox(height: screenHeight * 0.04), // Converted fixed height to be responsive
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
-        )
-                 
-                  
-             
-          ],
         ),
-      ))),
+      ),
     );
   }
 }

@@ -66,9 +66,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart' show Appimages, aa;
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/login_button.dart';
@@ -135,6 +138,7 @@ class PlayerLoginPlaySide extends StatelessWidget {
                 LoginTextfield(text: "Enter Team Nick Name", ), // Pass scaleFactor
                 SizedBox(height: 23 * heightScaleFactor),
                 LoginButton(
+                  onTap: ()=>Get.toNamed(RouteName.playerDashboardScreen2),
                   text: "Continue",
                   color: AppColors.forwardColor,
                   height: 50 * heightScaleFactor, // Scale button height

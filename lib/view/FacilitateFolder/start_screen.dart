@@ -164,11 +164,18 @@ class StartScreen extends StatelessWidget {
 
                         controller.select(4);
                        },),
+                     
                       SizedBox(height: 9 * scaleFactor),
                       LanguageSelectionContainer(text: "Arabic", image: Appimages.saudi, isSelected: controller.selectLangauge.value==5, onTap: () { 
 
                         controller.select(5);
                        }, ),
+                          SizedBox(height: 9 * scaleFactor),
+                      LanguageSelectionContainer(text: "South Africa", image: Appimages.southAfrica, isSelected: controller.selectLangauge.value==6, onTap: () { 
+
+                        controller.select(6);
+                       }, ),
+                       
                     ],
                   ),
                 ),

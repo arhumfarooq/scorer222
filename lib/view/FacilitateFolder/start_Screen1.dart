@@ -190,23 +190,24 @@ class StartScreen1 extends StatelessWidget {
              
                     
                     Center(
-                      child: BoldText(
-                        selectionColor: AppColors.blueColor,
-                        text: "Gamify Your Training Like\nNever Before",
-                        textAlign: TextAlign.center,
-                        fontSize: titleFontSize,
-                      ),
-                    ),
+  child: BoldText(
+    selectionColor: AppColors.blueColor,
+    text: "gamify_title".tr,  // 👈 key banayi
+    textAlign: TextAlign.center,
+    fontSize: titleFontSize,
+  ),
+),
+
                     SizedBox(height: screenHeight * 0.01),
-                    Center(
-                      child: MainText(
-                        text:
-                            "Experience real-time scoring, interactive challenges, and instant AI-powered feedback. Score’Master+ keeps every participant engaged and motivated from start to finish.",
-                        textAlign: TextAlign.center,
-                        fontSize: descriptionFontSize,
-                        height: 1.24,
-                      ),
-                    ),
+                  Center(
+  child: MainText(
+    text: "experience_text".tr,  // 👈 key banayi
+    textAlign: TextAlign.center,
+    fontSize: descriptionFontSize,
+    height: 1.24,
+  ),
+),
+
                     SizedBox(height: screenHeight * 0.02),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -244,7 +245,7 @@ class StartScreen1 extends StatelessWidget {
                     ),
                     const Spacer(),
                     Center(child: SvgPicture.asset(Appimages.bottom)),
-                    SizedBox(height: screenHeight * 0.02),
+                    SizedBox(height: screenHeight * 0.01),
                   ],
                 ),
               );

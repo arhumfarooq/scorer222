@@ -38,6 +38,18 @@ class RouteName {
   static const String userFacilitateDetailedScree='/userFacilitateDetailedScree';
   static const String userManagementScreen='/UserManagementScreen';
   static const String userPlayerDetailedScree='/UserPlayerDetailedScree';
+  static const String gameStart1Screen='/GameStart1Screen';
+
+  static const String playerDashboardScreen2='/PlayerDashboardScreen2';
+  static const String playerDashboard='/PlayerDashboard';
+  static const String playerLeaderBoardScreen2='/PlayerLeaderBoardScreen2';
+  static const String playerLeaderboardScreen='/PlayerLeaderboardScreen';
+  static const String playerLoginPlaySide='/PlayerLoginPlaySide';
+  static const String submitResponseScreen='/SubmitResponseScreen';
+  static const String submitResponseScreen2='/SubmitResponseScreen2';
+  static const String bottomNavigation='/BottomNavigation';
+
+
 
 // 
 
