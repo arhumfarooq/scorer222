@@ -342,7 +342,7 @@ class OverViewOptionScreen extends StatelessWidget {
   final controller = Get.put(OverviewController());
   OverViewOptionScreen({super.key});
 
-  final List<String> tabs = ["Overview", "Phases", "Players", "Leaderboard"];
+  final List<String> tabs = ["Overview", "Phases", "Players", " Leaderboard "];
   final List<Widget> screens = [
     OverViewScreen(),
     PhasesScreen(),
@@ -405,15 +405,19 @@ class OverViewOptionScreen extends StatelessWidget {
                         Row(
                           children: [
                             UseableContainer(
+                              width: 70,
                               text: "Phase 2",
                               color: AppColors.orangeColor,
-                              fontSize: 11 * heightScaleFactor,
+                              fontSize: 10 * heightScaleFactor,
+                              // height: 26,
                             ),
                             SizedBox(width: 8 * widthScaleFactor),
                             UseableContainer(
+                              width: 70,
                               text: "Active",
+                              // height: 26,
                               color: AppColors.forwardColor,
-                              fontSize: 11 * heightScaleFactor,
+                              fontSize: 10 * heightScaleFactor,
                             ),
                           ],
                         ),

@@ -73,6 +73,7 @@ class LoginTextfield extends StatelessWidget {
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(horizontal: 10 * widthScaleFactor),
             hintText: text,
+            
             hintStyle: TextStyle(
               fontFamily: "giory",
               fontSize:fontsize?? 21 * heightScaleFactor,

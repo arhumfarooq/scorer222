@@ -51,6 +51,7 @@ class CustomTimeRow extends StatelessWidget {
                   text: "Time\nDuration",
                   fontSize: 16 * widthScaleFactor,
                   selectionColor: AppColors.blueColor,
+                  textAlign: TextAlign.center,
                 ),
               ],
             ),
@@ -78,6 +79,8 @@ class CustomTimeRow extends StatelessWidget {
                 ),
                 BoldText(
                   text: "Active\nPlayers",
+                  textAlign: TextAlign.center,
+
                   fontSize: 16 * widthScaleFactor,
                   selectionColor: AppColors.blueColor,
                 ),
@@ -107,6 +110,8 @@ class CustomTimeRow extends StatelessWidget {
                 ),
                 BoldText(
                   text: "Total\nPhases",
+                  textAlign: TextAlign.center,
+
                   fontSize: 16 * widthScaleFactor,
                   selectionColor: AppColors.blueColor,
                 ),

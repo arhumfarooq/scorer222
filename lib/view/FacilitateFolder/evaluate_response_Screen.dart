@@ -376,6 +376,7 @@ class EvaluateResponseScreen extends StatelessWidget {
                       SizedBox(height: 26 * heightScaleFactor),
                       LoginButton(
                         text: "Accept AI Score (85)",
+                        fontSize: 18,
                         color: AppColors.forwardColor,
                         image: Appimages.ai2,
                         ishow: true,
@@ -385,9 +386,11 @@ class EvaluateResponseScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
+                        fontSize: 18,
+
                         text: "Manual Overwrite",
                         ishow: true,
-                        imageHeight: 38 * heightScaleFactor,
+                        imageHeight: 32 * heightScaleFactor,
                         imageWidth: 32 * widthScaleFactor,
                         icon: Icons.edit,
                         height: 74 * heightScaleFactor,

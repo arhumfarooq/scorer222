@@ -214,7 +214,7 @@ class CustomResponseContainer extends StatelessWidget {
                           UseableContainer(
                             text: text ?? "Pending",
                             height: 28 * scaleHeight,
-                            width: 52 * scaleWidth,
+                            width: 60 * scaleWidth,
                             color: color1 ?? AppColors.yellowColor,
                             textColor: textColor ?? AppColors.languageTextColor,
                             fontSize: 12 * scaleWidth, // Assuming a base font size

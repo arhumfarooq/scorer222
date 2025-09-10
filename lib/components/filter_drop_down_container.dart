@@ -130,14 +130,18 @@ class FilterDropDownContainer extends StatelessWidget {
                   const SizedBox(height: 40),
 
                   // buttons
-                  LoginButton(
-                    text: "Clear Filter",
-                    color: AppColors.redColor,
+                  Center(
+                    child: LoginButton(
+                      text: "Clear Filter",
+                      color: AppColors.redColor,
+                    ),
                   ),
                   const SizedBox(height: 10),
-                  LoginButton(
-                    text: "Apply Filter",
-                    color: AppColors.forwardColor,
+                  Center(
+                    child: LoginButton(
+                      text: "Apply Filter",
+                      color: AppColors.forwardColor,
+                    ),
                   ),
 
                   const SizedBox(height: 30),

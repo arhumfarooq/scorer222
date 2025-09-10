@@ -175,7 +175,10 @@ class FacilLoginScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 30 * heightScaleFactor),
-              LoginButton(text: "Login",  onTap:(){
+              LoginButton(
+                fontSize: 20,
+                
+                text: "Login",  onTap:(){
                         Get.toNamed(RouteName.facilitatorDashboard);
                       },),
               SizedBox(height: 18 * heightScaleFactor),

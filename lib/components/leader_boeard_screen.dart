@@ -491,6 +491,8 @@ class LeaderBoeardScreen extends StatelessWidget {
             MetricesContainer(screenWidth: screenWidth, screenHeight: screenHeight),
             SizedBox(height: screenHeight * 0.03),
             LoginButton(
+              fontSize:20 ,
+
               onTap: () {
         Get.toNamed(RouteName.endSessionScreen);
             },
@@ -502,11 +504,12 @@ class LeaderBoeardScreen extends StatelessWidget {
             SizedBox(height: screenHeight * 0.015),
             LoginButton(
               text: "Share Results",
+              fontSize:20 ,
               color: AppColors.forwardColor,
               image: Appimages.move,
               ishow: true,
             ),
-            SizedBox(height: 20,)
+            SizedBox(height: 30,)
             // SizedBox(height: screenHeight * 0.5),
           ],
         ),

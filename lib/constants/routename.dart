@@ -26,6 +26,19 @@ class RouteName {
   static const String viewScoreScreen='/ViewScoreScreen';
   // static const String viewResponsesScreen='/ViewResponsesScreen';
   // static const String viewScoreScreen='/ViewScoreScreen';
+  static const String adminCreateNewSessionScreen='/AdminCreateNewSessionScreen';
+
+  static const String adminDashboard='/AdminDashboard';
+
+  static const String adminOverviewOptionScreens='/AdminOverviewOptionScreens';
+  static const String createNewSessionHeader='/CreateNewSessionHeader';
+  static const String gameScreenAdminSide='/GameScreenAdminSide';
+  static const String game2Screen='/Game2Screen';
+  static const String userAdminDetailedScree='/UserAdminDetailedScree';
+  static const String userFacilitateDetailedScree='/userFacilitateDetailedScree';
+  static const String userManagementScreen='/UserManagementScreen';
+  static const String userPlayerDetailedScree='/UserPlayerDetailedScree';
+
 // 
 
 

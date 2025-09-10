@@ -439,20 +439,24 @@ class PlayersScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: verticalSpacing),
-                  LoginButton(text: "Add Player", image: Appimages.personadd, ishow: true),
+                  Center(child: LoginButton(text: "Add Player", image: Appimages.personadd, ishow: true)),
                   SizedBox(height: allPlayersContainerSpacing),
-                  LoginButton(
-                    text: "View Responses",
-                    image: Appimages.eye,
-                    color: AppColors.forwardColor,
-                    ishow: true,
+                  Center(
+                    child: LoginButton(
+                      text: "View Responses",
+                      image: Appimages.eye,
+                      color: AppColors.forwardColor,
+                      ishow: true,
+                    ),
                   ),
                   SizedBox(height: allPlayersContainerSpacing),
-                  LoginButton(
-                    text: "Send Alert",
-                    image: Appimages.noti,
-                    color: AppColors.redColor,
-                    ishow: true,
+                  Center(
+                    child: LoginButton(
+                      text: "Send Alert",
+                      image: Appimages.noti,
+                      color: AppColors.redColor,
+                      ishow: true,
+                    ),
                   ),
                   SizedBox(height: allPlayersContainerSpacing),
                 ],

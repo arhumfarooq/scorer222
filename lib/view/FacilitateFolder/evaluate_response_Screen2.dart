@@ -557,6 +557,8 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                         color: AppColors.forwardColor,
                         image: Appimages.ai2,
                         ishow: true,
+                        fontSize: 18,
+
                         imageHeight: 38 * heightScaleFactor,
                         imageWidth: 32 * widthScaleFactor,
                         height: 74 * heightScaleFactor,
@@ -568,13 +570,18 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                 },
                         text: "Move to Next Stage",
                         ishow: true,
+
                         imageHeight: 22 * heightScaleFactor,
                         imageWidth: 26 * widthScaleFactor,
                         icon: Icons.fast_forward,
                         height: 74 * heightScaleFactor,
+                        fontSize: 18,
+
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
+                        fontSize: 18,
+
                         text: "Export PDF",
                         ishow: true,
                         imageHeight: 18 * heightScaleFactor,
@@ -586,6 +593,7 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
                         text: "Edit Score & Feedback",
+                        fontSize: 18,
                         ishow: true,
                         imageHeight: 22 * heightScaleFactor,
                         imageWidth: 22 * widthScaleFactor,

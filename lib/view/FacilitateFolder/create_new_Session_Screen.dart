@@ -914,6 +914,8 @@ class CreateNewSessionScreen extends StatelessWidget {
                       FilterUseableContainer(isSelected: false, text: 'Record session for review', onTap: () {}),
                       SizedBox(height: 30 * scaleFactor),
                       LoginButton(
+                fontSize: 19,
+                        
                         text: "Start immediately",
                         ishow: true,
                         icon: Icons.play_arrow_rounded,
@@ -922,6 +924,8 @@ class CreateNewSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 13 * scaleFactor),
                       LoginButton(
+                fontSize: 19,
+
                         text: "Schedule for later",
                         image: Appimages.calender,
                         ishow: true,

@@ -313,7 +313,9 @@ import 'package:scorer/widgets/custom_dashboard_container.dart';
 import 'package:scorer/widgets/forward_button_container.dart';
 import 'package:scorer/widgets/login_button.dart';
 import 'package:scorer/widgets/main_text.dart';
+import 'package:scorer/widgets/use_able_game_row.dart';
 import 'package:scorer/widgets/useable_container.dart';
+import 'package:scorer/widgets/useable_textrow.dart';
 
 class UserAdminDetailedScree extends StatelessWidget {
   const UserAdminDetailedScree({super.key});
@@ -408,13 +410,14 @@ class UserAdminDetailedScree extends StatelessWidget {
                   SizedBox(height: 24 * heightScaleFactor),
                   Padding(
                     // padding: const EdgeInsets.all(8.0),
-                    padding: EdgeInsets.symmetric(horizontal: 30 * widthScaleFactor),
+                    padding: EdgeInsets.symmetric(horizontal: 12 * widthScaleFactor),
 
                     child: Row(
                       children: [
                         Expanded(
                           child: Container(
-                            height: 140 * heightScaleFactor, // Adjusted from activeInactiveBoxHeight
+                            width: 105,
+                            height: 116 * heightScaleFactor, // Adjusted from activeInactiveBoxHeight
                             decoration: BoxDecoration(
                               border: Border.all(color: AppColors.greyColor, width: 1.7 * widthScaleFactor),
                               borderRadius: BorderRadius.circular(24 * widthScaleFactor),
@@ -440,7 +443,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                         SizedBox(width: 10 * widthScaleFactor),
                         Expanded(
                           child: Container(
-                            height: 140 * heightScaleFactor, // Adjusted from activeInactiveBoxHeight
+                             width: 105,
+                            height: 116 * heightScaleFactor, // Adjusted from activeInactiveBoxHeight
                             decoration: BoxDecoration(
                               border: Border.all(color: AppColors.greyColor, width: 1.7 * widthScaleFactor),
                               borderRadius: BorderRadius.circular(24 * widthScaleFactor),
@@ -466,7 +470,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                         SizedBox(width: 10 * widthScaleFactor),
                         Expanded(
                           child: Container(
-                            height: 140 * heightScaleFactor, // Adjusted from activeInactiveBoxHeight
+                             width: 105,
+                            height: 116 * heightScaleFactor,  // Adjusted from activeInactiveBoxHeight
                             decoration: BoxDecoration(
                               border: Border.all(color: AppColors.greyColor, width: 1.7 * widthScaleFactor),
                               borderRadius: BorderRadius.circular(24 * widthScaleFactor),
@@ -578,11 +583,94 @@ class UserAdminDetailedScree extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20 * heightScaleFactor),
+
+
+                  Container(
+                    height: 183,
+                    width: 376,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.greyColor,width: 1.5),
+                      borderRadius: BorderRadius.circular(24)
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+SizedBox(height: 20,),
+MainText(text: "Recent Activity",fontSize: 14,),
+SizedBox(height: 10,),
+// UseAbleGameRow(text1: text1, text2: text2)
+ UseableTextrow(
+                                    height: 1,
+                    color: AppColors.forwardColor,
+                    text: "Alex submitted response • 1m ago"),
+                    SizedBox(height: 7,),
+                     UseableTextrow(
+                                    height: 1,
+                    color: AppColors.forwardColor2,
+                    text: "Sarah joined team discussion • 2m ago"),
+                      SizedBox(height: 7,),
+                     UseableTextrow(
+                                    height: 1,
+                    color: AppColors.forwardColor3,
+                    text: "Mike went inactive • 5m ago"),
+
+
+                          
+                        ],
+                      ),
+                    ),
+                  ),
+                  // SizedBox(height: 20,)
+                  SizedBox(height: 20 * heightScaleFactor),
+                    Container(
+                    height: 183,
+                    width: 376,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.greyColor,width: 1.5),
+                      borderRadius: BorderRadius.circular(24)
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+SizedBox(height: 20,),
+MainText(text: "Current Permissions",fontSize: 14,),
+SizedBox(height: 10,),
+// UseAbleGameRow(text1: text1, text2: text2)
+ UseableTextrow(
+                           ishow: true,         height: 1,
+                    color: AppColors.forwardColor,
+                    text: "Manage Users"),
+                    SizedBox(height: 7,),
+                     UseableTextrow(ishow: true,
+                                    height: 1,
+                    color: AppColors.forwardColor2,
+                    text: "Create Sessions"),
+                      SizedBox(height: 7,),
+                     UseableTextrow(ishow: true,
+                                    height: 1,
+                    color: AppColors.forwardColor3,
+                    text: "View Analytics"),
+
+
+                          
+                        ],
+                      ),
+                    ),
+                  ),
+                 
+                  SizedBox(height: 20 * heightScaleFactor),
+
                   BoldText(
-                    text: "Recent Sessionsa",
+                    text: "Recent Sessions",
                     selectionColor: AppColors.blueColor,
                     fontSize: 16 * widthScaleFactor,
                   ),
+                  SizedBox(height: 20 * heightScaleFactor),
+
                   CustomDashboardContainer(
                     mainWidth: 376 * widthScaleFactor,
                     right: 10 * widthScaleFactor,

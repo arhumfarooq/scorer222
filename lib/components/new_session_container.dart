@@ -55,7 +55,7 @@ class NewSessionContainer extends StatelessWidget {
                         children: [
                           BoldText(
                             text: "ABC123",
-                            fontSize: 16 * heightScaleFactor,
+                            fontSize: 14 * heightScaleFactor,
                             selectionColor: AppColors.blueColor,
                           ),
                           SizedBox(width: 10 * widthScaleFactor),
@@ -78,7 +78,7 @@ class NewSessionContainer extends StatelessWidget {
                         children: [
                           BoldText(
                             text: "https:/www.score.com",
-                            fontSize: 16 * heightScaleFactor,
+                            fontSize: 14 * heightScaleFactor,
                             selectionColor: AppColors.blueColor,
                           ),
                           SizedBox(width: 10 * widthScaleFactor),
@@ -99,7 +99,7 @@ class NewSessionContainer extends StatelessWidget {
                       ),
                       BoldText(
                         text: "2:30 PM",
-                        fontSize: 16 * heightScaleFactor,
+                        fontSize: 14 * heightScaleFactor,
                         selectionColor: AppColors.blueColor,
                       ),
                     ],
@@ -114,7 +114,7 @@ class NewSessionContainer extends StatelessWidget {
                       ),
                       BoldText(
                         text: "45 minutes",
-                        fontSize: 16 * heightScaleFactor,
+                        fontSize: 14 * heightScaleFactor,
                         selectionColor: AppColors.blueColor,
                       ),
                     ],
@@ -157,7 +157,8 @@ class NewSessionContainer extends StatelessWidget {
                                   UseableContainer(
                                     text: "Phase 2",
                                     color: AppColors.orangeColor,
-                                    fontSize: 12 * heightScaleFactor,
+                                    fontSize: 11 * heightScaleFactor,
+                                    height: 26,
                                   ),
                                   SizedBox(width: 10 * widthScaleFactor),
                                   MainText(
@@ -182,11 +183,11 @@ class NewSessionContainer extends StatelessWidget {
           children: [
              BoldText(
                   text: "12:32",
-                  fontSize: screenWidth * 0.05,
+                  fontSize: screenWidth * 0.04,
                   selectionColor: AppColors.blueColor),
               MainText(
                   text: "Remaining",
-                  fontSize: screenWidth * 0.03,
+                  fontSize: screenWidth * 0.025,
                   height: 1),
           ],
         ),

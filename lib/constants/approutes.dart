@@ -17,6 +17,16 @@ import 'package:scorer/view/FacilitateFolder/start_Screen3.dart';
 import 'package:scorer/view/FacilitateFolder/start_screen.dart';
 import 'package:scorer/view/FacilitateFolder/view_Score_Screen.dart';
 import 'package:scorer/view/FacilitateFolder/view_responses_Screen.dart';
+import 'package:scorer/view/adminside/admin_create_new_session_Screen.dart' show AdminCreateNewSessionScreen;
+import 'package:scorer/view/adminside/admin_dashboard.dart';
+import 'package:scorer/view/adminside/admin_overview_option_screens.dart';
+import 'package:scorer/view/adminside/create_new_Session_Screen_admin_side.dart';
+import 'package:scorer/view/adminside/game2_Screen.dart';
+import 'package:scorer/view/adminside/game_screen_Admin_Side.dart';
+import 'package:scorer/view/adminside/user_admin_detailed_scree.dart';
+import 'package:scorer/view/adminside/user_facilitate_detailed_scree.dart';
+import 'package:scorer/view/adminside/user_management_Screen.dart';
+import 'package:scorer/view/adminside/user_player_detailed_scree.dart';
 // import 'package:scorer/view/startscreen/evaluate_response_Screen2.dart';
 // import 'package:scorer/view/startscreen/start_Screen1.dart';
 // import 'package:scorer/view/startscreen/start_screen.dart';
@@ -68,7 +78,58 @@ transition: Transition.cupertino
 ),
 GetPage(name:RouteName.viewScoreScreen, page:()=> ViewScoreScreen(),
 transition: Transition.cupertino
-)
+),
+GetPage(
+  name: RouteName.adminCreateNewSessionScreen,
+  page: () => AdminCreateNewSessionScreen(),
+  transition: Transition.cupertino,
+),
+GetPage(
+  name: RouteName.adminDashboard,
+  page: () => AdminDashboard(),
+  transition: Transition.cupertino,
+),
+GetPage(
+  name: RouteName.adminOverviewOptionScreens,
+  page: () => AdminOverviewOptionScreens(),
+  transition: Transition.cupertino,
+),
+GetPage(
+  name: RouteName.createNewSessionHeader,
+  page: () => CreateNewSessionHeader(),
+  transition: Transition.cupertino,
+),
+GetPage(
+  name: RouteName.gameScreenAdminSide,
+  page: () => GameScreenAdminSide(),
+  transition: Transition.cupertino,
+),
+GetPage(
+  name: RouteName.game2Screen,
+  page: () => Game2Screen(),
+  transition: Transition.cupertino,
+),
+GetPage(
+  name: RouteName.userAdminDetailedScree,
+  page: () => UserAdminDetailedScree(),
+  transition: Transition.cupertino,
+),
+GetPage(
+  name: RouteName.userFacilitateDetailedScree,
+  page: () => UserFacilitateDetailedScree(),
+  transition: Transition.cupertino,
+),
+GetPage(
+  name: RouteName.userManagementScreen,
+  page: () => UserManagementScreen(),
+  transition: Transition.cupertino,
+),
+GetPage(
+  name: RouteName.userPlayerDetailedScree,
+  page: () => UserPlayerDetailedScree(),
+  transition: Transition.cupertino,
+),
+
 ];
 
 }

@@ -263,6 +263,7 @@ class CustomDashboardContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(24 * widthScaleFactor),
         ),
         child: Column(
+           mainAxisSize: MainAxisSize.min, // 
           children: [
             SizedBox(height: 29 * heightScaleFactor),
             BoldText(
@@ -270,7 +271,7 @@ class CustomDashboardContainer extends StatelessWidget {
               selectionColor: AppColors.blueColor,
               fontSize: 16 * heightScaleFactor,
             ),
-            SizedBox(height: 15 * heightScaleFactor),
+            SizedBox(height: 7 * heightScaleFactor),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -342,6 +343,7 @@ class CustomDashboardContainer extends StatelessWidget {
               ],
             ),
            Spacer(),
+          // SizedBox(height: 14 * heightScaleFactor,),
              isshow ? SizedBox():        ishow
                 ? Padding(
                     padding: EdgeInsets.symmetric(horizontal: 17 * widthScaleFactor),
@@ -350,6 +352,8 @@ class CustomDashboardContainer extends StatelessWidget {
                       children: [
                         Expanded(
                           child: PauseContainer(
+                            height: 40,
+                            
                             text: text3 ?? "",
                             icon: icon1,
                           ),
@@ -357,6 +361,7 @@ class CustomDashboardContainer extends StatelessWidget {
                         SizedBox(width: 10 * widthScaleFactor),
                         Expanded(
                           child: PauseContainer(
+                            height: 40,
                             color: AppColors.forwardColor,
                             text: text4 ?? "",
                             icon: icon2,
@@ -368,7 +373,7 @@ class CustomDashboardContainer extends StatelessWidget {
                 : Padding(
                     padding: EdgeInsets.symmetric(horizontal: 17 * widthScaleFactor),
                     child: PauseContainer(
-                      height: 45 * heightScaleFactor,
+                      height: 40 * heightScaleFactor,
                       width: 300 * widthScaleFactor,
                       color: color3,
                       text: text7 ?? "",
@@ -376,7 +381,8 @@ class CustomDashboardContainer extends StatelessWidget {
                       svgPath: svg,
                     ),
                   ),
-                   SizedBox(height: 15 * heightScaleFactor),
+
+                   SizedBox(height: 14 * heightScaleFactor),
           ],
         ),
       ),

@@ -446,11 +446,13 @@ class EndSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 13 * heightScaleFactor),
                       LoginButton(
+                fontSize: 19,
+
                         text: "Export PDF",
                         ishow: true,
                         image: Appimages.export,
                         color: AppColors.selectLangugaeColor,
-                        height: 74 * heightScaleFactor,
+                        // height: 74 * heightScaleFactor,
                       ),
                       SizedBox(height: 20 * heightScaleFactor),
                       SvgPicture.asset(
@@ -492,8 +494,8 @@ class EndSessionScreen extends StatelessWidget {
                       SizedBox(height: 12 * heightScaleFactor),
                       Image.asset(
                         Appimages.badge,
-                        height: 70 * heightScaleFactor,
-                        width: 70 * widthScaleFactor,
+                        height: 147 * heightScaleFactor,
+                        width: 158* widthScaleFactor,
                       ),
                       SizedBox(height: 10 * heightScaleFactor),
                       BoldText(
@@ -555,6 +557,8 @@ class EndSessionScreen extends StatelessWidget {
 },
                         text: "Create New Session",
                         ishow: true,
+                        fontSize: 19,
+
                         color: AppColors.redColor,
                         icon: Icons.add,
                         imageHeight: 35 * heightScaleFactor,
@@ -562,12 +566,14 @@ class EndSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 13 * heightScaleFactor),
                       LoginButton(
+                        fontSize: 19,
                         text: "Share Results",
                         color: AppColors.forwardColor,
                         image: Appimages.move,
                         ishow: true,
-                        height: 74 * heightScaleFactor,
+                        // height: 74 * heightScaleFactor,
                       ),
+                      SizedBox(height: 40,)
                     ],
                   ),
                 ),

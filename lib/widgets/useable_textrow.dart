@@ -42,7 +42,8 @@ class UseableTextrow extends StatelessWidget {
   final String text;
   final String? text1;
   final double?height;
-  const UseableTextrow({super.key, required this.color, required this.text, this.text1, this.height});
+  final bool ishow;
+  const UseableTextrow({super.key, required this.color, required this.text, this.text1, this.height,  this.ishow=false});
 
   @override
   Widget build(BuildContext context) {
@@ -57,6 +58,15 @@ class UseableTextrow extends StatelessWidget {
       children: [
         Row(
           children: [
+            ishow? Container(
+              width: 14,
+              height: 14,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: AppColors.forwardColor,
+              ),
+              child: Center(child: Icon(Icons.check,color: AppColors.whiteColor,size: 10,)),
+            ):
             Container(
               height: dotSize,
               width: dotSize,
@@ -65,6 +75,7 @@ class UseableTextrow extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
             ),
+           
             SizedBox(width: horizontalSpace),
             MainText(
               text: text,
