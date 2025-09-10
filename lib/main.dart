@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:device_preview/device_preview.dart'; // 👈 add this
+import 'package:scorer/bottom_navigation.dart';
 import 'package:scorer/constants/approutes.dart';
 import 'package:scorer/view/FacilitateFolder/create_new_Session_Screen.dart';
 import 'package:scorer/view/FacilitateFolder/facilitator_dashboard.dart';
@@ -150,7 +151,7 @@ class MyApp extends StatelessWidget {
       locale: locale,
       getPages: AppRoutes.getAppRoutes(),
       fallbackLocale: const Locale('en', 'US'),
-      home:   SplashScreen(),
+      home:   BottomNavigation(),
     );
   }
 }

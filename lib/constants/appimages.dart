@@ -89,6 +89,10 @@ static const String maingame= "assets/svg/maingame.svg";
 // static const String forward= "assets/svg/forward.svg";
 static const String ok= "assets/png/ok.png";
 static const String main= "assets/png/main.png";
+static const String bottom1= "assets/png/bottom.png";
+static const String buttonplus= "assets/png/buttonplus.png";
+
+
 
 
 static const String glass= "assets/png/glasses.png";
