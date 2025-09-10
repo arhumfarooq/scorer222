@@ -39,6 +39,9 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/widgets/custom_dashboard_container.dart';
 
 class ActiveSessionScreen extends StatelessWidget {
@@ -64,6 +67,8 @@ class ActiveSessionScreen extends StatelessWidget {
         //   icon2: Icons.fast_forward,
         // ),
          CustomDashboardContainer(
+          onTap:()=> Get.toNamed(RouteName.overViewOptionScreen),
+
           heading: "Team Building Workshop",
           text1: "Phase 1",
           height: 10,
@@ -78,6 +83,8 @@ class ActiveSessionScreen extends StatelessWidget {
         ),
         SizedBox(height: 12 * heightScaleFactor),
         CustomDashboardContainer(
+          // arrowshow: false,
+          onTap:()=> Get.toNamed(RouteName.overViewOptionScreen),
           heading: "Team Building Workshop",
           text1: "Phase 1",
           height: 10,

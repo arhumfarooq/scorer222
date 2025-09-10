@@ -241,65 +241,120 @@ class CreateNewSessionHeader extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 20 * scaleFactor),
-                SizedBox(
-                  height: 50 * scaleFactor,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: SvgPicture.asset(
+//                 SizedBox(
+//                   height: 50 * scaleFactor,
+//                   child: Stack(
+//                     alignment: Alignment.center,
+//                     children: [
+//                       Align(
+//                         alignment: Alignment.centerLeft,
+//                         child: SvgPicture.asset(
+//                           Appimages.arrowback,
+//                           colorFilter: ColorFilter.mode(AppColors.forwardColor, BlendMode.srcIn),
+//                           width: 24 * scaleFactor,
+//                           height: 20 * scaleFactor,
+//                         ),
+//                       ),
+//                       Center(
+//                         child: Row(
+//                           mainAxisAlignment: MainAxisAlignment.center,
+//                           children: [
+//                             BoldText(
+//                               text: "Add Nev",
+//                               selectionColor: AppColors.blueColor,
+//                               fontSize: 24 * scaleFactor,
+//                             ),
+//                            Container(
+//   width: 100 * scaleFactor,
+//   height: 37 * scaleFactor,
+//   decoration: BoxDecoration(
+//     color: AppColors.forwardColor,
+//     borderRadius: BorderRadius.circular(80 * scaleFactor),
+//   ),
+//   child: Row(
+//     children: [
+//       // Left aligned "v"
+//       BoldText(
+//         text: "v",
+//         selectionColor: AppColors.blueColor,
+//         fontSize: 24 * scaleFactor,
+//       ),
+
+//       // Center aligned "Session"
+//       Expanded(
+//         child: Center(
+//           child: BoldText(
+//             text: "Session",
+//             fontSize: 18 * scaleFactor,
+//             selectionColor: AppColors.whiteColor,
+//           ),
+//         ),
+//       ),
+//     ],
+//   ),
+// )
+
+//                           ],
+//                         ),
+//                       ),
+//                     ],
+//                   ),
+//                 ),
+ SizedBox(
+                    height: 50 * scaleFactor,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SvgPicture.asset(
                           Appimages.arrowback,
-                          colorFilter: ColorFilter.mode(AppColors.forwardColor, BlendMode.srcIn),
+                          colorFilter: ColorFilter.mode(
+                              AppColors.forwardColor, BlendMode.srcIn),
                           width: 24 * scaleFactor,
                           height: 20 * scaleFactor,
                         ),
-                      ),
-                      Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            BoldText(
-                              text: "Add Nev",
-                              selectionColor: AppColors.blueColor,
-                              fontSize: 24 * scaleFactor,
+                        Expanded(
+                          child: Center(
+                            child: Stack(
+                              alignment: Alignment.center,
+                              clipBehavior: Clip.none,
+                              children: [
+                                Positioned(
+                                  left: 169 * scaleFactor,
+                                  child: Container(
+                                    width: 90 * scaleFactor,
+                                    height: 37 * scaleFactor,
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 16 * scaleFactor,
+                                        vertical: 6 * scaleFactor),
+                                    decoration: BoxDecoration(
+                                      color: AppColors.forwardColor,
+                                      borderRadius:
+                                          BorderRadius.circular(20 * scaleFactor),
+                                    ),
+                                    child: Center(
+                                      child: BoldText(
+                                        text: "Player",
+                                        selectionColor: AppColors.whiteColor,
+                                        fontSize: 18 * scaleFactor,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 65 * scaleFactor,
+                                  child: BoldText(
+                                    text: "Add New",
+                                    fontSize: 24 * scaleFactor,
+                                    selectionColor: AppColors.blueColor,
+                                  ),
+                                ),
+                              ],
                             ),
-                           Container(
-  width: 100 * scaleFactor,
-  height: 37 * scaleFactor,
-  decoration: BoxDecoration(
-    color: AppColors.forwardColor,
-    borderRadius: BorderRadius.circular(80 * scaleFactor),
-  ),
-  child: Row(
-    children: [
-      // Left aligned "v"
-      BoldText(
-        text: "v",
-        selectionColor: AppColors.blueColor,
-        fontSize: 24 * scaleFactor,
-      ),
-
-      // Center aligned "Session"
-      Expanded(
-        child: Center(
-          child: BoldText(
-            text: "Session",
-            fontSize: 18 * scaleFactor,
-            selectionColor: AppColors.whiteColor,
-          ),
-        ),
-      ),
-    ],
-  ),
-)
-
-                          ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
                 Image.asset(
                   Appimages.group,
                   width: 208 * scaleFactor,

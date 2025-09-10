@@ -42,8 +42,7 @@ class AdminDashboard extends StatelessWidget {
     final double heightScaleFactor = screenHeight / baseHeight;
     final double widthScaleFactor = screenWidth / baseWidth;
 
-    return Scaffold(
-      body: GradientBackground(
+    return  GradientBackground(
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -167,7 +166,6 @@ class AdminDashboard extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

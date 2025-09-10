@@ -1,7 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/widgets/custom_dashboard_container.dart';
 
 class AdminScheduleSession extends StatelessWidget {
@@ -18,13 +21,18 @@ class AdminScheduleSession extends StatelessWidget {
       children: [
         SizedBox(height: 12 * heightScaleFactor),
         CustomDashboardContainer(
+          onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
+
+          // height: 0,
           width2: 78,
           color2: AppColors.scheColor,
           heading: "Eranove Odyssey – Team A",
           text1: "Phase 2",
           ishow: false,
           text2: "Scheduled",
-          description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
+          description: "Leadership Assessment strengthens teamwork through interactive activities.",
+
+          // description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
           text3: "Pause",
           text7: "Start Early",
           icon3: Icons.fast_forward,
@@ -34,7 +42,9 @@ class AdminScheduleSession extends StatelessWidget {
         ),
         SizedBox(height: 12 * heightScaleFactor),
         CustomDashboardContainer(
-          height: 27,
+          onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
+
+          height: 10,
           ishow: false,
           width2: 78,
           color2: AppColors.scheColor,

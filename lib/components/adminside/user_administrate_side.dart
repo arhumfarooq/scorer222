@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/widgets/all_players_container.dart';
 
 class UserAdministrateSide extends StatelessWidget {
@@ -30,12 +33,16 @@ class UserAdministrateSide extends StatelessWidget {
           // Player Container
           AllPlayersContainer(
             fontSize2: 12,
+            onTap: () => Get.toNamed(RouteName.userAdminDetailedScree),
+
             text: "Alex Martinez",
             text2: "john.smith@company.com",
             image: Appimages.prince2,
           ),
                   SizedBox(height: 7 * heightScaleFactor),
                     AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userAdminDetailedScree),
+
                       text3: "Inactive",
                       color: AppColors.orangeColor,
                       width: 60,
@@ -46,6 +53,8 @@ class UserAdministrateSide extends StatelessWidget {
           ),
             SizedBox(height: 7 * heightScaleFactor),
                     AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userAdminDetailedScree),
+
                       text3: "Pending",
                       color: AppColors.redColor,
                       width: 60,
@@ -56,6 +65,8 @@ class UserAdministrateSide extends StatelessWidget {
           ),
             SizedBox(height: 7 * heightScaleFactor),
                     AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userAdminDetailedScree),
+
             fontSize2: 12,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -63,6 +74,8 @@ class UserAdministrateSide extends StatelessWidget {
           ),
             SizedBox(height: 7 * heightScaleFactor),
                     AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userAdminDetailedScree),
+
             fontSize2: 12,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -70,6 +83,8 @@ class UserAdministrateSide extends StatelessWidget {
           ),
             SizedBox(height: 7 * heightScaleFactor),
                     AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userAdminDetailedScree),
+
             fontSize2: 12,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -77,6 +92,8 @@ class UserAdministrateSide extends StatelessWidget {
           ),
             SizedBox(height: 7 * heightScaleFactor),
                     AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userAdminDetailedScree),
+
             fontSize2: 12,
             text: "Alex Martinez",
             text2: "john.smith@company.com",

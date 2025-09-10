@@ -450,8 +450,7 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
     const double baseWidth = 375.0; // Base width for design
     final double scaleFactor = screenWidth / baseWidth;
 
-    return Scaffold(
-      body: GradientBackground(
+    return GradientBackground(
         child: SafeArea(
           child: SingleChildScrollView(
             child: Padding(
@@ -838,7 +837,6 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

@@ -45,8 +45,9 @@ class LoginTextfield extends StatelessWidget {
   final double? fontsize;
   final String text;
   final double? height;
+  final bool ishow;
   
-  const LoginTextfield({super.key, required this.text, this.fontsize, this.height});
+  const LoginTextfield({super.key, required this.text, this.fontsize, this.height,  this.ishow=false});
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +69,20 @@ class LoginTextfield extends StatelessWidget {
         borderRadius: BorderRadius.circular(25 * heightScaleFactor),
         border: Border.all(color: AppColors.selectLangugaeColor.withOpacity(0.1), width: 2 * widthScaleFactor),
       ),
-      child: Center(
+      child: ishow?TextFormField(
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(horizontal: 10 * widthScaleFactor),
+          hintText: text,
+          
+          hintStyle: TextStyle(
+            fontFamily: "giory",
+            fontSize:fontsize?? 21 * heightScaleFactor,
+            color: AppColors.languageTextColor,
+          ),
+          enabledBorder: InputBorder.none,
+          focusedBorder: InputBorder.none,
+        ),
+      ):Center(
         child: TextFormField(
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(horizontal: 10 * widthScaleFactor),

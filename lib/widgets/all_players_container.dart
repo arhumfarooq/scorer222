@@ -69,6 +69,7 @@ class AllPlayersContainer extends StatelessWidget {
   final double? width;
   final double? fontSize;
   final double? fontSize2;
+  final VoidCallback?onTap;
 
   const AllPlayersContainer({
     super.key,
@@ -79,7 +80,7 @@ class AllPlayersContainer extends StatelessWidget {
     this.fontSize2,
     this.text3,
     this.color,
-    this.width,
+    this.width, this.onTap,
   });
 
   @override
@@ -90,57 +91,60 @@ class AllPlayersContainer extends StatelessWidget {
     const double baseWidth = 375.0; // Base width for design
     final double scaleFactor = screenWidth / baseWidth;
 
-    return Container(
-      width: 336 * scaleFactor, // Scale width
-      height: 76 * scaleFactor, // Scale height
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: AppColors.greyColor,
-          width: 1.7 * scaleFactor, // Scale border width
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 336 * scaleFactor, // Scale width
+        height: 76 * scaleFactor, // Scale height
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: AppColors.greyColor,
+            width: 1.7 * scaleFactor, // Scale border width
+          ),
+          borderRadius: BorderRadius.circular(24 * scaleFactor), // Scale border radius
         ),
-        borderRadius: BorderRadius.circular(24 * scaleFactor), // Scale border radius
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15 * scaleFactor), // Scale horizontal padding
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  image,
-                  width: 38 * scaleFactor, // Scale image width
-                  height: 70 * scaleFactor, // Scale image height
-                ),
-                SizedBox(width: 13 * scaleFactor), // Scale spacing
-                Padding(
-                  padding: EdgeInsets.only(top: 10 * scaleFactor), // Scale top padding
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      MainText(
-                        text: text,
-                        fontSize: fontSize ?? 14 * scaleFactor, // Scale font size
-                        height: 1,
-                      ),
-                      MainText(
-                        text: text2,
-                        color: AppColors.teamColor,
-                        fontSize: fontSize2 ?? 14 * scaleFactor, // Scale font size
-                      ),
-                    ],
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15 * scaleFactor), // Scale horizontal padding
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    image,
+                    width: 38 * scaleFactor, // Scale image width
+                    height: 70 * scaleFactor, // Scale image height
                   ),
-                ),
-              ],
-            ),
-            UseableContainer(
-              text: text3 ?? "Active",
-              height: 22* scaleFactor,
-              width: width ?? 57 * scaleFactor, // Scale width
-              color: color ?? AppColors.forwardColor,
-            ),
-          ],
+                  SizedBox(width: 13 * scaleFactor), // Scale spacing
+                  Padding(
+                    padding: EdgeInsets.only(top: 10 * scaleFactor), // Scale top padding
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        MainText(
+                          text: text,
+                          fontSize: fontSize ?? 14 * scaleFactor, // Scale font size
+                          height: 1,
+                        ),
+                        MainText(
+                          text: text2,
+                          color: AppColors.teamColor,
+                          fontSize: fontSize2 ?? 14 * scaleFactor, // Scale font size
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              UseableContainer(
+                text: text3 ?? "Active",
+                height: 22* scaleFactor,
+                width: width ?? 57 * scaleFactor, // Scale width
+                color: color ?? AppColors.forwardColor,
+              ),
+            ],
+          ),
         ),
       ),
     );

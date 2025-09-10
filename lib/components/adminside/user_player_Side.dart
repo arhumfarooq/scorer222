@@ -93,8 +93,11 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/widgets/all_players_container.dart';
 
 class UserPlayerSide extends StatelessWidget {
@@ -123,6 +126,7 @@ class UserPlayerSide extends StatelessWidget {
 
           // Player Container
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
             fontSize2: 12 * widthScaleFactor,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -130,6 +134,8 @@ class UserPlayerSide extends StatelessWidget {
           ),
           SizedBox(height: 7 * heightScaleFactor),
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+
             text3: "Inactive",
             color: AppColors.orangeColor,
             width: 60 * widthScaleFactor,
@@ -140,6 +146,8 @@ class UserPlayerSide extends StatelessWidget {
           ),
           SizedBox(height: 7 * heightScaleFactor),
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+
             text3: "Pending",
             color: AppColors.redColor,
             width: 60 * widthScaleFactor,
@@ -150,6 +158,8 @@ class UserPlayerSide extends StatelessWidget {
           ),
           SizedBox(height: 7 * heightScaleFactor),
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+
             fontSize2: 12 * widthScaleFactor,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -157,6 +167,8 @@ class UserPlayerSide extends StatelessWidget {
           ),
           SizedBox(height: 7 * heightScaleFactor),
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+
             fontSize2: 12 * widthScaleFactor,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -164,6 +176,8 @@ class UserPlayerSide extends StatelessWidget {
           ),
           SizedBox(height: 7 * heightScaleFactor),
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+
             fontSize2: 12 * widthScaleFactor,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -171,6 +185,8 @@ class UserPlayerSide extends StatelessWidget {
           ),
           SizedBox(height: 7 * heightScaleFactor),
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+
             fontSize2: 12 * widthScaleFactor,
             text: "Alex Martinez",
             text2: "john.smith@company.com",

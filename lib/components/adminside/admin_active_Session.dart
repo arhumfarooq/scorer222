@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/constants/appcolors.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/widgets/custom_dashboard_container.dart';
 
 class AdminActiveSession extends StatelessWidget {
@@ -15,6 +18,7 @@ class AdminActiveSession extends StatelessWidget {
       children: [
         SizedBox(height: 12 * heightScaleFactor),
          CustomDashboardContainer(
+          onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
           heading: "Team Building Workshop",
           text1: "Phase 1",
           height: 10,
@@ -45,6 +49,9 @@ class AdminActiveSession extends StatelessWidget {
 
 
           CustomDashboardContainer(
+            // arrowshow: true,
+          onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
+
               color2: AppColors.yellowColor,
           color1: AppColors.redColor,
           heading: "Team Building Workshop",

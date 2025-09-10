@@ -497,9 +497,12 @@ class Game2Screen extends StatelessWidget {
                       text: "Enter Game Name", fontsize: 14 * scaleFactor),
                   SizedBox(height: 9 * scaleFactor),
                   LoginTextfield(
+                    ishow: true,
                       text: "Description",
                       height: 120 * scaleFactor,
                       fontsize: 14 * scaleFactor),
+                  SizedBox(height: 9 * scaleFactor),
+
                   BoldText(
                     text: "Number of Phases",
                     fontSize: 16 * scaleFactor,

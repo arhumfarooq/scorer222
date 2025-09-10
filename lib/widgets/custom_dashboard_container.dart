@@ -207,6 +207,7 @@ class CustomDashboardContainer extends StatelessWidget {
   final double?mainWidth;
   final double?mainHeight;
   final bool arrowshow;
+  final VoidCallback? onTap;
 
 
   const CustomDashboardContainer({
@@ -232,7 +233,7 @@ class CustomDashboardContainer extends StatelessWidget {
     this.height2,
     this.width,
     this.width2,
-    this.height,  this.isshow=false, this.smallImage, this.right, this.horizontal, this.mainWidth, this.mainHeight,  this.arrowshow=true,
+    this.height,  this.isshow=false, this.smallImage, this.right, this.horizontal, this.mainWidth, this.mainHeight,  this.arrowshow=true, this.onTap,
   });
 
   @override
@@ -391,9 +392,9 @@ class CustomDashboardContainer extends StatelessWidget {
           top: 36 * heightScaleFactor,
           right:right?? 9 * widthScaleFactor,
           child: AddOneContainer(
-              onTap:(){
-                        Get.toNamed(RouteName.overViewOptionScreen);
-                      },
+              onTap:
+                    onTap,
+                   
             svgPath: Appimages.forward,
             width: 13 * widthScaleFactor,
             height: 14 * heightScaleFactor,

@@ -208,6 +208,7 @@ import 'package:scorer/components/adminside/user_facilitate_side.dart';
 import 'package:scorer/components/adminside/user_player_Side.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/controllers/user_managment_controller.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 import 'package:scorer/widgets/add_one_Container.dart';
@@ -236,162 +237,161 @@ class UserManagementScreen extends StatelessWidget {
     const double baseWidth = 414.0;
     final double scaleFactor = screenWidth / baseWidth;
 
-    return Scaffold(
-      body: SafeArea(
-        child: GradientBackground(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 32 * scaleFactor,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Image.asset(
-                            Appimages.prince2,
-                            width: 62 * scaleFactor,
-                            height: 83 * scaleFactor,
-                          ),
-                          Row(
-                            children: [
-                              SettingContainer(icons: Icons.settings),
-                              SizedBox(width: 6 * scaleFactor),
-                              SettingContainer(
-                                icons: Icons.notifications,
-                                ishow: true,
-                              ),
-                              SizedBox(width: 6 * scaleFactor),
-                              AddOneContainer(icon: Icons.add),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(right: 21 * scaleFactor),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(""),
-                      CreateContainer(text: "Add"),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 32 * scaleFactor),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      BoldText(
-                        text: "Users Management",
-                        fontSize: 16 * scaleFactor,
-                        selectionColor: AppColors.blueColor,
-                      ),
-                      MainText(
-                        text: "Securely manage roles, permissions,\nand access.",
-                        fontSize: 14 * scaleFactor,
-                        height: 1.4,
-                      ),
-                      SizedBox(height: 23 * scaleFactor),
-                      Container(
-                        width: 336 * scaleFactor,
-                        height: 53 * scaleFactor,
-                        decoration: BoxDecoration(
-                          color: AppColors.whiteColor,
-                          border: Border.all(color: AppColors.searchBorder, width: 1 * scaleFactor),
-                          borderRadius: BorderRadius.circular(12 * scaleFactor),
-                        ),
-                        child: TextFormField(
-                          cursorColor: AppColors.blackColor,
-                          decoration: InputDecoration(
-                            hintText: "Search Players",
-                            prefixIcon: Padding(
-                              padding: EdgeInsets.only(left: 10 * scaleFactor),
-                              child: Icon(Icons.search, color: AppColors.forwardColor),
+    return GradientBackground(
+          child: SafeArea(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 32 * scaleFactor,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset(
+                              Appimages.prince2,
+                              width: 62 * scaleFactor,
+                              height: 83 * scaleFactor,
                             ),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12 * scaleFactor),
-                              borderSide: BorderSide.none,
+                            Row(
+                              children: [
+                                SettingContainer(icons: Icons.settings),
+                                SizedBox(width: 6 * scaleFactor),
+                                SettingContainer(
+                                  icons: Icons.notifications,
+                                  ishow: true,
+                                ),
+                                SizedBox(width: 6 * scaleFactor),
+                                AddOneContainer(icon: Icons.add,
+                                onTap: () => Get.toNamed(RouteName.createNewSessionHeader),
+                                ),
+                              ],
                             ),
-                            hintStyle: TextStyle(fontSize: 14 * scaleFactor),
-                          ),
+                          ],
                         ),
-                      ),
-                      SizedBox(height: 18 * scaleFactor),
-                      Obx(() {
-                        double totalWidth = screenWidth - (32 * 2 * scaleFactor);
-                        double tabWidth = totalWidth / tabs.length;
-                        double left = controller.selectedIndex.value * tabWidth;
-                        
-                        return Container(
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 21 * scaleFactor),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(""),
+                        CreateContainer(text: "Add"),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 32 * scaleFactor),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        BoldText(
+                          text: "Users Management",
+                          fontSize: 16 * scaleFactor,
+                          selectionColor: AppColors.blueColor,
+                        ),
+                        MainText(
+                          text: "Securely manage roles, permissions,\nand access.",
+                          fontSize: 14 * scaleFactor,
+                          height: 1.4,
+                        ),
+                        SizedBox(height: 23 * scaleFactor),
+                        Container(
+                          width: 336 * scaleFactor,
                           height: 53 * scaleFactor,
-                          width: totalWidth,
                           decoration: BoxDecoration(
-                            color: AppColors.settingColor,
+                            color: AppColors.whiteColor,
+                            border: Border.all(color: AppColors.searchBorder, width: 1 * scaleFactor),
                             borderRadius: BorderRadius.circular(12 * scaleFactor),
                           ),
-                          child: Stack(
-                            children: [
-                              // Highlight bar
-                              AnimatedPositioned(
-                                duration: const Duration(milliseconds: 250),
-                                curve: Curves.easeInOut,
-                                left: left + (4 * scaleFactor),
-                                top: 5.5 * scaleFactor,
-                                child: Container(
-                                  height: 42 * scaleFactor,
-                                  width: tabWidth - (8 * scaleFactor),
-                                  decoration: BoxDecoration(
-                                    color: AppColors.forwardColor,
-                                    borderRadius: BorderRadius.circular(12 * scaleFactor),
+                          child: TextFormField(
+                            cursorColor: AppColors.blackColor,
+                            decoration: InputDecoration(
+                              hintText: "Search Players",
+                              prefixIcon: Padding(
+                                padding: EdgeInsets.only(left: 10 * scaleFactor),
+                                child: Icon(Icons.search, color: AppColors.forwardColor),
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12 * scaleFactor),
+                                borderSide: BorderSide.none,
+                              ),
+                              hintStyle: TextStyle(fontSize: 14 * scaleFactor),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 18 * scaleFactor),
+                        Obx(() {
+                          double totalWidth = screenWidth - (32 * 2 * scaleFactor);
+                          double tabWidth = totalWidth / tabs.length;
+                          double left = controller.selectedIndex.value * tabWidth;
+                          
+                          return Container(
+                            height: 53 * scaleFactor,
+                            width: totalWidth,
+                            decoration: BoxDecoration(
+                              color: AppColors.settingColor,
+                              borderRadius: BorderRadius.circular(12 * scaleFactor),
+                            ),
+                            child: Stack(
+                              children: [
+                                // Highlight bar
+                                AnimatedPositioned(
+                                  duration: const Duration(milliseconds: 250),
+                                  curve: Curves.easeInOut,
+                                  left: left + (4 * scaleFactor),
+                                  top: 5.5 * scaleFactor,
+                                  child: Container(
+                                    height: 42 * scaleFactor,
+                                    width: tabWidth - (8 * scaleFactor),
+                                    decoration: BoxDecoration(
+                                      color: AppColors.forwardColor,
+                                      borderRadius: BorderRadius.circular(12 * scaleFactor),
+                                    ),
                                   ),
                                 ),
-                              ),
-                              // Tabs
-                              Row(
-                                children: List.generate(tabs.length, (index) {
-                                  return SizedBox(
-                                    width: tabWidth,
-                                    child: GestureDetector(
-                                      onTap: () => controller.changeTab(index),
-                                      child: Center(
-                                        child: Text(
-                                          tabs[index],
-                                          style: TextStyle(
-                                            fontSize: 14 * scaleFactor,
-                                            color: controller.selectedIndex.value == index
-                                                ? AppColors.whiteColor
-                                                : AppColors.languageColor,
+                                // Tabs
+                                Row(
+                                  children: List.generate(tabs.length, (index) {
+                                    return SizedBox(
+                                      width: tabWidth,
+                                      child: GestureDetector(
+                                        onTap: () => controller.changeTab(index),
+                                        child: Center(
+                                          child: Text(
+                                            tabs[index],
+                                            style: TextStyle(
+                                              fontSize: 14 * scaleFactor,
+                                              color: controller.selectedIndex.value == index
+                                                  ? AppColors.whiteColor
+                                                  : AppColors.languageColor,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  );
-                                }),
-                              )
-                            ],
-                          ),
-                        );
-                      }),
-                    ],
+                                    );
+                                  }),
+                                )
+                              ],
+                            ),
+                          );
+                        }),
+                      ],
+                    ),
                   ),
-                ),
-                Obx(
-                  () => screens[controller.selectedIndex.value],
-                ),
-              ],
+                  Obx(
+                    () => screens[controller.selectedIndex.value],
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
+        );
+}}

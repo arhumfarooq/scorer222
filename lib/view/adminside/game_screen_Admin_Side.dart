@@ -191,8 +191,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/approutes.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 import 'package:scorer/widgets/add_one_Container.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -215,8 +219,7 @@ class GameScreenAdminSide extends StatelessWidget {
     final double widthScaleFactor = screenWidth / baseWidth;
     final double heightScaleFactor = screenHeight / baseHeight;
 
-    return Scaffold(
-      body: GradientBackground(
+    return GradientBackground(
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -246,7 +249,11 @@ class GameScreenAdminSide extends StatelessWidget {
                                 ishow: true,
                               ),
                               SizedBox(width: 6 * widthScaleFactor),
-                              AddOneContainer(icon: Icons.add),
+                              AddOneContainer(icon: Icons.add,
+                              onTap:(){
+                                 Get.toNamed(RouteName.game2Screen);
+                              }
+                              ),
                             ],
                           ),
                         ],
@@ -315,8 +322,7 @@ class GameScreenAdminSide extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
 
