@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/all_players_container.dart';
@@ -243,58 +244,17 @@ class AdminPlayerScreen extends StatelessWidget {
         Positioned(
           right: 0,
           top: screenHeight * 0.2,
-          child: Container(
-            width: positionedBoxWidth,
-            height: positionedBoxHeight,
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(10),
-                bottomLeft: Radius.circular(10),
-              ),
-              color: AppColors.forwardColor,
-            ),
-            child: Padding(
-              padding: EdgeInsets.only(left: positionedTextPadding, top: screenHeight * 0.015),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  MainText(
-                    text: "Team Alpha",
-                    fontFamily: "gotham",
-                    fontSize: positionedTextFontSize,
-                    color: AppColors.whiteColor,
-                    height: 0,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Icon(
-                        Icons.keyboard_arrow_up_outlined,
-                        color: AppColors.arrowColor,
-                        size: positionedTextFontSize * 1.5,
-                      ),
-                      MainText(
-                        text: "2,890 pts  ",
-                        fontFamily: "gotham",
-                        fontSize: positionedTextFontSize,
-                        height: 0,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
+          child: TeamAlphaContainer(screenWidth: screenWidth, screenHeight: screenHeight),
         ),
+
+        /// Player Image
         Positioned(
-          top: screenHeight * 0.17,
-          left: screenWidth * 0.5,
-          child: Image.asset(
-            Appimages.man3,
-            width: positionedIconImageWidth,
-            height: positionedIconImageHeight,
-          ),
-        ),
+            top: screenHeight * 0.16,
+            left: screenWidth * 0.56,
+            child: Image.asset(Appimages.man3,
+                width: screenWidth * 0.16,
+                height: screenHeight * 0.14)),
+ 
       ],
     );
   }

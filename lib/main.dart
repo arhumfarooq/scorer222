@@ -12,6 +12,8 @@ import 'package:scorer/view/adminside/admin_create_new_session_Screen.dart';
 import 'package:scorer/view/adminside/admin_dashboard.dart';
 import 'package:scorer/view/adminside/admin_overview_option_screens.dart';
 import 'package:scorer/view/adminside/create_new_Session_Screen_admin_side.dart';
+import 'package:scorer/view/adminside/user_admin_detailed_scree.dart';
+import 'package:scorer/view/adminside/user_management_Screen.dart';
 
 
 void main() {
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context), // 👈 device_preview ke liye
       builder: DevicePreview.appBuilder, // 👈 device_preview ke liye
       getPages: AppRoutes.getAppRoutes(),
-      home:  AdminOverviewOptionScreens(),
+      home:  UserAdminDetailedScree(),
     );
   }
 }

@@ -27,147 +27,147 @@ class UserFacilitateDetailedScree extends StatelessWidget {
     final double heightScaleFactor = screenHeight / baseHeight;
     final double widthScaleFactor = screenWidth / baseWidth;
     return Scaffold(
-      body: GradientBackground(child: SafeArea(child: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 32),
-        child: SingleChildScrollView(
-          child: Column(
+      body: GradientBackground(child: SafeArea(child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 20,),
+        SizedBox(
+          height: 135, // 👈 image ki height ke barabar
+          child: Stack(
+            alignment: Alignment.center,
             children: [
-              SizedBox(height: 20,),
-          SizedBox(
-            height: 135, // 👈 image ki height ke barabar
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-          // Arrow thoda upar left
-          Positioned(
-            left: 0,
-            top: 20, // 👈 is value ko adjust karke arrow ka vertical position control karo
-            child: SvgPicture.asset(
-              Appimages.arrowback,
-              colorFilter: ColorFilter.mode(AppColors.forwardColor, BlendMode.srcIn),
-              width: 24 * widthScaleFactor,
-              height: 20 * heightScaleFactor,
-            ),
+        // Arrow thoda upar left
+        Positioned(
+          left: 0,
+          top: 20, // 👈 is value ko adjust karke arrow ka vertical position control karo
+          child: SvgPicture.asset(
+            Appimages.arrowback,
+            colorFilter: ColorFilter.mode(AppColors.forwardColor, BlendMode.srcIn),
+            width: 24 * widthScaleFactor,
+            height: 20 * heightScaleFactor,
           ),
-          
-          // Player image center
-          Center(
-            child: Image.asset(
-              Appimages.facil2,
-              width: 101,
-              height: 135,
-              fit: BoxFit.contain,
-            ),
+        ),
+        
+        // Player image center
+        Center(
+          child: Image.asset(
+            Appimages.facil2,
+            width: 101,
+            height: 135,
+            fit: BoxFit.contain,
           ),
-              ],
-            ),
-          ),
-          BoldText(text: "John Smith",fontSize: 16,selectionColor: AppColors.blueColor,),
-          MainText(text: "john.smith@company.com",fontSize: 14,height: 1.4,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MainText(text: "Last Login",fontSize: 14,color: AppColors.redColor,),
-              SizedBox(width: 3,),
-              Container(width: 9,height: 9,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.redColor
-              ),
-              ),
-              SizedBox(width: 3,),
-          
-               MainText(text: "Jan 15, 2025",fontSize: 14,color: AppColors.redColor,),
-              // SizedBox(width: 3,),
+        ),
             ],
           ),
-          UseableContainer(text: "Active",color: AppColors.forwardColor,),
-          SizedBox(height: 24,),
-          
-          Row(
-            children: [
-           Expanded(
-                        child: Container(
-                          height: activeInactiveBoxHeight,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: AppColors.greyColor, width: 1.7),
-                            borderRadius: BorderRadius.circular(24),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              BoldText(
-                                text: "47",
-                                selectionColor: AppColors.redColor,
-                                fontSize: screenWidth * 0.06,
-                              ),
-                              BoldText(textAlign: TextAlign.center,
-                                text: "Sessions\nLed",
-                                fontSize: screenWidth * 0.04,
-                                selectionColor: AppColors.blueColor,
-                              ),
-                            ],
-                          ),
+        ),
+        BoldText(text: "John Smith",fontSize: 16,selectionColor: AppColors.blueColor,),
+        MainText(text: "john.smith@company.com",fontSize: 14,height: 1.4,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            MainText(text: "Last Login",fontSize: 14,color: AppColors.redColor,),
+            SizedBox(width: 3,),
+            Container(width: 9,height: 9,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: AppColors.redColor
+            ),
+            ),
+            SizedBox(width: 3,),
+        
+             MainText(text: "Jan 15, 2025",fontSize: 14,color: AppColors.redColor,),
+            // SizedBox(width: 3,),
+          ],
+        ),
+        UseableContainer(text: "Active",color: AppColors.forwardColor,),
+        SizedBox(height: 24,),
+        
+        Row(
+          children: [
+         Expanded(
+                      child: Container(
+                        height: activeInactiveBoxHeight,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: AppColors.greyColor, width: 1.7),
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            BoldText(
+                              text: "47",
+                              selectionColor: AppColors.redColor,
+                              fontSize: screenWidth * 0.06,
+                            ),
+                            BoldText(textAlign: TextAlign.center,
+                              text: "Sessions\nLed",
+                              fontSize: screenWidth * 0.04,
+                              selectionColor: AppColors.blueColor,
+                            ),
+                          ],
                         ),
                       ),
-                      SizedBox(width: 10,),
-                       Expanded(
-                        child: Container(
-                          height: activeInactiveBoxHeight,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: AppColors.greyColor, width: 1.7),
-                            borderRadius: BorderRadius.circular(24),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              BoldText(
-                                text: "285",
-                                selectionColor: AppColors.forwardColor,
-                                fontSize: screenWidth * 0.06,
-                              ),
-                              BoldText(
-                                textAlign: TextAlign.center,
-                                text: "Manage\nPlayers",
-                                fontSize: screenWidth * 0.04,
-                                selectionColor: AppColors.blueColor,
-                              ),
-                            ],
-                          ),
+                    ),
+                    SizedBox(width: 10,),
+                     Expanded(
+                      child: Container(
+                        height: activeInactiveBoxHeight,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: AppColors.greyColor, width: 1.7),
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            BoldText(
+                              text: "285",
+                              selectionColor: AppColors.forwardColor,
+                              fontSize: screenWidth * 0.06,
+                            ),
+                            BoldText(
+                              textAlign: TextAlign.center,
+                              text: "Manage\nPlayers",
+                              fontSize: screenWidth * 0.04,
+                              selectionColor: AppColors.blueColor,
+                            ),
+                          ],
                         ),
                       ),
-                      SizedBox(width: 10,),
-                       Expanded(
-                        child: Container(
-                          height: activeInactiveBoxHeight,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: AppColors.greyColor, width: 1.7),
-                            borderRadius: BorderRadius.circular(24),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              BoldText(
-                                text: "96%",
-                                selectionColor: AppColors.redColor,
-                                fontSize: screenWidth * 0.06,
-                              ),
-                              BoldText(
-                                textAlign: TextAlign.center,
-                                text: "Success\nRate",
-                                fontSize: screenWidth * 0.04,
-                                selectionColor: AppColors.blueColor,
-                              ),
-                            ],
-                          ),
+                    ),
+                    SizedBox(width: 10,),
+                     Expanded(
+                      child: Container(
+                        height: activeInactiveBoxHeight,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: AppColors.greyColor, width: 1.7),
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            BoldText(
+                              text: "96%",
+                              selectionColor: AppColors.redColor,
+                              fontSize: screenWidth * 0.06,
+                            ),
+                            BoldText(
+                              textAlign: TextAlign.center,
+                              text: "Success\nRate",
+                              fontSize: screenWidth * 0.04,
+                              selectionColor: AppColors.blueColor,
+                            ),
+                          ],
                         ),
                       ),
-            ],
-          ),
-          SizedBox(height: 33,),
-          BoldText(text: "Account Information",selectionColor: AppColors.blueColor,fontSize: 16,),
-          SizedBox(height: 20,),
-          Container(
+                    ),
+          ],
+        ),
+        SizedBox(height: 33,),
+        BoldText(text: "Account Information",selectionColor: AppColors.blueColor,fontSize: 16,),
+        SizedBox(height: 20,),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Container(
             height: 177,
             width: 376,
             decoration: BoxDecoration(
@@ -245,59 +245,59 @@ class UserFacilitateDetailedScree extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20,),
-          BoldText(text: "Recent Sessionsa",selectionColor: AppColors.blueColor,fontSize: 16,),
-          // Column ke andar jahan tum last me container use kar rahe ho
-CustomDashboardContainer(
-  horizontal: 0,
-  mainWidth: 376,
-  right: -20,
-  mainHeight: 222,
-  color2: AppColors.forwardColor,
-  color1: AppColors.orangeColor,
-  heading: "Team Building Workshop",
-  text1: "Phase 2",
-  height: 9,
-  text2: "Active",
-  text6: "2nd Position",
-  smallImage: Appimages.Crown,
-  description:
-      "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
-  icon1: Icons.play_arrow,
-  text5: "12 Players",
-  isshow: true,
-),
-SizedBox(height: 12,),
-CustomDashboardContainer(
-  horizontal: 0,
-  mainWidth: 376,
-  right: -20,
-  mainHeight: 222,
-  color2: AppColors.yellowColor,
-  color1: AppColors.redColor,
-  heading: "Team Building Workshop",
-  text1: "Phase 3",
-  height: 9,
-  text2: "Paused",
-  text6: "3rd Position",
-  smallImage: Appimages.Crown,
-  description:
-      "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
-  icon1: Icons.play_arrow,
-  text5: "12 Players",
-  isshow: true,
-),
-SizedBox(height: 40,),
-LoginButton(text: "Delete Facilitator",image: Appimages.delete,ishow: true,color: AppColors.redColor,),
-SizedBox(height: 13,),
-LoginButton(text: "Edit Facilitator",icon: Icons.edit,ishow: true,color: AppColors.forwardColor,),
-SizedBox(height: 42,)
-
-
-
-          
-            ],
-          ),
+        ),
+        SizedBox(height: 20,),
+        BoldText(text: "Recent Sessionsa",selectionColor: AppColors.blueColor,fontSize: 16,),
+        // Column ke andar jahan tum last me container use kar rahe ho
+      CustomDashboardContainer(
+        // horizontal: 0,
+        mainWidth: 376,
+        right: 10,
+        mainHeight: 222,
+        color2: AppColors.forwardColor,
+        color1: AppColors.orangeColor,
+        heading: "Team Building Workshop",
+        text1: "Phase 2",
+        height: 9,
+        text2: "Active",
+        text6: "2nd Position",
+        smallImage: Appimages.Crown,
+        description:
+            "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
+        icon1: Icons.play_arrow,
+        text5: "12 Players",
+        isshow: true,
+      ),
+      SizedBox(height: 12,),
+      CustomDashboardContainer(
+        // horizontal: 0,
+        mainWidth: 376,
+        right: 10,
+        mainHeight: 222,
+        color2: AppColors.yellowColor,
+        color1: AppColors.redColor,
+        heading: "Team Building Workshop",
+        text1: "Phase 3",
+        height: 9,
+        text2: "Paused",
+        text6: "3rd Position",
+        smallImage: Appimages.Crown,
+        description:
+            "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
+        icon1: Icons.play_arrow,
+        text5: "12 Players",
+        isshow: true,
+      ),
+      SizedBox(height: 40,),
+      LoginButton(text: "Delete Facilitator",image: Appimages.delete,ishow: true,color: AppColors.redColor,),
+      SizedBox(height: 13,),
+      LoginButton(text: "Edit Facilitator",icon: Icons.edit,ishow: true,color: AppColors.forwardColor,),
+      SizedBox(height: 42,)
+      
+      
+      
+        
+          ],
         ),
       ))),
     );

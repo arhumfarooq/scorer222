@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:scorer/components/adminside/admin_Session_container.dart';
 import 'package:scorer/components/adminside/admin_realtime_monitoring_container.dart';
 import 'package:scorer/components/adminside/admin_team_progress.dart';
@@ -24,7 +25,7 @@ import 'package:scorer/widgets/useable_container.dart';
 import 'package:scorer/widgets/useable_textrow.dart';
 
 class AdminPhaseScreen extends StatelessWidget {
-  // final StageController controller = Get.put(StageController());
+  final StageController controller = Get.put(StageController());
   AdminPhaseScreen({super.key});
 
   @override
@@ -47,8 +48,33 @@ class AdminPhaseScreen extends StatelessWidget {
               CreateContainer(
                   text: "Current Phase", width: screenWidth * 0.3),
               SizedBox(height: verticalSpacing),
-              SvgPicture.asset(Appimages.time,
-                  width: screenWidth * 0.3, height: screenWidth * 0.3),
+             
+              // SizedBox(height: verticalSpacing),
+ Center(
+                child: CircularPercentIndicator(
+                  radius: 60.0, // circle ka size
+                  lineWidth: 5.0, // border ki thickness
+                  percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
+                  animation: true,
+                  animationDuration: 500,
+                  circularStrokeCap: CircularStrokeCap.round,
+                  backgroundColor: Colors.transparent,
+                  progressColor: AppColors.forwardColor,
+                  center: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+             BoldText(
+                  text: "12:32",
+                  fontSize: screenWidth * 0.06,
+                  selectionColor: AppColors.blueColor),
+              MainText(
+                  text: "Remaining",
+                  fontSize: screenWidth * 0.04,
+                  height: 1),
+          ],
+                  ),
+                ),
+              ),
               SizedBox(height: verticalSpacing),
 
               /// Example Content
@@ -191,25 +217,10 @@ SizedBox(height: 25,),
         ),
 
         /// Fixed Overlay Timer
-        Positioned(
-          top: screenHeight * 0.14,
-          left: screenWidth * 0.40,
-          child: Column(
-            children: [
-              BoldText(
-                  text: "12:32",
-                  fontSize: screenWidth * 0.06,
-                  selectionColor: AppColors.blueColor),
-              MainText(
-                  text: "Remaining",
-                  fontSize: screenWidth * 0.04,
-                  height: 1),
-            ],
-          ),
-        ),
+        
 
         /// Fixed Overlay "Team Alpha"
-        Positioned(
+       Positioned(
           right: 0,
           top: screenHeight * 0.2,
           child: TeamAlphaContainer(screenWidth: screenWidth, screenHeight: screenHeight),
@@ -218,10 +229,11 @@ SizedBox(height: 25,),
         /// Player Image
         Positioned(
             top: screenHeight * 0.16,
-            left: screenWidth * 0.5,
+            left: screenWidth * 0.56,
             child: Image.asset(Appimages.man3,
                 width: screenWidth * 0.16,
-                height: screenHeight * 0.12)),
+                height: screenHeight * 0.13)),
+ 
       ],
     );
   }

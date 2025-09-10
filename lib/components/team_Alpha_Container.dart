@@ -30,7 +30,7 @@ class TeamAlphaContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: screenWidth * 0.4,
-      height: screenHeight * 0.07,
+      height: screenHeight * 0.08,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(screenWidth * 0.03),
