@@ -87,12 +87,19 @@ class AdminOverviewOptionScreens extends StatelessWidget {
                           Row(
                             children: [
                               UseableContainer(
+                                width: 70,
+                                height: 20,
                                 text: "Phase 2",
                                 color: AppColors.orangeColor,
                                 fontSize: 11 * heightScaleFactor,
                               ),
                               SizedBox(width: 8 * widthScaleFactor),
                               UseableContainer(
+                                  width: 70,
+          //   width2:70 ,
+          //   height2: 22,
+          // height1:22 ,
+          height: 20,
                                 text: "Active",
                                 color: AppColors.forwardColor,
                                 fontSize: 11 * heightScaleFactor,

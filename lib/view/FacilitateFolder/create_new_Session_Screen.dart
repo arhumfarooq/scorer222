@@ -562,8 +562,8 @@ class CreateNewSessionScreen extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                        top: 28 * scaleFactor,
-                        left: 150 * scaleFactor,
+                        top: 29 * scaleFactor,
+                        left: MediaQuery.of(context).size.width>380?185: 140 ,
                         child: Container(
                           width: 100 * scaleFactor,
                           height: 37 * scaleFactor,
@@ -574,7 +574,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                           child: Center(
                             child: BoldText(
                               text: "Session",
-                              fontSize: 22 * scaleFactor,
+                              fontSize: 20 * scaleFactor,
                               selectionColor: AppColors.whiteColor,
                             ),
                           ),

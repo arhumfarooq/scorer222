@@ -453,12 +453,12 @@ class Game2Screen extends StatelessWidget {
                               clipBehavior: Clip.none,
                               children: [
                                 Positioned(
-                                  left: 175 * scaleFactor,
+                                     left: MediaQuery.of(context).size.width>380?220: 140 ,
                                   child: Container(
                                     width: 90 * scaleFactor,
                                     height: 37 * scaleFactor,
                                     padding: EdgeInsets.symmetric(
-                                        horizontal: 16 * scaleFactor,
+                                        horizontal: 13 * scaleFactor,
                                         vertical: 6 * scaleFactor),
                                     decoration: BoxDecoration(
                                       color: AppColors.forwardColor,
@@ -469,7 +469,7 @@ class Game2Screen extends StatelessWidget {
                                       child: BoldText(
                                         text: "Game",
                                         selectionColor: AppColors.whiteColor,
-                                        fontSize: 20 * scaleFactor,
+                                        fontSize: 18 * scaleFactor,
                                       ),
                                     ),
                                   ),

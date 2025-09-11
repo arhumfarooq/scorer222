@@ -51,7 +51,7 @@ class RoleTextContainer extends StatelessWidget {
         child: BoldText(
           text: "Role",
           selectionColor: AppColors.whiteColor,
-          fontSize: 24 * heightScaleFactor,
+          fontSize: 20 * heightScaleFactor,
         ),
       ),
     );

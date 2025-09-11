@@ -68,7 +68,7 @@ class ActiveSessionScreen extends StatelessWidget {
         // ),
          CustomDashboardContainer(
           onTap:()=> Get.toNamed(RouteName.overViewOptionScreen),
-
+width: 70,
           heading: "Team Building Workshop",
           text1: "Phase 1",
           height: 10,

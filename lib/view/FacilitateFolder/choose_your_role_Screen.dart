@@ -220,7 +220,8 @@ class ChooseYourRoleScreen extends StatelessWidget {
             children: [
               Positioned(
   top: screenHeight * 0.02,   // 2% from top
-  right: screenWidth * 0.18,  // 15% from right
+  // right: screenWidth * 0.18,  // 15% from right
+  right: 60,
   child: Transform.rotate(
     angle: -0.1,
     child: RoleTextContainer(),

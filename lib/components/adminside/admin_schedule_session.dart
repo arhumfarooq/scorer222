@@ -22,9 +22,13 @@ class AdminScheduleSession extends StatelessWidget {
         SizedBox(height: 12 * heightScaleFactor),
         CustomDashboardContainer(
           onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
-
+  width: 70,
+            // width2:70 ,
+            // height2: 22,
+          height1:22 ,
           // height: 0,
-          width2: 78,
+          height2: 20,
+          width2: 80,
           color2: AppColors.scheColor,
           heading: "Eranove Odyssey – Team A",
           text1: "Phase 2",
@@ -43,7 +47,10 @@ class AdminScheduleSession extends StatelessWidget {
         SizedBox(height: 12 * heightScaleFactor),
         CustomDashboardContainer(
           onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
-
+  width: 70,
+            // width2:70 ,
+            height2: 22,
+          height1:22 ,
           height: 10,
           ishow: false,
           width2: 78,

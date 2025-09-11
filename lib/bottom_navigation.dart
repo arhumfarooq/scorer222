@@ -472,6 +472,7 @@ import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/controllers/bottom_nav_controller.dart';
+import 'package:scorer/view/FacilitateFolder/aa.dart';
 import 'package:scorer/view/adminside/admin_create_new_session_Screen.dart';
 import 'package:scorer/view/adminside/admin_dashboard.dart';
 import 'package:scorer/view/adminside/game_screen_Admin_Side.dart';
@@ -502,59 +503,85 @@ class BottomNavigation extends StatelessWidget {
           extendBody: true,
           body: _pages[controller.selectedIndex.value],
           bottomNavigationBar: Container(
-            height: 120 * scaleFactor,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(Appimages.bottom1),
-                fit: BoxFit.fitWidth,
-                alignment: Alignment.bottomCenter,
-              ),
+              decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.bottomCenter,
+          end: Alignment.topCenter,
+          colors: [
+            Color(0xFFFFFFFF), // solid white top
+            Color(0x00FFFFFF), // fade to transparent
+          ],
+        ),
+      ),
+    
+            child: Container(
+              height: 120 * scaleFactor,
+              width: double.infinity,
+              decoration: BoxDecoration(
+              //  color: AppColors.whiteColor,
+                 gradient: LinearGradient(
+              begin: Alignment.bottomRight,
+              end: Alignment.topLeft,
+              colors: [
+                Color.fromRGBO(67, 177, 80, 0.2), // subtle green
+                Color.fromRGBO(168, 209, 236, 0.2), // subtle blue
+              ],
+              transform: GradientRotation(0.97), // ≈ 55.36deg in radians
             ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0 * scaleFactor),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  // Home Item
-                  _buildNavItem(
-                    context,
-                    icon: Appimages.house1,
-                    label: "Home",
-                    index: 0,
-                    scaleFactor: scaleFactor,
-                  ),
-
-                  // Create Item
-                  _buildCreateItem(
-                    context,
-                    icon: Appimages.buttonplus,
-                    label: "Create",
-                    index: 1,
-                    scaleFactor: scaleFactor,
-                  ),
-
-                  // Game Item
-                  _buildNavItem(
-                    context,
-                    icon: Appimages.game,
-                    label: "Game",
-                    index: 2,
-                    scaleFactor: scaleFactor,
-                  ),
-
-                  // Users Item
-                  _buildNavItem(
-                    context,
-                    icon: Appimages.group,
-                    label: "Users",
-                    index: 3,
-                    scaleFactor: scaleFactor,
-                  ),
-                ],
+               borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30),
+                topRight: Radius.circular(30)
+               )
+              ),
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0 * scaleFactor),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    // Home Item
+                    _buildNavItem(
+                      context,
+                      icon: Appimages.house1,
+                      label: "Home",
+                      index: 0,
+                      scaleFactor: scaleFactor,
+                    ),
+            
+                    // Create Item
+                    _buildCreateItem(
+                      context,
+                      icon: Appimages.buttonplus,
+                      label: "Create",
+                      index: 1,
+                      scaleFactor: scaleFactor,
+                    ),
+            
+                    // Game Item
+                    _buildNavItem(
+                      context,
+                      icon: Appimages.game,
+                      label: "Game",
+                      index: 2,
+                      scaleFactor: scaleFactor,
+                    ),
+            
+                    // Users Item
+                    _buildNavItem(
+                      context,
+                      icon: Appimages.group,
+                      label: "Users",
+                      index: 3,
+                      scaleFactor: scaleFactor,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
         ));
+  
+
+
   }
 
   Widget _buildNavItem(BuildContext context,

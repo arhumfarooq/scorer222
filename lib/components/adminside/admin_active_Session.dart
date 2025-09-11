@@ -18,6 +18,10 @@ class AdminActiveSession extends StatelessWidget {
       children: [
         SizedBox(height: 12 * heightScaleFactor),
          CustomDashboardContainer(
+          width: 70,
+            width2:70 ,
+            height2: 22,
+          height1:22 ,
           onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
           heading: "Team Building Workshop",
           text1: "Phase 1",
@@ -49,6 +53,10 @@ class AdminActiveSession extends StatelessWidget {
 
 
           CustomDashboardContainer(
+            width2:70 ,
+            height2: 22,
+               width: 70,
+          height1:22 ,
             // arrowshow: true,
           onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
 

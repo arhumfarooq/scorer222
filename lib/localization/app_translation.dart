@@ -80,7 +80,7 @@ class AppTranslations extends Translations {
   'remaining': "Remaining",
   'pause': "Pause",
   'next_phase': "Next Phase",
-   "active_players": "Active\nPlayers",
+   "active_players": "Active Players",
   "inactive_players": "Inactive\nPlayers",
   "all_players": "All Players",
   "filter": "Filter",

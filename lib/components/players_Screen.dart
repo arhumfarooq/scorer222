@@ -293,6 +293,7 @@ class PlayersScreen extends StatelessWidget {
                             fontSize: screenWidth * 0.06,
                           ),
                        BoldText(
+                        textAlign: TextAlign.center,
   text: "active_players".tr,
   fontSize: screenWidth * 0.04,
   selectionColor: AppColors.blueColor,
@@ -318,6 +319,8 @@ class PlayersScreen extends StatelessWidget {
                             fontSize: screenWidth * 0.06,
                           ),
                          BoldText(
+                        textAlign: TextAlign.center,
+                          
   text: "inactive_players".tr,
   fontSize: screenWidth * 0.04,
   selectionColor: AppColors.blueColor,

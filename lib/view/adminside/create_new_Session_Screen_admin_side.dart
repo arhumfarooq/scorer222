@@ -211,6 +211,163 @@
 //     );
 //   }
 // }
+// import 'package:flutter/material.dart';
+// import 'package:flutter_svg/svg.dart';
+// import 'package:scorer/constants/appcolors.dart';
+// import 'package:scorer/constants/appimages.dart';
+// import 'package:scorer/view/FacilitateFolder/aa.dart';
+// import 'package:scorer/widgets/bold_text.dart';
+// import 'package:scorer/widgets/login_button.dart';
+// import 'package:scorer/widgets/login_textfield.dart';
+
+// class CreateNewSessionHeader extends StatelessWidget {
+//   const CreateNewSessionHeader({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     final Size screenSize = MediaQuery.of(context).size;
+//     final double screenWidth = screenSize.width;
+//     final double screenHeight = screenSize.height;
+
+//     // Define a base width for scaling, assuming a typical phone screen width of 375.
+//     const double baseWidth = 375.0;
+//     final double scaleFactor = screenWidth / baseWidth;
+
+//     return Scaffold(
+//       body: GradientBackground(
+//         child: SafeArea(
+//           child: Padding(
+//             padding: EdgeInsets.symmetric(horizontal: 30 * scaleFactor),
+//             child: Column(
+//               children: [
+//                 SizedBox(height: 20 * scaleFactor),
+//  SizedBox(
+//                     height: 50 * scaleFactor,
+//                     child: Row(
+//                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                       children: [
+//                         SvgPicture.asset(
+//                           Appimages.arrowback,
+//                           colorFilter: ColorFilter.mode(
+//                               AppColors.forwardColor, BlendMode.srcIn),
+//                           width: 24 * scaleFactor,
+//                           height: 20 * scaleFactor,
+//                         ),
+//                         Expanded(
+//                           child: Center(
+//                             child: Stack(
+//                               alignment: Alignment.center,
+//                               clipBehavior: Clip.none,
+//                               children: [
+//                                 Positioned(
+//                                   left: 145,
+//                                   child: Container(
+//                                     width: 90 * scaleFactor,
+//                                     height: 37 * scaleFactor,
+//                                     padding: EdgeInsets.symmetric(
+//                                         horizontal: 16 * scaleFactor,
+//                                         vertical: 6 * scaleFactor),
+//                                     decoration: BoxDecoration(
+//                                       color: AppColors.forwardColor,
+//                                       borderRadius:
+//                                           BorderRadius.circular(20 * scaleFactor),
+//                                     ),
+//                                     child: Center(
+//                                       child: BoldText(
+//                                         text: "Player",
+//                                         selectionColor: AppColors.whiteColor,
+//                                         fontSize: 18 * scaleFactor,
+//                                       ),
+//                                     ),
+//                                   ),
+//                                 ),
+//                                 Positioned(
+//                                   left: 65 * scaleFactor,
+//                                   child: BoldText(
+//                                     text: "Add New",
+//                                     fontSize: 24 * scaleFactor,
+//                                     selectionColor: AppColors.blueColor,
+//                                   ),
+//                                 ),
+//                               ],
+//                             ),
+//                           ),
+//                         ),
+//                       ],
+//                     ),
+//                   ),
+//                 Image.asset(
+//                   Appimages.group,
+//                   width: 208 * scaleFactor,
+//                   height: 181 * scaleFactor,
+//                 ),
+//                 SizedBox(height: 10 * scaleFactor),
+//                 LoginTextfield(
+//                   text: "Enter Player Name",
+//                   fontsize: 18 * scaleFactor,
+//                 ),
+//                 SizedBox(height: 9 * scaleFactor),
+//                 LoginTextfield(
+//                   text: "Enter Player Email Address",
+//                   fontsize: 18 * scaleFactor,
+//                 ),
+//                 SizedBox(height: 9 * scaleFactor),
+//                 Container(
+//                   padding: EdgeInsets.symmetric(horizontal: 10 * scaleFactor),
+//                   height: 70 * scaleFactor,
+//                   width: 337 * scaleFactor,
+//                   decoration: BoxDecoration(
+//                     borderRadius: BorderRadius.circular(25 * scaleFactor),
+//                     border: Border.all(
+//                       color: AppColors.selectLangugaeColor.withOpacity(0.1),
+//                       width: 2 * scaleFactor,
+//                     ),
+//                   ),
+//                   child: Row(
+//                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                     children: [
+//                       BoldText(
+//                         text: "Role",
+//                         fontSize: 18 * scaleFactor,
+//                       ),
+//                       Row(
+//                         children: [
+//                           BoldText(
+//                             text: "Facilitator",
+//                             selectionColor: AppColors.blueColor,
+//                             fontSize: 16 * scaleFactor,
+//                           ),
+//                           Icon(
+//                             Icons.keyboard_arrow_down_rounded,
+//                             color: AppColors.forwardColor,
+//                             size: 30 * scaleFactor,
+//                           ),
+//                         ],
+//                       ),
+//                     ],
+//                   ),
+//                 ),
+//                 SizedBox(height: 40 * scaleFactor),
+//                 LoginButton(
+//                   text: "Save",
+//                   ishow: true,
+//                   image: Appimages.save,
+//                 ),
+//                 SizedBox(height: 13 * scaleFactor),
+//                 LoginButton(
+//                   text: "Cancel",
+//                   color: AppColors.forwardColor,
+//                 ),
+//                 Spacer()
+//               ],
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -227,199 +384,169 @@ class CreateNewSessionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
     final double screenWidth = screenSize.width;
-    final double screenHeight = screenSize.height;
 
-    // Define a base width for scaling, assuming a typical phone screen width of 375.
+    // Base width for scaling
     const double baseWidth = 375.0;
     final double scaleFactor = screenWidth / baseWidth;
 
     return Scaffold(
+      resizeToAvoidBottomInset: true, // 👈 keyboard ke liye zaroori
       body: GradientBackground(
         child: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30 * scaleFactor),
-            child: Column(
-              children: [
-                SizedBox(height: 20 * scaleFactor),
-//                 SizedBox(
-//                   height: 50 * scaleFactor,
-//                   child: Stack(
-//                     alignment: Alignment.center,
-//                     children: [
-//                       Align(
-//                         alignment: Alignment.centerLeft,
-//                         child: SvgPicture.asset(
-//                           Appimages.arrowback,
-//                           colorFilter: ColorFilter.mode(AppColors.forwardColor, BlendMode.srcIn),
-//                           width: 24 * scaleFactor,
-//                           height: 20 * scaleFactor,
-//                         ),
-//                       ),
-//                       Center(
-//                         child: Row(
-//                           mainAxisAlignment: MainAxisAlignment.center,
-//                           children: [
-//                             BoldText(
-//                               text: "Add Nev",
-//                               selectionColor: AppColors.blueColor,
-//                               fontSize: 24 * scaleFactor,
-//                             ),
-//                            Container(
-//   width: 100 * scaleFactor,
-//   height: 37 * scaleFactor,
-//   decoration: BoxDecoration(
-//     color: AppColors.forwardColor,
-//     borderRadius: BorderRadius.circular(80 * scaleFactor),
-//   ),
-//   child: Row(
-//     children: [
-//       // Left aligned "v"
-//       BoldText(
-//         text: "v",
-//         selectionColor: AppColors.blueColor,
-//         fontSize: 24 * scaleFactor,
-//       ),
-
-//       // Center aligned "Session"
-//       Expanded(
-//         child: Center(
-//           child: BoldText(
-//             text: "Session",
-//             fontSize: 18 * scaleFactor,
-//             selectionColor: AppColors.whiteColor,
-//           ),
-//         ),
-//       ),
-//     ],
-//   ),
-// )
-
-//                           ],
-//                         ),
-//                       ),
-//                     ],
-//                   ),
-//                 ),
- SizedBox(
-                    height: 50 * scaleFactor,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              return SingleChildScrollView(
+                padding: EdgeInsets.symmetric(horizontal: 30 * scaleFactor),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minHeight: constraints.maxHeight, // 👈 full height tak stretch karega
+                  ),
+                  child: IntrinsicHeight(
+                    child: Column(
                       children: [
-                        SvgPicture.asset(
-                          Appimages.arrowback,
-                          colorFilter: ColorFilter.mode(
-                              AppColors.forwardColor, BlendMode.srcIn),
-                          width: 24 * scaleFactor,
-                          height: 20 * scaleFactor,
-                        ),
-                        Expanded(
-                          child: Center(
-                            child: Stack(
-                              alignment: Alignment.center,
-                              clipBehavior: Clip.none,
-                              children: [
-                                Positioned(
-                                  left: 169 * scaleFactor,
-                                  child: Container(
-                                    width: 90 * scaleFactor,
-                                    height: 37 * scaleFactor,
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: 16 * scaleFactor,
-                                        vertical: 6 * scaleFactor),
-                                    decoration: BoxDecoration(
-                                      color: AppColors.forwardColor,
-                                      borderRadius:
-                                          BorderRadius.circular(20 * scaleFactor),
-                                    ),
-                                    child: Center(
-                                      child: BoldText(
-                                        text: "Player",
-                                        selectionColor: AppColors.whiteColor,
-                                        fontSize: 18 * scaleFactor,
+                        SizedBox(height: 20 * scaleFactor),
+
+                        // Header Row
+                        SizedBox(
+                          height: 50 * scaleFactor,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SvgPicture.asset(
+                                Appimages.arrowback,
+                                colorFilter: ColorFilter.mode(
+                                    AppColors.forwardColor, BlendMode.srcIn),
+                                width: 24 * scaleFactor,
+                                height: 20 * scaleFactor,
+                              ),
+                              Expanded(
+                                child: Center(
+                                  child: Stack(
+                                    alignment: Alignment.center,
+                                    clipBehavior: Clip.none,
+                                    children: [
+                                      Positioned(
+                                        left: 145,
+                                        child: Container(
+                                          width: 90 * scaleFactor,
+                                          height: 37 * scaleFactor,
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 16 * scaleFactor,
+                                              vertical: 6 * scaleFactor),
+                                          decoration: BoxDecoration(
+                                            color: AppColors.forwardColor,
+                                            borderRadius: BorderRadius.circular(
+                                                20 * scaleFactor),
+                                          ),
+                                          child: Center(
+                                            child: BoldText(
+                                              text: "Player",
+                                              selectionColor:
+                                                  AppColors.whiteColor,
+                                              fontSize: 18 * scaleFactor,
+                                            ),
+                                          ),
+                                        ),
                                       ),
-                                    ),
+                                      Positioned(
+                                        left: 65 * scaleFactor,
+                                        child: BoldText(
+                                          text: "Add New",
+                                          fontSize: 24 * scaleFactor,
+                                          selectionColor: AppColors.blueColor,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                Positioned(
-                                  left: 65 * scaleFactor,
-                                  child: BoldText(
-                                    text: "Add New",
-                                    fontSize: 24 * scaleFactor,
-                                    selectionColor: AppColors.blueColor,
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
+
+                        // Image
+                        Image.asset(
+                          Appimages.group,
+                          width: 208 * scaleFactor,
+                          height: 181 * scaleFactor,
+                        ),
+
+                        SizedBox(height: 10 * scaleFactor),
+
+                        // Textfields
+                        LoginTextfield(
+                          text: "Enter Player Name",
+                          fontsize: 18 * scaleFactor,
+                        ),
+                        SizedBox(height: 9 * scaleFactor),
+                        LoginTextfield(
+                          text: "Enter Player Email Address",
+                          fontsize: 18 * scaleFactor,
+                        ),
+                        SizedBox(height: 9 * scaleFactor),
+
+                        // Role dropdown UI
+                        Container(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 10 * scaleFactor),
+                          height: 70 * scaleFactor,
+                          width: 337 * scaleFactor,
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(25 * scaleFactor),
+                            border: Border.all(
+                              color: AppColors.selectLangugaeColor
+                                  .withOpacity(0.1),
+                              width: 2 * scaleFactor,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              BoldText(
+                                text: "Role",
+                                fontSize: 18 * scaleFactor,
+                              ),
+                              Row(
+                                children: [
+                                  BoldText(
+                                    text: "Facilitator",
+                                    selectionColor: AppColors.blueColor,
+                                    fontSize: 16 * scaleFactor,
+                                  ),
+                                  Icon(
+                                    Icons.keyboard_arrow_down_rounded,
+                                    color: AppColors.forwardColor,
+                                    size: 30 * scaleFactor,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(height: 40 * scaleFactor),
+
+                        // Buttons
+                        LoginButton(
+                          text: "Save",
+                          ishow: true,
+                          image: Appimages.save,
+                        ),
+                        SizedBox(height: 13 * scaleFactor),
+                        LoginButton(
+                          text: "Cancel",
+                          color: AppColors.forwardColor,
+                        ),
+
+                        // 👇 Spacer ab safe hai (overflow nahi hoga)
+                        Spacer(),
                       ],
                     ),
                   ),
-                Image.asset(
-                  Appimages.group,
-                  width: 208 * scaleFactor,
-                  height: 181 * scaleFactor,
                 ),
-                SizedBox(height: 10 * scaleFactor),
-                LoginTextfield(
-                  text: "Enter Player Name",
-                  fontsize: 18 * scaleFactor,
-                ),
-                SizedBox(height: 9 * scaleFactor),
-                LoginTextfield(
-                  text: "Enter Player Email Address",
-                  fontsize: 18 * scaleFactor,
-                ),
-                SizedBox(height: 9 * scaleFactor),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10 * scaleFactor),
-                  height: 70 * scaleFactor,
-                  width: 337 * scaleFactor,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25 * scaleFactor),
-                    border: Border.all(
-                      color: AppColors.selectLangugaeColor.withOpacity(0.1),
-                      width: 2 * scaleFactor,
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      BoldText(
-                        text: "Role",
-                        fontSize: 18 * scaleFactor,
-                      ),
-                      Row(
-                        children: [
-                          BoldText(
-                            text: "Facilitator",
-                            selectionColor: AppColors.blueColor,
-                            fontSize: 16 * scaleFactor,
-                          ),
-                          Icon(
-                            Icons.keyboard_arrow_down_rounded,
-                            color: AppColors.forwardColor,
-                            size: 30 * scaleFactor,
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 40 * scaleFactor),
-                LoginButton(
-                  text: "Save",
-                  ishow: true,
-                  image: Appimages.save,
-                ),
-                SizedBox(height: 13 * scaleFactor),
-                LoginButton(
-                  text: "Cancel",
-                  color: AppColors.forwardColor,
-                ),
-                Spacer()
-              ],
-            ),
+              );
+            },
           ),
         ),
       ),
