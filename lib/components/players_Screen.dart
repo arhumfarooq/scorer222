@@ -222,6 +222,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -291,11 +292,11 @@ class PlayersScreen extends StatelessWidget {
                             selectionColor: AppColors.forwardColor,
                             fontSize: screenWidth * 0.06,
                           ),
-                          BoldText(
-                            text: "Active\nPlayers",
-                            fontSize: screenWidth * 0.04,
-                            selectionColor: AppColors.blueColor,
-                          ),
+                       BoldText(
+  text: "active_players".tr,
+  fontSize: screenWidth * 0.04,
+  selectionColor: AppColors.blueColor,
+),
                         ],
                       ),
                     ),
@@ -316,11 +317,11 @@ class PlayersScreen extends StatelessWidget {
                             selectionColor: AppColors.redColor,
                             fontSize: screenWidth * 0.06,
                           ),
-                          BoldText(
-                            text: "Inactive\nPlayers",
-                            fontSize: screenWidth * 0.04,
-                            selectionColor: AppColors.blueColor,
-                          ),
+                         BoldText(
+  text: "inactive_players".tr,
+  fontSize: screenWidth * 0.04,
+  selectionColor: AppColors.blueColor,
+),
                         ],
                       ),
                     ),
@@ -337,20 +338,20 @@ class PlayersScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      BoldText(
-                        text: "All Players",
-                        fontSize: screenWidth * 0.04,
-                        selectionColor: AppColors.blueColor,
-                      ),
+                     BoldText(
+  text: "all_players".tr,
+  fontSize: screenWidth * 0.04,
+  selectionColor: AppColors.blueColor,
+),
                       Row(
                         children: [
                           SvgPicture.asset(Appimages.filter),
                           SizedBox(width: screenWidth * 0.015),
                           BoldText(
-                            text: "Filter",
-                            fontSize: screenWidth * 0.04,
-                            selectionColor: AppColors.blueColor,
-                          ),
+  text: "filter".tr,
+  fontSize: screenWidth * 0.04,
+  selectionColor: AppColors.blueColor,
+),
                         ],
                       )
                     ],
@@ -361,7 +362,7 @@ class PlayersScreen extends StatelessWidget {
                   CreateContainer(
                     right: screenWidth * 0.08,
                     width: screenWidth * 0.25,
-                    text: "Team Alpha",
+                    text: "team_alpha".tr
                   ),
                   SizedBox(height: allPlayersContainerSpacing * 2),
                   AllPlayersContainer(text: "Sarah Johnson", text2: "Joined 2:35 PM", image: Appimages.player2),
@@ -372,7 +373,7 @@ class PlayersScreen extends StatelessWidget {
                     containerColor: AppColors.lightPurpleColor,
                     right: screenWidth * 0.08,
                     width: screenWidth * 0.25,
-                    text: "Team Beta",
+                    text: "team_beta".tr
                   ),
                   SizedBox(height: allPlayersContainerSpacing * 2),
                   AllPlayersContainer(text: "Sarah Johnson", text2: "Joined 2:35 PM", image: Appimages.prince2),
@@ -383,7 +384,7 @@ class PlayersScreen extends StatelessWidget {
                     containerColor: AppColors.lightOrangeColor.withOpacity(0.5),
                     right: screenWidth * 0.08,
                     width: screenWidth * 0.25,
-                    text: "Team Gamma",
+                    text: "team_gamma".tr
                   ),
                   SizedBox(height: allPlayersContainerSpacing * 2),
                   AllPlayersContainer(text: "Alex Martinez", text2: "Joined 2:35 PM", image: Appimages.play3),
@@ -391,7 +392,7 @@ class PlayersScreen extends StatelessWidget {
                   CreateContainer(
                     right: screenWidth * 0.08,
                     width: screenWidth * 0.25,
-                    text: "Team Alpha",
+                    text: "team_alpha".tr
                   ),
                   // SizedBox(height: ,)
                   SizedBox(height: allPlayersContainerSpacing * 2),
@@ -411,27 +412,27 @@ class PlayersScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          BoldText(
-                            text: "Team Distribution",
-                            selectionColor: AppColors.blueColor,
-                            fontSize: screenWidth * 0.04,
-                          ),
+                         BoldText(
+  text: "team_distribution".tr,
+  selectionColor: AppColors.blueColor,
+  fontSize: screenWidth * 0.04,
+),
                           SizedBox(height: screenHeight * 0.005),
                           UseableTextrow(
                             color: AppColors.forwardColor,
-                            text: "Team Beta",
+                            text:"team_beta".tr,
                             text1: "4 Players",
                           ),
                           SizedBox(height: screenHeight * 0.01),
                           UseableTextrow(
                             color: AppColors.forwardColor2,
-                            text: "Team Gamma",
+                            text: "team_gamma".tr,
                             text1: "4 Players",
                           ),
                           SizedBox(height: screenHeight * 0.01),
                           UseableTextrow(
                             color: AppColors.forwardColor3,
-                            text: "Team Alpha",
+                            text: "team_alpha".tr,
                             text1: "4 Players",
                           ),
                         ],
@@ -439,11 +440,11 @@ class PlayersScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: verticalSpacing),
-                  Center(child: LoginButton(text: "Add Player", image: Appimages.personadd, ishow: true)),
+                  Center(child: LoginButton(text: "add_player".tr, image: Appimages.personadd, ishow: true)),
                   SizedBox(height: allPlayersContainerSpacing),
                   Center(
                     child: LoginButton(
-                      text: "View Responses",
+                      text: "view_responses".tr,
                       image: Appimages.eye,
                       color: AppColors.forwardColor,
                       ishow: true,
@@ -452,7 +453,7 @@ class PlayersScreen extends StatelessWidget {
                   SizedBox(height: allPlayersContainerSpacing),
                   Center(
                     child: LoginButton(
-                      text: "Send Alert",
+                      text: "send_alert".tr,
                       image: Appimages.noti,
                       color: AppColors.redColor,
                       ishow: true,

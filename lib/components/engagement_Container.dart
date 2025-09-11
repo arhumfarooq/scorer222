@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -65,17 +66,18 @@ class EngagementContainer extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 6 * widthScaleFactor),
-                       Expanded(
-      child: FittedBox(
-        fit: BoxFit.scaleDown, // text ko shrink karega agar jagah kam ho
-        alignment: Alignment.centerLeft, // left align rakhega
-        child: BoldText(
-          text: "Active Players",
-          selectionColor: AppColors.blueColor,
-          fontSize: 16 * heightScaleFactor,
-        ),
-      ),
+                      
+Expanded(
+  child: FittedBox(
+    fit: BoxFit.scaleDown,
+    alignment: Alignment.centerLeft,
+    child: BoldText(
+      text: "active_players".tr,
+      selectionColor: AppColors.blueColor,
+      fontSize: 16 * heightScaleFactor,
     ),
+  ),
+),
     
                       ],
                     ),
@@ -98,17 +100,17 @@ class EngagementContainer extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 5 * widthScaleFactor),
-                        Expanded(
-                          child: FittedBox(
-                            fit: BoxFit.scaleDown, // text ko shrink karega agar jagah kam ho
-        alignment: Alignment.centerLeft,
-                            child: BoldText(
-                              text: "Engagement",
-                              selectionColor: AppColors.blueColor,
-                              fontSize: 16 * heightScaleFactor,
-                            ),
-                          ),
-                        )
+                       Expanded(
+  child: FittedBox(
+    fit: BoxFit.scaleDown,
+    alignment: Alignment.centerLeft,
+    child: BoldText(
+      text: "engagement".tr,
+      selectionColor: AppColors.blueColor,
+      fontSize: 16 * heightScaleFactor,
+    ),
+  ),
+),
                       ],
                     )
                   ],

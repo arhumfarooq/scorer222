@@ -121,6 +121,7 @@ import 'package:scorer/localization/translation_Service.dart';
 import 'package:scorer/view/FacilitateFolder/facilitator_dashboard.dart';
 import 'package:scorer/view/FacilitateFolder/splash_screen.dart';
 import 'package:scorer/view/FacilitateFolder/start_screen.dart';
+import 'package:scorer/view/FacilitateFolder/view_responses_Screen.dart';
 import 'package:scorer/view/adminside/admin_create_new_session_Screen.dart';
 import 'package:scorer/view/adminside/admin_dashboard.dart';
 import 'package:scorer/view/adminside/admin_overview_option_screens.dart';
@@ -160,7 +161,7 @@ class MyApp extends StatelessWidget {
       locale: locale,
       getPages: AppRoutes.getAppRoutes(),
       fallbackLocale: const Locale('en', 'US'),
-      home:   StartScreen(),
+      home:   ViewResponsesScreen(),
     );
   }
 }

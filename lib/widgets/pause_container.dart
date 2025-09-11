@@ -176,6 +176,7 @@ class PauseContainer extends StatelessWidget {
   final double? height;
   final double? width;
   final VoidCallback? onTap;
+  final double?fontSize;
 
   const PauseContainer({
     super.key,
@@ -185,7 +186,7 @@ class PauseContainer extends StatelessWidget {
     this.text = "",
     this.height,
     this.width,
-    this.onTap,
+    this.onTap, this.fontSize,
   });
 
   @override
@@ -223,12 +224,12 @@ class PauseContainer extends StatelessWidget {
                 color: AppColors.whiteColor,
                 size: 20 * heightScaleFactor,
               ),
-              SizedBox(width: 8 * widthScaleFactor),
+              SizedBox(width: 5 * widthScaleFactor),
             ],
             MainText(
               text: text,
               color: AppColors.whiteColor,
-              fontSize: 14 * heightScaleFactor,
+              fontSize:fontSize?? 14 * heightScaleFactor,
             ),
           ],
         ),

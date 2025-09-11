@@ -130,24 +130,42 @@ class StartScreen2 extends StatelessWidget {
                     // SizedBox(height: screenHeight * 0.1),
              
                     
+                    // Center(
+                    //   child: BoldText(
+                    //     selectionColor: AppColors.blueColor,
+                    //     text: "A Role for Everyone",
+                    //     textAlign: TextAlign.center,
+                    //     fontSize: titleFontSize,
+                    //   ),
+                    // ),
+                    // SizedBox(height: screenHeight * 0.01),
+                    // Center(
+                    //   child: MainText(
+                    //     text:
+                    //         "Whether you’re an Administrator setting up sessions, a Facilitator managing the game, or a Player competing for the top spot, Score’Master+ is designed to fit your role perfectly.",
+                    //     textAlign: TextAlign.center,
+                    //     fontSize: descriptionFontSize,
+                    //     height: 1.24,
+                    //   ),
+                    // ),
                     Center(
-                      child: BoldText(
-                        selectionColor: AppColors.blueColor,
-                        text: "A Role for Everyone",
-                        textAlign: TextAlign.center,
-                        fontSize: titleFontSize,
-                      ),
-                    ),
-                    SizedBox(height: screenHeight * 0.01),
-                    Center(
-                      child: MainText(
-                        text:
-                            "Whether you’re an Administrator setting up sessions, a Facilitator managing the game, or a Player competing for the top spot, Score’Master+ is designed to fit your role perfectly.",
-                        textAlign: TextAlign.center,
-                        fontSize: descriptionFontSize,
-                        height: 1.24,
-                      ),
-                    ),
+  child: BoldText(
+    selectionColor: AppColors.blueColor,
+    text: "role_title".tr,   // 👈 key banayi
+    textAlign: TextAlign.center,
+    fontSize: titleFontSize,
+  ),
+),
+SizedBox(height: screenHeight * 0.01),
+Center(
+  child: MainText(
+    text: "role_description".tr,   // 👈 key banayi
+    textAlign: TextAlign.center,
+    fontSize: descriptionFontSize,
+    height: 1.24,
+  ),
+),
+
                     SizedBox(height: screenHeight * 0.03),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

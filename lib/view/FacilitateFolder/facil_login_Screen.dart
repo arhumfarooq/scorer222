@@ -121,12 +121,12 @@ class FacilLoginScreen extends StatelessWidget {
                     height: 20 * heightScaleFactor,
                   ),
                 ),
-                Center(
-                  child: BoldText(
-                    text: "Facilitator Login",
-                    selectionColor: AppColors.blueColor,
-                  ),
-                ),
+              Center(
+  child: BoldText(
+    text: "facilitator_login".tr,
+    selectionColor: AppColors.blueColor,
+  ),
+),
               ],
             ),
           ),
@@ -136,11 +136,11 @@ class FacilLoginScreen extends StatelessWidget {
                 height: 180 * heightScaleFactor,
               ),
               SizedBox(height: 23 * heightScaleFactor),
-              LoginTextfield(text: "Enter Full Name"),
-              SizedBox(height: 9 * heightScaleFactor),
-              LoginTextfield(text: "Enter Email Address"),
-              SizedBox(height: 9 * heightScaleFactor),
-              LoginTextfield(text: "Enter Password"),
+             LoginTextfield(text: "enter_full_name".tr),
+SizedBox(height: 9 * heightScaleFactor),
+LoginTextfield(text: "enter_email".tr),
+SizedBox(height: 9 * heightScaleFactor),
+LoginTextfield(text: "enter_password".tr),
               SizedBox(height: 9 * heightScaleFactor),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -160,25 +160,25 @@ class FacilLoginScreen extends StatelessWidget {
                       ),
                       SizedBox(width: 6 * widthScaleFactor),
                       MainText(
-                        text: "Remember me",
-                        fontSize: 14 * heightScaleFactor,
-                        color: AppColors.languageTextColor,
-                      ),
+  text: "remember_me".tr,
+  fontSize: 14 * heightScaleFactor,
+  color: AppColors.languageTextColor,
+),
                     ],
                   ),
-                  MainText(
-                    text: "Forget Password?",
-                    fontFamily: "gotham",
-                    fontSize: 14 * heightScaleFactor,
-                    color: AppColors.selectLangugaeColor,
-                  ),
+                 MainText(
+  text: "forget_password".tr,
+  fontFamily: "gotham",
+  fontSize: 14 * heightScaleFactor,
+  color: AppColors.selectLangugaeColor,
+),
                 ],
               ),
               SizedBox(height: 30 * heightScaleFactor),
               LoginButton(
                 fontSize: 20,
                 
-                text: "Login",  onTap:(){
+               text: "login".tr, onTap:(){
                         Get.toNamed(RouteName.facilitatorDashboard);
                       },),
               SizedBox(height: 18 * heightScaleFactor),

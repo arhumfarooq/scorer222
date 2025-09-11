@@ -183,6 +183,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -294,7 +295,7 @@ class PlayersContainers extends StatelessWidget {
             else
               Flexible(
                 child: UseableContainer(
-                  text: text3 ?? "Submitted",
+                  text: text3 ?? "submitted".tr,
                   width: width1 ?? containerWidth * 0.23,
                   color: color ?? AppColors.forwardColor,
                 ),

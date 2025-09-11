@@ -175,6 +175,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
@@ -228,7 +229,7 @@ class StagesRow extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: cardHeight * 0.07),
-                  BoldText(text: "Stage 1", fontSize: cardWidth * 0.16, selectionColor: AppColors.whiteColor),
+                  BoldText(text: "stage1".tr, fontSize: cardWidth * 0.16, selectionColor: AppColors.whiteColor),
                   MainText(text: "8:42min", fontSize: cardWidth * 0.12, color: AppColors.whiteColor, height: 1.5),
                 ],
               ),
@@ -273,7 +274,7 @@ class StagesRow extends StatelessWidget {
                             ),
                           ),
                           SizedBox(height: cardHeight * 0.07),
-                          BoldText(text: "Stage 2", fontSize: cardWidth * 0.16, selectionColor: AppColors.whiteColor),
+                          BoldText(text: "stage2".tr, fontSize: cardWidth * 0.16, selectionColor: AppColors.whiteColor),
                           MainText(text: "8:19min", fontSize: cardWidth * 0.12, color: AppColors.whiteColor, height: 1.5),
                         ],
                       ),
@@ -306,7 +307,7 @@ class StagesRow extends StatelessWidget {
                             ),
                           ),
                           SizedBox(height: cardHeight * 0.07),
-                          BoldText(text: "Stage 2", selectionColor: AppColors.blueColor, fontSize: cardWidth * 0.16),
+                          BoldText(text: "stage2".tr, selectionColor: AppColors.blueColor, fontSize: cardWidth * 0.16),
                         ],
                       ),
                     ),
@@ -349,7 +350,7 @@ class StagesRow extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: cardHeight * 0.07),
-                  BoldText(text: "Stage 3", selectionColor: AppColors.containerColor, fontSize: cardWidth * 0.16),
+                  BoldText(text:   "stage3".tr, selectionColor: AppColors.containerColor, fontSize: cardWidth * 0.16),
                   MainText(text: "10:00min", fontSize: cardWidth * 0.12, color: AppColors.containerColor, height: 1.5),
                 ],
               ),

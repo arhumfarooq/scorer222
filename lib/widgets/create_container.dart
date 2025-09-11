@@ -92,6 +92,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/main_text.dart';
@@ -145,7 +146,7 @@ class CreateContainer extends StatelessWidget {
             child: FittedBox(
   fit: BoxFit.scaleDown, // 🔹 text ko shrink karke ek line me fit karega
   child: Text(
-    text ?? "Create",
+text ?? "create".tr,
     style: TextStyle(
       fontFamily: "gotham",
       fontSize: 13 * heightScaleFactor,

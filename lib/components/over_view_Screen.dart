@@ -246,6 +246,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/components/engagement_Container.dart';
 import 'package:scorer/components/new_session_container.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -275,16 +276,16 @@ class OverViewScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              BoldText(
-                text: "Session Information",
-                selectionColor: AppColors.blueColor,
-                fontSize: 16 * heightScaleFactor,
-              ),
+             BoldText(
+  text: "session_info".tr,
+  selectionColor: AppColors.blueColor,
+  fontSize: 16 * heightScaleFactor,
+),
               MainText(
-                text: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
-                fontSize: 14 * heightScaleFactor,
-                height: 1.5,
-              )
+  text: "session_description".tr,
+  fontSize: 14 * heightScaleFactor,
+  height: 1.5,
+),
             ],
           ),
         ),

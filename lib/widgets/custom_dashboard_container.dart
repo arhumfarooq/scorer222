@@ -354,7 +354,7 @@ class CustomDashboardContainer extends StatelessWidget {
                         Expanded(
                           child: PauseContainer(
                             height: 40,
-                            
+                          fontSize:13 ,
                             text: text3 ?? "",
                             icon: icon1,
                           ),
@@ -362,6 +362,7 @@ class CustomDashboardContainer extends StatelessWidget {
                         SizedBox(width: 10 * widthScaleFactor),
                         Expanded(
                           child: PauseContainer(
+                            fontSize: 13,
                             height: 40,
                             color: AppColors.forwardColor,
                             text: text4 ?? "",

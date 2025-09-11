@@ -36,6 +36,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/custom_dashboard_container.dart';
@@ -71,7 +72,7 @@ class ScheduleScreen extends StatelessWidget {
 
 
           CustomDashboardContainer(
-            text7: "Start Early",
+        text7: "start_early".tr,
           icon3: Icons.fast_forward,
           heading: "Team Building Workshop",
           text1: "Phase 1",
@@ -104,7 +105,7 @@ class ScheduleScreen extends StatelessWidget {
           icon2: Icons.square,
           ishow: false,
            svg: Appimages.edit,
-          text7: "Edit Session",
+       text7: "edit_session".tr,
           text6: "Friday 2:00 PM," ),
         SizedBox(height: 20 * heightScaleFactor)
       ],

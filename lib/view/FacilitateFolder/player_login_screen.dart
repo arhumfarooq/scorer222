@@ -102,6 +102,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -167,11 +168,11 @@ class PlayerLoginScreen extends StatelessWidget {
                   height: 180 * heightScaleFactor,
                 ),
                 SizedBox(height: 23 * heightScaleFactor),
-                LoginTextfield(text: "Enter Full Name"),
-                SizedBox(height: 9 * heightScaleFactor),
-                LoginTextfield(text: "Enter Email Address"),
-                SizedBox(height: 9 * heightScaleFactor),
-                LoginTextfield(text: "Enter Password"),
+               LoginTextfield(text: "enter_full_name".tr),
+SizedBox(height: 9 * heightScaleFactor),
+LoginTextfield(text: "enter_email".tr),
+SizedBox(height: 9 * heightScaleFactor),
+LoginTextfield(text: "enter_password".tr),
                 SizedBox(height: 9 * heightScaleFactor),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -190,23 +191,23 @@ class PlayerLoginScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 6 * widthScaleFactor),
-                        MainText(
-                          text: "Remember me",
-                          fontSize: 14 * heightScaleFactor,
-                          color: AppColors.languageTextColor,
-                        ),
+                      MainText(
+  text: "remember_me".tr,
+  fontSize: 14 * heightScaleFactor,
+  color: AppColors.languageTextColor,
+),
                       ],
                     ),
-                    MainText(
-                      text: "Forget Password?",
-                      fontFamily: "gotham",
-                      fontSize: 14 * heightScaleFactor,
-                      color: AppColors.selectLangugaeColor,
-                    ),
+                  MainText(
+  text: "forget_password".tr,
+  fontFamily: "gotham",
+  fontSize: 14 * heightScaleFactor,
+  color: AppColors.selectLangugaeColor,
+),
                   ],
                 ),
                 SizedBox(height: 30 * heightScaleFactor),
-                LoginButton(text: "Login",
+                LoginButton( text: "login".tr,
                 fontSize: 20,
                 onTap: (){
                   Get.toNamed(RouteName.playerDashboard);
@@ -223,10 +224,10 @@ class PlayerLoginScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(width: 12 * widthScaleFactor),
-                    BoldText(
-                      text: "or",
-                      fontSize: 22 * heightScaleFactor,
-                    ),
+                  BoldText(
+  text: "or".tr,
+  fontSize: 22 * heightScaleFactor,
+),
                     SizedBox(width: 12 * widthScaleFactor),
                     Expanded(
                       child: Divider(
@@ -239,11 +240,10 @@ class PlayerLoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 18 * heightScaleFactor),
                 LoginButton(
-                fontSize: 20,
-                  
-                  text: "Join with Session Code",
-                  color: AppColors.forwardColor,
-                ),
+  fontSize: 20,
+  text: "join_with_code".tr,
+  color: AppColors.forwardColor,
+),
                 SizedBox(height: 28 * heightScaleFactor),
               ],
             ),

@@ -54,26 +54,25 @@ class StartScreen3 extends StatelessWidget {
                     // SizedBox(height: screenHeight * 0.1),
              
                     
-                    Center(
-                      child: BoldText(
-                        height: 1.2,
-                        selectionColor: AppColors.blueColor,
-                        text: "One Platform, Many\nGames",
-                        textAlign: TextAlign.center,
-                        fontSize: titleFontSize,
-                      ),
-                    ),
-                    SizedBox(height: screenHeight * 0.01),
-                    Center(
-                      child: MainText(
-                        text:
-                        "Play and score across multiple formats Odyssée des OKR, FeedLoop, Elo’R, Transform’Action, and Eranove Odyssey each designed for unique training experiences.",
-                            // "Whether you’re an Administrator setting up sessions, a Facilitator managing the game, or a Player competing for the top spot, Score’Master+ is designed to fit your role perfectly.",
-                        textAlign: TextAlign.center,
-                        fontSize: descriptionFontSize,
-                        height: 1.24,
-                      ),
-                    ),
+                   Center(
+  child: BoldText(
+    height: 1.2,
+    selectionColor: AppColors.blueColor,
+    text: "platform_title".tr,   // 👈 key banayi
+    textAlign: TextAlign.center,
+    fontSize: titleFontSize,
+  ),
+),
+SizedBox(height: screenHeight * 0.01),
+Center(
+  child: MainText(
+    text: "platform_description".tr,  // 👈 key banayi
+    textAlign: TextAlign.center,
+    fontSize: descriptionFontSize,
+    height: 1.24,
+  ),
+),
+
                     SizedBox(height: screenHeight * 0.03),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -62,7 +62,7 @@ class PhaseContainer extends StatelessWidget {
                       ),
                       SizedBox(width: screenWidth * 0.02),
                       MainText(
-                          text: "Strategy Building",
+                          text: "strategy_building".tr,
                           fontSize: screenWidth * 0.04),
                     ],
                   ),

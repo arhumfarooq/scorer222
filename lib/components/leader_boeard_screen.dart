@@ -355,21 +355,21 @@ class LeaderBoeardScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(width: screenWidth * 0.02),
-                    MainText(
-                      text: "Live Updates....",
-                      color: AppColors.visitingColor,
-                      fontSize: screenWidth * 0.035,
-                    )
+                   MainText(
+  text: "live_updates".tr,
+  color: AppColors.visitingColor,
+  fontSize: screenWidth * 0.035,
+),
                   ],
                 ),
-                CreateContainer(
-                  containerColor: AppColors.forwardColor.withOpacity(0.3),
-                  text: "Overall",
-                  width: screenWidth * 0.18,
-                  textColor: AppColors.forwardColor,
-                  borderColor: AppColors.forwardColor,
-                  ishow: false,
-                )
+               CreateContainer(
+  containerColor: AppColors.forwardColor.withOpacity(0.3),
+  text: "overall".tr,
+  width: screenWidth * 0.18,
+  textColor: AppColors.forwardColor,
+  borderColor: AppColors.forwardColor,
+  ishow: false,
+),
               ],
             ),
             SizedBox(height: screenHeight * 0.04),
@@ -380,7 +380,7 @@ class LeaderBoeardScreen extends StatelessWidget {
                   () => Row(
                     children: [
                       BoldText(
-                        text: "Players",
+                        text: "players".tr,
                         selectionColor: isTeamSelected.value
                             ? AppColors.playerColo1r
                             : AppColors.blueColor,
@@ -399,7 +399,7 @@ class LeaderBoeardScreen extends StatelessWidget {
                       ),
                       SizedBox(width: screenWidth * 0.025),
                       BoldText(
-                        text: "Teams",
+                        text: "teams".tr,
                         selectionColor: isTeamSelected.value
                             ? AppColors.blueColor
                             : AppColors.playerColo1r,
@@ -413,7 +413,7 @@ class LeaderBoeardScreen extends StatelessWidget {
                     showCustomBottomSheet(context: context);
                   },
                   child: CreateContainer(
-                    text: "Use Filter",
+                    text: "use_filter".tr,
                     width: screenWidth * 0.22,
                   ),
                 ),
@@ -425,7 +425,7 @@ class LeaderBoeardScreen extends StatelessWidget {
             Obx(
               () => PlayersContainers(
                 text1: "1",
-                text2: isTeamSelected.value ? "Team Alpha" : "Alex M.",
+                text2: isTeamSelected.value ? "team_alpha".tr : "Alex M.",
                 image: Appimages.facil2,
                 icon: Icons.keyboard_arrow_up_outlined,
                 iconColor: AppColors.arrowColor,
@@ -496,14 +496,14 @@ class LeaderBoeardScreen extends StatelessWidget {
               onTap: () {
         Get.toNamed(RouteName.endSessionScreen);
             },
-              text: "End Session",
+              text: "end_session".tr,
               color: AppColors.redColor,
               icon: Icons.square_sharp,
               ishow: true,
             ),
             SizedBox(height: screenHeight * 0.015),
             LoginButton(
-              text: "Share Results",
+              text: "share_results".tr,
               fontSize:20 ,
               color: AppColors.forwardColor,
               image: Appimages.move,

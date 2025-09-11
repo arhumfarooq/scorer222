@@ -50,8 +50,7 @@ class RealTimeMonitorContainer extends StatelessWidget {
           children: [
             SizedBox(height: verticalSpacing),
             BoldText(
-                text: "Real-Time Monitoring",
-                selectionColor: AppColors.blueColor,
+                text: "real_time_monitoring".tr,                selectionColor: AppColors.blueColor,
                 fontSize: screenWidth * 0.04),
             SizedBox(height: verticalSpacing),
             Row(
@@ -81,7 +80,7 @@ class RealTimeMonitorContainer extends StatelessWidget {
               children: [
                 MainText(
                   // height: 1,
-                    text: "Player Engagement",
+                  text: "player_engagement".tr,
                     fontSize: screenWidth * 0.04),
                 BoldText(
                     text: "89%",
@@ -91,7 +90,7 @@ class RealTimeMonitorContainer extends StatelessWidget {
             ),
             SizedBox(height: verticalSpacing),
             MainText(
-                text: "Recent Activity",
+               text: "recent_activity".tr,
                 fontSize: screenWidth * 0.04),
             // SizedBox(height: verticalSpacing * 0.5),
             UseableTextrow(

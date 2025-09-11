@@ -69,6 +69,7 @@
 // }
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -121,10 +122,10 @@ class StartScreen extends StatelessWidget {
                         // Scale horizontal spacing
                         SizedBox(width: 5 * scaleFactor),
                         // Scale font size
-                        MainText(
-                          text: 'Select Language',
-                          fontSize: 16 * scaleFactor, // Assuming a base font size
-                        ),
+                      MainText(
+  text: 'select_language'.tr,
+  fontSize: 16 * scaleFactor,
+),
                       ],
                     ),
                     ForwardButtonContainer(

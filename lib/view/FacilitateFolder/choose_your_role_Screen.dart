@@ -240,59 +240,53 @@ class ChooseYourRoleScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height: 20 * heightScaleFactor),
-                    BoldText(
-                      text: "Choose Your",
-                      selectionColor: AppColors.blueColor,
-                      fontSize: 24,
-                    ),
-                    SizedBox(height: 20 * heightScaleFactor),
-                    MainText(
-                      height: 1.3,
-                      fontSize: 16,
-                      text: 'Select how you want to participate\nin the session',
-                      textAlign: TextAlign.center,
-                    ),
+                   BoldText(
+  text: "choose_your".tr,
+  selectionColor: AppColors.blueColor,
+  fontSize: 24,
+),
+SizedBox(height: 20 * heightScaleFactor),
+MainText(
+  height: 1.3,
+  fontSize: 16,
+  text: 'select_participation'.tr,
+  textAlign: TextAlign.center,
+),
+
                     SizedBox(height: 19 * heightScaleFactor),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                       Obx(()=> RoleSelectionContainer(
-                          onTap: () {
-                             controller.changeTab(0);
-                          },
-                          isSelected: controller.selectedIndex.value==0 ,
-                          image: Appimages.prince1,
-                          image2: Appimages.admin,
-                          text: "Administrator",
-                          text2: 'Full system access\nand control',
-                        ),),
+                     Obx(() => RoleSelectionContainer(
+  onTap: () => controller.changeTab(0),
+  isSelected: controller.selectedIndex.value == 0,
+  image: Appimages.prince1,
+  image2: Appimages.admin,
+  text: "administrator".tr,
+  text2: 'admin_description'.tr,
+)),
                     SizedBox(height: 10 * heightScaleFactor),
 
-                       Obx(()=> RoleSelectionContainer(
-                          // isSelected: true,
-                           onTap: () {
-                             controller.changeTab(1);
-                          },
-                          isSelected: controller.selectedIndex.value==1 ,
-                          image: Appimages.blackman,
-                          image2: Appimages.facil,
-                          text: "Facilitator",
-                          text2: 'Manage sessions and\nguide activities',
-                          width: 169,
-                        ),),
+                    Obx(() => RoleSelectionContainer(
+  onTap: () => controller.changeTab(1),
+  isSelected: controller.selectedIndex.value == 1,
+  image: Appimages.blackman,
+  image2: Appimages.facil,
+  text: "facilitator".tr,
+  text2: 'facilitator_description'.tr,
+  width: 169,
+)),
                     SizedBox(height: 10 * heightScaleFactor),
 
-                      Obx(()=>  RoleSelectionContainer(
-                           onTap: () {
-                             controller.changeTab(2);
-                          },
-                          isSelected: controller.selectedIndex.value==2,
-                          image: Appimages.blackgirl,
-                          image2: Appimages.player,
-                          text: "Player",
-                          text2: 'Participate in games\nand activities',
-                          width: 160, 
-                        ),)
+                     Obx(() => RoleSelectionContainer(
+  onTap: () => controller.changeTab(2),
+  isSelected: controller.selectedIndex.value == 2,
+  image: Appimages.blackgirl,
+  image2: Appimages.player,
+  text: "player".tr,
+  text2: 'player_description'.tr,
+  width: 160,
+)),
                       ],
                     ),
                     Spacer(),
@@ -314,11 +308,13 @@ class ChooseYourRoleScreen extends StatelessWidget {
     } 
     else {
       // Agar koi select hi na kare
-      Get.snackbar("Selection Required", "Please select a role first!",
-      backgroundColor: AppColors.forwardColor,
-      colorText: AppColors.whiteColor
-      
-      );
+    Get.snackbar(
+  "selection_required".tr,
+  "please_select_role".tr,
+  backgroundColor: AppColors.forwardColor,
+  colorText: AppColors.whiteColor,
+);
+
     }
   },
 ),

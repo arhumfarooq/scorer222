@@ -167,7 +167,7 @@ class CustomStratgyContainer extends StatelessWidget {
     final horizontalPadding = baseWidth * (10 / 334);
     final verticalPadding = baseHeight * (10 / 91);
     final iconSize = baseHeight * (24 / 91);
-    final textFontSize = baseWidth * 0.04;
+    final textFontSize = baseWidth * 0.035;
     final smallContainerWidth = baseWidth * (70 / 334);
     final progressBarHeight = baseHeight * (5 / 91);
     final progressBarWidth = baseWidth - (horizontalPadding * 2);
@@ -219,6 +219,7 @@ class CustomStratgyContainer extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(top: verticalPadding),
                   child: UseableContainer(
+                    
                     text: text3,
                     width: width3 ?? smallContainerWidth,
                     color: smallContainer,

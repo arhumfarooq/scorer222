@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -47,10 +48,7 @@ class NewSessionContainer extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MainText(
-                        text: "Session Code",
-                        fontSize: 14 * heightScaleFactor,
-                      ),
+                     MainText(text: "session_code".tr, fontSize: 14 * heightScaleFactor),
                       Row(
                         children: [
                           BoldText(
@@ -70,10 +68,8 @@ class NewSessionContainer extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MainText(
-                        text: "Join Link",
-                        fontSize: 14 * heightScaleFactor,
-                      ),
+                     MainText(text: "join_link".tr, fontSize: 14 * heightScaleFactor),
+
                       Row(
                         children: [
                           BoldText(
@@ -93,10 +89,8 @@ class NewSessionContainer extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MainText(
-                        text: "Started",
-                        fontSize: 14 * heightScaleFactor,
-                      ),
+                    MainText(text: "started".tr, fontSize: 14 * heightScaleFactor),
+
                       BoldText(
                         text: "2:30 PM",
                         fontSize: 14 * heightScaleFactor,
@@ -108,10 +102,8 @@ class NewSessionContainer extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MainText(
-                        text: "Duration",
-                        fontSize: 14 * heightScaleFactor,
-                      ),
+                      MainText(text: "duration".tr, fontSize: 14 * heightScaleFactor),
+
                       BoldText(
                         text: "45 minutes",
                         fontSize: 14 * heightScaleFactor,
@@ -147,11 +139,11 @@ class NewSessionContainer extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              BoldText(
-                                text: "Current Phase",
-                                fontSize: 16 * heightScaleFactor,
-                                selectionColor: AppColors.blueColor,
-                              ),
+                           BoldText(
+  text: "current_phase".tr,
+  fontSize: 16 * heightScaleFactor,
+  selectionColor: AppColors.blueColor,
+),
                               Row(
                                 children: [
                                   UseableContainer(
@@ -161,10 +153,10 @@ class NewSessionContainer extends StatelessWidget {
                                     height: 26,
                                   ),
                                   SizedBox(width: 10 * widthScaleFactor),
-                                  MainText(
-                                    text: "Strategy Building",
-                                    fontSize: 14 * heightScaleFactor,
-                                  )
+                                MainText(
+  text: "strategy_building".tr,
+  fontSize: 14 * heightScaleFactor,
+),
                                 ],
                               )
                             ],
@@ -185,10 +177,11 @@ class NewSessionContainer extends StatelessWidget {
                   text: "12:32",
                   fontSize: screenWidth * 0.04,
                   selectionColor: AppColors.blueColor),
-              MainText(
-                  text: "Remaining",
-                  fontSize: screenWidth * 0.025,
-                  height: 1),
+             MainText(
+  text: "remaining".tr,
+  fontSize: screenWidth * 0.025,
+  height: 1,
+),
           ],
         ),
       ),
@@ -223,23 +216,21 @@ class NewSessionContainer extends StatelessWidget {
                         children: [
                           Expanded(
                             child: PauseContainer(
-                              text: "Pause",
-                              height: 45 * heightScaleFactor,
-                              width: 140 * widthScaleFactor,
-                              // fontSize: 14 * heightScaleFactor,
-                            ),
+  text: "pause".tr,
+  height: 45 * heightScaleFactor,
+  width: 140 * widthScaleFactor,
+),
                           ),
                           SizedBox(width: 20 * widthScaleFactor),
                           Expanded(
                             child: PauseContainer(
-                              text: "Next Phase",
+                              text: "next_phase".tr,
                               icon: Icons.fast_forward,
                               color: AppColors.forwardColor,
                               height: 45 * heightScaleFactor,
                               width: 140 * widthScaleFactor,
-                              // fontSize: 14 * heightScaleFactor,
                             ),
-                          )
+                          ),
                         ],
                       )
                     ],

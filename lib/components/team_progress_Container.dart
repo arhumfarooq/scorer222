@@ -114,8 +114,7 @@ class TeamProgressContainer extends StatelessWidget {
                         ? AppColors.forwardColor
                         : AppColors.yellowColor,
                     text3: controller.isCompleted.value
-                        ? "Submitted"
-                        : "Working...",
+                        ?  "submitted".tr : "working".tr,
                     text1: "2",
                     text2: "Sarah J.",
                     image: Appimages.play2);
