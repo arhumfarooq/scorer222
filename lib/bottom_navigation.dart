@@ -472,7 +472,6 @@ import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/controllers/bottom_nav_controller.dart';
-import 'package:scorer/view/FacilitateFolder/aa.dart';
 import 'package:scorer/view/adminside/admin_create_new_session_Screen.dart';
 import 'package:scorer/view/adminside/admin_dashboard.dart';
 import 'package:scorer/view/adminside/game_screen_Admin_Side.dart';
@@ -508,16 +507,11 @@ class BottomNavigation extends StatelessWidget {
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter,
               colors: [
-                // Colors.white
-                // solid white top
-                // Color(0x00FFFFFF).withOpacity(0.), // fade to transparent
-                // Colors.transparent
-               Colors.transparent,  
-                            // bottom transparent (bottom nav ke sath merge)
+                
+               Colors.transparent, 
+                  Colors.white,
                       Color.fromRGBO(168, 209, 236, 0.2), 
-                         Colors.white,// subtle middle shade
-                      // Colors.white.withOpacity(0.5), // upper thodi zyada white
-                      // Colors.white,              
+                       
               ],
               //  stops: [0.0, 0.4, 0.7, 1.0], // gr
                       ),
@@ -529,14 +523,17 @@ class BottomNavigation extends StatelessWidget {
                   decoration: BoxDecoration(
                   //  color: AppColors.whiteColor,
                      gradient: LinearGradient(
-  begin: Alignment.bottomRight,
-  end: Alignment.topLeft,
-  colors: [
-    Color.fromRGBO(168, 209, 236, 0.2), // Subtle blue at the bottom
-    Color.fromRGBO(67, 177, 80, 0.2), // Subtle green in the middle
-    Colors.white, // This white will dominate the top part
-  ],
-),
+    begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+            colors: [
+                
+              Color.fromRGBO(168, 209, 236, 0.2), 
+              // col// Subtle blue at the bottom
+            
+              Color.fromRGBO(67, 177, 80, 0.2), // Subtle green in the middle
+              // Colors.white, // This white will dominate the top part
+            ],
+          ),
                    borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30)

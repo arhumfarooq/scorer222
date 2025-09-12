@@ -40,7 +40,6 @@
 // }
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/constants/routename.dart';
 import 'package:scorer/widgets/custom_dashboard_container.dart';
 

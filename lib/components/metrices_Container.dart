@@ -1,21 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_switch/flutter_switch.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:scorer/components/filter_drop_down_container.dart';
-import 'package:scorer/components/players_Row.dart';
 import 'package:scorer/constants/appcolors.dart';
-import 'package:scorer/constants/appimages.dart';
-import 'package:scorer/constants/routename.dart';
-import 'package:scorer/main.dart';
 import 'package:scorer/widgets/bold_text.dart';
-import 'package:scorer/widgets/create_container.dart';
-import 'package:scorer/widgets/login_button.dart';
 import 'package:scorer/widgets/main_text.dart';
-import 'package:scorer/widgets/players_container.dart';
 class MetricesContainer extends StatelessWidget {
   const MetricesContainer({
     super.key,

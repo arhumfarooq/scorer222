@@ -190,12 +190,10 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
-import 'package:scorer/constants/approutes.dart';
 import 'package:scorer/constants/routename.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 import 'package:scorer/widgets/add_one_Container.dart';

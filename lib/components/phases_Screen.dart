@@ -920,7 +920,6 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:scorer/components/phases_container.dart';
@@ -938,9 +937,6 @@ import 'package:scorer/widgets/custom_stratgy_container.dart';
 import 'package:scorer/widgets/login_button.dart';
 import 'package:scorer/widgets/main_text.dart';
 import 'package:scorer/widgets/pause_container.dart';
-import 'package:scorer/widgets/players_container.dart';
-import 'package:scorer/widgets/useable_container.dart';
-import 'package:scorer/widgets/useable_textrow.dart';
 
 class PhasesScreen extends StatelessWidget {
   final StageController controller = Get.put(StageController());

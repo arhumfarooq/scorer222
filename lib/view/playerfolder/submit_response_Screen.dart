@@ -191,7 +191,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/components/adminside/admin_team_progress.dart';
 import 'package:scorer/components/playerside/leader_stack_container.dart';
 import 'package:scorer/constants/appcolors.dart';

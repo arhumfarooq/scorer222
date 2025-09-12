@@ -251,7 +251,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/components/analysis_container.dart';
 import 'package:scorer/components/audio_container.dart';
 import 'package:scorer/components/feedback_container.dart';

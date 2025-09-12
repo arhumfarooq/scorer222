@@ -95,7 +95,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
-import 'package:scorer/widgets/main_text.dart';
 
 class CreateContainer extends StatelessWidget {
   final String? text;

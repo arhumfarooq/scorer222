@@ -166,11 +166,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
-import 'package:scorer/constants/routename.dart';
 import 'package:scorer/widgets/add_one_Container.dart';
 import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/main_text.dart';

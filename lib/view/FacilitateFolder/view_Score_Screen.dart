@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer/components/analysis_container.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';

@@ -73,7 +73,7 @@ class RoleSelectionContainer extends StatelessWidget {
   final double? width;
   final VoidCallback onTap;
 
-   RoleSelectionContainer({
+   const RoleSelectionContainer({
     super.key,
     required this.image,
     required this.image2,

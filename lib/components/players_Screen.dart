@@ -231,8 +231,6 @@ import 'package:scorer/widgets/all_players_container.dart';
 import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/create_container.dart';
 import 'package:scorer/widgets/login_button.dart';
-import 'package:scorer/widgets/main_text.dart';
-import 'package:scorer/widgets/useable_container.dart';
 import 'package:scorer/widgets/useable_textrow.dart';
 
 class PlayersScreen extends StatelessWidget {

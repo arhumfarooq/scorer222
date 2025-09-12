@@ -9,7 +9,6 @@ import 'package:scorer/widgets/login_button.dart';
 import 'package:scorer/widgets/main_text.dart';
 import 'package:scorer/widgets/pause_container.dart';
 import 'package:scorer/widgets/useable_container.dart';
-import 'package:scorer/widgets/useable_textrow.dart';
 
 class AdminNewSessionScreen extends StatelessWidget {
   const AdminNewSessionScreen({

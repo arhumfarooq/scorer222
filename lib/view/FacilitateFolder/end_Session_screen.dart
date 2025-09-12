@@ -329,7 +329,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart' show Get;
 import 'package:scorer/components/custom_session_container.dart';
 import 'package:scorer/components/custom_time_row.dart';
 import 'package:scorer/components/phase_breakdown_container.dart';
@@ -344,7 +343,6 @@ import 'package:scorer/widgets/create_container.dart';
 import 'package:scorer/widgets/login_button.dart';
 import 'package:scorer/widgets/main_text.dart';
 import 'package:scorer/widgets/players_container.dart';
-import 'package:scorer/widgets/session_useable_row.dart';
 import 'package:scorer/widgets/useable_container.dart';
 
 class EndSessionScreen extends StatelessWidget {

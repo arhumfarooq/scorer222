@@ -7,7 +7,7 @@ import 'package:scorer/widgets/main_text.dart';
 
 class PlayersRow extends StatelessWidget {
     final bool isTeamSelected; 
-   PlayersRow({super.key, required this.isTeamSelected});
+   const PlayersRow({super.key, required this.isTeamSelected});
 
   @override
   Widget build(BuildContext context) {

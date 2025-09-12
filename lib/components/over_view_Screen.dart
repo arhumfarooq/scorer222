@@ -245,16 +245,12 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/engagement_Container.dart';
 import 'package:scorer/components/new_session_container.dart';
 import 'package:scorer/constants/appcolors.dart';
-import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/main_text.dart';
-import 'package:scorer/widgets/pause_container.dart';
-import 'package:scorer/widgets/useable_container.dart';
 
 class OverViewScreen extends StatelessWidget {
   const OverViewScreen({super.key});

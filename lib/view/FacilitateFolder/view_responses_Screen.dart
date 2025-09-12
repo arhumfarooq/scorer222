@@ -183,11 +183,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:get/instance_manager.dart';
-import 'package:scorer/components/adminside/user_administrate_side.dart';
-import 'package:scorer/components/adminside/user_facilitate_side.dart';
-import 'package:scorer/components/adminside/user_player_Side.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -200,9 +195,6 @@ import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/create_container.dart';
 import 'package:scorer/widgets/custom_response_container.dart';
 import 'package:scorer/widgets/custom_stratgy_container.dart';
-import 'package:scorer/widgets/login_button.dart';
-import 'package:scorer/widgets/main_text.dart';
-import 'package:scorer/widgets/useable_container.dart';
 
 class ViewResponsesScreen extends StatelessWidget {
   final StageController controller = Get.put(StageController());

@@ -67,8 +67,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/utils.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart' show Appimages, aa;
 import 'package:scorer/constants/routename.dart';

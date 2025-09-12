@@ -56,7 +56,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:scorer/constants/appcolors.dart';
-import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/main_text.dart';
 import 'package:scorer/widgets/useable_container.dart';
 

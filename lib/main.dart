@@ -5,28 +5,6 @@ import 'package:get/get.dart';
 import 'package:device_preview/device_preview.dart'; // 👈 add this
 import 'package:scorer/bottom_navigation.dart';
 import 'package:scorer/constants/approutes.dart';
-import 'package:scorer/view/FacilitateFolder/choose_your_role_Screen.dart';
-import 'package:scorer/view/FacilitateFolder/create_new_Session_Screen.dart';
-import 'package:scorer/view/FacilitateFolder/facilitator_dashboard.dart';
-import 'package:scorer/view/adminside/game2_Screen.dart';
-import 'package:scorer/view/adminside/game_screen_Admin_Side.dart';
-import 'package:scorer/view/FacilitateFolder/splash_screen.dart';
-import 'package:scorer/view/adminside/admin_create_new_session_Screen.dart';
-import 'package:scorer/view/adminside/admin_dashboard.dart';
-import 'package:scorer/view/adminside/admin_overview_option_screens.dart';
-import 'package:scorer/view/adminside/create_new_Session_Screen_admin_side.dart';
-import 'package:scorer/view/adminside/user_admin_detailed_scree.dart';
-import 'package:scorer/view/adminside/user_facilitate_detailed_scree.dart';
-import 'package:scorer/view/adminside/user_management_Screen.dart';
-import 'package:scorer/view/adminside/user_player_detailed_scree.dart';
-import 'package:scorer/view/playerfolder/game_start1_screen.dart';
-import 'package:scorer/view/playerfolder/player_dashboard.dart';
-import 'package:scorer/view/playerfolder/player_dashboard_Screen2.dart';
-import 'package:scorer/view/playerfolder/player_leader_board_Screen2.dart';
-import 'package:scorer/view/playerfolder/player_leaderboard_screen.dart';
-import 'package:scorer/view/playerfolder/player_login_play_side.dart';
-import 'package:scorer/view/playerfolder/submit_response_Screen.dart';
-import 'package:scorer/view/playerfolder/submit_response_Screen2.dart';
 
 
 void main() {
@@ -50,7 +28,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context), // 👈 device_preview ke liye
       builder: DevicePreview.appBuilder, // 👈 device_preview ke liye
       getPages: AppRoutes.getAppRoutes(),
-      home:  SplashScreen(),
+      home:  BottomNavigation(),
     );
   }
 }
@@ -165,7 +143,7 @@ class MyApp extends StatelessWidget {
 //       locale: locale,
 //       getPages: AppRoutes.getAppRoutes(),
 //       fallbackLocale: const Locale('en', 'US'),
-//       home:   SplashScreen(),
+//       home:   BottomNavigation(),
 //     );
 //   }
 // }
