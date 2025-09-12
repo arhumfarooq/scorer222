@@ -132,6 +132,7 @@ class FilterDropDownContainer extends StatelessWidget {
                   // buttons
                   Center(
                     child: LoginButton(
+                      fontSize: 18,
                       text: "Clear Filter",
                       color: AppColors.redColor,
                     ),
@@ -139,6 +140,7 @@ class FilterDropDownContainer extends StatelessWidget {
                   const SizedBox(height: 10),
                   Center(
                     child: LoginButton(
+                      fontSize: 18,
                       text: "Apply Filter",
                       color: AppColors.forwardColor,
                     ),

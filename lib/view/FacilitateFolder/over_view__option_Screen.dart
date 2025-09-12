@@ -342,7 +342,7 @@ class OverViewOptionScreen extends StatelessWidget {
   final controller = Get.put(OverviewController());
   OverViewOptionScreen({super.key});
 
-  final List<String> tabs = ["Overview", "Phases", "Players", " Leaderboard "];
+  final List<String> tabs = ["Overview", "Phases", "Players", "   Leaderboard     "];
   final List<Widget> screens = [
     OverViewScreen(),
     PhasesScreen(),
@@ -513,7 +513,7 @@ class OverViewOptionScreen extends StatelessWidget {
             int tabCount = tabs.length;
           
             // container ka width
-            double containerWidth = screenSize.width - (42 * widthScaleFactor);
+            double containerWidth = screenSize.width - (0 * widthScaleFactor);
           
             // har tab ka equal width
             double tabWidth = containerWidth / tabCount;
@@ -539,11 +539,11 @@ class OverViewOptionScreen extends StatelessWidget {
             curve: Curves.easeInOut,
             child: Container(
               margin: EdgeInsets.symmetric(
-                horizontal: 5 * widthScaleFactor,
+                horizontal: 4 * widthScaleFactor,
                 vertical: 5.5 * heightScaleFactor,
               ),
               height: 42 * heightScaleFactor,
-              width: tabWidth - (14 * widthScaleFactor),
+              width: tabWidth - (18 * widthScaleFactor),
               decoration: BoxDecoration(
                 color: AppColors.forwardColor,
                 borderRadius: BorderRadius.circular(12 * widthScaleFactor),

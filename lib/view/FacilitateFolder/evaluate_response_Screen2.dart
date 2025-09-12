@@ -286,11 +286,13 @@ class EvaluateResponseScreen2 extends StatelessWidget {
     return Scaffold(
       body: GradientBackground(
         child: SafeArea(
-          child: Padding(
+          child: Stack(
+            children: [
+              Padding(
             padding: EdgeInsets.symmetric(horizontal: 30 * widthScaleFactor),
-            child: Stack(
-              children: [
-                SingleChildScrollView(
+
+                // padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
                   child: Column(
                     children: [
                        SizedBox(
@@ -355,7 +357,7 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                                   ),
                                   UseableContainer(
                                     text: "Completed",
-                                    width: 75 * widthScaleFactor,
+                                    width: 83 * widthScaleFactor,
                                     color: AppColors.forwardColor,
                                   )
                                 ],
@@ -558,7 +560,7 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                         image: Appimages.ai2,
                         ishow: true,
                         fontSize: 18,
-
+                          
                         imageHeight: 38 * heightScaleFactor,
                         imageWidth: 32 * widthScaleFactor,
                         height: 74 * heightScaleFactor,
@@ -570,18 +572,18 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                 },
                         text: "Move to Next Stage",
                         ishow: true,
-
+                          
                         imageHeight: 22 * heightScaleFactor,
                         imageWidth: 26 * widthScaleFactor,
                         icon: Icons.fast_forward,
                         height: 74 * heightScaleFactor,
                         fontSize: 18,
-
+                          
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
                         fontSize: 18,
-
+                          
                         text: "Export PDF",
                         ishow: true,
                         imageHeight: 18 * heightScaleFactor,
@@ -605,22 +607,16 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                     ],
                   ),
                 ),
-                  Positioned(
-          right: 0,
-          top: screenHeight * 0.2,
-          child: TeamAlphaContainer(screenWidth: screenWidth, screenHeight: screenHeight),
-        ),
-
-        /// Player Image
-        Positioned(
-            top: screenHeight * 0.16,
-            left: screenWidth * 0.4,
-            child: Image.asset(Appimages.man3,
-                width: screenWidth * 0.16,
-                height: screenHeight * 0.12)),
-      
-              ],
-            ),
+              ),
+                Positioned(
+                    right: 0,
+                    top: screenHeight * 0.2,
+                    child: TeamAlphaContainer(screenWidth: screenWidth, screenHeight: screenHeight),
+                  ),
+          
+                  /// Player Image
+                
+            ],
           ),
         ),
       ),

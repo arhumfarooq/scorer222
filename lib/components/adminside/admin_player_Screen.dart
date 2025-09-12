@@ -248,12 +248,7 @@ class AdminPlayerScreen extends StatelessWidget {
         ),
 
         /// Player Image
-        Positioned(
-            top: screenHeight * 0.16,
-            left: screenWidth * 0.56,
-            child: Image.asset(Appimages.man3,
-                width: screenWidth * 0.16,
-                height: screenHeight * 0.14)),
+       
  
       ],
     );

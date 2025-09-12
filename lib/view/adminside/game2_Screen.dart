@@ -453,7 +453,7 @@ class Game2Screen extends StatelessWidget {
                               clipBehavior: Clip.none,
                               children: [
                                 Positioned(
-                                     left: MediaQuery.of(context).size.width>380?220: 140 ,
+                                     left: MediaQuery.of(context).size.width>380?220: 160 ,
                                   child: Container(
                                     width: 90 * scaleFactor,
                                     height: 37 * scaleFactor,

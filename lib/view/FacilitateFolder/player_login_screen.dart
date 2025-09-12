@@ -326,11 +326,11 @@ class PlayerLoginScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 23 * heightScaleFactor),
-                    LoginTextfield(text: "enter_full_name".tr),
+                    Center(child: LoginTextfield(text: "enter_full_name".tr)),
                     SizedBox(height: 9 * heightScaleFactor),
-                    LoginTextfield(text: "enter_email".tr),
+                    Center(child: LoginTextfield(text: "enter_email".tr)),
                     SizedBox(height: 9 * heightScaleFactor),
-                    LoginTextfield(text: "enter_password".tr),
+                    Center(child: LoginTextfield(text: "enter_password".tr)),
                     SizedBox(height: 9 * heightScaleFactor),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -365,12 +365,14 @@ class PlayerLoginScreen extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 30 * heightScaleFactor),
-                    LoginButton(
-                      text: "login".tr,
-                      fontSize: 20,
-                      onTap: () {
-                        Get.toNamed(RouteName.playerDashboard);
-                      },
+                    Center(
+                      child: LoginButton(
+                        text: "login".tr,
+                        fontSize: 20,
+                        onTap: () {
+                          Get.toNamed(RouteName.playerDashboard);
+                        },
+                      ),
                     ),
                     SizedBox(height: 18 * heightScaleFactor),
                     Row(
@@ -398,10 +400,12 @@ class PlayerLoginScreen extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 18 * heightScaleFactor),
-                    LoginButton(
-                      fontSize: 20,
-                      text: "join_with_code".tr,
-                      color: AppColors.forwardColor,
+                    Center(
+                      child: LoginButton(
+                        fontSize: 20,
+                        text: "join_with_code".tr,
+                        color: AppColors.forwardColor,
+                      ),
                     ),
 
                     /// 👇 Spacer last me

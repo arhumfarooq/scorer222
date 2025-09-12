@@ -503,81 +503,90 @@ class BottomNavigation extends StatelessWidget {
           extendBody: true,
           body: _pages[controller.selectedIndex.value],
           bottomNavigationBar: Container(
-              decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.bottomCenter,
-          end: Alignment.topCenter,
-          colors: [
-            Color(0xFFFFFFFF), // solid white top
-            Color(0x00FFFFFF), // fade to transparent
-          ],
-        ),
-      ),
-    
-            child: Container(
-              height: 120 * scaleFactor,
-              width: double.infinity,
-              decoration: BoxDecoration(
-              //  color: AppColors.whiteColor,
-                 gradient: LinearGradient(
-              begin: Alignment.bottomRight,
-              end: Alignment.topLeft,
+                  decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
               colors: [
-                Color.fromRGBO(67, 177, 80, 0.2), // subtle green
-                Color.fromRGBO(168, 209, 236, 0.2), // subtle blue
+                // Colors.white
+                // solid white top
+                // Color(0x00FFFFFF).withOpacity(0.), // fade to transparent
+                // Colors.transparent
+               Colors.transparent,  
+                            // bottom transparent (bottom nav ke sath merge)
+                      Color.fromRGBO(168, 209, 236, 0.2), 
+                         Colors.white,// subtle middle shade
+                      // Colors.white.withOpacity(0.5), // upper thodi zyada white
+                      // Colors.white,              
               ],
-              transform: GradientRotation(0.97), // ≈ 55.36deg in radians
-            ),
-               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30),
-                topRight: Radius.circular(30)
-               )
-              ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0 * scaleFactor),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    // Home Item
-                    _buildNavItem(
-                      context,
-                      icon: Appimages.house1,
-                      label: "Home",
-                      index: 0,
-                      scaleFactor: scaleFactor,
+              //  stops: [0.0, 0.4, 0.7, 1.0], // gr
+                      ),
                     ),
-            
-                    // Create Item
-                    _buildCreateItem(
-                      context,
-                      icon: Appimages.buttonplus,
-                      label: "Create",
-                      index: 1,
-                      scaleFactor: scaleFactor,
+                  
+                child: Container(
+                  height: 120 * scaleFactor,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                  //  color: AppColors.whiteColor,
+                     gradient: LinearGradient(
+  begin: Alignment.bottomRight,
+  end: Alignment.topLeft,
+  colors: [
+    Color.fromRGBO(168, 209, 236, 0.2), // Subtle blue at the bottom
+    Color.fromRGBO(67, 177, 80, 0.2), // Subtle green in the middle
+    Colors.white, // This white will dominate the top part
+  ],
+),
+                   borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30)
+                   )
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0 * scaleFactor),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        // Home Item
+                        _buildNavItem(
+                          context,
+                          icon: Appimages.house1,
+                          label: "Home",
+                          index: 0,
+                          scaleFactor: scaleFactor,
+                        ),
+                
+                        // Create Item
+                        _buildCreateItem(
+                          context,
+                          icon: Appimages.buttonplus,
+                          label: "Create",
+                          index: 1,
+                          scaleFactor: scaleFactor,
+                        ),
+                
+                        // Game Item
+                        _buildNavItem(
+                          context,
+                          icon: Appimages.game,
+                          label: "Game",
+                          index: 2,
+                          scaleFactor: scaleFactor,
+                        ),
+                
+                        // Users Item
+                        _buildNavItem(
+                          context,
+                          icon: Appimages.group,
+                          label: "Users",
+                          index: 3,
+                          scaleFactor: scaleFactor,
+                        ),
+                      ],
                     ),
-            
-                    // Game Item
-                    _buildNavItem(
-                      context,
-                      icon: Appimages.game,
-                      label: "Game",
-                      index: 2,
-                      scaleFactor: scaleFactor,
-                    ),
-            
-                    // Users Item
-                    _buildNavItem(
-                      context,
-                      icon: Appimages.group,
-                      label: "Users",
-                      index: 3,
-                      scaleFactor: scaleFactor,
-                    ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-          ),
         ));
   
 

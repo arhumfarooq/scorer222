@@ -226,6 +226,7 @@ import 'package:get/get.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
+import 'package:scorer/constants/routename.dart';
 import 'package:scorer/widgets/all_players_container.dart';
 import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/create_container.dart';
@@ -443,10 +444,16 @@ class PlayersScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: verticalSpacing),
-                  Center(child: LoginButton(text: "add_player".tr, image: Appimages.personadd, ishow: true)),
+                  Center(child: LoginButton(
+                    fontSize: 18,
+                    text: "add_player".tr, image: Appimages.personadd, ishow: true)),
                   SizedBox(height: allPlayersContainerSpacing),
                   Center(
                     child: LoginButton(
+                      onTap: () {
+                        Get.toNamed(RouteName.viewResponsesScreen);
+                      },
+                      fontSize: 18,
                       text: "view_responses".tr,
                       image: Appimages.eye,
                       color: AppColors.forwardColor,
@@ -456,6 +463,7 @@ class PlayersScreen extends StatelessWidget {
                   SizedBox(height: allPlayersContainerSpacing),
                   Center(
                     child: LoginButton(
+                      fontSize: 18,
                       text: "send_alert".tr,
                       image: Appimages.noti,
                       color: AppColors.redColor,
@@ -530,12 +538,7 @@ class PlayersScreen extends StatelessWidget {
         ),
 
         /// Player Image
-        Positioned(
-            top: screenHeight * 0.16,
-            left: screenWidth * 0.5,
-            child: Image.asset(Appimages.man3,
-                width: screenWidth * 0.16,
-                height: screenHeight * 0.12)),
+      
       
       ],
     );

@@ -415,7 +415,7 @@ onTap: () {
               
                   CustomResponseContainer(
                     onTap: () {
-  Get.toNamed(RouteName.evaluateResponseScreen);
+  Get.toNamed(RouteName.viewScoreScreen);
 },
               color1: AppColors.forwardColor,
               text1: "View Score",
@@ -426,7 +426,11 @@ onTap: () {
               
                   ),
                    SizedBox(height: 13,),
-                  CustomResponseContainer(),
+                  CustomResponseContainer(
+                      onTap: () {
+  Get.toNamed(RouteName.evaluateResponseScreen2);
+},
+                  ),
                   SizedBox(height: 13,),
               
                   CustomResponseContainer(
@@ -522,12 +526,7 @@ onTap: () {
         ),
 
         /// Player Image
-        Positioned(
-            top: screenHeight * 0.16,
-            left: screenWidth * 0.5,
-            child: Image.asset(Appimages.man3,
-                width: screenWidth * 0.16,
-                height: screenHeight * 0.12)),
+       
       
             ],
           ),

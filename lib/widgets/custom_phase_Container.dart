@@ -72,11 +72,11 @@ class CustomPhaseContainer extends StatelessWidget {
           children: [
             BoldText(
               text: text1,
-              fontSize: 20 * scaleFactor, // Scale font size
+              fontSize: 18 * scaleFactor, // Scale font size
             ),
             BoldText(
               text: text2,
-              fontSize: fontSize ?? 20 * scaleFactor, // Scale optional font size
+              fontSize: fontSize ?? 18 * scaleFactor, // Scale optional font size
               selectionColor: color,
             )
           ],

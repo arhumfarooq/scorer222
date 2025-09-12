@@ -198,7 +198,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
               int tabCount = tabs.length;
             
               // container ka width
-              double containerWidth = screenSize.width - (42 * widthScaleFactor);
+              double containerWidth = screenSize.width - (0 * widthScaleFactor);
             
               // har tab ka equal width
               double tabWidth = containerWidth / tabCount;
@@ -228,7 +228,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
                   vertical: 5.5 * heightScaleFactor,
                 ),
                 height: 42 * heightScaleFactor,
-                width: tabWidth - (14 * widthScaleFactor),
+                width: tabWidth - (18 * widthScaleFactor),
                 decoration: BoxDecoration(
                   color: AppColors.forwardColor,
                   borderRadius: BorderRadius.circular(12 * widthScaleFactor),

@@ -1099,19 +1099,27 @@ class PhasesScreen extends StatelessWidget {
                     SizedBox(height: verticalSpacing),
                     BoldText( text: "all_phases".tr,fontSize: 16,selectionColor: AppColors.blueColor,),
           SizedBox(height: 25,),
-                    CustomStratgyContainer(iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
+                    CustomStratgyContainer(
+                      width3: 80,
+                      iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
                     flex: 4,flex1: 0,
                     ),
                     SizedBox(height: 10,),
-                     CustomStratgyContainer(iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr, smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
+                     CustomStratgyContainer(
+                      // width3: 80,
+                      iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr, smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
              
                     ),
                      SizedBox(height: 10,),
-                     CustomStratgyContainer(iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase3_implementation".tr, text2: "Upcoming • 25 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
+                     CustomStratgyContainer(
+                      width3: 80,
+                      iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase3_implementation".tr, text2: "Upcoming • 25 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
              
                     ),
                          SizedBox(height: 10,),
-                     CustomStratgyContainer(iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase4_evaluation".tr,text2: "Upcoming • 15 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
+                     CustomStratgyContainer(
+                      width3: 80,
+                      iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase4_evaluation".tr,text2: "Upcoming • 15 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
              
                     ),
                     SizedBox(height: 25,),
@@ -1124,6 +1132,7 @@ class PhasesScreen extends StatelessWidget {
                     /// View Responses Button
                     Center(
                       child: LoginButton(
+                        fontSize: 18,
                          text: "view_responses".tr,
                         color: AppColors.forwardColor,
                         ishow: true,
@@ -1164,12 +1173,12 @@ class PhasesScreen extends StatelessWidget {
         ),
 
         /// Player Image
-        Positioned(
-            top: screenHeight * 0.16,
-            left: screenWidth * 0.5,
-            child: Image.asset(Appimages.man3,
-                width: screenWidth * 0.16,
-                height: screenHeight * 0.12)),
+        // Positioned(
+        //     top: screenHeight * 0.16,
+        //     left: screenWidth * 0.5,
+        //     child: Image.asset(Appimages.man3,
+        //         width: screenWidth * 0.16,
+        //         height: screenHeight * 0.12)),
       ],
     );
   }

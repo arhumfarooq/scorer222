@@ -210,11 +210,13 @@ class EvaluateResponseScreen extends StatelessWidget {
     return Scaffold(
       body: GradientBackground(
         child: SafeArea(
-          child: Padding(
+          child: Stack(
+            children: [
+              Padding(
             padding: EdgeInsets.symmetric(horizontal: 30 * widthScaleFactor),
-            child: Stack(
-              children: [
-                SingleChildScrollView(
+
+                // padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
                   child: Column(
                     children: [
                       SizedBox(
@@ -387,7 +389,7 @@ class EvaluateResponseScreen extends StatelessWidget {
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
                         fontSize: 18,
-
+                          
                         text: "Manual Overwrite",
                         ishow: true,
                         imageHeight: 32 * heightScaleFactor,
@@ -399,22 +401,17 @@ class EvaluateResponseScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                 Positioned(
-          right: 0,
-          top: screenHeight * 0.2,
-          child: TeamAlphaContainer(screenWidth: screenWidth, screenHeight: screenHeight),
-        ),
-
-        /// Player Image
-        Positioned(
-            top: screenHeight * 0.16,
-            left: screenWidth * 0.4,
-            child: Image.asset(Appimages.man3,
-                width: screenWidth * 0.16,
-                height: screenHeight * 0.12)),
-      
-              ],
-            ),
+              ),
+               Positioned(
+                    right: 0,
+                    top: screenHeight * 0.2,
+                    child: TeamAlphaContainer(screenWidth: screenWidth, screenHeight: screenHeight),
+                  ),
+          
+                  /// Player Image
+                
+                
+            ],
           ),
         ),
       ),
