@@ -201,6 +201,7 @@
 // }
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -251,7 +252,7 @@ class AnalysisContainer extends StatelessWidget {
                     SizedBox(height: 20 * scaleHeight),
                     Center(
                       child: BoldText(
-                        text: "AI Analysis & Suggestion",
+                        text:  "ai_analysis_suggestion".tr,
                         fontSize: 16 * scaleWidth,
                         selectionColor: AppColors.blueColor,
                       ),
@@ -269,7 +270,7 @@ class AnalysisContainer extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         BoldText(
-                          text: "Relevance to Question",
+                        text: "relevance_to_question".tr,
                           selectionColor: AppColors.blueColor,
                           fontSize: 16 * scaleWidth,
                         ),
@@ -318,7 +319,7 @@ class AnalysisContainer extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         BoldText(
-                          text: "Strategic Depth",
+                          text: "strategic_depth".tr,
                           selectionColor: AppColors.blueColor,
                           fontSize: 16 * scaleWidth,
                         ),
@@ -367,7 +368,7 @@ class AnalysisContainer extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         BoldText(
-                          text: "Implementation Clarity",
+                         text: "implementation_clarity".tr,
                           selectionColor: AppColors.blueColor,
                           fontSize: 16 * scaleWidth,
                         ),
@@ -412,11 +413,11 @@ class AnalysisContainer extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 25 * scaleHeight),
-                    MainText(
-                      text: "AI Suggested Score: 9.1/10 - Comprehensive response with clear objectives, well-defined strategies, and realistic implementation timeline.",
-                      height: 1.2,
-                      fontSize: 14 * scaleWidth,
-                    ),
+                  MainText(
+  text: "ai_suggested_score".tr,
+  fontSize: 14 * scaleWidth,
+  height: 1.2,
+),
                   ],
                 ),
               ),
@@ -452,12 +453,13 @@ class AnalysisContainer extends StatelessWidget {
                   children: [
                     BoldText(
                       text: "89/100",
-                      fontSize: 38 * scaleWidth,
+                      fontSize: 35 * scaleWidth,
                       selectionColor: AppColors.createBorderColor,
                     ),
                     SizedBox(height: 4 * scaleHeight),
                     BoldText(
-                      text: "Final Score",
+                       text: "final_score".tr,
+
                       fontSize: 16 * scaleWidth,
                       selectionColor: AppColors.blueColor,
                     )

@@ -22,6 +22,8 @@ class PhaseContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isSpanish = Get.locale?.languageCode == 'es';
+
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
       child: Container(
@@ -51,13 +53,14 @@ class PhaseContainer extends StatelessWidget {
                         color: AppColors.orangeColor,
                       ),
                       SizedBox(width: screenWidth * 0.02),
-                      MainText(
-                          text: "strategy_building".tr,
-                          fontSize: screenWidth * 0.04),
+                     MainText(
+  text: "strategy_building".tr,
+  fontSize: isSpanish ? 11 : 14 
+),
                     ],
                   ),
                   UseableContainer(
-                      text: "Active",
+                      text: "active".tr,
                       color: AppColors.selectLangugaeColor),
                 ],
               ),
@@ -67,8 +70,7 @@ class PhaseContainer extends StatelessWidget {
                     EdgeInsets.only(left: screenWidth * 0.08),
                 child: MainText(
                   height: 1.5,
-                  text:
-                      "Team collaboration and strategic planning phase",
+                    text: "team_collaboration_phase".tr,
                   color: AppColors.teamColor,
                   fontSize: screenWidth * 0.035,
                 ),

@@ -459,7 +459,7 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                       children: [
                         Positioned(
                           top: 28 * scaleFactor,
-                          left: 110 * scaleFactor,
+                          left: MediaQuery.of(context).size.width>380?185: 140 ,
                           child: Container(
                             width: 100 * scaleFactor,
                             height: 37 * scaleFactor,

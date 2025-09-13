@@ -384,7 +384,7 @@ class EndSessionScreen extends StatelessWidget {
                             fontSize: 16 * widthScaleFactor,
                           ),
                           UseableContainer(
-                            text: "Completed",
+                            text: "completed".tr,
                             color: AppColors.forwardColor,
                             width: 85 * widthScaleFactor,
                           ),
@@ -421,13 +421,13 @@ class EndSessionScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               BoldText(
-                                text: "Export by",
+                                text: "export_by".tr,
                                 fontSize: 22 * widthScaleFactor,
                               ),
                               Row(
                                 children: [
                                   BoldText(
-                                    text: "Phase",
+                                    text: "phase".tr,
                                     fontSize: 22 * widthScaleFactor,
                                   ),
                                   SizedBox(width: 7 * widthScaleFactor),
@@ -446,7 +446,7 @@ class EndSessionScreen extends StatelessWidget {
                       LoginButton(
                 fontSize: 19,
 
-                        text: "Export PDF",
+                        text: "export_pdf".tr,
                         ishow: true,
                         image: Appimages.export,
                         color: AppColors.selectLangugaeColor,
@@ -466,7 +466,7 @@ class EndSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 5 * heightScaleFactor),
                       MainText(
-                        text: "Session completed successfully",
+                        text: "session_completed".tr,
                         fontSize: 14 * widthScaleFactor,
                       ),
                       SizedBox(height: 21 * heightScaleFactor),
@@ -479,13 +479,13 @@ class EndSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 20 * heightScaleFactor),
                       MainText(
-                        text: "Rewards Unlocked",
+                        text: "rewards_unlocked".tr,
                         fontSize: 16 * widthScaleFactor,
                         fontFamily: "gotham",
                       ),
                       SizedBox(height: 16 * heightScaleFactor),
                       BoldText(
-                        text: "Strategic Thinker",
+                       text: "strategic_thinker".tr,
                         fontSize: 16 * widthScaleFactor,
                         selectionColor: AppColors.blueColor,
                       ),
@@ -497,7 +497,7 @@ class EndSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 10 * heightScaleFactor),
                       BoldText(
-                        text: "Badge",
+                        text: "badge".tr,
                         fontSize: 16 * widthScaleFactor,
                         selectionColor: AppColors.blueColor,
                       ),
@@ -543,7 +543,7 @@ class EndSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 30 * heightScaleFactor),
                       CreateContainer(
-                        text: "View Full Ranking",
+                       text: "view_full_ranking".tr,
                         width: 148 * widthScaleFactor,
                       ),
                       SizedBox(height: 20 * heightScaleFactor),
@@ -553,7 +553,7 @@ class EndSessionScreen extends StatelessWidget {
                         onTap: () {
   Get.toNamed(RouteName.createNewSessionScreen);
 },
-                        text: "Create New Session",
+                        text: "create_new_session".tr,
                         ishow: true,
                         fontSize: 19,
 
@@ -565,7 +565,7 @@ class EndSessionScreen extends StatelessWidget {
                       SizedBox(height: 13 * heightScaleFactor),
                       LoginButton(
                         fontSize: 19,
-                        text: "Share Results",
+                        text: "share_results".tr,
                         color: AppColors.forwardColor,
                         image: Appimages.move,
                         ishow: true,

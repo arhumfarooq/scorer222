@@ -947,6 +947,7 @@ class PhasesScreen extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
+    bool isSpanish = Get.locale?.languageCode == 'es';
     // Common scaling
     final verticalSpacing = screenHeight * 0.02;
     final horizontalPadding = screenWidth * 0.05;
@@ -1066,8 +1067,12 @@ class PhasesScreen extends StatelessWidget {
                         Expanded(
                             child: PauseContainer(
                                 onTap: () =>
+                                
                                     controller.isCompleted.value = false,
-                                 text: "back".tr,)),
+                                 text: "back".tr,
+                                 fontSize:isSpanish? 12:14,
+                                 
+                                 )),
                         SizedBox(width: horizontalPadding),
                        Expanded(
             child: PauseContainer(
@@ -1082,6 +1087,7 @@ class PhasesScreen extends StatelessWidget {
                 }
               },
               text: "assign_score".tr,
+              fontSize:isSpanish? 12:14,
               icon: Icons.fast_forward,
               color: AppColors.assignColor,
             ),
@@ -1096,12 +1102,16 @@ class PhasesScreen extends StatelessWidget {
                     BoldText( text: "all_phases".tr,fontSize: 16,selectionColor: AppColors.blueColor,),
           SizedBox(height: 25,),
                     CustomStratgyContainer(
+                      // fontSize: isSpanish?2:14,
+fontSize2:isSpanish? 11:14,
                       width3: 80,
                       iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
-                    flex: 4,flex1: 0,
+                    flex: 3,flex1: 0,
                     ),
                     SizedBox(height: 10,),
                      CustomStratgyContainer(
+                      fontSize2:isSpanish? 11:14,
+                      // fontSize: 6,
                       // width3: 80,
                       iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr, smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
              

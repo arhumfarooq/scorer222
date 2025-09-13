@@ -10,9 +10,10 @@ class SessionUseableRow extends StatelessWidget {
   final String text2;
   final String tex3;
   final String tex4;
+  final double?fontSize;
 
 
-  const SessionUseableRow({super.key, required this.iamge, required this.text, required this.text2, required this.tex3, required this.tex4});
+  const SessionUseableRow({super.key, required this.iamge, required this.text, required this.text2, required this.tex3, required this.tex4, this.fontSize});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class SessionUseableRow extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         BoldText(text: tex3,fontSize: 16,selectionColor: AppColors.orangeColor,),
-                        MainText(text: tex4,fontSize: 12,color: AppColors.teamColor,height: 1,)
+                        MainText(text: tex4,fontSize:fontSize?? 12,color: AppColors.teamColor,height: 1,)
             
                       ],
                     )

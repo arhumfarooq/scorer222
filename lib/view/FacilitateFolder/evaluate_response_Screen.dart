@@ -178,6 +178,7 @@
 // }
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/components/analysis_container.dart';
 import 'package:scorer/components/audio_container.dart';
 import 'package:scorer/components/feedback_container.dart';
@@ -235,7 +236,7 @@ class EvaluateResponseScreen extends StatelessWidget {
                       ),
                       Center(
                         child: BoldText(
-                          text: "Evaluate Response",
+                           text: "evaluate_response".tr,
                           selectionColor: AppColors.blueColor,
                         ),
                       ),
@@ -243,19 +244,20 @@ class EvaluateResponseScreen extends StatelessWidget {
                   ),
                 ),
                       SizedBox(height: 27 * heightScaleFactor),
-                      CustomResponseContainer(
-                        ishow1: false,
-                        containerHeight: 175 * heightScaleFactor,
-                        color1: AppColors.forwardColor,
-                        text1: "View Score",
-                        image: Appimages.eye,
-                        text: "Scored",
-                        ishow: true,
-                        textColor: AppColors.whiteColor,
-                      ),
+                     CustomResponseContainer(
+  ishow1: false,
+  containerHeight: 175 * heightScaleFactor,
+  color1: AppColors.forwardColor,
+  text1: "view_score".tr,
+  image: Appimages.eye,
+  text: "scored".tr,
+  ishow: true,
+  textColor: AppColors.whiteColor,
+),
                       SizedBox(height: 12 * heightScaleFactor),
                       BoldText(
-                        text: "Relevance threshold: >80%",
+                         text: "relevance_threshold".tr,
+
                         fontSize: 16 * widthScaleFactor,
                         selectionColor: AppColors.forwardColor,
                       ),
@@ -283,7 +285,7 @@ class EvaluateResponseScreen extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   BoldText(
-                                    text: "Team Response",
+                                   text: "team_response".tr,
                                     fontSize: 16 * widthScaleFactor,
                                     selectionColor: AppColors.blueColor,
                                   ),
@@ -311,35 +313,36 @@ class EvaluateResponseScreen extends StatelessWidget {
                                 height: 1.2,
                               ),
                               SizedBox(height: 20 * heightScaleFactor),
-                              BoldText(
-                                text: "Key Strategies:",
-                                fontSize: 16 * widthScaleFactor,
-                                selectionColor: AppColors.blueColor,
-                              ),
+                            
+BoldText(
+  text: "key_strategies".tr,
+  fontSize: 16 * widthScaleFactor,
+  selectionColor: AppColors.blueColor,
+),
+                              SizedBox(height: 20 * heightScaleFactor),
+                             MainText(
+  text: "feedback_system".tr,
+  fontSize: 14 * widthScaleFactor,
+  height: 1.2,
+),
+                              SizedBox(height: 20 * heightScaleFactor),
+                             MainText(
+  text: "reduce_response_time".tr,
+  fontSize: 14 * widthScaleFactor,
+  height: 1.2,
+),
+                              SizedBox(height: 20 * heightScaleFactor),
+                             MainText(
+  text: "enhance_self_service".tr,
+  fontSize: 14 * widthScaleFactor,
+  height: 1.2,
+),
                               SizedBox(height: 20 * heightScaleFactor),
                               MainText(
-                                text: "Implement real-time feedback system: Deploy customer feedback tools at every service interaction point to capture immediate responses and identify pain points quickly.",
-                                fontSize: 14 * widthScaleFactor,
-                                height: 1.2,
-                              ),
-                              SizedBox(height: 20 * heightScaleFactor),
-                              MainText(
-                                text: "Reduce response time to under 2 hours: Streamline our support processes and implement automated routing to ensure faster resolution of customer inquiries.",
-                                fontSize: 14 * widthScaleFactor,
-                                height: 1.2,
-                              ),
-                              SizedBox(height: 20 * heightScaleFactor),
-                              MainText(
-                                text: "Enhance self-service capabilities: comprehensive FAQ sections, video tutorials, and chatbot assistance to empower customers to resolve common issues independently.",
-                                fontSize: 14 * widthScaleFactor,
-                                height: 1.2,
-                              ),
-                              SizedBox(height: 20 * heightScaleFactor),
-                              MainText(
-                                text: "These strategies align with our company's customer-centric approach and will be measured through monthly satisfaction surveys, response time analytics, and self-service adoption rates.",
-                                fontSize: 14 * widthScaleFactor,
-                                height: 1.2,
-                              ),
+  text: "alignment".tr,
+  fontSize: 14 * widthScaleFactor,
+  height: 1.2,
+),
                             ],
                           ),
                         ),
@@ -358,26 +361,26 @@ class EvaluateResponseScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(height: 20 * heightScaleFactor),
-                              BoldText(
-                                text: "Scoring Breakdown",
-                                selectionColor: AppColors.blueColor,
-                                fontSize: 16 * widthScaleFactor,
-                              ),
+                            BoldText(
+  text: "scoring_breakdown".tr,
+  fontSize: 16 * widthScaleFactor,
+  selectionColor: AppColors.blueColor,
+),
                               SizedBox(height: 31 * heightScaleFactor),
-                              CustomSloderRow(text: "Clarity & Specificity", text2: "22/25"),
+CustomSloderRow(text: "clarity_specificity".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
-                              CustomSloderRow(text: "Strategic Thinking", text2: "22/25"),
+CustomSloderRow(text: "strategic_thinking".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
-                              CustomSloderRow(text: "Feasibility", text2: "22/25"),
+CustomSloderRow(text: "feasibility".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
-                              CustomSloderRow(text: "Innovation", text2: "22/25"),
+CustomSloderRow(text: "innovation".tr, text2: "22/25"),
                             ],
                           ),
                         ),
                       ),
                       SizedBox(height: 26 * heightScaleFactor),
                       LoginButton(
-                        text: "Accept AI Score (85)",
+                        text:  "accept_ai_score".tr,
                         fontSize: 18,
                         color: AppColors.forwardColor,
                         image: Appimages.ai2,
@@ -390,7 +393,7 @@ class EvaluateResponseScreen extends StatelessWidget {
                       LoginButton(
                         fontSize: 18,
                           
-                        text: "Manual Overwrite",
+                        text:  "manual_overwrite".tr,
                         ishow: true,
                         imageHeight: 32 * heightScaleFactor,
                         imageWidth: 32 * widthScaleFactor,

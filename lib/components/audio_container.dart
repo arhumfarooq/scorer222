@@ -119,6 +119,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -157,7 +158,7 @@ class AudioContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 BoldText(
-                  text: "Audio Response",
+                 text: "audio_response".tr,
                   fontSize: 16 * scaleWidth,
                   selectionColor: AppColors.blueColor,
                 ),

@@ -43,7 +43,7 @@ class TeamProgressContainer extends StatelessWidget {
             children: [
               SizedBox(height: verticalSpacing),
               BoldText(
-                  text: "Team Progress",
+                  text: "team_progress".tr,
                   selectionColor: AppColors.blueColor,
                   fontSize: screenWidth * 0.04),
               SizedBox(height: screenHeight * 0.015),

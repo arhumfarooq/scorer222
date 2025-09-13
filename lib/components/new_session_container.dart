@@ -24,6 +24,8 @@ class NewSessionContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
+    bool isSpanish = Get.locale?.languageCode == 'es';
+
 
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16 * widthScaleFactor),
@@ -153,16 +155,16 @@ class NewSessionContainer extends StatelessWidget {
                                     height: 26,
                                   ),
                                   SizedBox(width: 10 * widthScaleFactor),
-                                MainText(
+                             MainText(
   text: "strategy_building".tr,
-  fontSize: 14 * heightScaleFactor,
-),
+  fontSize: isSpanish ? 11 * heightScaleFactor : 14 * heightScaleFactor,
+)
                                 ],
                               )
                             ],
                           ),
                         CircularPercentIndicator(
-        radius: 40.0, // circle ka size
+      radius: isSpanish ? 35.0 : 40.0, // radius adj
         lineWidth: 4.0, // border ki thickness
         percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
         animation: true,

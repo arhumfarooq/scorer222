@@ -130,6 +130,7 @@
 // }
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -171,16 +172,15 @@ class FeedbackContainer extends StatelessWidget {
               children: [
                 SizedBox(height: 100 * scaleHeight),
                 BoldText(
-                  text: "AI Feedback",
+text: "ai_feedback".tr,
                   fontSize: 22 * scaleWidth,
                   selectionColor: AppColors.languageTextColor,
                 ),
-                MainText(
-                  height: 1.3,
-                  fontSize: 14 * scaleWidth,
-                  text:
-                      """ "Excellent strategic thinking with a comprehensive digital transformation approach. The timeline is realistic and the three-phase implementation shows strong project management skills. Great work on considering both technical and human aspects." """,
-                ),
+             MainText(
+  text: "ai_feedback_text".tr,
+  fontSize: 14 * scaleWidth,
+  height: 1.3,
+),
               ],
             ),
           ),
@@ -218,7 +218,7 @@ class FeedbackContainer extends StatelessWidget {
                   ),
                   SizedBox(height: 4 * scaleHeight),
                   BoldText(
-                    text: "Final Score",
+                    text: "final_score".tr,
                     fontSize: 16 * scaleWidth,
                     selectionColor: AppColors.blueColor,
                   )

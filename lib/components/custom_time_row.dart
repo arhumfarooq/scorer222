@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 // import 'package:scorer/view/startscreen/aa.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -36,7 +37,7 @@ class CustomTimeRow extends StatelessWidget {
                   fontSize: 24 * widthScaleFactor,
                 ),
                 BoldText(
-                  text: "Time\nDuration",
+                   text: "time_duration".tr,
                   fontSize: 16 * widthScaleFactor,
                   selectionColor: AppColors.blueColor,
                   textAlign: TextAlign.center,
@@ -66,7 +67,7 @@ class CustomTimeRow extends StatelessWidget {
                   fontSize: 24 * widthScaleFactor,
                 ),
                 BoldText(
-                  text: "Active\nPlayers",
+                  text: "active_players".tr,
                   textAlign: TextAlign.center,
 
                   fontSize: 16 * widthScaleFactor,
@@ -97,7 +98,7 @@ class CustomTimeRow extends StatelessWidget {
                   fontSize: 24 * widthScaleFactor,
                 ),
                 BoldText(
-                  text: "Total\nPhases",
+                 text: "total_phases".tr,
                   textAlign: TextAlign.center,
 
                   fontSize: 16 * widthScaleFactor,

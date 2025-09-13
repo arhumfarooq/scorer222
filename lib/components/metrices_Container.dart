@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/components/filter_drop_down_container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -28,7 +29,7 @@ class MetricesContainer extends StatelessWidget {
           children: [
             SizedBox(height: screenHeight * 0.025),
             BoldText(
-              text: "Engagement Metrics",
+              text: "engagement_metrics".tr,
               fontSize: screenWidth * 0.04,
               selectionColor: AppColors.blueColor,
             ),
@@ -44,7 +45,7 @@ class MetricesContainer extends StatelessWidget {
                       selectionColor: AppColors.forwardColor,
                     ),
                     BoldText(
-                      text: "Participation",
+                  text: "participation".tr,
                       fontSize: screenWidth * 0.04,
                       selectionColor: AppColors.blueColor,
                     ),
@@ -59,7 +60,7 @@ class MetricesContainer extends StatelessWidget {
                       selectionColor: AppColors.forwardColor,
                     ),
                     BoldText(
-                      text: "Participation",
+                    text: "participation".tr,
                       fontSize: screenWidth * 0.04,
                       selectionColor: AppColors.blueColor,
                     ),
@@ -105,7 +106,7 @@ class MetricesContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 MainText(
-                  text: "Active Players",
+                 text: "active_players".tr,
                   fontSize: screenWidth * 0.035,
                 ),
                 BoldText(
@@ -154,7 +155,7 @@ class MetricesContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 MainText(
-                  text: "Avg Response Time",
+  text: "avg_response_time".tr,
                   fontSize: screenWidth * 0.035,
                 ),
                 BoldText(

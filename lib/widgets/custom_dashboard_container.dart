@@ -166,6 +166,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/add_one_Container.dart';
@@ -306,10 +307,10 @@ class CustomDashboardContainer extends StatelessWidget {
                       height: 28 * heightScaleFactor,
                       width: 26 * widthScaleFactor,
                     ),
-                    MainText(
-                      text: text5 ?? "12 Players",
-                      fontSize: 14 * heightScaleFactor,
-                    ),
+                  MainText(
+  text: text5 ?? "players_12".tr,
+  fontSize: 14 * heightScaleFactor,
+),
                   ],
                 ),
                 SizedBox(width: 9 * widthScaleFactor),
@@ -330,11 +331,11 @@ class CustomDashboardContainer extends StatelessWidget {
       
           SizedBox(width: 6 * widthScaleFactor),
       
-          MainText(
-            text: text6 ?? "25min left",
-            fontSize: 14 * heightScaleFactor,
-            color: AppColors.redColor,
-          ),
+        MainText(
+  text: text6 ?? "time_left_25".tr,
+  fontSize: 14 * heightScaleFactor,
+  color: AppColors.redColor,
+),
         ],
       )
       

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 // import 'package:scorer/view/startscreen/aa.dart';
@@ -16,6 +17,7 @@ class CustomSessionContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isSpanish = Get.locale?.languageCode == 'es';
     return Container(
       height: 355 * heightScaleFactor,
       width: 330 * widthScaleFactor,
@@ -32,39 +34,41 @@ class CustomSessionContainer extends StatelessWidget {
           children: [
             SizedBox(height: 20 * heightScaleFactor),
             BoldText(
-              text: "Session Statistics",
+             text: "session_statistics".tr,
               selectionColor: AppColors.blueColor,
               fontSize: 16 * widthScaleFactor,
             ),
             SizedBox(height: 30 * heightScaleFactor),
             SessionUseableRow(
               iamge: Appimages.phone1,
-              text: "Average Score",
-              text2: "Across all players",
+              text: "average_score".tr,
+              text2: "across_all_players".tr,
               tex3: "2,890",
               tex4: "pts",
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
+              
               iamge: Appimages.phone2,
-              text: "Top Performer",
-              text2: "Highest scoring player",
+              text: "top_performer".tr,
+              fontSize: isSpanish?10:12,
+              text2: "highest_scoring_player".tr,
               tex3: "Alex M.",
               tex4: "2890 points",
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
               iamge: Appimages.phone3,
-              text: "Completion Rate",
-              text2: "Players who finished",
+              text: "completion_rate".tr,
+              text2: "players_finished".tr,
               tex3: "100%",
               tex4: "12/12 players",
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
               iamge: Appimages.phone4,
-              text: "Participation Rate",
-              text2: "Participation Rate",
+              text: "participation_rate".tr,
+              text2: "participation_rate".tr,
               tex3: "100%",
               tex4: "Very high",
             ),

@@ -35,6 +35,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -567,7 +568,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                           ),
                           child: Center(
                             child: BoldText(
-                              text: "Session",
+                              text: "session".tr,
                               fontSize: 20 * scaleFactor,
                               selectionColor: AppColors.whiteColor,
                             ),
@@ -580,7 +581,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(left: 30 * scaleFactor),
                             child: BoldText(
-                              text: "Create New",
+                              text: "create_new".tr,
                               selectionColor: AppColors.blueColor,
                               fontSize: 24 * scaleFactor,
                             ),
@@ -616,44 +617,44 @@ class CreateNewSessionScreen extends StatelessWidget {
                         ),
                         child: Center(
                           child: BoldText(
-                            text: "Enter Session Name",
+                       text: "enter_session_name".tr,
                             fontSize: 22 * scaleFactor,
                           ),
                         ),
                       ),
                       SizedBox(height: 50 * scaleFactor),
                       BoldText(
-                        text: "Select Game Format",
+                text:   "select_game_format".tr, 
                         selectionColor: AppColors.blueColor,
                         fontSize: 16 * scaleFactor,
                       ),
                       SizedBox(height: 30 * scaleFactor),
                       GameSelectUseableContainer(
-                        text1: "Odyssée des OKR",
-                        text2: "Strategic goal-setting workshop",
+                       text1: "odyssee_des_okr".tr,
+  text2: "strategic_goal_workshop".tr,
                         isSelected: isSelected,
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       GameSelectUseableContainer(
-                        text1: "FeedLoop",
-                        text2: "Feedback and collaboration game",
+                      text1: "feedloop".tr,
+  text2: "feedback_collab_game".tr,
                         isSelected: false,
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       GameSelectUseableContainer(
-                        text1: "Innovation Challenge",
-                        text2: "Creative problem-solving workshop",
+                      text1: "innovation_challenge".tr,
+  text2: "creative_problem_workshop".tr,
                         isSelected: isSelected,
                       ),
                       SizedBox(height: 31 * scaleFactor),
                       BoldText(
-                        text: "Number of Phases",
+  text: "number_of_phases".tr,
                         fontSize: 16 * scaleFactor,
                         selectionColor: AppColors.blueColor,
                       ),
                       SizedBox(height: 14 * scaleFactor),
                       MainText(
-                        text: "Phase structure adapts based on selected game format",
+  text: "phase_structure_adapts".tr,
                         color: AppColors.teamColor,
                         textAlign: TextAlign.center,
                         height: 1.4,
@@ -730,30 +731,30 @@ class CreateNewSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 30 * scaleFactor),
                       BoldText(
-                        text: "Enter Details of phase 1",
+                        text: "enter_details_phase_1".tr,
                         selectionColor: AppColors.blueColor,
                         fontSize: 16 * scaleFactor,
                       ),
                       SizedBox(height: 25 * scaleFactor),
-                      CustomPhaseContainer(text1: "Name of Phase 1", text2: "Strategy"),
+CustomPhaseContainer(text1: "name_phase_1".tr, text2: "Strategy"),
                       SizedBox(height: 9 * scaleFactor),
-                      CustomPhaseContainer(text1: "No of Stages", text2: "03"),
+CustomPhaseContainer(text1: "no_of_stages".tr, text2: "03"),
                       SizedBox(height: 9 * scaleFactor),
-                      CustomPhaseContainer(text1: "Duration", text2: "15 min"),
+CustomPhaseContainer(text1: "duration".tr, text2: "15 min"),
                       SizedBox(height: 30 * scaleFactor),
-                      BoldText(
-                        text: "Phase 1 Stages",
-                        selectionColor: AppColors.blueColor,
-                        fontSize: 16 * scaleFactor,
-                      ),
+                     BoldText(
+  text: "phase_1_stages".tr,
+  selectionColor: AppColors.blueColor,
+  fontSize: 16 * scaleFactor,
+),
                       SizedBox(height: 25 * scaleFactor),
-                      FilterUseableContainer(isSelected: true, text: "MCQ", onTap: () {}),
+FilterUseableContainer(isSelected: true, text: "mcq".tr, onTap: () {}),
                       SizedBox(height: 10 * scaleFactor),
-                      FilterUseableContainer(isSelected: false, text: "Open-ended", onTap: () {}),
+FilterUseableContainer(isSelected: false, text: "open_ended".tr, onTap: () {}),
                       SizedBox(height: 10 * scaleFactor),
-                      FilterUseableContainer(isSelected: true, text: "Puzzle", onTap: () {}),
+FilterUseableContainer(isSelected: true, text: "puzzle".tr, onTap: () {}),
                       SizedBox(height: 10 * scaleFactor),
-                      FilterUseableContainer(isSelected: false, text: "Simulation", onTap: () {}),
+FilterUseableContainer(isSelected: false, text: "simulation".tr, onTap: () {}),
                       SizedBox(height: 24 * scaleFactor),
                       LoginButton(
                         text: "Move to phase 2",
@@ -765,7 +766,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 50 * scaleFactor),
                       BoldText(
-                        text: "Player Capacity",
+                        text: "player_capacity".tr,
                         selectionColor: AppColors.blueColor,
                         fontSize: 16 * scaleFactor,
                       ),
@@ -778,7 +779,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                               Image.asset(Appimages.pas, width: 100 * scaleFactor, height: 86 * scaleFactor),
                               SizedBox(height: 10 * scaleFactor),
                               BoldText(text: "5-10", fontSize: 16 * scaleFactor, selectionColor: AppColors.blueColor),
-                              MainText(text: "Small", fontSize: 14 * scaleFactor, height: 1.7, color: AppColors.teamColor)
+MainText(text: "small".tr, fontSize: 14 * scaleFactor, height: 1.7, color: AppColors.teamColor),
                             ],
                           ),
                           Column(
@@ -786,7 +787,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                               Image.asset(Appimages.pas, width: 100 * scaleFactor, height: 86 * scaleFactor),
                               SizedBox(height: 10 * scaleFactor),
                               BoldText(text: "10-20", fontSize: 16 * scaleFactor, selectionColor: AppColors.forwardColor),
-                              MainText(text: "Medium", fontSize: 14 * scaleFactor, height: 1.7, color: AppColors.forwardColor)
+MainText(text: "medium".tr, fontSize: 14 * scaleFactor, height: 1.7, color: AppColors.forwardColor),
                             ],
                           ),
                           Column(
@@ -794,7 +795,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                               Image.asset(Appimages.pas, width: 100 * scaleFactor, height: 86 * scaleFactor),
                               SizedBox(height: 10 * scaleFactor),
                               BoldText(text: "20-50", fontSize: 16 * scaleFactor, selectionColor: AppColors.blueColor),
-                              MainText(text: "Large", fontSize: 14 * scaleFactor, height: 1.7, color: AppColors.teamColor)
+MainText(text: "large".tr, fontSize: 14 * scaleFactor, height: 1.7, color: AppColors.teamColor),
                             ],
                           )
                         ],
@@ -874,9 +875,9 @@ class CreateNewSessionScreen extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      MainText(text: "AI Scoring", fontSize: 14 * scaleFactor),
-                                      MainText(text: "Enable automatic scoring using AI", fontSize: 11 * scaleFactor, color: AppColors.teamColor, height: 1.2),
-                                    ],
+                                    MainText(text: "ai_scoring".tr, fontSize: 14 * scaleFactor),
+MainText(text: "enable_ai_scoring".tr, fontSize: 11 * scaleFactor, color: AppColors.teamColor, height: 1.2),
+                               ],
                                   ),
                                 ],
                               ),
@@ -895,22 +896,23 @@ class CreateNewSessionScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 30 * scaleFactor),
-                      BoldText(
-                        text: "Additional Settings",
-                        selectionColor: AppColors.blueColor,
-                        fontSize: 16 * scaleFactor,
-                      ),
+                    
+BoldText(
+  text: "additional_settings".tr,
+  selectionColor: AppColors.blueColor,
+  fontSize: 16 * scaleFactor,
+),
                       SizedBox(height: 20 * scaleFactor),
-                      FilterUseableContainer(isSelected: true, text: 'Allow late joiners', onTap: () {}),
+FilterUseableContainer(isSelected: true, text: 'allow_late_joiners'.tr, onTap: () {}),
                       SizedBox(height: 10 * scaleFactor),
-                      FilterUseableContainer(isSelected: false, text: 'Send email invitations', onTap: () {}),
+FilterUseableContainer(isSelected: false, text: 'send_email_invitations'.tr, onTap: () {}),
                       SizedBox(height: 10 * scaleFactor),
-                      FilterUseableContainer(isSelected: false, text: 'Record session for review', onTap: () {}),
+                     FilterUseableContainer(isSelected: false, text: 'record_session_review'.tr, onTap: () {}),
                       SizedBox(height: 30 * scaleFactor),
                       LoginButton(
                 fontSize: 19,
                         
-                        text: "Start immediately",
+                        text: "start_immediately".tr,
                         ishow: true,
                         icon: Icons.play_arrow_rounded,
                         imageHeight: 30 * scaleFactor,
@@ -920,7 +922,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                       LoginButton(
                 fontSize: 19,
 
-                        text: "Schedule for later",
+                   text:      "schedule_for_later".tr, 
                         image: Appimages.calender,
                         ishow: true,
                         color: AppColors.forwardColor,

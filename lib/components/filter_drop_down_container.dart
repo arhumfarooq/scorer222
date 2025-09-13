@@ -49,14 +49,14 @@ class FilterDropDownContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       BoldText(
-                        text: "Filter",
+                       text: "filter".tr,
                         fontSize: 24,
                         selectionColor: AppColors.blueColor,
                       ),
                       GestureDetector(
                         onTap: () => Get.back(),
                         child: MainText(
-                          text: "Cancel",
+                          text: "cancel".tr,
                           fontSize: 15,
                           color: AppColors.forwardColor,
                           fontWeight: FontWeight.w600,
@@ -69,7 +69,7 @@ class FilterDropDownContainer extends StatelessWidget {
 
                   Center(
                     child: BoldText(
-                      text: "By Phase",
+                      text: "by_phase".tr,
                       fontSize: 16,
                       selectionColor: AppColors.blueColor,
                     ),
@@ -81,26 +81,26 @@ class FilterDropDownContainer extends StatelessWidget {
                   Obx(() => FilterUseableContainer(
                         onTap: () => controller.select(0),
                         isSelected: controller.selectedIndex.value == 0,
-                        text: "Phase 1",
+                        text: "phase_1".tr
                       )),
                   const SizedBox(height: 10),
                   Obx(() => FilterUseableContainer(
                         onTap: () => controller.select(1),
                         isSelected: controller.selectedIndex.value == 1,
-                        text: "Phase 2",
+                        text: "phase_2".tr
                       )),
                   const SizedBox(height: 10),
                   Obx(() => FilterUseableContainer(
                         onTap: () => controller.select(2),
                         isSelected: controller.selectedIndex.value == 2,
-                        text: "Phase 3",
+                        text: "phase_3".tr
                       )),
 
                   const SizedBox(height: 40),
 
                   Center(
                     child: BoldText(
-                      text: "By Stage",
+                      text: "by_stage".tr,
                       fontSize: 16,
                       selectionColor: AppColors.blueColor,
                     ),
@@ -112,13 +112,14 @@ class FilterDropDownContainer extends StatelessWidget {
                   Obx(() => FilterUseableContainer(
                         onTap: () => controller.selectStage(0),
                         isSelected: controller.selectedstage.value == 0,
-                        text: "Stage 1",
+                        text: "stage_1".tr
+                        
                       )),
                   const SizedBox(height: 10),
                   Obx(() => FilterUseableContainer(
                         onTap: () => controller.selectStage(1),
                         isSelected: controller.selectedstage.value == 1,
-                        text: "Stage 2",
+                        text:"stage_2".tr
                       )),
                   const SizedBox(height: 10),
                   Obx(() => FilterUseableContainer(
@@ -133,7 +134,7 @@ class FilterDropDownContainer extends StatelessWidget {
                   Center(
                     child: LoginButton(
                       fontSize: 18,
-                      text: "Clear Filter",
+                      text: "clear_filter".tr,
                       color: AppColors.redColor,
                     ),
                   ),
@@ -141,7 +142,7 @@ class FilterDropDownContainer extends StatelessWidget {
                   Center(
                     child: LoginButton(
                       fontSize: 18,
-                      text: "Apply Filter",
+                      text: "apply_filter".tr,
                       color: AppColors.forwardColor,
                     ),
                   ),

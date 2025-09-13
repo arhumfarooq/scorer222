@@ -135,6 +135,7 @@ class CustomStratgyContainer extends StatelessWidget {
   final double? spaceHeight2;
   final int?flex1;
   final int?flex;
+  final double?fontSize2;
 
   const CustomStratgyContainer({
     super.key,
@@ -156,7 +157,8 @@ class CustomStratgyContainer extends StatelessWidget {
     this.extra,
     this.fontSize,
     this.mainHeight,
-    this.spaceHeight2, this.flex1, this.flex,
+    this.spaceHeight2, this.flex1, this.flex, this.fontSize2,
+    
   });
 
   @override
@@ -210,7 +212,7 @@ class CustomStratgyContainer extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        MainText(text: text1, fontSize: textFontSize),
+                        MainText(text: text1, fontSize:fontSize2?? textFontSize),
                         MainText(text: text2, fontSize: textFontSize, color: AppColors.teamColor, height: 1),
                       ],
                     ),

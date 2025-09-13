@@ -248,16 +248,26 @@ class FacilitatorDashboard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      BoldText(
-                        text: "Welcome back, Adam!",
-                        fontSize: 16 * heightScaleFactor,
-                        selectionColor: AppColors.blueColor,
+                      Row(
+                        children: [
+                        BoldText(
+  text: "welcome_back".tr,
+  fontSize: 16 * heightScaleFactor,
+  selectionColor: AppColors.blueColor,
+),
+                           BoldText(
+                            text: " Adam!",
+                            fontSize: 16 * heightScaleFactor,
+                            selectionColor: AppColors.blueColor,
+                          ),
+                        ],
                       ),
-                      MainText(
-                        text: "Manage your sessions and track\nengagement in real-time.",
-                        fontSize: 14 * heightScaleFactor,
-                        height: 1.4,
-                      ),
+                    
+MainText(
+  text: "manage_sessions".tr,
+  fontSize: 14 * heightScaleFactor,
+  height: 1.4,
+),
                       SizedBox(height: 23 * heightScaleFactor),
                       Obx(
                         () => Container(
@@ -292,7 +302,7 @@ class FacilitatorDashboard extends StatelessWidget {
                                         onTap: () {
                                           controller.changeTab(0);
                                         },
-                                        text: "Active Sessions",
+                                        text:   "active_sessions".tr,
                                         color: controller.selectedIndex.value == 0
                                             ? AppColors.whiteColor
                                             : AppColors.languageColor,
@@ -303,7 +313,7 @@ class FacilitatorDashboard extends StatelessWidget {
                                   Expanded(
                                     child: Center(
                                       child: MainText(
-                                        text: "Scheduled",
+                                        text:  "scheduled".tr,
                                         fontSize: 14 * heightScaleFactor,
                                         color: controller.selectedIndex.value == 0
                                             ? AppColors.languageColor

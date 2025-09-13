@@ -342,7 +342,13 @@ class OverViewOptionScreen extends StatelessWidget {
   final controller = Get.put(OverviewController());
   OverViewOptionScreen({super.key});
 
-  final List<String> tabs = ["Overview", "Phases", "Players", "   Leaderboard     "];
+  final List<String> tabs = [
+  "tab_overview".tr,
+  "tab_phases".tr,
+  "tab_players".tr,
+  "tab_leaderboard".tr,
+];
+
   final List<Widget> screens = [
     OverViewScreen(),
     PhasesScreen(),

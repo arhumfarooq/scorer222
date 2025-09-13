@@ -99,6 +99,8 @@ import 'package:scorer/components/phases_Screen.dart';
 import 'package:scorer/constants/approutes.dart';
 import 'package:scorer/localization/app_translation.dart';
 import 'package:scorer/localization/translation_Service.dart';
+import 'package:scorer/view/FacilitateFolder/evaluate_response_Screen.dart';
+import 'package:scorer/view/FacilitateFolder/evaluate_response_Screen2.dart';
 import 'package:scorer/view/FacilitateFolder/facilitator_dashboard.dart';
 import 'package:scorer/view/FacilitateFolder/over_view__option_Screen.dart';
 import 'package:scorer/view/FacilitateFolder/splash_screen.dart';
@@ -143,7 +145,7 @@ class MyApp extends StatelessWidget {
       locale: locale,
       getPages: AppRoutes.getAppRoutes(),
       fallbackLocale: const Locale('en', 'US'),
-      home: SplashScreen(),
+      home: EvaluateResponseScreen2(),
     );
   }
 }
