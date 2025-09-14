@@ -1103,14 +1103,18 @@ class PhasesScreen extends StatelessWidget {
           SizedBox(height: 25,),
                     CustomStratgyContainer(
                       // fontSize: isSpanish?2:14,
-fontSize2:isSpanish? 11:14,
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
                       width3: 80,
                       iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
                     flex: 3,flex1: 0,
                     ),
                     SizedBox(height: 10,),
                      CustomStratgyContainer(
-                      fontSize2:isSpanish? 11:14,
+                      // fontSize2:isSpanish? 11:14,
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
+
                       // fontSize: 6,
                       // width3: 80,
                       iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr, smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
@@ -1118,12 +1122,16 @@ fontSize2:isSpanish? 11:14,
                     ),
                      SizedBox(height: 10,),
                      CustomStratgyContainer(
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                       width3: 80,
                       iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase3_implementation".tr, text2: "Upcoming • 25 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
              
                     ),
                          SizedBox(height: 10,),
                      CustomStratgyContainer(
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                       width3: 80,
                       iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase4_evaluation".tr,text2: "Upcoming • 15 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
              

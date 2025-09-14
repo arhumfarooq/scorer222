@@ -117,6 +117,7 @@
 // }
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/login_button.dart';
@@ -162,6 +163,8 @@ class CustomResponseContainer extends StatelessWidget {
     // Calculate scale factors
     final double scaleWidth = screenWidth / baseWidth;
     final double scaleHeight = screenHeight / baseHeight;
+    bool isSpanish = Get.locale?.languageCode == 'es';
+
 
     return Stack(
       clipBehavior: Clip.none,
@@ -212,12 +215,12 @@ class CustomResponseContainer extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           UseableContainer(
-                            text: text ?? "Pending",
+                            text: text ?? "pending".tr,
                             height: 28 * scaleHeight,
-                            width: 60 * scaleWidth,
+                            width: 70 * scaleWidth,
                             color: color1 ?? AppColors.yellowColor,
                             textColor: textColor ?? AppColors.languageTextColor,
-                            fontSize: 12 * scaleWidth, // Assuming a base font size
+                            fontSize:isSpanish?10: 12 * scaleWidth, // Assuming a base font size
                           ),
                           SizedBox(width: 4 * scaleWidth),
                           UseableContainer(
@@ -245,7 +248,7 @@ class CustomResponseContainer extends StatelessWidget {
                       fontFamily: "refsan",
                       imageHeight: 17 * scaleHeight,
                       imageWidth: 18 * scaleWidth,
-                      text: text1 ?? "Evaluate",
+                text: text1?.tr ?? "evaluate".tr,
                       height: 45 * scaleHeight,
                       width: 300 * scaleWidth,
                       radius: 12 * scaleWidth,

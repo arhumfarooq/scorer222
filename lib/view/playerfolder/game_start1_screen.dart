@@ -639,6 +639,9 @@ class GameStart1Screen extends StatelessWidget {
                                           Row(
                                             children: [
                                               UseableContainer(
+                                                width: 70,
+                                                height: 25,
+                                                
                                                 text: "Phase 2",
                                                 color: AppColors.orangeColor,
                                                 fontSize:
@@ -1230,6 +1233,7 @@ class GameStart1Screen extends StatelessWidget {
                             SizedBox(height: 43 * heightScaleFactor),
                             if (controller.currentPhase.value >= 2)
                               LoginButton(
+                                fontSize: 20,
                                 text: "Previous",
                                 color: AppColors.redColor,
                               )
@@ -1239,6 +1243,7 @@ class GameStart1Screen extends StatelessWidget {
                             Obx(() => LoginButton(
                               onTap: ()=>Get.toNamed(RouteName.submitResponseScreen),
                                   ishow: true,
+                                  fontSize: 20,
                                   image: Appimages.submit,
                                   text: "Submit Response",
                                   color: controller.currentPhase.value >= 1

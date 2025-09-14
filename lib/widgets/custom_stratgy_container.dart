@@ -136,6 +136,8 @@ class CustomStratgyContainer extends StatelessWidget {
   final int?flex1;
   final int?flex;
   final double?fontSize2;
+  final double?fontSize3;
+  
 
   const CustomStratgyContainer({
     super.key,
@@ -157,7 +159,7 @@ class CustomStratgyContainer extends StatelessWidget {
     this.extra,
     this.fontSize,
     this.mainHeight,
-    this.spaceHeight2, this.flex1, this.flex, this.fontSize2,
+    this.spaceHeight2, this.flex1, this.flex, this.fontSize2, this.fontSize3,
     
   });
 
@@ -221,7 +223,7 @@ class CustomStratgyContainer extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(top: verticalPadding),
                   child: UseableContainer(
-                    
+                    fontSize: fontSize3,
                     text: text3,
                     width: width3 ?? smallContainerWidth,
                     color: smallContainer,

@@ -457,7 +457,7 @@ class SubmitResponseScreen extends StatelessWidget {
                           SizedBox(height: 30 * scaleFactor),
                           LoginButton(
                         onTap: () => Get.toNamed(RouteName.submitResponseScreen2),
-
+fontSize: 20,
                             text: "Review AI Score",
                             color: AppColors.forwardColor,
                             ishow: true,

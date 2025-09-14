@@ -244,7 +244,7 @@ class LoginButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: (height ?? 70) * heightScaleFactor,
+        height: (height ?? 65) * heightScaleFactor,
         width: (width ?? 337) * widthScaleFactor,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular((radius ?? 25) * heightScaleFactor),

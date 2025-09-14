@@ -367,13 +367,25 @@ BoldText(
   selectionColor: AppColors.blueColor,
 ),
                               SizedBox(height: 31 * heightScaleFactor),
-CustomSloderRow(text: "clarity_specificity".tr, text2: "22/25"),
+CustomSloderRow(
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+
+  text: "clarity_specificity".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
-CustomSloderRow(text: "strategic_thinking".tr, text2: "22/25"),
+CustomSloderRow(
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+  
+  text: "strategic_thinking".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
-CustomSloderRow(text: "feasibility".tr, text2: "22/25"),
+CustomSloderRow(
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+  
+  text: "feasibility".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
-CustomSloderRow(text: "innovation".tr, text2: "22/25"),
+CustomSloderRow(
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+  
+  text: "innovation".tr, text2: "22/25"),
                             ],
                           ),
                         ),
@@ -387,7 +399,7 @@ CustomSloderRow(text: "innovation".tr, text2: "22/25"),
                         ishow: true,
                         imageHeight: 38 * heightScaleFactor,
                         imageWidth: 32 * widthScaleFactor,
-                        height: 74 * heightScaleFactor,
+                        // height: 74 * heightScaleFactor,
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
@@ -398,7 +410,7 @@ CustomSloderRow(text: "innovation".tr, text2: "22/25"),
                         imageHeight: 32 * heightScaleFactor,
                         imageWidth: 32 * widthScaleFactor,
                         icon: Icons.edit,
-                        height: 74 * heightScaleFactor,
+                        // height: 74 * heightScaleFactor,
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
                     ],

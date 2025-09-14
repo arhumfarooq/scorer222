@@ -281,6 +281,8 @@ class EvaluateResponseScreen2 extends StatelessWidget {
     const double baseWidth = 414.0;
     final double heightScaleFactor = screenHeight / baseHeight;
     final double widthScaleFactor = screenWidth / baseWidth;
+    bool isSpanish = Get.locale?.languageCode == 'es';
+
 
     return Scaffold(
       body: GradientBackground(
@@ -350,11 +352,11 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  BoldText(
-                                    text: "Your Evaluation",
-                                    selectionColor: AppColors.blueColor,
-                                    // fontSize: 16 * widthScaleFactor,
-                                  ),
+                                 BoldText(
+  text: "your_evaluation".tr,
+  selectionColor: AppColors.blueColor,
+  fontSize: 16 * widthScaleFactor, // optional dynamic sizing
+),
                                   UseableContainer(
                                     text: "completed".tr,
                                     width: 83 * widthScaleFactor,
@@ -392,16 +394,16 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       SizedBox(height: 20 * heightScaleFactor),
-                                      BoldText(
-                                        text: "Feedback (Optional)",
-                                        fontSize: 20 * widthScaleFactor,
-                                      ),
+                                     BoldText(
+  text: "feedback_optional".tr,
+  fontSize: 20 * widthScaleFactor,
+),
                                       SizedBox(height: 6 * heightScaleFactor),
-                                      MainText(
-                                        fontSize: 14 * widthScaleFactor,
-                                        height: 1.1,
-                                        text: """"Excellent strategic thinking with a comprehensive digital transformation approach. The timeline is realistic and the  three-phase implementation shows strong project management skills. Great work on considering both technical and human aspects.'"""
-                                      )
+                                     MainText(
+  text: "evaluation_text".tr,
+  fontSize: 14 * widthScaleFactor,
+  height: 1.1,
+),
                                     ],
                                   ),
                                 ),
@@ -426,13 +428,32 @@ class EvaluateResponseScreen2 extends StatelessWidget {
   selectionColor: AppColors.blueColor,
 ),
                                      SizedBox(height: 31 * heightScaleFactor),
-CustomSloderRow(text: "clarity_specificity".tr, text2: "22/25"),
+CustomSloderRow(
+  // fontSize: isSpanish? 11:14,
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+
+  text: "clarity_specificity".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
-CustomSloderRow(text: "strategic_thinking".tr, text2: "22/25"),
+CustomSloderRow(
+  // fontSize: isSpanish? 11:14,
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+
+  
+  text: "strategic_thinking".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
-CustomSloderRow(text: "feasibility".tr, text2: "22/25"),
+CustomSloderRow(
+  // fontSize: isSpanish? 11:14,
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+
+  
+  text: "feasibility".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
-CustomSloderRow(text: "innovation".tr, text2: "22/25"),
+CustomSloderRow(
+  // fontSize: isSpanish? 11:14,
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+
+  
+  text: "innovation".tr, text2: "22/25"),
                                     ],
                                   ),
                                 ),
@@ -537,48 +558,59 @@ BoldText(
                         color: AppColors.forwardColor,
                         image: Appimages.ai2,
                         ishow: true,
-                        fontSize: 18,
+                        // fontSize: 18,
+  fontSize: isSpanish? 16:18,
+
                           
                         imageHeight: 38 * heightScaleFactor,
                         imageWidth: 32 * widthScaleFactor,
-                        height: 74 * heightScaleFactor,
+                        // height: 74 * heightScaleFactor,
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
                         onTap: () {
                   Get.toNamed(RouteName.overViewOptionScreen);
                 },
-                        text: "Move to Next Stage",
+                       text: "move_next_stage".tr,
                         ishow: true,
                           
                         imageHeight: 22 * heightScaleFactor,
                         imageWidth: 26 * widthScaleFactor,
                         icon: Icons.fast_forward,
-                        height: 74 * heightScaleFactor,
-                        fontSize: 18,
+                        // height: 74 * heightScaleFactor,
+                        // fontSize: 18,
+  fontSize: isSpanish? 16:18,
+
+
                           
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
-                        fontSize: 18,
+                        // fontSize: 18,\
+  fontSize: isSpanish? 16:18,
+
+
                           
-                        text: "Export PDF",
+                      text: "export_pdf".tr,
                         ishow: true,
                         imageHeight: 18 * heightScaleFactor,
                         imageWidth: 18 * widthScaleFactor,
                         image: Appimages.export,
-                        height: 74 * heightScaleFactor,
+                        // height: 74 * heightScaleFactor,
                         color: AppColors.redColor,
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
-                        text: "Edit Score & Feedback",
-                        fontSize: 18,
+                     text: "edit_score_feedback".tr,
+                        // fontSize: 18,
+   fontSize: isSpanish? 15:18,
+
+
                         ishow: true,
                         imageHeight: 22 * heightScaleFactor,
                         imageWidth: 22 * widthScaleFactor,
                         icon: Icons.edit,
-                        height: 74 * heightScaleFactor,
+                        // height: 74 * heightScaleFactor,
                         color: AppColors.orangeColor,
                       ),
                       SizedBox(height: 100 * heightScaleFactor)

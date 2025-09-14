@@ -70,13 +70,13 @@ class NewSessionContainer extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                     MainText(text: "join_link".tr, fontSize: 14 * heightScaleFactor),
+                     MainText(text: "join_link".tr, fontSize: 14* heightScaleFactor),
 
                       Row(
                         children: [
                           BoldText(
                             text: "https:/www.score.com",
-                            fontSize: 14 * heightScaleFactor,
+                           fontSize: Get.locale?.languageCode == 'fr' ? 12 * heightScaleFactor : 14 * heightScaleFactor,
                             selectionColor: AppColors.blueColor,
                           ),
                           SizedBox(width: 10 * widthScaleFactor),
@@ -155,10 +155,13 @@ class NewSessionContainer extends StatelessWidget {
                                     height: 26,
                                   ),
                                   SizedBox(width: 10 * widthScaleFactor),
-                             MainText(
+                          MainText(
   text: "strategy_building".tr,
-  fontSize: isSpanish ? 11 * heightScaleFactor : 14 * heightScaleFactor,
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
+      ? 11 * heightScaleFactor
+      : 14 * heightScaleFactor, // default for English
 )
+
                                 ],
                               )
                             ],

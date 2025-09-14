@@ -199,11 +199,13 @@ import 'package:scorer/widgets/custom_stratgy_container.dart';
 class ViewResponsesScreen extends StatelessWidget {
   final StageController controller = Get.put(StageController());
   ViewResponsesScreen({super.key});
-  final List<String> tabs = ["All", "Pending", "Scored"];
-  
+final List<String> tabs = ["all".tr, "pending".tr, "scored".tr];
+
 
   @override
   Widget build(BuildContext context) {
+    bool isSpanish = Get.locale?.languageCode == 'es';
+
     final Size screenSize = MediaQuery.of(context).size;
     final double screenHeight = screenSize.height;
     final double screenWidth = screenSize.width;
@@ -243,7 +245,9 @@ class ViewResponsesScreen extends StatelessWidget {
       ),
       Center(
         child: BoldText(
-          text: "Stage 2 Responses",
+            text: "stage2_responses".tr,
+            fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 20:22,
+
           selectionColor: AppColors.blueColor,
         ),
       ),
@@ -266,7 +270,9 @@ class ViewResponsesScreen extends StatelessWidget {
                         width2: 126,
                         iconContainer: AppColors.selectLangugaeColor,
                         icon: Icons.play_arrow_rounded,
-                        text1: "Phase 2 Strategy Building",
+                        text1:"phase2_strategy".tr,
+                       fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                         text2: 'Completed • 20 min',
                         text3: 'active'.tr,
                         smallContainer: AppColors.selectLangugaeColor,
@@ -274,7 +280,7 @@ class ViewResponsesScreen extends StatelessWidget {
                       ),
                   
                       SizedBox(height: 31),
-                      CreateContainer(text: "Stage 2 Scoring", width: 134),
+                      CreateContainer( text: "stage2_scoring".tr, width: 134),
                   SizedBox(height: 31,),
                       Row(
                         children: [
@@ -296,7 +302,7 @@ class ViewResponsesScreen extends StatelessWidget {
                                   ),
                                   SizedBox(width: 11),
                                   BoldText(
-                                    text: "Scored".tr,
+                                    text: "scored".tr,
                                     selectionColor: AppColors.blueColor,
                                     fontSize: 16,
                                   ),
@@ -410,9 +416,9 @@ onTap: () {
   Get.toNamed(RouteName.viewScoreScreen);
 },
               color1: AppColors.forwardColor,
-              text1: "View Score",
+              text1: "view_score".tr,
               image: Appimages.eye,
-              text: "Scored",
+              text: "scored".tr,
               ishow: true,
               textColor: AppColors.whiteColor,
               
@@ -427,9 +433,9 @@ onTap: () {
               
                   CustomResponseContainer(
               color1: AppColors.forwardColor,
-              text1: "View Score",
+               text1: "view_score".tr,
               image: Appimages.eye,
-              text: "Scored",
+              text: "scored".tr,
               ishow: true,
               textColor: AppColors.whiteColor,
               
@@ -438,16 +444,19 @@ onTap: () {
                   SizedBox(height: 30),
                   
                             BoldText(
-                                text: "All Phases",
+                               text: "all_phases".tr,
                                 fontSize: 16,
                                 selectionColor: AppColors.blueColor),
                             CustomStratgyContainer(
-                                width3: 73,
+                                // width3: 73,
                         spaceHeight2: 20,
                         spaceHeight: 14,
-                        
+                        fontSize3:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:12,
                               // width1: 207,
                               //  width2: 70,
+                              // fontSize2:isSpanish? 11:14,
+                            fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                               iconContainer: AppColors.forwardColor,
                               icon: Icons.check,
                               width1: 277,
@@ -455,17 +464,25 @@ onTap: () {
                                 // width3: 70,
                               smallContainer: AppColors.forwardColor,
                               largeConatiner: AppColors.forwardColor,
+                          width3  :(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 64:73,
+
                             ),
                             SizedBox(height: 10),
                             CustomStratgyContainer(
                                 mainHeight: 1.3,
                         fontSize: 14,
                         // containerHeight: 180,
-                        width3: 54,
+                        //   :(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+                        // width3: 54,
+                          width3  :(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 50:54,
+
                         spaceHeight2: 20,
                         spaceHeight: 14,
                               width1: 207,
                                width2: 70,
+                              //  fontSize2:isSpanish? 11:14,
+                            fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                               iconContainer: AppColors.selectLangugaeColor,
                               icon: Icons.play_arrow_rounded,
                             text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr,
@@ -474,12 +491,15 @@ onTap: () {
                             ),
                             SizedBox(height: 10),
                             CustomStratgyContainer(
-                              width3: 54,
+                              width3: 70,
                         spaceHeight2: 20,
                         spaceHeight: 14,
                               width1: 207,
                                width2: 70,
                               iconContainer: AppColors.watchColor,
+                              // fontSize2:isSpanish? 11:14,
+                            fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+
                               icon: Icons.watch_later,
                            text1: "phase3_implementation".tr, text2: "Upcoming • 25 min", text3: "pending".tr,
                               smallContainer: AppColors.watchColor,
@@ -487,12 +507,15 @@ onTap: () {
                             ),
                             SizedBox(height: 10),
                             CustomStratgyContainer(
-                                width3: 54,
+                                  width3: 70,
+                                // width3: 54,
                         spaceHeight2: 20,
                         spaceHeight: 14,
                               width1: 207,
                                width2: 70,
                               iconContainer: AppColors.watchColor,
+                            fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+
                               icon: Icons.watch_later,
                             text1: "phase4_evaluation".tr,text2: "Upcoming • 15 min", text3: "pending".tr,
                               smallContainer: AppColors.watchColor,

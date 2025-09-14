@@ -183,12 +183,16 @@ class AdminLeaderBoardScreen extends StatelessWidget {
   Get.toNamed(RouteName.endSessionScreen);
 },
               text: "End Session",
+                      fontSize: 20,
+
               color: AppColors.redColor,
               icon: Icons.square_sharp,
               ishow: true,
             ),
             SizedBox(height: screenHeight * 0.015),
             LoginButton(
+                      fontSize: 20,
+
               text: "Share Results",
               color: AppColors.forwardColor,
               image: Appimages.move,

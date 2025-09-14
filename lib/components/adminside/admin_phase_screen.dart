@@ -183,6 +183,8 @@ SizedBox(height: 25,),
                    
  Center(
                       child: LoginButton(
+                      fontSize: 20,
+
                         text: "Add Phases",
                         // color: AppColors.forwardColor,
                         ishow: true,
@@ -195,6 +197,8 @@ SizedBox(height: 25,),
                     /// View Responses Button
                     Center(
                       child: LoginButton(
+                      fontSize: 20,
+
                         text: "View Responses",
                         color: AppColors.forwardColor,
                         ishow: true,

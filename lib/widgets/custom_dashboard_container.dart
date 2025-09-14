@@ -351,7 +351,7 @@ class CustomDashboardContainer extends StatelessWidget {
                       children: [
                         Expanded(
                           child: PauseContainer(
-                            height: 40,
+                            height: 35,
                           fontSize:13 ,
                             text: text3 ?? "",
                             icon: icon1,
@@ -361,7 +361,7 @@ class CustomDashboardContainer extends StatelessWidget {
                         Expanded(
                           child: PauseContainer(
                             fontSize: 13,
-                            height: 40,
+                            height: 35,
                             color: AppColors.forwardColor,
                             text: text4 ?? "",
                             icon: icon2,
@@ -374,7 +374,7 @@ class CustomDashboardContainer extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 17 * widthScaleFactor),
                     child: PauseContainer(
                       onTap: onTap,
-                      height: 40 * heightScaleFactor,
+                      height: 35 * heightScaleFactor,
                       width: 300 * widthScaleFactor,
                       color: color3,
                       text: text7 ?? "",

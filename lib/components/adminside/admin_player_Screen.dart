@@ -217,9 +217,13 @@ class AdminPlayerScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: verticalSpacing),
-                    LoginButton(text: "Add Player", image: Appimages.personadd, ishow: true),
+                    LoginButton(
+                      fontSize: 20,
+                      
+                      text: "Add Player", image: Appimages.personadd, ishow: true),
                     SizedBox(height: allPlayersContainerSpacing),
                     LoginButton(
+                      fontSize: 20,
                       text: "View Responses",
                       image: Appimages.eye,
                       color: AppColors.forwardColor,
@@ -227,6 +231,8 @@ class AdminPlayerScreen extends StatelessWidget {
                     ),
                     SizedBox(height: allPlayersContainerSpacing),
                     LoginButton(
+                      fontSize: 20,
+                      
                       text: "Send Alert",
                       image: Appimages.noti,
                       color: AppColors.redColor,

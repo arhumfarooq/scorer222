@@ -518,7 +518,7 @@ class SubmitResponseScreen2 extends StatelessWidget {
                                 children: [
                                   BoldText(
                                     text: "89/100",
-                                    fontSize: 38 * scaleFactor,
+                                    fontSize: 35 * scaleFactor,
                                     selectionColor: AppColors.createBorderColor,
                                   ),
                                   SizedBox(height: 4 * scaleFactor),

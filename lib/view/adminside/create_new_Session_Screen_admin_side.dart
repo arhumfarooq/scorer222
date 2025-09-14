@@ -428,8 +428,8 @@ class CreateNewSessionHeader extends StatelessWidget {
                                       Positioned(
                                         left: 145,
                                         child: Container(
-                                          width: 90 * scaleFactor,
-                                          height: 37 * scaleFactor,
+                                          width: 90 ,
+                                          height: 37 ,
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 16 * scaleFactor,
                                               vertical: 6 * scaleFactor),
@@ -529,12 +529,15 @@ class CreateNewSessionHeader extends StatelessWidget {
 
                         // Buttons
                         LoginButton(
+                          fontSize: 20,
                           text: "Save",
                           ishow: true,
                           image: Appimages.save,
                         ),
                         SizedBox(height: 13 * scaleFactor),
                         LoginButton(
+                          fontSize: 20,
+
                           text: "Cancel",
                           color: AppColors.forwardColor,
                         ),

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -40,6 +41,7 @@ class PhaseContainer extends StatelessWidget {
               horizontal: screenWidth * 0.025),
           child: Column(
             children: [
+              SizedBox(height: 10,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -55,7 +57,7 @@ class PhaseContainer extends StatelessWidget {
                       SizedBox(width: screenWidth * 0.02),
                      MainText(
   text: "strategy_building".tr,
-  fontSize: isSpanish ? 11 : 14 
+  fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11 : 14 
 ),
                     ],
                   ),
