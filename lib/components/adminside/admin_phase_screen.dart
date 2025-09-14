@@ -45,7 +45,7 @@ class AdminPhaseScreen extends StatelessWidget {
               // SizedBox(height: verticalSpacing),
  Center(
                 child: CircularPercentIndicator(
-                  radius: 60.0, // circle ka size
+                  radius: screenWidth * 0.15, //  circle ka size
                   lineWidth: 5.0, // border ki thickness
                   percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
                   animation: true,
@@ -58,7 +58,7 @@ class AdminPhaseScreen extends StatelessWidget {
           children: [
              BoldText(
                   text: "12:32",
-                  fontSize: screenWidth * 0.06,
+                  fontSize: screenWidth * 0.05,
                   selectionColor: AppColors.blueColor),
               MainText(
                   text: "Remaining",
@@ -180,7 +180,7 @@ SizedBox(height: 25,),
                     ),
                     SizedBox(height: 25,),
                     AdminSessionContainer(contentWidth: contentWidth, screenHeight: screenHeight, screenWidth: screenWidth, verticalSpacing: verticalSpacing),
-                   
+                   SizedBox(height: 20,),
  Center(
                       child: LoginButton(
                       fontSize: 20,

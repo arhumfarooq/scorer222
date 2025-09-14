@@ -457,33 +457,123 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                     height: 100 * scaleFactor,
                     child: Stack(
                       children: [
-                        Positioned(
-                          top: 28 * scaleFactor,
-                          left: MediaQuery.of(context).size.width>380?185: 140 ,
-                          child: Container(
-                            width: 100 * scaleFactor,
-                            height: 37 * scaleFactor,
-                            decoration: BoxDecoration(
-                              color: AppColors.forwardColor,
-                              borderRadius: BorderRadius.circular(80 * scaleFactor),
-                            ),
-                            child: Center(
-                              child: BoldText(
-                                text: "Session",
-                                fontSize: 22 * scaleFactor,
-                                selectionColor: AppColors.whiteColor,
-                              ),
-                            ),
-                          ),
-                        ),
+                        // Positioned(
+                        //   top: 28,
+                        //   left: MediaQuery.of(context).size.width>380?185: 110 ,
+                        //   child: Container(
+                        //     width: 100 ,
+                        //     height: 37 ,
+                        //     decoration: BoxDecoration(
+                        //       color: AppColors.forwardColor,
+                        //       borderRadius: BorderRadius.circular(80 * scaleFactor),
+                        //     ),
+                        //     child: Center(
+                        //       child: BoldText(
+                        //         text: "Session",
+                        //         fontSize: 22 * scaleFactor,
+                        //         selectionColor: AppColors.whiteColor,
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            BoldText(
-                              text: "Create New",
-                              selectionColor: AppColors.blueColor,
-                              fontSize: 24 * scaleFactor,
-                            ),
+                            // Container(
+                              
+                            //   child: Stack(
+                            //     clipBehavior: Clip.none,
+                            //     children: [
+                            //       Positioned(
+                            //         bottom: 1,
+                            //         top: 2,
+                            //         right: -90,
+                            //         child: Container(
+                            //                                     width: 90 * scaleFactor,
+                            //                                     height: 37 * scaleFactor,
+                            //                                     decoration: BoxDecoration(
+                            //                                       color: AppColors.forwardColor,
+                            //                                       borderRadius: BorderRadius.circular(80 * scaleFactor),
+                            //                                     ),
+                            //                                     child: Center(
+                            //                                       child: BoldText(
+                            //                                         text: "Session",
+                            //                                         fontSize: 18 * scaleFactor,
+                            //                                         selectionColor: AppColors.whiteColor,
+                            //                                       ),
+                            //                                     ),
+                            //                                   ),
+                            //       ),
+                            //       Row(
+                            //         children: [
+                            //           BoldText(
+                            //         text: "Create New",
+                            //         selectionColor: AppColors.blueColor,
+                            //         fontSize: 24 * scaleFactor,
+                            //       ),
+                            //         ],
+                            //       ),
+                            //     ],
+                            //   )
+                            // ),
+                            RichText(
+      text: TextSpan(
+        style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),
+        children: [
+           TextSpan(
+            text: "Create Ne",
+            
+            style: TextStyle(
+              color: AppColors.blueColor, // Dark Blue
+            ),
+          ),
+          WidgetSpan(
+            alignment: PlaceholderAlignment.middle, // aligns inline
+            child: Container(
+              // padding: const EdgeInsets.symmetric( vertical: 4),
+              decoration: BoxDecoration(
+                color: Color(0xff8DC046),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  bottomLeft: Radius.circular(30),
+                ),
+              ),
+              child:  Text(
+                "w",
+                style: TextStyle(
+                  color: AppColors.blueColor, 
+                  fontSize: 22 * scaleFactor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          WidgetSpan(
+            alignment: PlaceholderAlignment.middle, // aligns inline
+            child: Container(
+              decoration: BoxDecoration(
+                color: AppColors.forwardColor,
+                borderRadius: const BorderRadius.only(
+                  topRight: Radius.circular(30),
+                  bottomRight: Radius.circular(30),
+                ),
+              ),
+              child: Padding(
+                padding:  EdgeInsets.only(left: 4.0, right: 10.0),
+                child:  Text(
+                  "Session",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22 * scaleFactor,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
                             Padding(
                               padding: EdgeInsets.only(top: 10 * scaleFactor),
                               child: Image.asset(
@@ -498,24 +588,66 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                     ),
                   ),
                   // Main content
-                  Image.asset(Appimages.game, width: 300 * scaleFactor),
-                  SizedBox(height: 40 * scaleFactor),
-                  Container(
-                    height: 74 * scaleFactor,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(24 * scaleFactor),
-                      border: Border.all(
-                        color: AppColors.selectLangugaeColor.withOpacity(0.1),
-                        width: 2 * scaleFactor,
-                      ),
-                    ),
-                    child: Center(
-                      child: BoldText(
-                        text: "Enter Session Name",
-                        fontSize: 22 * scaleFactor,
-                      ),
-                    ),
+                  SizedBox(
+                  height: 150 * scaleFactor, // set height you want
+                  child: Image.asset(
+                    Appimages.game,
+                    fit: BoxFit.contain, // ensures it fits without stretching
                   ),
+                ),
+                  SizedBox(height: 20 * scaleFactor),
+                  // Container(
+                  //   height: 74 * scaleFactor,
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(24 * scaleFactor),
+                  //     border: Border.all(
+                  //       color: AppColors.selectLangugaeColor.withOpacity(0.1),
+                  //       width: 2 * scaleFactor,
+                  //     ),
+                  //   ),
+                  //   child: Center(
+                  //     child: BoldText(
+                  //       text: "Enter Session Name",
+                  //       fontSize: 22 * scaleFactor,
+                  //     ),
+                  //   ),
+                  // ),
+                  TextFormField(
+                    textAlign: TextAlign.center, 
+  style: TextStyle(
+    fontSize: 22 * scaleFactor,
+    fontWeight: FontWeight.w600,
+  ),
+  decoration: InputDecoration(
+    hintText: "Enter Session Name",
+    hintStyle: TextStyle(
+      fontSize: 22 * scaleFactor,
+      fontWeight: FontWeight.w600,
+      color: AppColors.languageTextColor
+    ),
+    contentPadding: EdgeInsets.symmetric(
+      vertical: 20 * scaleFactor,
+      horizontal: 16 * scaleFactor,
+    ),
+    border:OutlineInputBorder(
+      borderRadius: BorderRadius.circular(24 * scaleFactor),
+      borderSide: BorderSide(
+        color: AppColors.assignColor,
+        width: 2 * scaleFactor,
+      ),
+    ) ,
+    // enabledBrder: InputBorder.none
+    
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(24 * scaleFactor),
+      borderSide: BorderSide(
+        color: AppColors.assignColor,
+        width: 2 * scaleFactor,
+      ),
+    ) ,
+  ),
+)
+,
                   SizedBox(height: 50 * scaleFactor),
                   BoldText(
                     text: "Select Game Format",
@@ -812,6 +944,7 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                   FilterUseableContainer(isSelected: false, text: 'Record session for review', onTap: () {}),
                   SizedBox(height: 30 * scaleFactor),
                   LoginButton(
+                    fontSize: 20,
                     text: "Start immediately",
                     ishow: true,
                     icon: Icons.play_arrow_rounded,
@@ -820,6 +953,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 13 * scaleFactor),
                   LoginButton(
+                    fontSize: 20,
+
                     text: "Schedule for later",
                     image: Appimages.calender,
                     ishow: true,

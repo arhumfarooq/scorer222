@@ -250,7 +250,7 @@ class PlayersScreen extends StatelessWidget {
     final sectionPadding = screenWidth * 0.08;
     final allPlayersContainerSpacing = screenHeight * 0.01;
     final teamDistributionBoxWidth = screenWidth * 0.9;
-    final teamDistributionBoxHeight = screenHeight * 0.25;
+    final teamDistributionBoxHeight = screenHeight * 0.24;
     final buttonHeight = screenHeight * 0.06;
     final positionedBoxWidth = screenWidth * 0.38;
     final positionedBoxHeight = screenHeight * 0.07;

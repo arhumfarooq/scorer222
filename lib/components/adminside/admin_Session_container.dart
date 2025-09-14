@@ -82,10 +82,10 @@ class AdminSessionContainer extends StatelessWidget {
                     MainText(
                       // height: 1,
     text: "40% Complete",
-    fontSize: screenWidth * 0.04),
+    fontSize: screenWidth * 0.036),
                     BoldText(
     text: "55 minutes remaining",
-    fontSize: screenWidth * 0.04,
+    fontSize: screenWidth * 0.035,
     selectionColor: AppColors.blueColor),
                   ],
                 ),

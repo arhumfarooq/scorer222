@@ -446,53 +446,76 @@ class Game2Screen extends StatelessWidget {
                           width: 24 * scaleFactor,
                           height: 20 * scaleFactor,
                         ),
-                        Expanded(
-                          child: Center(
-                            child: Stack(
-                              alignment: Alignment.center,
-                              clipBehavior: Clip.none,
-                              children: [
-                                Positioned(
-                                     left: MediaQuery.of(context).size.width>380?220: 160 ,
-                                  child: Container(
-                                    width: 90 * scaleFactor,
-                                    height: 37 * scaleFactor,
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: 13 * scaleFactor,
-                                        vertical: 6 * scaleFactor),
-                                    decoration: BoxDecoration(
-                                      color: AppColors.forwardColor,
-                                      borderRadius:
-                                          BorderRadius.circular(20 * scaleFactor),
-                                    ),
-                                    child: Center(
-                                      child: BoldText(
-                                        text: "Game",
-                                        selectionColor: AppColors.whiteColor,
-                                        fontSize: 18 * scaleFactor,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  left: 65 * scaleFactor,
-                                  child: BoldText(
-                                    text: "Create New",
-                                    fontSize: 24 * scaleFactor,
-                                    selectionColor: AppColors.blueColor,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
+                      RichText(
+                                                     text: TextSpan(
+                                                       style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),
+                                                       children: [
+                              TextSpan(
+                               text: "Create Ne",
+                               
+                               style: TextStyle(
+                                 color: AppColors.blueColor, // Dark Blue
+                               ),
+                                                         ),
+                                                         WidgetSpan(
+                               alignment: PlaceholderAlignment.middle, // aligns inline
+                               child: Container(
+                                 // padding: const EdgeInsets.symmetric( vertical: 4),
+                                 decoration: BoxDecoration(
+                                   color: Color(0xff8DC046),
+                                   borderRadius: const BorderRadius.only(
+                                                topLeft: Radius.circular(30),
+                                                bottomLeft: Radius.circular(30),
+                                   ),
+                                 ),
+                                 child:  Text(
+                                   "w",
+                                   style: TextStyle(
+                                                color: AppColors.blueColor, 
+                                                fontSize: 22 * scaleFactor,
+                                                fontWeight: FontWeight.bold,
+                                   ),
+                                 ),
+                               ),
+                                                         ),
+                                                         WidgetSpan(
+                               alignment: PlaceholderAlignment.middle, // aligns inline
+                               child: Container(
+                                 decoration: BoxDecoration(
+                                   color: AppColors.forwardColor,
+                                   borderRadius: const BorderRadius.only(
+                                                topRight: Radius.circular(30),
+                                                bottomRight: Radius.circular(30),
+                                   ),
+                                 ),
+                                 child: Padding(
+                                   padding:  EdgeInsets.only(left: 4.0, right: 10.0),
+                                   child:  Text(
+                                                "Game",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 22 * scaleFactor,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                   ),
+                                 ),
+                               ),
+                                                         ),
+                                                       ],
+                                                     ),
+                                                   ),
+                                                   
+                                                   Text("")
+                                                   ],
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Image.asset(Appimages.game, width: 300 * scaleFactor),
+                  SizedBox(
+                  height: 150 * scaleFactor, // set height you want
+                  child: Image.asset(
+                    Appimages.game,
+                    fit: BoxFit.contain, // ensures it fits without stretching
                   ),
+                ),
                   LoginTextfield(
                       text: "Enter Game Name", fontsize: 14 * scaleFactor),
                   SizedBox(height: 9 * scaleFactor),

@@ -552,58 +552,103 @@ class CreateNewSessionScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(
-                  height: 100 * scaleFactor,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        top: 29 * scaleFactor,
-                        left: MediaQuery.of(context).size.width>380?185: 140 ,
-                        child: Container(
-                          width: 100 * scaleFactor,
-                          height: 37 * scaleFactor,
-                          decoration: BoxDecoration(
-                            color: AppColors.forwardColor,
-                            borderRadius: BorderRadius.circular(80 * scaleFactor),
-                          ),
-                          child: Center(
-                            child: BoldText(
-                              text: "session".tr,
-                              fontSize: 20 * scaleFactor,
-                              selectionColor: AppColors.whiteColor,
+                 SizedBox(
+                    height: 100 * scaleFactor,
+                    child: Stack(
+                      children: [
+                     
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                          
+                            Padding(
+                                      padding: EdgeInsets.only(left: 30 * scaleFactor), // Apply horizontal padding once
+
+                              child: RichText(
+                                                     text: TextSpan(
+                                                       style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),
+                                                       children: [
+                              TextSpan(
+                               text: "Create Ne",
+                               
+                               style: TextStyle(
+                                 color: AppColors.blueColor, // Dark Blue
+                               ),
+                                                         ),
+                                                         WidgetSpan(
+                               alignment: PlaceholderAlignment.middle, // aligns inline
+                               child: Container(
+                                 // padding: const EdgeInsets.symmetric( vertical: 4),
+                                 decoration: BoxDecoration(
+                                   color: Color(0xff8DC046),
+                                   borderRadius: const BorderRadius.only(
+                                                topLeft: Radius.circular(30),
+                                                bottomLeft: Radius.circular(30),
+                                   ),
+                                 ),
+                                 child:  Text(
+                                   "w",
+                                   style: TextStyle(
+                                                color: AppColors.blueColor, 
+                                                fontSize: 22 * scaleFactor,
+                                                fontWeight: FontWeight.bold,
+                                   ),
+                                 ),
+                               ),
+                                                         ),
+                                                         WidgetSpan(
+                               alignment: PlaceholderAlignment.middle, // aligns inline
+                               child: Container(
+                                 decoration: BoxDecoration(
+                                   color: AppColors.forwardColor,
+                                   borderRadius: const BorderRadius.only(
+                                                topRight: Radius.circular(30),
+                                                bottomRight: Radius.circular(30),
+                                   ),
+                                 ),
+                                 child: Padding(
+                                   padding:  EdgeInsets.only(left: 4.0, right: 10.0),
+                                   child:  Text(
+                                                "Session",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 22 * scaleFactor,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                   ),
+                                 ),
+                               ),
+                                                         ),
+                                                       ],
+                                                     ),
+                                                   ),
                             ),
-                          ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 10 * scaleFactor),
+                              child: Image.asset(
+                                Appimages.house1,
+                                height: 85 * scaleFactor,
+                                width: 100 * scaleFactor,
+                              ),
+                            )
+                          ],
                         ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 30 * scaleFactor),
-                            child: BoldText(
-                              text: "create_new".tr,
-                              selectionColor: AppColors.blueColor,
-                              fontSize: 24 * scaleFactor,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 10 * scaleFactor, right: 10 * scaleFactor),
-                            child: Image.asset(
-                              Appimages.house1,
-                              height: 85 * scaleFactor,
-                              width: 100 * scaleFactor,
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
+                
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30 * scaleFactor),
                   child: Column(
                     children: [
-                      Image.asset(Appimages.game, width: 300 * scaleFactor),
+                      // Image.asset(Appimages.game, width: 300 * scaleFactor),
+                      SizedBox(
+                  height: 150 * scaleFactor, // set height you want
+                  child: Image.asset(
+                    Appimages.game,
+                    fit: BoxFit.contain, // ensures it fits without stretching
+                  ),
+                ),
                       SizedBox(height: 40 * scaleFactor),
                       Container(
                         height: 74 * scaleFactor,

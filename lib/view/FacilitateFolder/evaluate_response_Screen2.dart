@@ -321,7 +321,7 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                 ), SizedBox(height: 27 * heightScaleFactor),
                       CustomResponseContainer(
                         ishow1: false,
-                        containerHeight: 171 * heightScaleFactor,
+                        containerHeight: 160 * heightScaleFactor,
                         color1: AppColors.yellowColor,
                         text1: "view_score".tr,
                         image: Appimages.eye,

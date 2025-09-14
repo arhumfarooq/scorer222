@@ -200,7 +200,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                             ],
                           ),
                          CircularPercentIndicator(
-        radius: 40.0, // circle ka size
+       radius: 40.0 * heightScaleFactor,// circle ka size
         lineWidth: 4.0, // border ki thickness
         percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
         animation: true,
@@ -213,7 +213,7 @@ class AdminNewSessionScreen extends StatelessWidget {
           children: [
              BoldText(
                   text: "12:32",
-                  fontSize: screenWidth * 0.04,
+                  fontSize: screenWidth * 0.035,
                   selectionColor: AppColors.blueColor),
               MainText(
                   text: "Remaining",

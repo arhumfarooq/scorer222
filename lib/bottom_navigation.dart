@@ -821,7 +821,7 @@ class BottomNavigation extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Image.asset(icon, height: 65 * scaleFactor),
+          Image.asset(icon, height: 62 * scaleFactor),
           SizedBox(height: 5 * scaleFactor),
           CreateContainer(
             text: label,

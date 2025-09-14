@@ -40,6 +40,7 @@ class CustomSessionContainer extends StatelessWidget {
             ),
             SizedBox(height: 30 * heightScaleFactor),
             SessionUseableRow(
+              
               iamge: Appimages.phone1,
               text: "average_score".tr,
               text2: "across_all_players".tr,
@@ -51,7 +52,7 @@ class CustomSessionContainer extends StatelessWidget {
               
               iamge: Appimages.phone2,
               text: "top_performer".tr,
-              fontSize: isSpanish?10:12,
+              fontSize: isSpanish?10:10,
               text2: "highest_scoring_player".tr,
               tex3: "Alex M.",
               tex4: "2890 points",

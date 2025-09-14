@@ -222,7 +222,7 @@ class NewSessionContainer extends StatelessWidget {
                           Expanded(
                             child: PauseContainer(
   text: "pause".tr,
-  height: 45 * heightScaleFactor,
+  // height: 45 * heightScaleFactor,
   width: 140 * widthScaleFactor,
 ),
                           ),
@@ -232,7 +232,7 @@ class NewSessionContainer extends StatelessWidget {
                               text: "next_phase".tr,
                               icon: Icons.fast_forward,
                               color: AppColors.forwardColor,
-                              height: 45 * heightScaleFactor,
+                              // height: 45 * heightScaleFactor,
                               width: 140 * widthScaleFactor,
                             ),
                           ),
