@@ -166,6 +166,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -233,9 +234,11 @@ class CustomDashboardContainer extends StatelessWidget {
     this.width2,
     this.height,  this.isshow=false, this.smallImage, this.right, this.horizontal, this.mainWidth, this.mainHeight,  this.arrowshow=true, this.onTap,
   });
+  bool get isSpanish => Get.locale?.languageCode == "es";
 
   @override
   Widget build(BuildContext context) {
+    
     // Get screen dimensions for scaling
     final Size screenSize = MediaQuery.of(context).size;
     final double baseHeight = 812.0;
@@ -282,6 +285,7 @@ class CustomDashboardContainer extends StatelessWidget {
                 ),
                 SizedBox(width: 6 * widthScaleFactor),
                 UseableContainer(
+                  fontSize:isSpanish?10:12 ,
                   height: height2,
                   width: width2,
                   text: text2,

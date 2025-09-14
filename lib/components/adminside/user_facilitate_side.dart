@@ -42,7 +42,7 @@ class UserFacilitateSide extends StatelessWidget {
                     AllPlayersContainer(
             onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
 
-                      text3: "Inactive",
+                      text3: "inactive".tr,
                       color: AppColors.orangeColor,
                       width: 60,
             fontSize2: 12,
@@ -52,11 +52,11 @@ class UserFacilitateSide extends StatelessWidget {
           ),
             SizedBox(height: 7 * heightScaleFactor),
                     AllPlayersContainer(
-                      text3: "Pending",
+                      text3: "pending".tr,
             onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
 
                       color: AppColors.redColor,
-                      width: 60,
+                      width: 70,
             fontSize2: 12,
             text: "Alex Martinez",
             text2: "john.smith@company.com",

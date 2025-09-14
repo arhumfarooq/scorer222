@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -41,7 +42,7 @@ class AdminTeamProgress extends StatelessWidget {
             children: [
               SizedBox(height: verticalSpacing),
               BoldText(
-                  text: "Team Progress",
+                 text: "team_progress".tr,
                   selectionColor: AppColors.blueColor,
                   fontSize: screenWidth * 0.04),
               SizedBox(height: screenHeight * 0.015),
@@ -94,7 +95,7 @@ class AdminTeamProgress extends StatelessWidget {
               SizedBox(height: verticalSpacing * 0.7),
          PlayersContainers(
                     color: AppColors.yellowColor,
-                    text3: "Working...",
+                    text3:"working".tr,
                     text1: "2",
                     text2: "Sarah J.",
                     image: Appimages.play2),

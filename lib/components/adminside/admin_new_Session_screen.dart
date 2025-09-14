@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -48,10 +49,8 @@ class AdminNewSessionScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MainText(
-                        text: "Session Code",
-                        fontSize: 14 * heightScaleFactor,
-                      ),
+                                       MainText(text: "session_code".tr, fontSize: 14 * heightScaleFactor),
+
                       Row(
                         children: [
                           BoldText(
@@ -71,15 +70,13 @@ class AdminNewSessionScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MainText(
-                        text: "Join Link",
-                        fontSize: 14 * heightScaleFactor,
-                      ),
+                      MainText(text: "join_link".tr, fontSize: 14* heightScaleFactor),
+
                       Row(
                         children: [
                           BoldText(
                             text: "https:/www.score.com",
-                            fontSize: 16 * heightScaleFactor,
+                           fontSize: Get.locale?.languageCode == 'fr' ? 12 * heightScaleFactor : 14 * heightScaleFactor,
                             selectionColor: AppColors.blueColor,
                           ),
                           SizedBox(width: 10 * widthScaleFactor),
@@ -94,10 +91,8 @@ class AdminNewSessionScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MainText(
-                        text: "Started",
-                        fontSize: 14 * heightScaleFactor,
-                      ),
+                                         MainText(text: "started".tr, fontSize: 14 * heightScaleFactor),
+
                       BoldText(
                         text: "2:30 PM",
                         fontSize: 16 * heightScaleFactor,
@@ -109,10 +104,8 @@ class AdminNewSessionScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MainText(
-                        text: "Duration",
-                        fontSize: 14 * heightScaleFactor,
-                      ),
+                                         MainText(text: "duration".tr, fontSize: 14 * heightScaleFactor),
+
                       BoldText(
                         text: "45 minutes",
                         fontSize: 16 * heightScaleFactor,
@@ -125,7 +118,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       MainText(
-                        text: "Created By",
+                      text: "created_by".tr,
                         fontSize: 14 * heightScaleFactor,
                       ),
                       BoldText(
@@ -140,7 +133,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       MainText(
-                        text: "Created Time",
+                       text: "created_time".tr,
                         fontSize: 14 * heightScaleFactor,
                       ),
                       BoldText(
@@ -179,7 +172,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               BoldText(
-                                text: "Current Phase",
+                               text: "current_phase".tr,
                                 fontSize: 16 * heightScaleFactor,
                                 selectionColor: AppColors.blueColor,
                               ),
@@ -192,8 +185,10 @@ class AdminNewSessionScreen extends StatelessWidget {
                                   ),
                                   SizedBox(width: 10 * widthScaleFactor),
                                   MainText(
-                                    text: "Strategy Building",
-                                    fontSize: 14 * heightScaleFactor,
+                                  text: "strategy_building".tr,
+  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
+      ? 11 * heightScaleFactor
+      : 14 * heightScaleFactor, // default for English
                                   )
                                 ],
                               )
@@ -216,7 +211,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                   fontSize: screenWidth * 0.035,
                   selectionColor: AppColors.blueColor),
               MainText(
-                  text: "Remaining",
+                  text: "remaining".tr,
                   fontSize: screenWidth * 0.027,
                   height: 1),
           ],
@@ -253,7 +248,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: PauseContainer(
-                              text: "Pause",
+                              text: "pause".tr,
                               height: 45 * heightScaleFactor,
                               width: 140 * widthScaleFactor,
                               // fontSize: 14 * heightScaleFactor,
@@ -262,7 +257,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                           SizedBox(width: 20 * widthScaleFactor),
                           Expanded(
                             child: PauseContainer(
-                              text: "Next Phase",
+                               text: "next_phase".tr,
                               icon: Icons.fast_forward,
                               color: AppColors.forwardColor,
                               height: 45 * heightScaleFactor,
@@ -275,7 +270,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                            SizedBox(height: 12 * heightScaleFactor),
                       LoginButton(
                         fontFamily: "refsan",fontSize: 14,
-                        text: "Extend Time",height: 45,radius: 12,ishow: true,color: AppColors.orangeColor,icon: Icons.watch_later,),
+                        text: "extend_time".tr,height: 45,radius: 12,ishow: true,color: AppColors.orangeColor,icon: Icons.watch_later,),
                         
       
                     ],

@@ -216,15 +216,7 @@ class ChooseYourRoleScreen extends StatelessWidget {
         child: SafeArea(
           child: Stack(
             children: [
-              Positioned(
-  top: screenHeight * 0.02,   // 2% from top
-  // right: screenWidth * 0.18,  // 15% from right
-  right: 60,
-  child: Transform.rotate(
-    angle: -0.1,
-    child: RoleTextContainer(),
-  ),
-),
+            
 
               // Positioned(
               //   top: 15 * heightScaleFactor,
@@ -239,11 +231,34 @@ class ChooseYourRoleScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height: 20 * heightScaleFactor),
-                   BoldText(
-  text: "choose_your".tr,
-  selectionColor: AppColors.blueColor,
-  fontSize: 24,
+                   Container(
+                    width: 100,
+                     child: Stack(
+                      clipBehavior: Clip.none,
+                       children: [
+                          Positioned(
+                            right: -45,
+  // top: screenHeight * 0.02,   // 2% from top
+  // right: screenWidth * 0.18,  // 15% from right
+  // right: 60,
+  child: Transform.rotate(
+    angle: -0.1,
+    child: RoleTextContainer(),
+  ),
 ),
+                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                           children: [
+                             BoldText(
+                               text: "choose_your".tr,
+                               selectionColor: AppColors.blueColor,
+                               fontSize: 24,
+                             ),
+                           ],
+                         ),
+                       ],
+                     ),
+                   ),
 SizedBox(height: 20 * heightScaleFactor),
 MainText(
   height: 1.3,
@@ -329,3 +344,71 @@ MainText(
     );
   }
 }
+ 
+
+
+
+
+
+
+
+
+
+  // RichText(
+  //                                                    text: TextSpan(
+  //                                                      style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),
+  //                                                      children: [
+  //                             TextSpan(
+  //                              text: "Create Ne",
+                               
+  //                              style: TextStyle(
+  //                                color: AppColors.blueColor, // Dark Blue
+  //                              ),
+  //                                                        ),
+  //                                                        WidgetSpan(
+  //                              alignment: PlaceholderAlignment.middle, // aligns inline
+  //                              child: Container(
+  //                                // padding: const EdgeInsets.symmetric( vertical: 4),
+  //                                decoration: BoxDecoration(
+  //                                  color: Color(0xff8DC046),
+  //                                  borderRadius: const BorderRadius.only(
+  //                                               topLeft: Radius.circular(30),
+  //                                               bottomLeft: Radius.circular(30),
+  //                                  ),
+  //                                ),
+  //                                child:  Text(
+  //                                  "w",
+  //                                  style: TextStyle(
+  //                                               color: AppColors.blueColor, 
+  //                                               fontSize: 22 * scaleFactor,
+  //                                               fontWeight: FontWeight.bold,
+  //                                  ),
+  //                                ),
+  //                              ),
+  //                                                        ),
+  //                                                        WidgetSpan(
+  //                              alignment: PlaceholderAlignment.middle, // aligns inline
+  //                              child: Container(
+  //                                decoration: BoxDecoration(
+  //                                  color: AppColors.forwardColor,
+  //                                  borderRadius: const BorderRadius.only(
+  //                                               topRight: Radius.circular(30),
+  //                                               bottomRight: Radius.circular(30),
+  //                                  ),
+  //                                ),
+  //                                child: Padding(
+  //                                  padding:  EdgeInsets.only(left: 4.0, right: 10.0),
+  //                                  child:  Text(
+  //                                               "Session",
+  //                                               style: TextStyle(
+  //                                                 color: Colors.white,
+  //                                                 fontSize: 22 * scaleFactor,
+  //                                                 fontWeight: FontWeight.bold,
+  //                                               ),
+  //                                  ),
+  //                                ),
+  //                              ),
+  //                                                        ),
+  //                                                      ],
+  //                                                    ),
+  //                                                  ),

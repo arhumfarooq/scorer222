@@ -124,6 +124,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/components/adminside/admin_new_Session_screen.dart';
 import 'package:scorer/components/engagement_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -153,13 +154,12 @@ class AdminOverviewScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 BoldText(
-                  text: "Session Information",
+                  text: "session_info".tr,
                   selectionColor: AppColors.blueColor,
                   fontSize: 16 * scaleFactor,
                 ),
                 MainText(
-                  text: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
-                  fontSize: 14 * scaleFactor,
+  text: "session_description".tr,                  fontSize: 14 * scaleFactor,
                   height: 1.5,
                 )
               ],
@@ -191,7 +191,7 @@ class AdminOverviewScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         BoldText(
-                          text: "System Activity",
+                        text: "system_activity".tr,
                           selectionColor: AppColors.blueColor,
                           fontSize: 16 * scaleFactor, // Scale font size
                         ),
@@ -224,14 +224,29 @@ class AdminOverviewScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 22 * scaleFactor),
-                LoginButton(
-                  
-                  text: "Export Result by Phase", ishow: true, image: Appimages.export,fontSize: 18,),
-                SizedBox(height: 9 * scaleFactor),
-                LoginButton(text: "Export Result by Team", ishow: true, image: Appimages.export, color: AppColors.redColor,fontSize: 18),
-                SizedBox(height: 9 * scaleFactor),
-                LoginButton(text: "Export Result by Player", ishow: true, image: Appimages.export, color: AppColors.forwardColor,fontSize: 18),
-                SizedBox(height: 44 * scaleFactor),
+              
+LoginButton(
+  text: "export_by_phase".tr,
+  ishow: true,
+  image: Appimages.export,
+  fontSize: 18,
+),
+SizedBox(height: 9 * scaleFactor),
+LoginButton(
+  text: "export_by_team".tr,
+  ishow: true,
+  image: Appimages.export,
+  color: AppColors.redColor,
+  fontSize: 18,
+),
+SizedBox(height: 9 * scaleFactor),
+LoginButton(
+  text: "export_by_player".tr,
+  ishow: true,
+  image: Appimages.export,
+  color: AppColors.forwardColor,
+  fontSize: 18,
+),                SizedBox(height: 44 * scaleFactor),
               ],
             ),
           ),

@@ -244,7 +244,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                       Expanded(
                         child: Center(
                           child: BoldText(
-                            text: "Team Alpha",
+                            text: "team_alpha".tr,
                             fontSize: 22 * widthScaleFactor,
                           ),
                         ),
@@ -284,10 +284,10 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                         ],
                       ),
                       BoldText(
-                        text: "Team Building Workshop",
-                        fontSize: 16 * widthScaleFactor,
-                        selectionColor: AppColors.blueColor,
-                      ),
+  text: "team_building_workshop".tr,
+  fontSize: 16 * heightScaleFactor,
+  selectionColor: AppColors.blueColor,
+),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -322,11 +322,11 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              BoldText(
-                                text: "Team Code",
-                                fontSize: 16 * widthScaleFactor,
-                                selectionColor: AppColors.blueColor,
-                              ),
+                             BoldText(
+  text: "team_code".tr,
+  fontSize: 16 * widthScaleFactor,
+  selectionColor: AppColors.blueColor,
+),
                               Row(
                                 children: [
                                   MainText(
@@ -371,17 +371,17 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                           ),
 
                           SizedBox(width: 8 * widthScaleFactor),
-                          MainText(
-                            text: "Waiting for facilitator to start the session...",
-                            fontSize: 12 * widthScaleFactor,
-                          ),
+                        MainText(
+  text: "waiting_facilitator_start".tr,
+  fontSize: 12 * widthScaleFactor,
+),
                         ],
                       ),
                       SizedBox(height: 20 * heightScaleFactor),
 
                       PlayersContainers(
                         color: AppColors.forwardColor,
-                        text3: "Joined.",
+                        text3: "joined".tr,
                         text1: "1",
                         text2: "You",
                         image: Appimages.play1,
@@ -390,7 +390,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                       SizedBox(height: 15 * heightScaleFactor),
                       PlayersContainers(
                         color: AppColors.forwardColor,
-                        text3: "Joined.",
+                        text3: "joined".tr,
                         text1: "2",
                         text2: "Sarah J.",
                         image: Appimages.play2,
@@ -399,7 +399,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                       SizedBox(height: 15 * heightScaleFactor),
                       PlayersContainers(
                         color: AppColors.forwardColor,
-                        text3: "Joined.",
+                        text3:"joined".tr,
                         text1: "3",
                         text2: "Mike C.",
                         image: Appimages.play3,
@@ -408,7 +408,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                       SizedBox(height: 15 * heightScaleFactor),
                       PlayersContainers(
                         color: AppColors.forwardColor,
-                        text3: "Joined.",
+                        text3: "joined".tr,
                         text1: "4",
                         text2: "David B.",
                         image: Appimages.play4,
@@ -417,7 +417,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                       SizedBox(height: 15 * heightScaleFactor),
                       PlayersContainers(
                         color: AppColors.forwardColor,
-                        text3: "Joined.",
+                        text3: "joined".tr,
                         text1: "5",
                         text2: "Lisa G.",
                         image: Appimages.play5,
@@ -451,11 +451,11 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                               SizedBox(width: 10 * widthScaleFactor),
                               Expanded(
                                 child: MainText(
-                                  height: 1.6,
-                                  text: "Make sure your device is charged and you have a stable internet connection for the best experience.",
-                                  fontSize: 13 * widthScaleFactor,
-                                  textAlign: TextAlign.start,
-                                ),
+  height: 1.6,
+  text: "device_connection_notice".tr,
+  fontSize: 13 * widthScaleFactor,
+  textAlign: TextAlign.start,
+),
                               ),
                             ],
                           ),
@@ -464,7 +464,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                       SizedBox(height: 15 * heightScaleFactor),
                       LoginButton(
                         onTap: ()=>Get.toNamed(RouteName.gameStart1Screen),
-                        text: "Leave Session",
+                        text:"leave_session".tr,
                         ishow: true,
                         image: Appimages.leave,
                         color: AppColors.redColor,

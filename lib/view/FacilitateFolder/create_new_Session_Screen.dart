@@ -569,7 +569,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                                                        style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),
                                                        children: [
                               TextSpan(
-                               text: "Create Ne",
+                               text: "create_ne".tr,   // "Create Ne"
                                
                                style: TextStyle(
                                  color: AppColors.blueColor, // Dark Blue
@@ -587,7 +587,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                                    ),
                                  ),
                                  child:  Text(
-                                   "w",
+                                  "w".tr,    
                                    style: TextStyle(
                                                 color: AppColors.blueColor, 
                                                 fontSize: 22 * scaleFactor,
@@ -609,7 +609,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                                  child: Padding(
                                    padding:  EdgeInsets.only(left: 4.0, right: 10.0),
                                    child:  Text(
-                                                "Session",
+                                               "session".tr,
                                                 style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 22 * scaleFactor,
@@ -650,23 +650,41 @@ class CreateNewSessionScreen extends StatelessWidget {
                   ),
                 ),
                       SizedBox(height: 40 * scaleFactor),
-                      Container(
-                        height: 74 * scaleFactor,
-                        width: 337 * scaleFactor,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(24 * scaleFactor),
-                          border: Border.all(
-                            color: AppColors.selectLangugaeColor.withOpacity(0.1),
-                            width: 2 * scaleFactor,
-                          ),
-                        ),
-                        child: Center(
-                          child: BoldText(
-                       text: "enter_session_name".tr,
-                            fontSize: 22 * scaleFactor,
-                          ),
-                        ),
-                      ),
+                      TextFormField(
+                    textAlign: TextAlign.center, 
+  style: TextStyle(
+    fontSize: 22 * scaleFactor,
+    fontWeight: FontWeight.w600,
+  ),
+  decoration: InputDecoration(
+    hintText: "enter_session_name".tr,
+    hintStyle: TextStyle(
+      fontSize: 22 * scaleFactor,
+      fontWeight: FontWeight.w600,
+      color: AppColors.languageTextColor
+    ),
+    contentPadding: EdgeInsets.symmetric(
+      vertical: 20 * scaleFactor,
+      horizontal: 16 * scaleFactor,
+    ),
+    border:OutlineInputBorder(
+      borderRadius: BorderRadius.circular(24 * scaleFactor),
+      borderSide: BorderSide(
+        color: AppColors.assignColor,
+        width: 2 * scaleFactor,
+      ),
+    ) ,
+    // enabledBrder: InputBorder.none
+    
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(24 * scaleFactor),
+      borderSide: BorderSide(
+        color: AppColors.assignColor,
+        width: 2 * scaleFactor,
+      ),
+    ) ,
+  ),
+),
                       SizedBox(height: 50 * scaleFactor),
                       BoldText(
                 text:   "select_game_format".tr, 
@@ -802,7 +820,7 @@ FilterUseableContainer(isSelected: true, text: "puzzle".tr, onTap: () {}),
 FilterUseableContainer(isSelected: false, text: "simulation".tr, onTap: () {}),
                       SizedBox(height: 24 * scaleFactor),
                       LoginButton(
-                        text: "Move to phase 2",
+                        text: "move_to_phase2".tr,
                         height: 45 * scaleFactor,
                         color: AppColors.forwardColor,
                         radius: 12 * scaleFactor,
@@ -858,7 +876,7 @@ MainText(text: "large".tr, fontSize: 14 * scaleFactor, height: 1.7, color: AppCo
                           child: TextFormField(
                             cursorColor: AppColors.languageTextColor,
                             decoration: InputDecoration(
-                              hintText: "Or enter custom number",
+                              hintText: "enter_custom_number".tr,
                               focusedBorder: InputBorder.none,
                               enabledBorder: InputBorder.none,
                               hintStyle: TextStyle(color: Colors.grey, fontSize: 16 * scaleFactor),
@@ -871,7 +889,7 @@ MainText(text: "large".tr, fontSize: 14 * scaleFactor, height: 1.7, color: AppCo
                       ),
                       SizedBox(height: 40 * scaleFactor),
                       BoldText(
-                        text: "Badge Labeling",
+                        text: "badge_labeling".tr,
                         fontSize: 16 * scaleFactor,
                         selectionColor: AppColors.blueColor,
                       ),
@@ -879,21 +897,21 @@ MainText(text: "large".tr, fontSize: 14 * scaleFactor, height: 1.7, color: AppCo
                       Image.asset(Appimages.badge, width: 129 * scaleFactor, height: 120 * scaleFactor),
                       SizedBox(height: 11 * scaleFactor),
                       CustomPhaseContainer(
-                        text1: "Badge Name",
+                        text1: "badge_name".tr,
                         text2: "Gold Achiever",
                         fontSize: 16 * scaleFactor,
                         color: AppColors.forwardColor,
                       ),
                       SizedBox(height: 8 * scaleFactor),
                       CustomPhaseContainer(
-                        text1: "Required Score",
+                        text1:  "required_score".tr,
                         text2: "90+",
                         fontSize: 16 * scaleFactor,
                         color: AppColors.forwardColor,
                       ),
                       SizedBox(height: 16 * scaleFactor),
                       LoginButton(
-                        text: "Add More Badges",
+                        text:  "add_more_badges".tr,
                         height: 45 * scaleFactor,
                         color: AppColors.forwardColor,
                         radius: 12 * scaleFactor,

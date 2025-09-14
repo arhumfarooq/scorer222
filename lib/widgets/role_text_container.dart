@@ -21,6 +21,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/widgets/bold_text.dart';
 
@@ -49,7 +50,7 @@ class RoleTextContainer extends StatelessWidget {
       ),
       child: Center(
         child: BoldText(
-          text: "Role",
+          text:"role".tr,
           selectionColor: AppColors.whiteColor,
           fontSize: 20 * heightScaleFactor,
         ),

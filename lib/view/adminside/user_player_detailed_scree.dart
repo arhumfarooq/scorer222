@@ -305,6 +305,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -378,7 +379,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       MainText(
-                        text: "Last Login",
+                        text: "last_login".tr,
                         fontSize: 14 * widthScaleFactor,
                         color: AppColors.redColor,
                       ),
@@ -400,7 +401,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                     ],
                   ),
                   UseableContainer(
-                    text: "Active",
+                    text: "active".tr,
                     fontSize: 11,
                     color: AppColors.forwardColor,
                   
@@ -431,7 +432,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                                 ),
                                 BoldText(
                                   textAlign: TextAlign.center,
-                                  text: "Sessions\nLed",
+                                  text: "sessions_led".tr,
                                   fontSize: 0.04 * screenWidth,
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -458,7 +459,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                                 ),
                                 BoldText(
                                   textAlign: TextAlign.center,
-                                  text: "Manage\nPlayers",
+                                  text:  "manage_players".tr,
                                   fontSize: 0.04 * screenWidth,
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -485,7 +486,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                                 ),
                                 BoldText(
                                   textAlign: TextAlign.center,
-                                  text: "Success\nRate",
+                                  text: "success_rate".tr,
                                   fontSize: 0.04 * screenWidth,
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -498,7 +499,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                   ),
                   SizedBox(height: 33 * heightScaleFactor),
                   BoldText(
-                    text: "Account Information",
+                    text: "account_information".tr,
                     selectionColor: AppColors.blueColor,
                     fontSize: 16 * widthScaleFactor,
                   ),
@@ -521,7 +522,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
-                                  text: "Email",
+                                  text:  "email".tr,
                                   fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
@@ -536,7 +537,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
-                                  text: "Phone",
+                                  text:  "phone".tr,
                                   fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
@@ -551,7 +552,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
-                                  text: "Join Date",
+                                  text: "join_date".tr,
                                   fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
@@ -566,7 +567,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
-                                  text: "Player Level",
+                                  text: "player_level".tr,
                                   fontSize: 14 * widthScaleFactor,
                                 ),
                                 CreateContainer(
@@ -586,7 +587,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
 
 
                   BoldText(
-                    text: "Recent Sessions",
+                    text:  "recent_sessions".tr,
                     selectionColor: AppColors.blueColor,
                     fontSize: 16 * widthScaleFactor,
                   ),
@@ -601,7 +602,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                     heading: "Team Building Workshop",
                     text1: "Phase 2",
                     height: 5* heightScaleFactor,
-                    text2: "Active",
+                    text2: "active".tr,
                     text6: "2nd Position",
                     smallImage: Appimages.Crown,
                     description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
@@ -619,7 +620,7 @@ class UserPlayerDetailedScree extends StatelessWidget {
                     heading: "Team Building Workshop",
                     text1: "Phase 2",
                     height: 5 * heightScaleFactor,
-                    text2: "Active",
+                    text2: "active".tr,
                     text6: "2nd Position",
                     smallImage: Appimages.Crown,
                     description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
@@ -629,9 +630,9 @@ class UserPlayerDetailedScree extends StatelessWidget {
                   ),
 
                   SizedBox(height: 20 * heightScaleFactor),
-LoginButton(text: "Delete Player",ishow: true,image: Appimages.delete,fontSize: 20,color: AppColors.redColor,),
+LoginButton(text: "delete_player".tr,ishow: true,image: Appimages.delete,fontSize: 20,color: AppColors.redColor,),
    SizedBox(height: 20 * heightScaleFactor),
-LoginButton(text: "Edit Player",ishow: true,icon: Icons.edit,fontSize: 20,color: AppColors.forwardColor,),
+LoginButton(text: "edit_player".tr,ishow: true,icon: Icons.edit,fontSize: 20,color: AppColors.forwardColor,),
                   SizedBox(height: 42 * heightScaleFactor),
                 ],
               ),

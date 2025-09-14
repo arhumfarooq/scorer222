@@ -546,7 +546,7 @@ class GameStart1Screen extends StatelessWidget {
                           Expanded(
                             child: Center(
                               child: BoldText(
-                                text: "Team Alpha",
+                                text: "team_alpha".tr,
                                 fontSize: 22 * widthScaleFactor,
                               ),
                             ),
@@ -579,11 +579,11 @@ class GameStart1Screen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        BoldText(
-                          text: "Team Building Workshop",
-                          fontSize: 16 * heightScaleFactor,
-                          selectionColor: AppColors.blueColor,
-                        ),
+                     BoldText(
+  text: "team_building_workshop".tr,
+  fontSize: 16 * heightScaleFactor,
+  selectionColor: AppColors.blueColor,
+),
                         SizedBox(height: 5 * heightScaleFactor),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -630,11 +630,11 @@ class GameStart1Screen extends StatelessWidget {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          BoldText(
-                                            text: "Current Phase",
-                                            fontSize: 16 * heightScaleFactor,
-                                            selectionColor: AppColors.blueColor,
-                                          ),
+                                        BoldText(
+  text: "current_phase".tr,
+  fontSize: 16 * heightScaleFactor,
+  selectionColor: AppColors.blueColor,
+),
                                           SizedBox(height: 5 * heightScaleFactor),
                                           Row(
                                             children: [
@@ -650,9 +650,8 @@ class GameStart1Screen extends StatelessWidget {
                                               SizedBox(
                                                   width: 10 * widthScaleFactor),
                                               MainText(
-                                                text: "Strategy Building",
-                                                fontSize:
-                                                    14 * heightScaleFactor,
+                                               text: "strategy_building".tr,
+  fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11 : 14 
                                               )
                                             ],
                                           )
@@ -678,7 +677,7 @@ class GameStart1Screen extends StatelessWidget {
                                                 selectionColor:
                                                     AppColors.blueColor),
                                             MainText(
-                                                text: "Remaining",
+                                                text: "remaining".tr,
                                                 fontSize: screenWidth * 0.02,
                                                 height: 1),
                                           ],
@@ -687,11 +686,10 @@ class GameStart1Screen extends StatelessWidget {
                                     ],
                                   ),
                                   SizedBox(height: 20 * heightScaleFactor),
-                                  MainText(
-                                    text:
-                                        "Team collaboration and strategic planning phase",
-                                    fontSize: 14 * heightScaleFactor,
-                                  ),
+                                 MainText(
+  text: "team_collab_phase".tr,
+  fontSize: 14 * heightScaleFactor,
+),
                                   SizedBox(height: 15 * heightScaleFactor),
                                   // Obx(
                                   //   () => Row(
@@ -946,7 +944,7 @@ class GameStart1Screen extends StatelessWidget {
                                         text2: controller.isCompleted.value
                                             ? "Active • 30 min"
                                             : "Time Left 30 min",
-                                        text3: "Active",
+                                        text3: "active".tr,
                                         smallContainer: controller.isCompleted.value
                                             ? AppColors.forwardColor
                                             : AppColors.selectLangugaeColor,
@@ -961,7 +959,7 @@ class GameStart1Screen extends StatelessWidget {
                                       child: showBack
                                           ? PauseContainer(
                                               onTap: () => controller.back(),
-                                              text: "Back",
+                                              text: "back".tr,
                                               color: AppColors.selectLangugaeColor,
                                               height: 45 * heightScaleFactor,
                                               width: double.infinity,
@@ -973,7 +971,7 @@ class GameStart1Screen extends StatelessWidget {
                                                 Expanded(
                                                   child: PauseContainer(
                                                     onTap: () => controller.pause(),
-                                                    text: "Pause",
+                                                    text: "pause".tr,
                                                     color: AppColors.selectLangugaeColor,
                                                     height: 45 * heightScaleFactor,
                                                     width: 140 * widthScaleFactor,
@@ -983,7 +981,7 @@ class GameStart1Screen extends StatelessWidget {
                                                 Expanded(
                                                   child: PauseContainer(
                                                     onTap: () => controller.nextPhase(),
-                                                    text: "Next Phase",
+                                                    text: "next_phase".tr,
                                                     icon: Icons.fast_forward,
                                                     color: controller.isCompleted.value
                                                         ? AppColors.forwardColor
@@ -1029,30 +1027,31 @@ class GameStart1Screen extends StatelessWidget {
                                 children: [
                                   SizedBox(height: 30 * heightScaleFactor),
                                   BoldText(
-                                    text: "Scenario:",
+                                   text: "scenario".tr,
                                     selectionColor: AppColors.blueColor,
                                     fontSize: 16 * heightScaleFactor,
                                   ),
                                   SizedBox(height: 15 * heightScaleFactor),
-                                  MainText(
-                                    height: 1.5,
-                                    text:
-                                        "Your team has been tasked with organizing a company retreat for 50 employees. You have a budget of \$15,000 and need to choose between three venue options. Each option has different benefits and constraints.",
-                                    fontSize: 13 * heightScaleFactor,
-                                  ),
+                                
+MainText(
+  height: 1.5,
+  text: "scenario_description".tr,
+  fontSize: 13 * heightScaleFactor,
+),
                                   SizedBox(height: 15 * heightScaleFactor),
-                                  BoldText(
-                                    text: "Question:",
-                                    selectionColor: AppColors.redColor,
-                                    fontSize: 16 * heightScaleFactor,
-                                  ),
+                                  
+BoldText(
+  text: "question".tr,
+  selectionColor: AppColors.redColor,
+  fontSize: 16 * heightScaleFactor,
+),
                                   SizedBox(height: 10 * heightScaleFactor),
-                                  MainText(
-                                    text:
-                                        "Which venue would you choose and why? Consider budget, team activities, and logistics.",
-                                    fontSize: 13 * heightScaleFactor,
-                                    height: 1.5,
-                                  ),
+                                 
+MainText(
+  text: "question_description".tr,
+  fontSize: 13 * heightScaleFactor,
+  height: 1.5,
+),
                                 ],
                               ),
                             ),
@@ -1062,7 +1061,7 @@ class GameStart1Screen extends StatelessWidget {
                             return FilterUseableContainer(
                               isSelected: controller.gamevalue.value == 0,
                               fontSze: 13 * heightScaleFactor,
-                              text: "Mountain Resort (\$12,000)",
+                              text: "mountain_resort".tr,
                               onTap: () {
                                 controller.gameSelect(0);
                               },
@@ -1072,7 +1071,7 @@ class GameStart1Screen extends StatelessWidget {
                           Obx(() => FilterUseableContainer(
                                 isSelected: controller.gamevalue.value == 1,
                                 fontSze: 13 * heightScaleFactor,
-                                text: "Beach Hotel (\$14,500)",
+                                text: "beach_hotel".tr,
                                 onTap: () {
                                   controller.gameSelect(1);
                                 },
@@ -1081,7 +1080,7 @@ class GameStart1Screen extends StatelessWidget {
                           Obx(() => FilterUseableContainer(
                                 isSelected: controller.gamevalue.value == 2,
                                 fontSze: 13 * heightScaleFactor,
-                                text: "City Conference Center (\$8,000)",
+                                text: "city_conference_center".tr,
                                 onTap: () {
                                   controller.gameSelect(2);
                                 },
@@ -1103,7 +1102,7 @@ class GameStart1Screen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 BoldText(
-                                  text: "Explain your reasoning:",
+                                  text:  "explain_reasoning".tr,
                                   fontSize: 16 * heightScaleFactor,
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -1115,7 +1114,7 @@ class GameStart1Screen extends StatelessWidget {
                                     textAlignVertical: TextAlignVertical.top,
                                     decoration: InputDecoration(
                                       hintText:
-                                          "Share your team's thought process and decision factors...",
+                                          "share_thought_process".tr,
                                       hintStyle:
                                           TextStyle(color: AppColors.teamColor),
                                       border: InputBorder.none,
@@ -1148,35 +1147,33 @@ class GameStart1Screen extends StatelessWidget {
                       child: Obx(
                         () => Column(
                           children: [
-                            CustomStratgyContainer(
-                              iconContainer: AppColors.forwardColor,
-                              icon: Icons.check,
-                              text1: "Phase 1 Strategy Building",
-                              text2: "Completed • 20 min",
-                              text3: "Completed",
-                              smallContainer: AppColors.forwardColor,
-                              largeConatiner: AppColors.forwardColor,
-                              flex: 4,
-                              flex1: 0,
-                            ),
+                           CustomStratgyContainer(
+                      // fontSize: isSpanish?2:14,
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+                      width3: 80,
+                      iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
+                    flex: 3,flex1: 0,
+                    ),
                             SizedBox(height: 10 * heightScaleFactor),
                             if (controller.currentPhase.value >= 1)
-                              CustomStratgyContainer(
-                                iconContainer: AppColors.forwardColor,
-                                icon: Icons.check,
-                                text1: "Phase 2 Strategy Building",
-                                text2: "Active • 30 min",
-                                text3: "Completed",
-                                smallContainer: AppColors.forwardColor,
-                                largeConatiner: AppColors.forwardColor,
-                                flex: 4,
-                                flex1: 0,
-                              )
+                             CustomStratgyContainer(
+                      // fontSize2:isSpanish? 11:14,
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
+
+                      // fontSize: 6,
+                      // width3: 80,
+                      iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr, smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
+             
+                    )
                             else
                               CustomStratgyContainer(
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                                 iconContainer: AppColors.selectLangugaeColor,
                                 icon: Icons.play_arrow_sharp,
-                                text1: "Phase 2 Strategy Building",
+                                text1: "phase2_strategy".tr ,
                                 text2: "Upcoming • 25 min",
                                 text3: "Active",
                                 smallContainer: AppColors.selectLangugaeColor,
@@ -1185,9 +1182,11 @@ class GameStart1Screen extends StatelessWidget {
                             SizedBox(height: 10 * heightScaleFactor),
                             if (controller.currentPhase.value >= 2)
                               CustomStratgyContainer(
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                                 iconContainer: AppColors.forwardColor,
                                 icon: Icons.check,
-                                text1: "Phase 3 Strategy Building",
+                                text1: "phase3_implementation".tr,
                                 text2: "Completed • 20 min",
                                 text3: "Completed",
                                 smallContainer: AppColors.forwardColor,
@@ -1197,9 +1196,11 @@ class GameStart1Screen extends StatelessWidget {
                               )
                             else
                               CustomStratgyContainer(
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                                 iconContainer: AppColors.watchColor,
                                 icon: Icons.watch_later,
-                                text1: "Phase 3: Implementation",
+                                text1: "phase3_implementation".tr,
                                 text2: "Upcoming • 25 min",
                                 text3: "Pending",
                                 smallContainer: AppColors.watchColor,
@@ -1210,9 +1211,11 @@ class GameStart1Screen extends StatelessWidget {
                             SizedBox(height: 10 * heightScaleFactor),
                             if (controller.currentPhase.value >= 2)
                               CustomStratgyContainer(
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                                 iconContainer: AppColors.selectLangugaeColor,
                                 icon: Icons.play_arrow_sharp,
-                                text1: "Phase 4: Evaluation",
+                              text1: "phase4_evaluation".tr,
                                 text2: "Upcoming • 15 min",
                                 text3: "Active",
                                 smallContainer: AppColors.selectLangugaeColor,
@@ -1220,9 +1223,11 @@ class GameStart1Screen extends StatelessWidget {
                               )
                             else
                               CustomStratgyContainer(
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                                 iconContainer: AppColors.watchColor,
                                 icon: Icons.watch_later,
-                                text1: "Phase 4: Evaluation",
+                               text1: "phase4_evaluation".tr,
                                 text2: "Upcoming • 15 min",
                                 text3: "Pending",
                                 smallContainer: AppColors.watchColor,
@@ -1234,7 +1239,7 @@ class GameStart1Screen extends StatelessWidget {
                             if (controller.currentPhase.value >= 2)
                               LoginButton(
                                 fontSize: 20,
-                                text: "Previous",
+                                text: "previous".tr,
                                 color: AppColors.redColor,
                               )
                             else
@@ -1245,7 +1250,7 @@ class GameStart1Screen extends StatelessWidget {
                                   ishow: true,
                                   fontSize: 20,
                                   image: Appimages.submit,
-                                  text: "Submit Response",
+                                  text: "submit_response".tr,
                                   color: controller.currentPhase.value >= 1
                                       ? AppColors.forwardColor
                                       : AppColors.assignColor,

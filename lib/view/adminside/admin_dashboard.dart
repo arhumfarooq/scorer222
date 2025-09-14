@@ -77,14 +77,22 @@ class AdminDashboard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      BoldText(
-                        text: "Hello Administrator, Chris!",
-                        fontSize: 16 * heightScaleFactor,
-                        selectionColor: AppColors.blueColor,
+                      Row(
+                        children: [
+                          BoldText(
+                             text: "hello_admin".tr,
+                            fontSize: 16 * heightScaleFactor,
+                            selectionColor: AppColors.blueColor,
+                          ),
+                           BoldText(
+                            text: ", Chris!",
+                            fontSize: 16 * heightScaleFactor,
+                            selectionColor: AppColors.blueColor,
+                          ),
+                        ],
                       ),
                       MainText(
-                        text: "Welcome! You have full system access to manage sessions, users, and game content..",
-                        fontSize: 14 * heightScaleFactor,
+text: "welcome_admin".tr,                        fontSize: 14 * heightScaleFactor,
                         height: 1.4,
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
@@ -121,7 +129,7 @@ class AdminDashboard extends StatelessWidget {
                                         onTap: () {
                                           controller.changeTab(0);
                                         },
-                                        text: "Active Sessions",
+                                          text:   "active_sessions".tr,
                                         color: controller.selectedIndex.value == 0
                                             ? AppColors.whiteColor
                                             : AppColors.languageColor,
@@ -132,7 +140,7 @@ class AdminDashboard extends StatelessWidget {
                                   Expanded(
                                     child: Center(
                                       child: MainText(
-                                        text: "Scheduled",
+                                        text:  "scheduled".tr,
                                         fontSize: 14 * heightScaleFactor,
                                         color: controller.selectedIndex.value == 0
                                             ? AppColors.languageColor

@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -70,7 +71,8 @@ class AdminPlayerScreen extends StatelessWidget {
                               fontSize: screenWidth * 0.06,
                             ),
                             BoldText(
-                              text: "Active\nPlayers",
+                              textAlign: TextAlign.center,
+                            text: "active_players".tr,
                               fontSize: screenWidth * 0.04,
                               selectionColor: AppColors.blueColor,
                             ),
@@ -95,7 +97,9 @@ class AdminPlayerScreen extends StatelessWidget {
                               fontSize: screenWidth * 0.06,
                             ),
                             BoldText(
-                              text: "Inactive\nPlayers",
+                              textAlign: TextAlign.center,
+
+                              text: "inactive_players".tr,
                               fontSize: screenWidth * 0.04,
                               selectionColor: AppColors.blueColor,
                             ),
@@ -116,7 +120,7 @@ class AdminPlayerScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         BoldText(
-                          text: "All Players",
+                          text: "all_players".tr,
                           fontSize: screenWidth * 0.04,
                           selectionColor: AppColors.blueColor,
                         ),
@@ -125,7 +129,7 @@ class AdminPlayerScreen extends StatelessWidget {
                             SvgPicture.asset(Appimages.filter),
                             SizedBox(width: screenWidth * 0.015),
                             BoldText(
-                              text: "Filter",
+                             text: "filter".tr,
                               fontSize: screenWidth * 0.04,
                               selectionColor: AppColors.blueColor,
                             ),
@@ -139,7 +143,7 @@ class AdminPlayerScreen extends StatelessWidget {
                     CreateContainer(
                       right: screenWidth * 0.08,
                       width: screenWidth * 0.25,
-                      text: "Team Alpha",
+                     text: "team_alpha".tr
                     ),
                     SizedBox(height: allPlayersContainerSpacing * 2),
                     AllPlayersContainer(text: "Sarah Johnson", text2: "Joined 2:35 PM", image: Appimages.player2),
@@ -150,7 +154,7 @@ class AdminPlayerScreen extends StatelessWidget {
                       containerColor: AppColors.lightPurpleColor,
                       right: screenWidth * 0.08,
                       width: screenWidth * 0.25,
-                      text: "Team Beta",
+                      text: "team_beta".tr
                     ),
                     SizedBox(height: allPlayersContainerSpacing * 2),
                     AllPlayersContainer(text: "Sarah Johnson", text2: "Joined 2:35 PM", image: Appimages.prince2),
@@ -161,7 +165,7 @@ class AdminPlayerScreen extends StatelessWidget {
                       containerColor: AppColors.lightOrangeColor.withOpacity(0.5),
                       right: screenWidth * 0.08,
                       width: screenWidth * 0.25,
-                      text: "Team Gamma",
+                     text: "team_gamma".tr
                     ),
                     SizedBox(height: allPlayersContainerSpacing * 2),
                     AllPlayersContainer(text: "Alex Martinez", text2: "Joined 2:35 PM", image: Appimages.play3),
@@ -169,7 +173,7 @@ class AdminPlayerScreen extends StatelessWidget {
                     CreateContainer(
                       right: screenWidth * 0.08,
                       width: screenWidth * 0.25,
-                      text: "Team Alpha",
+                      text: "team_alpha".tr
                     ),
                     // SizedBox(height: ,)
                     SizedBox(height: allPlayersContainerSpacing * 2),
@@ -190,26 +194,26 @@ class AdminPlayerScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             BoldText(
-                              text: "Team Distribution",
+                              text: "team_distribution".tr,
                               selectionColor: AppColors.blueColor,
                               fontSize: screenWidth * 0.04,
                             ),
                             SizedBox(height: screenHeight * 0.005),
                             UseableTextrow(
                               color: AppColors.forwardColor,
-                              text: "Team Beta",
+                              text:"team_beta".tr,
                               text1: "4 Players",
                             ),
                             SizedBox(height: screenHeight * 0.01),
                             UseableTextrow(
                               color: AppColors.forwardColor2,
-                              text: "Team Gamma",
+                               text: "team_gamma".tr,
                               text1: "4 Players",
                             ),
                             SizedBox(height: screenHeight * 0.01),
                             UseableTextrow(
                               color: AppColors.forwardColor3,
-                              text: "Team Alpha",
+                             text: "team_alpha".tr,
                               text1: "4 Players",
                             ),
                           ],
@@ -220,11 +224,11 @@ class AdminPlayerScreen extends StatelessWidget {
                     LoginButton(
                       fontSize: 20,
                       
-                      text: "Add Player", image: Appimages.personadd, ishow: true),
+                       text: "add_player".tr, image: Appimages.personadd, ishow: true),
                     SizedBox(height: allPlayersContainerSpacing),
                     LoginButton(
                       fontSize: 20,
-                      text: "View Responses",
+                      text: "view_responses".tr,
                       image: Appimages.eye,
                       color: AppColors.forwardColor,
                       ishow: true,
@@ -233,7 +237,7 @@ class AdminPlayerScreen extends StatelessWidget {
                     LoginButton(
                       fontSize: 20,
                       
-                      text: "Send Alert",
+                                         text: "send_alert".tr,
                       image: Appimages.noti,
                       color: AppColors.redColor,
                       ishow: true,

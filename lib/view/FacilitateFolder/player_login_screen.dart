@@ -308,12 +308,13 @@ class PlayerLoginScreen extends StatelessWidget {
                               height: 20 * heightScaleFactor,
                             ),
                           ),
-                          Center(
-                            child: BoldText(
-                              text: "Player Login",
-                              selectionColor: AppColors.blueColor,
-                            ),
-                          ),
+                        Center(
+  child: BoldText(
+    text: "player_login".tr,
+    selectionColor: AppColors.blueColor,
+  ),
+),
+
                         ],
                       ),
                     ),

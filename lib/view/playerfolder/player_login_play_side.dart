@@ -114,13 +114,13 @@ class PlayerLoginPlaySide extends StatelessWidget {
                           height: 20 * heightScaleFactor,
                         ),
                       ),
-                      Center(
-                        child: BoldText(
-                          text: "Player Nickname",
-                          selectionColor: AppColors.blueColor,
-                          fontSize: 24 * widthScaleFactor, // Assuming a base font size
-                        ),
-                      ),
+                     Center(
+  child: BoldText(
+    text: "player_nickname".tr,
+    selectionColor: AppColors.blueColor,
+    fontSize: 24 * widthScaleFactor,
+  ),
+),
                     ],
                   ),
                 ),
@@ -131,13 +131,19 @@ class PlayerLoginPlaySide extends StatelessWidget {
                   height: 150 * heightScaleFactor, // Scale image height
                 ),
                 SizedBox(height: 23 * heightScaleFactor),
-                LoginTextfield(text: "Enter Nick Name",), // Pass scaleFactor
-                SizedBox(height: 9 * heightScaleFactor),
-                LoginTextfield(text: "Enter Team Nick Name", ), // Pass scaleFactor
-                SizedBox(height: 23 * heightScaleFactor),
+               
+LoginTextfield(
+  text: "enter_nickname".tr,
+),
+
+SizedBox(height: 9 * heightScaleFactor),
+
+LoginTextfield(
+  text: "enter_team_nickname".tr,
+),               SizedBox(height: 23 * heightScaleFactor),
                 LoginButton(
                   onTap: ()=>Get.toNamed(RouteName.playerDashboardScreen2),
-                  text: "Continue",
+                  text: "continue".tr,
                   color: AppColors.forwardColor,
                   height: 50 * heightScaleFactor, // Scale button height
                   width: double.infinity,

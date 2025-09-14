@@ -250,6 +250,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:scorer/components/players_Row.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -289,7 +290,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                           Image.asset(Appimages.player2, height: 63, width: 50),
                           Expanded(
                             child: Center(
-                              child: BoldText(text: "Team Alpha", fontSize: 22),
+                              child: BoldText(text: "team_alpha".tr, fontSize: 22),
                             ),
                           ),
                           Image.asset(Appimages.house1, height: 63, width: 80),
@@ -302,7 +303,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           BoldText(
-                            text: "Players",
+                            text: "players".tr,
                             selectionColor: isTeamSelected.value ? AppColors.playerColo1r : AppColors.blueColor,
                             fontSize: screenWidth * 0.04,
                           ),
@@ -319,7 +320,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                           ),
                           SizedBox(width: screenWidth * 0.025),
                           BoldText(
-                            text: "Teams",
+                            text: "teams".tr,
                             selectionColor: isTeamSelected.value ? AppColors.blueColor : AppColors.playerColo1r,
                             fontSize: screenWidth * 0.04,
                           ),

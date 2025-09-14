@@ -44,7 +44,7 @@ class AdminLeaderBoardScreen extends StatelessWidget {
                     ),
                     SizedBox(width: screenWidth * 0.02),
                     MainText(
-                      text: "Live Updates....",
+                     text: "live_updates".tr,
                       color: AppColors.visitingColor,
                       fontSize: screenWidth * 0.035,
                     )
@@ -52,7 +52,7 @@ class AdminLeaderBoardScreen extends StatelessWidget {
                 ),
                 CreateContainer(
                   containerColor: AppColors.forwardColor.withOpacity(0.3),
-                  text: "Overall",
+                text: "overall".tr,
                   width: screenWidth * 0.18,
                   textColor: AppColors.forwardColor,
                   borderColor: AppColors.forwardColor,
@@ -68,7 +68,7 @@ class AdminLeaderBoardScreen extends StatelessWidget {
                   () => Row(
                     children: [
                       BoldText(
-                        text: "Players",
+                         text: "players".tr,
                         selectionColor: isTeamSelected.value
                             ? AppColors.playerColo1r
                             : AppColors.blueColor,
@@ -87,7 +87,7 @@ class AdminLeaderBoardScreen extends StatelessWidget {
                       ),
                       SizedBox(width: screenWidth * 0.025),
                       BoldText(
-                        text: "Teams",
+                        text: "teams".tr,
                         selectionColor: isTeamSelected.value
                             ? AppColors.blueColor
                             : AppColors.playerColo1r,
@@ -101,7 +101,7 @@ class AdminLeaderBoardScreen extends StatelessWidget {
                     showCustomBottomSheet(context: context);
                   },
                   child: CreateContainer(
-                    text: "Use Filter",
+                   text: "use_filter".tr,
                     width: screenWidth * 0.22,
                   ),
                 ),
@@ -113,7 +113,7 @@ class AdminLeaderBoardScreen extends StatelessWidget {
             Obx(
               () => PlayersContainers(
                 text1: "1",
-                text2: isTeamSelected.value ? "Team Alpha" : "Alex M.",
+                text2: isTeamSelected.value ? "team_alpha".tr: "Alex M.",
                 image: Appimages.facil2,
                 icon: Icons.keyboard_arrow_up_outlined,
                 iconColor: AppColors.arrowColor,
@@ -181,8 +181,7 @@ class AdminLeaderBoardScreen extends StatelessWidget {
             LoginButton(
               onTap: () {
   Get.toNamed(RouteName.endSessionScreen);
-},
-              text: "End Session",
+},  text: "end_session".tr,
                       fontSize: 20,
 
               color: AppColors.redColor,
@@ -193,7 +192,7 @@ class AdminLeaderBoardScreen extends StatelessWidget {
             LoginButton(
                       fontSize: 20,
 
-              text: "Share Results",
+             text: "share_results".tr,
               color: AppColors.forwardColor,
               image: Appimages.move,
               ishow: true,

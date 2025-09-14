@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/main_text.dart';
@@ -38,7 +39,7 @@ class AdminRealtimeMonitoringContainer extends StatelessWidget {
           children: [
             SizedBox(height: verticalSpacing),
             BoldText(
-                text: "Real-Time Monitoring (Stage 2)",
+                text:  "real_time_monitoring_stage2".tr,
                 selectionColor: AppColors.blueColor,
                 fontSize: screenWidth * 0.04),
             SizedBox(height: verticalSpacing),
@@ -69,7 +70,7 @@ class AdminRealtimeMonitoringContainer extends StatelessWidget {
               children: [
                 MainText(
                   // height: 1,
-                    text: "Player Engagement",
+                    text:  "player_engagement".tr,
                     fontSize: screenWidth * 0.04),
                 BoldText(
                     text: "89%",
@@ -79,7 +80,7 @@ class AdminRealtimeMonitoringContainer extends StatelessWidget {
             ),
             SizedBox(height: verticalSpacing),
             MainText(
-                text: "Recent Activity",
+                text: "recent_activity".tr,
                 fontSize: screenWidth * 0.04),
             // SizedBox(height: verticalSpacing * 0.5),
             UseableTextrow(

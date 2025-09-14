@@ -135,9 +135,9 @@ class UserPlayerSide extends StatelessWidget {
           AllPlayersContainer(
             onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
 
-            text3: "Inactive",
+            text3: "inactive".tr,
             color: AppColors.orangeColor,
-            width: 60 * widthScaleFactor,
+            width: 65 * widthScaleFactor,
             fontSize2: 12 * widthScaleFactor,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -147,9 +147,9 @@ class UserPlayerSide extends StatelessWidget {
           AllPlayersContainer(
             onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
 
-            text3: "Pending",
+            text3: "pending".tr,
             color: AppColors.redColor,
-            width: 60 * widthScaleFactor,
+            width: 70 * widthScaleFactor,
             fontSize2: 12 * widthScaleFactor,
             text: "Alex Martinez",
             text2: "john.smith@company.com",

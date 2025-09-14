@@ -304,6 +304,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -377,7 +378,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       MainText(
-                        text: "Last Login",
+                                            text: "last_login".tr,
+
                         fontSize: 14 * widthScaleFactor,
                         color: AppColors.redColor,
                       ),
@@ -399,7 +401,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                     ],
                   ),
                   UseableContainer(
-                    text: "Active",
+                                      text: "active".tr,
+
                     // fontSize: 12,
                     color: AppColors.forwardColor,
                     height: 20* heightScaleFactor,
@@ -429,7 +432,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                                 ),
                                 BoldText(
                                   textAlign: TextAlign.center,
-                                  text: "Sessions\nLed",
+                                                                                                 text: "sessions_led".tr,
+
                                   fontSize: 0.04 * screenWidth,
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -456,7 +460,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                                 ),
                                 BoldText(
                                   textAlign: TextAlign.center,
-                                  text: "Manage\nPlayers",
+                                                                                        text:  "manage_players".tr,
+
                                   fontSize: 0.04 * screenWidth,
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -483,7 +488,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                                 ),
                                 BoldText(
                                   textAlign: TextAlign.center,
-                                  text: "Success\nRate",
+                                                                                                 text: "success_rate".tr,
+
                                   fontSize: 0.04 * screenWidth,
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -496,7 +502,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                   ),
                   SizedBox(height: 33 * heightScaleFactor),
                   BoldText(
-                    text: "Account Information",
+                                                        text: "account_information".tr,
+
                     selectionColor: AppColors.blueColor,
                     fontSize: 16 * widthScaleFactor,
                   ),
@@ -519,7 +526,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
-                                  text: "Email",
+                                                                                                 text:  "email".tr,
+
                                   fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
@@ -534,7 +542,8 @@ class UserAdminDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
-                                  text: "Phone",
+                                                                                                  text:  "phone".tr,
+
                                   fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
@@ -549,7 +558,7 @@ class UserAdminDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
-                                  text: "Join Date",
+                               text: "join_date".tr,
                                   fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
@@ -564,7 +573,7 @@ class UserAdminDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
-                                  text: "Player Level",
+                                  text: "Facilitator Level",
                                   fontSize: 14 * widthScaleFactor,
                                 ),
                                 CreateContainer(
@@ -662,7 +671,8 @@ SizedBox(height: 10,),
                   SizedBox(height: 20 * heightScaleFactor),
 
                   BoldText(
-                    text: "Recent Sessions",
+                                                       text:  "recent_sessions".tr,
+
                     selectionColor: AppColors.blueColor,
                     fontSize: 16 * widthScaleFactor,
                   ),
@@ -677,7 +687,7 @@ SizedBox(height: 10,),
                     heading: "Team Building Workshop",
                     text1: "Phase 2",
                     height: 5* heightScaleFactor,
-                    text2: "Active",
+                    text2: "active".tr,
                     text6: "2nd Position",
                     smallImage: Appimages.Crown,
                     description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
@@ -695,7 +705,7 @@ SizedBox(height: 10,),
                     heading: "Team Building Workshop",
                     text1: "Phase 2",
                     height: 5 * heightScaleFactor,
-                    text2: "Active",
+                    text2: "active".tr,
                     text6: "2nd Position",
                     smallImage: Appimages.Crown,
                     description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",

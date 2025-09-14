@@ -196,17 +196,16 @@ class PlayerDashboard extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 20 * heightScaleFactor),
-                  BoldText(
-                    text: "Welcome to Score’Master+!",
-                    fontSize: 16 * heightScaleFactor,
-                    selectionColor: AppColors.blueColor,
-                  ),
-                  MainText(
-                    text:
-                        "ou’re all set to join a session. Enter your session code or wait for your facilitator to start the game.",
-                    fontSize: 14 * heightScaleFactor,
-                    height: 1.4,
-                  ),
+                 BoldText(
+  text: "welcome_scoremaster".tr,
+  fontSize: 16 * heightScaleFactor,
+  selectionColor: AppColors.blueColor,
+),
+                MainText(
+  text: "join_session_text".tr,
+  fontSize: 14 * heightScaleFactor,
+  height: 1.4,
+),
                   SizedBox(height: 20 * heightScaleFactor),
                   Container(
                     height: 70 * heightScaleFactor,
@@ -224,17 +223,16 @@ class PlayerDashboard extends StatelessWidget {
                           top: -20 * heightScaleFactor,
                           right: 0,
                           child: CreateContainer(
-                            text: "Join with Session Code",
-                            width: 186 * widthScaleFactor,
-                           
-                          ),
+  text: "join_with_code".tr,
+  width: 186 * widthScaleFactor,
+),
                         ),
-                        Center(
-                          child: BoldText(
-                            text: "Enter Code",
-                            fontSize: 22 * heightScaleFactor,
-                          ),
-                        ),
+                      Center(
+  child: BoldText(
+    text: "enter_code".tr,
+    fontSize: 22 * heightScaleFactor,
+  ),
+),
                       ],
                     ),
                   ),
@@ -293,8 +291,8 @@ horizontal: 0,
           description: "Leadership Assessment strengthens teamwork through interactive activities.",
 
           // description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
-          text3: "Pause",
-          text7: "Join Session",
+          text3: "paused".tr,
+          text7:"join_session".tr,
           icon3: Icons.fast_forward,
           color3: AppColors.forwardColor,
           text5: "12 Players",
@@ -312,12 +310,12 @@ horizontal: 0,
           heading: "Eranove Odyssey – Team A",
           text1: "Phase 2",
           ishow: false,
-          text2: "Scheduled",
+          text2: "scheduled".tr,
           description: "Leadership Assessment strengthens teamwork through interactive activities.",
 
           // description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
           text3: "Pause",
-          text7: "Join Session",
+         text7: "join_session".tr,
           icon3: Icons.fast_forward,
           color3: AppColors.forwardColor,
           text5: "12 Players",

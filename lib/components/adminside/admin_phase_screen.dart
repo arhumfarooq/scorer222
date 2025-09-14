@@ -39,7 +39,7 @@ class AdminPhaseScreen extends StatelessWidget {
             children: [
               SizedBox(height: verticalSpacing * 2),
               CreateContainer(
-                  text: "Current Phase", width: screenWidth * 0.3),
+                  text: "current_phase".tr, width: screenWidth * 0.3),
               SizedBox(height: verticalSpacing),
              
               // SizedBox(height: verticalSpacing),
@@ -61,7 +61,7 @@ class AdminPhaseScreen extends StatelessWidget {
                   fontSize: screenWidth * 0.05,
                   selectionColor: AppColors.blueColor),
               MainText(
-                  text: "Remaining",
+                  text: "remaining".tr,
                   fontSize: screenWidth * 0.04,
                   height: 1),
           ],
@@ -120,7 +120,7 @@ class AdminPhaseScreen extends StatelessWidget {
                               fontSize: screenWidth * 0.06,
                               selectionColor: AppColors.blueColor),
                           MainText(
-                              text: "Remaining",
+                              text: "remaining".tr,
                               fontSize: screenWidth * 0.04),
                         ],
                       ),
@@ -135,14 +135,14 @@ class AdminPhaseScreen extends StatelessWidget {
                             child: PauseContainer(
                                 onTap: () {},
                                    
-                                text: "Back")),
+                                text: "back".tr)),
                         SizedBox(width: horizontalPadding),
                        Expanded(
   child: PauseContainer(
     onTap: () {
      
     },
-    text: "Next Stage",
+    text:"next_stage".tr,
     icon: Icons.fast_forward,
     color: AppColors.assignColor,
   ),
@@ -161,31 +161,50 @@ class AdminPhaseScreen extends StatelessWidget {
                     /// Real-Time Monitoring
                     AdminRealtimeMonitoringContainer(contentWidth: contentWidth, screenHeight: screenHeight, screenWidth: screenWidth, verticalSpacing: verticalSpacing),
                     SizedBox(height: verticalSpacing),
-                      BoldText(text: "All Phases",fontSize: 16,selectionColor: AppColors.blueColor,),
+                      BoldText( text: "all_phases".tr,fontSize: 16,selectionColor: AppColors.blueColor,),
 SizedBox(height: 25,),
-                    CustomStratgyContainer(iconContainer: AppColors.forwardColor, icon: Icons.check, text1: "Phase 1 Strategy Building", text2: "Completed • 20 min", text3: "Completed", smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
-                    flex: 4,flex1: 0,
+                     CustomStratgyContainer(
+                      // fontSize: isSpanish?2:14,
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+                      width3: 80,
+                      iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
+                    flex: 3,flex1: 0,
                     ),
                     SizedBox(height: 10,),
-                     CustomStratgyContainer(iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "Phase 2 Strategy Building", text2: "Active • 30 min", text3: "Active", smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
+                     CustomStratgyContainer(
+                      // fontSize2:isSpanish? 11:14,
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
+
+                      // fontSize: 6,
+                      // width3: 80,
+                      iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr, smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
              
                     ),
                      SizedBox(height: 10,),
-                     CustomStratgyContainer(iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "Phase 3: Implementation", text2: "Upcoming • 25 min", text3: "Pending", smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
+                     CustomStratgyContainer(
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
+                      width3: 80,
+                      iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase3_implementation".tr, text2: "Upcoming • 25 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
              
                     ),
                          SizedBox(height: 10,),
-                     CustomStratgyContainer(iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "Phase 4: Evaluation", text2: "Upcoming • 15 min", text3: "Pending", smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
+                     CustomStratgyContainer(
+fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
+                      width3: 80,
+                      iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase4_evaluation".tr,text2: "Upcoming • 15 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
              
                     ),
-                    SizedBox(height: 25,),
-                    AdminSessionContainer(contentWidth: contentWidth, screenHeight: screenHeight, screenWidth: screenWidth, verticalSpacing: verticalSpacing),
-                   SizedBox(height: 20,),
+                    SizedBox(height: 20,),
+          
  Center(
                       child: LoginButton(
                       fontSize: 20,
 
-                        text: "Add Phases",
+                        text:  "add_phases".tr,
                         // color: AppColors.forwardColor,
                         ishow: true,
                         // image: Appimages.eye,
@@ -199,7 +218,7 @@ SizedBox(height: 25,),
                       child: LoginButton(
                       fontSize: 20,
 
-                        text: "View Responses",
+                       text: "view_responses".tr,
                         color: AppColors.forwardColor,
                         ishow: true,
                         image: Appimages.eye,

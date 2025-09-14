@@ -219,7 +219,11 @@ import 'package:scorer/widgets/setting_container.dart';
 
 class UserManagementScreen extends StatelessWidget {
   final UserManagmentController controller = Get.put(UserManagmentController());
-  final List<String> tabs = ["Players", "Facilitator", "Administrator"];
+  final List<String> tabs = [
+  "players".tr,
+  "facilitator".tr,
+  "administrator".tr,
+];
   final List<Widget> screens = [
     UserPlayerSide(),
     UserFacilitateSide(),
@@ -283,7 +287,7 @@ class UserManagementScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text(""),
-                        CreateContainer(text: "Add"),
+                       CreateContainer(text: "add".tr)
                       ],
                     ),
                   ),
@@ -293,12 +297,12 @@ class UserManagementScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         BoldText(
-                          text: "Users Management",
+                           text: "users_management".tr,
                           fontSize: 16 * scaleFactor,
                           selectionColor: AppColors.blueColor,
                         ),
                         MainText(
-                          text: "Securely manage roles, permissions,\nand access.",
+                          text: "securely_manage_roles".tr,
                           fontSize: 14 * scaleFactor,
                           height: 1.4,
                         ),
@@ -314,7 +318,7 @@ class UserManagementScreen extends StatelessWidget {
                           child: TextFormField(
                             cursorColor: AppColors.blackColor,
                             decoration: InputDecoration(
-                              hintText: "Search Players",
+                             hintText: "search_players".tr,
                               prefixIcon: Padding(
                                 padding: EdgeInsets.only(left: 10 * scaleFactor),
                                 child: Icon(Icons.search, color: AppColors.forwardColor),

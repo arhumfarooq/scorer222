@@ -59,7 +59,8 @@ class GameSelectUseableContainer extends StatelessWidget {
   final String text1;
   final String text2;
   final bool isSelected;
-  const GameSelectUseableContainer({super.key, required this.text1, required this.text2, required this.isSelected});
+  final double?fontSize;
+  const GameSelectUseableContainer({super.key, required this.text1, required this.text2, required this.isSelected, this.fontSize});
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +114,7 @@ class GameSelectUseableContainer extends StatelessWidget {
                 ),
                 MainText(
                   text: text2,
-                  fontSize: 13 * scaleFactor, // Scale font size
+                  fontSize:fontSize?? 13 * scaleFactor, // Scale font size
                   color: AppColors.teamColor,
                   height: 1.5,
                 )

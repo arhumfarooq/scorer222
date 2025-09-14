@@ -32,12 +32,12 @@ class AdminScheduleSession extends StatelessWidget {
           heading: "Eranove Odyssey – Team A",
           text1: "Phase 2",
           ishow: false,
-          text2: "Scheduled",
+          text2: "scheduled".tr,
           description: "Leadership Assessment strengthens teamwork through interactive activities.",
 
           // description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
           text3: "Pause",
-          text7: "Start Early",
+        text7: "start_early".tr,
           icon3: Icons.fast_forward,
           color3: AppColors.forwardColor,
           text5: "12 Players",
@@ -62,7 +62,7 @@ class AdminScheduleSession extends StatelessWidget {
           text3: "Resume",
           text4: "Next Phase",
           svg: Appimages.edit,
-          text7: "Edit Session",
+          text7: "edit_session".tr,
           text6: "Friday 2:00 PM",
         ),
         SizedBox(height: 20 * heightScaleFactor)

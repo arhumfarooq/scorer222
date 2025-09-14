@@ -55,6 +55,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/widgets/main_text.dart';
 import 'package:scorer/widgets/useable_container.dart';
@@ -137,9 +138,10 @@ class AllPlayersContainer extends StatelessWidget {
                 ],
               ),
               UseableContainer(
-                text: text3 ?? "Active",
+                
+                text: text3 ?? "active".tr,
                 height: 22* scaleFactor,
-                width: width ?? 57 * scaleFactor, // Scale width
+                width: width ?? 65 * scaleFactor, // Scale width
                 color: color ?? AppColors.forwardColor,
               ),
             ],
