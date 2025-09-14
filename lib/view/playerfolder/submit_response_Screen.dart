@@ -240,7 +240,7 @@ class SubmitResponseScreen extends StatelessWidget {
                           Expanded(
                             child: Center(
                               child: BoldText(
-                                text: "Team Alpha",
+                                text: "team_alpha".tr,
                                 fontSize: 22 * scaleFactor,
                               ),
                             ),
@@ -274,14 +274,14 @@ class SubmitResponseScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 10 * scaleFactor),
                     BoldText(
-                      text: "Response Submitted!",
+                       text: "response_submitted".tr,
                       fontSize: 16 * scaleFactor,
                       selectionColor: AppColors.blueColor,
                     ),
                     Center(
                       child: MainText(
                         height: 1.2,
-                        text: "Your team decision has been recorded \nsuccessfully.",
+                        text: "team_decision_recorded".tr,
                         fontSize: 14 * scaleFactor,
                         textAlign: TextAlign.center,
                       ),
@@ -305,32 +305,33 @@ class SubmitResponseScreen extends StatelessWidget {
                             children: [
                               SizedBox(height: 30 * scaleFactor),
                               BoldText(
-                                text: "Your Submission",
+                               text: "your_submission".tr,
                                 selectionColor: AppColors.blueColor,
                                 fontSize: 16 * scaleFactor,
                               ),
                               SizedBox(height: 15 * scaleFactor),
                               MainText(
                                 height: 1.5,
-                                text: "Mountain Resort (\$12,000)",
+                               text: "mountain_resort".tr,
                                 fontSize: 13 * scaleFactor,
                               ),
                               SizedBox(height: 15 * scaleFactor),
                               BoldText(
-                                text: "Reasoning:",
+                               text: "reasoning".tr,
                                 selectionColor: AppColors.redColor,
                                 fontSize: 16 * scaleFactor,
                               ),
                               SizedBox(height: 10 * scaleFactor),
                               MainText(
-                                text: "The mountain resort offers the best balance of cost-effectiveness and team-building opportunities. The outdoor activities will help strengthen team bonds...",
+                                text: "mountain_resort_reason".tr,
+                                // text: "The mountain resort offers the best balance of cost-effectiveness and team-building opportunities. The outdoor activities will help strengthen team bonds...",
                                 fontSize: 13 * scaleFactor,
                                 height: 1.5,
                               ),
                               SizedBox(height: 20 * scaleFactor),
                               UseableTextrow(
                                 color: AppColors.forwardColor,
-                                text: "Submitted at: 2:47 PM",
+                                text: "submitted_at".tr,
                                
                               ),
                               SizedBox(height: 20 * scaleFactor),
@@ -355,19 +356,20 @@ class SubmitResponseScreen extends StatelessWidget {
                       width: 100 * scaleFactor,
                     ),
                     BoldText(
-                      text: "Waiting for Team",
-                      fontSize: 16 * scaleFactor,
-                      selectionColor: AppColors.blueColor,
-                    ),
+  text: "waiting_for_team".tr,
+  fontSize: 16 * scaleFactor,
+  selectionColor: AppColors.blueColor,
+),
                     SizedBox(height: 10 * scaleFactor),
-                    Center(
-                      child: MainText(
-                        height: 1.2,
-                        text: "We're waiting for Maria Garcia to\nsubmit their response.",
-                        fontSize: 14 * scaleFactor,
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                  
+Center(
+  child: MainText(
+    height: 1.2,
+    text: "waiting_for_member".tr,
+    fontSize: 14 * scaleFactor,
+    textAlign: TextAlign.center,
+  ),
+),
                     SizedBox(height: 10 * scaleFactor),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -411,7 +413,7 @@ class SubmitResponseScreen extends StatelessWidget {
                             icon: Icons.check,
                             text1: "Phase 1 Strategy Building",
                             text2: "Completed • 20 min",
-                            text3: "Completed",
+                            text3: "completed".tr,
                             smallContainer: AppColors.forwardColor,
                             largeConatiner: AppColors.forwardColor,
                             flex: 4,
@@ -424,7 +426,7 @@ class SubmitResponseScreen extends StatelessWidget {
                             icon: Icons.check,
                             text1: "Phase 2 Strategy Building",
                             text2: "Active • 30 min",
-                            text3: "Completed",
+                          text3: "completed".tr,
                             smallContainer: AppColors.forwardColor,
                             largeConatiner: AppColors.forwardColor,
                             flex: 4,
@@ -436,7 +438,7 @@ class SubmitResponseScreen extends StatelessWidget {
                             icon: Icons.watch_later,
                             text1: "Phase 3: Implementation",
                             text2: "Upcoming • 15 min",
-                            text3: "Pending",
+                            text3: "pending".tr,
                             smallContainer: AppColors.watchColor,
                             largeConatiner: AppColors.greyColor,
                             flex: 4,
@@ -448,7 +450,7 @@ class SubmitResponseScreen extends StatelessWidget {
                             icon: Icons.watch_later,
                             text1: "Phase 4: Evaluation",
                             text2: "Upcoming • 15 min",
-                            text3: "Pending",
+                            text3: "pending".tr,
                             smallContainer: AppColors.watchColor,
                             largeConatiner: AppColors.greyColor,
                             flex: 4,
@@ -458,7 +460,7 @@ class SubmitResponseScreen extends StatelessWidget {
                           LoginButton(
                         onTap: () => Get.toNamed(RouteName.submitResponseScreen2),
 fontSize: 20,
-                            text: "Review AI Score",
+                            text: "review_ai_score".tr,
                             color: AppColors.forwardColor,
                             ishow: true,
                             image: Appimages.ai2,

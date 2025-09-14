@@ -341,7 +341,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                         ),
                         SizedBox(width: screenWidth * 0.02),
                         MainText(
-                          text: "Live Updates....",
+                          text: "live_updates".tr,
                           color: AppColors.visitingColor,
                           fontSize: screenWidth * 0.035,
                         )
@@ -350,7 +350,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                     SizedBox(height: screenHeight * 0.025), // Converted fixed height to be responsive
                     Obx(
                       () => CreateContainer(
-                        text: isTeamSelected.value ? "Your Team Rank 2nd " : "Your Rank 2nd ",
+                        text: isTeamSelected.value ? "your_team_rank_2nd".tr : "your_rank_2nd".tr,
                         // Converted fixed width to a responsive value based on screen width
                         width: isTeamSelected.value ? screenWidth * 0.45 : screenWidth * 0.33,
                       ),
@@ -365,7 +365,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                           Obx(
                             () => PlayersContainers(
                               text1: "1",
-                              text2: isTeamSelected.value ? "Team Alpha" : "Alex M.",
+                              text2: isTeamSelected.value ? "team_alpha".tr : "Alex M.",
                               image: Appimages.facil2,
                               icon: Icons.keyboard_arrow_up_outlined,
                               iconColor: AppColors.arrowColor,
@@ -431,7 +431,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                           LoginButton(
                             fontSize: 19,
 
-                            text: "Move to Phase 3",
+                            text: "move_to_phase_3".tr,
                             color: AppColors.forwardColor,
                             ishow: true,
                             image: Appimages.submit,
@@ -440,7 +440,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                           LoginButton(
                             fontSize: 19,
 
-                            text: "Share Results",
+                            text: "share_results".tr,
                             ishow: true,
                             color: AppColors.redColor,
                             image: Appimages.move,
@@ -448,7 +448,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                           SizedBox(height: screenHeight * 0.012), // Converted fixed height to be responsive
                           LoginButton(
                             fontSize: 19,
-                            text: "Export Data",
+                            text: "export_data".tr,
                             ishow: true,
                             image: Appimages.export,
                           ),
@@ -478,7 +478,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        MainText(text: "Back", fontSize: 16, color: AppColors.whiteColor),
+                        MainText(text: "back".tr, fontSize: 16, color: AppColors.whiteColor),
                         Image.asset(Appimages.main),
                       ],
                     ),

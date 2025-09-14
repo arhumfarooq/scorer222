@@ -528,11 +528,15 @@ class UserAdminDetailedScree extends StatelessWidget {
                                 MainText(
                                                                                                  text:  "email".tr,
 
-                                  fontSize: 14 * widthScaleFactor,
+                                  // fontSize: 14 * widthScaleFactor,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                 ),
                                 BoldText(
                                   text: "john.smith@company.com",
-                                  fontSize: 16 * widthScaleFactor,
+                                  // fontSize: 16 * widthScaleFactor,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],
@@ -544,11 +548,15 @@ class UserAdminDetailedScree extends StatelessWidget {
                                 MainText(
                                                                                                   text:  "phone".tr,
 
-                                  fontSize: 14 * widthScaleFactor,
+                                  // fontSize: 14 * widthScaleFactor,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                 ),
                                 BoldText(
                                   text: "+1 (555) 987-6543",
-                                  fontSize: 16 * widthScaleFactor,
+                                  // fontSize: 16 * widthScaleFactor,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],
@@ -559,11 +567,15 @@ class UserAdminDetailedScree extends StatelessWidget {
                               children: [
                                 MainText(
                                text: "join_date".tr,
-                                  fontSize: 14 * widthScaleFactor,
+                                  // fontSize: 14 * widthScaleFactor,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                 ),
                                 BoldText(
                                   text: "September 8, 2024",
-                                  fontSize: 16 * widthScaleFactor,
+                                  // fontSize: 16 * widthScaleFactor,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],
@@ -574,7 +586,9 @@ class UserAdminDetailedScree extends StatelessWidget {
                               children: [
                                 MainText(
                                   text: "Facilitator Level",
-                                  fontSize: 14 * widthScaleFactor,
+                                  // fontSize: 14 * widthScaleFactor,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                 ),
                                 CreateContainer(
                                   text: "Level 3",

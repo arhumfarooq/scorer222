@@ -40,7 +40,9 @@ class CustomSessionContainer extends StatelessWidget {
             ),
             SizedBox(height: 30 * heightScaleFactor),
             SessionUseableRow(
-              
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:10,
+              fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
               iamge: Appimages.phone1,
               text: "average_score".tr,
               text2: "across_all_players".tr,
@@ -49,16 +51,21 @@ class CustomSessionContainer extends StatelessWidget {
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
+fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
               
               iamge: Appimages.phone2,
               text: "top_performer".tr,
-              fontSize: isSpanish?10:10,
+              // fontSize: isSpanish?10:10,
               text2: "highest_scoring_player".tr,
               tex3: "Alex M.",
               tex4: "2890 points",
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
+fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+
               iamge: Appimages.phone3,
               text: "completion_rate".tr,
               text2: "players_finished".tr,
@@ -67,6 +74,9 @@ class CustomSessionContainer extends StatelessWidget {
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 8:10,
+fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
               iamge: Appimages.phone4,
               text: "participation_rate".tr,
               text2: "participation_rate".tr,

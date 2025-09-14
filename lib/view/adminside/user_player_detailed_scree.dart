@@ -305,6 +305,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -522,12 +523,16 @@ class UserPlayerDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                   text:  "email".tr,
-                                  fontSize: 14 * widthScaleFactor,
+                                  // fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
                                   text: "john.smith@company.com",
-                                  fontSize: 16 * widthScaleFactor,
+                                  // fontSize: 16 * widthScaleFactor,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],
@@ -537,12 +542,16 @@ class UserPlayerDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                   text:  "phone".tr,
-                                  fontSize: 14 * widthScaleFactor,
+                                  // fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                   text: "+1 (555) 987-6543",
-                                  fontSize: 16 * widthScaleFactor,
+                                  // fontSize: 16 * widthScaleFactor,
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],
@@ -552,12 +561,16 @@ class UserPlayerDetailedScree extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 MainText(
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                   text: "join_date".tr,
-                                  fontSize: 14 * widthScaleFactor,
+                                  // fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+
                                   text: "September 8, 2024",
-                                  fontSize: 16 * widthScaleFactor,
+                                  // fontSize: 16 * widthScaleFactor,
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],

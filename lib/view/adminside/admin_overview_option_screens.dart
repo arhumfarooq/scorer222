@@ -17,7 +17,10 @@ class AdminOverviewOptionScreens extends StatelessWidget {
   final controller = Get.put(OverviewController());
   AdminOverviewOptionScreens({super.key});
 
-  final List<String> tabs = ["Overview", "Phases", "Players", "Leaderboard"];
+  final List<String> tabs = [ "tab_overview".tr,
+  "tab_phases".tr,
+  "tab_players".tr,
+  "tab_leaderboard".tr,];
   final List<Widget> screens = [
     AdminOverviewScreen(),
     AdminPhaseScreen(),
@@ -97,7 +100,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
           //   height2: 22,
           // height1:22 ,
           height: 20,
-                                text: "Active",
+                                text: "active".tr,
                                 color: AppColors.forwardColor,
                                 fontSize: 11 * heightScaleFactor,
                               ),

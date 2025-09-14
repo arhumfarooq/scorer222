@@ -659,7 +659,9 @@ class CreateNewSessionScreen extends StatelessWidget {
   decoration: InputDecoration(
     hintText: "enter_session_name".tr,
     hintStyle: TextStyle(
-      fontSize: 22 * scaleFactor,
+      // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 18:22,
+      // fontSize: 22 * scaleFactor,
       fontWeight: FontWeight.w600,
       color: AppColors.languageTextColor
     ),
@@ -693,24 +695,31 @@ class CreateNewSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 30 * scaleFactor),
                       GameSelectUseableContainer(
+                        // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
                        text1: "odyssee_des_okr".tr,
   text2: "strategic_goal_workshop".tr,
                         isSelected: isSelected,
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       GameSelectUseableContainer(
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
+
                       text1: "feedloop".tr,
   text2: "feedback_collab_game".tr,
                         isSelected: false,
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       GameSelectUseableContainer(
+fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
+
                       text1: "innovation_challenge".tr,
   text2: "creative_problem_workshop".tr,
                         isSelected: isSelected,
                       ),
                       SizedBox(height: 31 * scaleFactor),
                       BoldText(
+                        
   text: "number_of_phases".tr,
                         fontSize: 16 * scaleFactor,
                         selectionColor: AppColors.blueColor,
