@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -50,7 +51,11 @@ class NewSessionContainer extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                     MainText(text: "session_code".tr, fontSize: 14 * heightScaleFactor),
+                     MainText(text: "session_code".tr, fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                     )),
                       Row(
                         children: [
                           BoldText(
@@ -66,17 +71,25 @@ class NewSessionContainer extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(height: 10 * heightScaleFactor),
+                  SizedBox(height: 6 * heightScaleFactor),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                     MainText(text: "join_link".tr, fontSize: 14* heightScaleFactor),
+                     MainText(text: "join_link".tr,  fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                     )),
 
                       Row(
                         children: [
                           BoldText(
                             text: "https:/www.score.com",
-                           fontSize: Get.locale?.languageCode == 'fr' ? 12 * heightScaleFactor : 14 * heightScaleFactor,
+                           fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                     ),
                             selectionColor: AppColors.blueColor,
                           ),
                           SizedBox(width: 10 * widthScaleFactor),
@@ -87,11 +100,15 @@ class NewSessionContainer extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(height: 10 * heightScaleFactor),
+                  SizedBox(height: 6 * heightScaleFactor),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                    MainText(text: "started".tr, fontSize: 14 * heightScaleFactor),
+                    MainText(text: "started".tr, fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                     )),
 
                       BoldText(
                         text: "2:30 PM",
@@ -100,11 +117,15 @@ class NewSessionContainer extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10 * heightScaleFactor),
+                  SizedBox(height: 6 * heightScaleFactor),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MainText(text: "duration".tr, fontSize: 14 * heightScaleFactor),
+                      MainText(text: "duration".tr, fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                     )),
 
                       BoldText(
                         text: "45 minutes",
@@ -154,12 +175,14 @@ class NewSessionContainer extends StatelessWidget {
                                     fontSize: 11 * heightScaleFactor,
                                     height: 26,
                                   ),
-                                  SizedBox(width: 10 * widthScaleFactor),
+                                  SizedBox(width: 7* widthScaleFactor),
                           MainText(
   text: "strategy_building".tr,
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
-      ? 11 * heightScaleFactor
-      : 14 * heightScaleFactor, // default for English
+    fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 11
+
+                     ) // default for English
 )
 
                                 ],
@@ -167,7 +190,11 @@ class NewSessionContainer extends StatelessWidget {
                             ],
                           ),
                         CircularPercentIndicator(
-      radius: isSpanish ? 35.0 : 40.0, // radius adj
+      radius:  ResponsiveFont.getFontSizeCustom(
+defaultSize: 40,
+smallSize: 34
+
+                     ),
         lineWidth: 4.0, // border ki thickness
         percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
         animation: true,

@@ -149,7 +149,7 @@ class UserPlayerSide extends StatelessWidget {
 
             text3: "pending".tr,
             color: AppColors.redColor,
-            width: 70 * widthScaleFactor,
+            width: 80 * widthScaleFactor,
             fontSize2: 12 * widthScaleFactor,
             text: "Alex Martinez",
             text2: "john.smith@company.com",

@@ -192,6 +192,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -369,13 +370,12 @@ class GameUseAbleContainer extends StatelessWidget {
               children: [
                 SizedBox(height: 17 * heightScaleFactor),
                 MainText(
-                  text: "Odyssée des OKR",
+                  text: "odyssee_des_okr".tr,
                   fontSize: 14 * widthScaleFactor,
                 ),
                 SizedBox(height: 5 * heightScaleFactor),
                 MainText(
-                  text: "Objective & Key Result alignment through decision-making",
-                  fontSize: 14 * widthScaleFactor,
+text: "okr_description".tr,                  fontSize: 14 * widthScaleFactor,
                   height: 1.3,
                   color: AppColors.teamColor,
                 ),
@@ -383,14 +383,16 @@ class GameUseAbleContainer extends StatelessWidget {
                 Row(
                   children: [
                     UseableContainer(
+                      fontSize: 9,
                       height: 26,
-                      text: "AI-based",
+                      text: "ai_based".tr,
                       color: AppColors.orangeColor,
-                      width: 72 * widthScaleFactor,
+                      width: 75 * widthScaleFactor,
                     ),
                     SizedBox(width: 7 * widthScaleFactor),
                     UseableContainer(
-                      text: "Active",height: 26,
+                      fontSize: 9,
+                      text: "active".tr,height: 26,
                       color: AppColors.forwardColor,
                     )
                   ],

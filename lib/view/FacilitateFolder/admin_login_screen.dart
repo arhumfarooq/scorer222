@@ -353,6 +353,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -412,6 +413,11 @@ class AdminLoginScreen extends StatelessWidget {
                               ),
                               Center(
                                 child: BoldText(
+                                  fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 22,
+smallSize: 17
+
+                                  ),
                                   text: "admin_login".tr,
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -431,11 +437,31 @@ class AdminLoginScreen extends StatelessWidget {
                         SizedBox(height: 23 * heightScaleFactor),
 
                         // TextFields
-                        LoginTextfield(text: "enter_full_name".tr),
+                        LoginTextfield(text: "enter_full_name".tr,
+                         fontsize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 21,
+smallSize: 19
+
+                                  ),
+                        ),
                         SizedBox(height: 9 * heightScaleFactor),
-                        LoginTextfield(text: "enter_email".tr),
+                        LoginTextfield(text: "enter_email".tr,
+                          fontsize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 21,
+smallSize: 19
+
+                                  ),
+
+                        ),
                         SizedBox(height: 9 * heightScaleFactor),
-                        LoginTextfield(text: "enter_password".tr),
+                        LoginTextfield(text: "enter_password".tr,
+                          fontsize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 21,
+smallSize: 19
+
+                                  ),
+
+                        ),
 
                         SizedBox(height: 9 * heightScaleFactor),
 
@@ -459,7 +485,13 @@ class AdminLoginScreen extends StatelessWidget {
                                 SizedBox(width: 6 * widthScaleFactor),
                                 MainText(
                                   text: "remember_me".tr,
-                                  fontSize: 14 * heightScaleFactor,
+                                  // fontSize: 14 * heightScaleFactor,
+                                    fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 11
+
+                                  ),
+
                                   color: AppColors.languageTextColor,
                                 ),
                               ],
@@ -467,7 +499,11 @@ class AdminLoginScreen extends StatelessWidget {
                             MainText(
                               text: "forget_password".tr,
                               fontFamily: "gotham",
-                              fontSize: 14 * heightScaleFactor,
+                               fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 11
+
+                                  ),
                               color: AppColors.selectLangugaeColor,
                             ),
                           ],

@@ -400,6 +400,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -451,7 +452,7 @@ class Game2Screen extends StatelessWidget {
                                                        style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),
                                                        children: [
                               TextSpan(
-                               text: "Create Ne",
+                                text: "create_ne".tr,  
                                
                                style: TextStyle(
                                  color: AppColors.blueColor, // Dark Blue
@@ -469,7 +470,7 @@ class Game2Screen extends StatelessWidget {
                                    ),
                                  ),
                                  child:  Text(
-                                   "w",
+                                   "w".tr,
                                    style: TextStyle(
                                                 color: AppColors.blueColor, 
                                                 fontSize: 22 * scaleFactor,
@@ -491,7 +492,7 @@ class Game2Screen extends StatelessWidget {
                                  child: Padding(
                                    padding:  EdgeInsets.only(left: 4.0, right: 10.0),
                                    child:  Text(
-                                                "Game",
+                                                "game".tr,
                                                 style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 22 * scaleFactor,
@@ -509,31 +510,35 @@ class Game2Screen extends StatelessWidget {
                                                    ],
                     ),
                   ),
-                  SizedBox(
-                  height: 150 * scaleFactor, // set height you want
-                  child: Image.asset(
-                    Appimages.game,
-                    fit: BoxFit.contain, // ensures it fits without stretching
+                  SizedBox(height: 30,),
+                  Center(
+                    child: SizedBox(
+                    height: 150 * scaleFactor, // set height you want
+                    child: Image.asset(
+                      Appimages.game,
+                      fit: BoxFit.contain, // ensures it fits without stretching
+                    ),
+                                    ),
                   ),
-                ),
+                  SizedBox(height: 20,),
                   LoginTextfield(
-                      text: "Enter Game Name", fontsize: 14 * scaleFactor),
+                      text: "enter_game_name".tr, fontsize: 14 * scaleFactor),
                   SizedBox(height: 9 * scaleFactor),
                   LoginTextfield(
                     ishow: true,
-                      text: "Description",
+                      text: "description".tr,
                       height: 120 * scaleFactor,
                       fontsize: 14 * scaleFactor),
                   SizedBox(height: 9 * scaleFactor),
 
                   BoldText(
-                    text: "Number of Phases",
+                    text:"number_of_phases".tr,
                     fontSize: 16 * scaleFactor,
                     selectionColor: AppColors.blueColor,
                   ),
                   SizedBox(height: 14 * scaleFactor),
                   MainText(
-                    text: "Phase structure adapts based on selected game format",
+                    text: "phase_structure_adapts".tr,
                     color: AppColors.teamColor,
                     textAlign: TextAlign.center,
                     height: 1.4,
@@ -624,7 +629,7 @@ class Game2Screen extends StatelessWidget {
                         children: [
                           SizedBox(height: 28 * scaleFactor),
                           BoldText(
-                              text: "Game Logic Setup",
+                              text: "game_logic_setup".tr,
                               fontSize: 16 * scaleFactor,
                               selectionColor: AppColors.blueColor),
                           SizedBox(height: 19 * scaleFactor),
@@ -650,7 +655,7 @@ class Game2Screen extends StatelessWidget {
                     ),
                   ),
                   LoginButton(
-                    text: "Add Phase",
+                    text: "add_phase".tr,
                     ishow: true,
                     icon: Icons.add,
                     imageHeight: 26 * scaleFactor,
@@ -664,16 +669,14 @@ class Game2Screen extends StatelessWidget {
                   ),
                   SizedBox(height: 25 * scaleFactor),
                   FilterUseableContainer(
-                      isSelected: true, text: "MCQ", onTap: () {}),
-                  SizedBox(height: 10 * scaleFactor),
-                  FilterUseableContainer(
-                      isSelected: false, text: "Open-ended", onTap: () {}),
-                  SizedBox(height: 10 * scaleFactor),
-                  FilterUseableContainer(
-                      isSelected: true, text: "Puzzle", onTap: () {}),
-                  SizedBox(height: 10 * scaleFactor),
-                  FilterUseableContainer(
-                      isSelected: false, text: "Simulation", onTap: () {}),
+  
+  isSelected: true, text: "mcq".tr, onTap: () {}),
+                      SizedBox(height: 10 * scaleFactor),
+FilterUseableContainer(isSelected: false, text: "open_ended".tr, onTap: () {}),
+                      SizedBox(height: 10 * scaleFactor),
+FilterUseableContainer(isSelected: true, text: "puzzle".tr, onTap: () {}),
+                      SizedBox(height: 10 * scaleFactor),
+FilterUseableContainer(isSelected: false, text: "simulation".tr, onTap: () {}),
                   SizedBox(height: 10 * scaleFactor),
                   CustomContainer(scaleFactor: scaleFactor),
                   SizedBox(height: 24 * scaleFactor),
@@ -692,14 +695,14 @@ class Game2Screen extends StatelessWidget {
                         children: [
                           SizedBox(height: 20 * scaleFactor),
                           BoldText(
-                            text: "Difficulty Level",
+                            text:"default_time_limit_per_phase".tr,
                             selectionColor: AppColors.blueColor,
                             fontSize: 16 * scaleFactor,
                           ),
                           SizedBox(height: 31 * scaleFactor),
                           CustomSloderRow(
                               text: "Phase 1",
-                              text2: "Easy",
+                              text2: "easy".tr,
                               value: 15,
                               width: 82 * scaleFactor,
                               fontSize: 16 * scaleFactor,
@@ -708,7 +711,7 @@ class Game2Screen extends StatelessWidget {
                           CustomSloderRow(
                               width1: 10 * scaleFactor,
                               text: "Phase 2",
-                              text2: "Medium",
+                              text2:"medium".tr,
                               value: 20,
                               color: AppColors.orangeColor,
                               width: 82 * scaleFactor,
@@ -717,7 +720,7 @@ class Game2Screen extends StatelessWidget {
                           CustomSloderRow(
                               width1: 10 * scaleFactor,
                               text: "Phase 3",
-                              text2: "Hard",
+                              text2:"hard".tr,
                               value: 30,
                               color: AppColors.redColor,
                               width: 82 * scaleFactor,
@@ -730,7 +733,7 @@ class Game2Screen extends StatelessWidget {
 
                   Center(
                     child: BoldText(
-                      text: "Badge Labeling",
+                      text: "badge_labeling".tr,
                       fontSize: 16 * scaleFactor,
                       selectionColor: AppColors.blueColor,
                     ),
@@ -742,21 +745,22 @@ class Game2Screen extends StatelessWidget {
                   ),
                   SizedBox(height: 11 * scaleFactor),
                   CustomPhaseContainer(
-                    text1: "Badge Name",
-                    text2: "Gold Achiever",
+                    text1: "badge_name".tr,
+
+                    text2:  "gold_achiever".tr,
                     fontSize: 16 * scaleFactor,
                     color: AppColors.forwardColor,
                   ),
                   SizedBox(height: 8 * scaleFactor),
                   CustomPhaseContainer(
-                    text1: "Required Score",
+                    text1:"required_score".tr,
                     text2: "90+",
                     fontSize: 16 * scaleFactor,
                     color: AppColors.forwardColor,
                   ),
                   SizedBox(height: 16 * scaleFactor),
                   LoginButton(
-                    text: "Add More Badges",
+                    text: "add_more_badges".tr,
                     height: 45 * scaleFactor,
                     color: AppColors.forwardColor,
                     radius: 12 * scaleFactor,
@@ -765,29 +769,30 @@ class Game2Screen extends StatelessWidget {
                   ),
                   SizedBox(height: 18 * scaleFactor),
                   BoldText(
-                    text: "Additional Settings",
+                    text:  "additional_settings".tr,
                     selectionColor: AppColors.blueColor,
                     fontSize: 16 * scaleFactor,
                   ),
                   SizedBox(height: 20 * scaleFactor),
                   FilterUseableContainer(
-                      isSelected: true, text: 'Manual', onTap: () {}),
+                      isSelected: true, text: 'manual'.tr,
+ onTap: () {}),
                   SizedBox(height: 10 * scaleFactor),
-                  FilterUseableContainer(isSelected: false, text: 'AI', onTap: () {}),
+                  FilterUseableContainer(isSelected: false, text: 'ai'.tr, onTap: () {}),
                   SizedBox(height: 10 * scaleFactor),
                   FilterUseableContainer(
-                      isSelected: false, text: 'Mixed', onTap: () {}),
+                      isSelected: false, text:  'mixed'.tr, onTap: () {}),
                   SizedBox(height: 10 * scaleFactor),
                   CustomContainer(
                     scaleFactor: scaleFactor,
-                    text1: "Points per Correct Answer",
+                    text1: "points_per_correct_answer".tr,
                     text2: "10pts",
                     color: AppColors.forwardColor,
                   ),
                   SizedBox(height: 10 * scaleFactor),
                   CustomContainer(
                     scaleFactor: scaleFactor,
-                    text1: "Penalty for Wrong Answers",
+                    text1:  "penalty_for_wrong_answers".tr,
                     text2: "-5pts",
                     color: AppColors.redColor,
                   ),
@@ -798,25 +803,25 @@ class Game2Screen extends StatelessWidget {
                       screenHeight: screenHeight, screenWidth: screenWidth, scaleFactor: scaleFactor),
                   SizedBox(height: 10 * scaleFactor),
                   GameRow(
-                      text: "Allow Team Mode",
+                      text: "allow_team_mode".tr,
                       screenHeight: screenHeight,
                       screenWidth: screenWidth, scaleFactor: scaleFactor),
                   SizedBox(height: 10 * scaleFactor),
                   GameRow(
-                      text: "Auto-Start Sessions",
+                      text: "auto_start_sessions".tr,
                       screenHeight: screenHeight,
                       screenWidth: screenWidth, scaleFactor: scaleFactor),
                   SizedBox(height: 43 * scaleFactor),
                   LoginButton(
                     fontSize: 20,
-                      text: "Save",
+                      text: "save".tr,
                       ishow: true,
                       image: Appimages.save,
                       ),
                   SizedBox(height: 10 * scaleFactor),
                   LoginButton(
                     fontSize: 20,
-                      text: "Cancel",
+                      text: "cancel".tr,
                       color: AppColors.forwardColor,
                       ),
                   SizedBox(height: 43 * scaleFactor),

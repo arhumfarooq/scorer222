@@ -183,6 +183,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -246,8 +247,12 @@ final List<String> tabs = ["all".tr, "pending".tr, "scored".tr];
       Center(
         child: BoldText(
             text: "stage2_responses".tr,
-            fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 20:22,
-
+            // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 20:22,
+fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 22
+,
+smallSize: 20
+),
           selectionColor: AppColors.blueColor,
         ),
       ),
@@ -259,19 +264,28 @@ final List<String> tabs = ["all".tr, "pending".tr, "scored".tr];
                       CustomStratgyContainer(
                         isshow: true,
                         mainHeight: 1.3,
-                        fontSize: 14,
+                        fontSize: ResponsiveFont.getFontSizeCustom(
+                          defaultSize: 14,
+                          smallSize: 12
+                        ),
                         containerHeight: 180,
                         width3: 54,
                         spaceHeight2: 20,
                         spaceHeight: 14,
                         extra:
-                            "Define your team's primary objective for the next quarter and identify three key strategies to achieve it.",
+                            "primary_objective".tr,
                         width1: 150,
                         width2: 126,
                         iconContainer: AppColors.selectLangugaeColor,
                         icon: Icons.play_arrow_rounded,
                         text1:"phase2_strategy".tr,
-                       fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+                        fontSize2: ResponsiveFont.getFontSizeCustom
+                        
+                        (
+defaultSize: 14
+,smallSize: 10
+                        ),
+                      //  fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
 
                         text2: 'Completed • 20 min',
                         text3: 'active'.tr,
@@ -450,13 +464,20 @@ onTap: () {
                             CustomStratgyContainer(
                                 // width3: 73,
                         spaceHeight2: 20,
+
                         spaceHeight: 14,
-                        fontSize3:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:12,
+                        
+                        // fontSize3:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:12,
                               // width1: 207,
                               //  width2: 70,
                               // fontSize2:isSpanish? 11:14,
-                            fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-
+                            // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom
+                        
+                        (
+defaultSize: 14
+,smallSize: 10
+                        ),
                               iconContainer: AppColors.forwardColor,
                               icon: Icons.check,
                               width1: 277,
@@ -464,8 +485,8 @@ onTap: () {
                                 // width3: 70,
                               smallContainer: AppColors.forwardColor,
                               largeConatiner: AppColors.forwardColor,
-                          width3  :(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 64:73,
-
+                              fontSize3: 10,
+                          width3  :70
                             ),
                             SizedBox(height: 10),
                             CustomStratgyContainer(
@@ -474,15 +495,22 @@ onTap: () {
                         // containerHeight: 180,
                         //   :(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
                         // width3: 54,
-                          width3  :(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 50:54,
-
+                          // width3  :(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 50:54,
+fontSize3: 10,
+                          width3  :70,
                         spaceHeight2: 20,
                         spaceHeight: 14,
                               width1: 207,
                                width2: 70,
                               //  fontSize2:isSpanish? 11:14,
-                            fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-
+                            // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom
+                        
+                        (
+defaultSize: 14
+,smallSize: 9
+                        ),
+              
                               iconContainer: AppColors.selectLangugaeColor,
                               icon: Icons.play_arrow_rounded,
                             text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr,
@@ -491,15 +519,22 @@ onTap: () {
                             ),
                             SizedBox(height: 10),
                             CustomStratgyContainer(
-                              width3: 70,
+                              fontSize3: 10,
+                          width3  :70,
+                              // width3: 70,
                         spaceHeight2: 20,
                         spaceHeight: 14,
                               width1: 207,
                                width2: 70,
                               iconContainer: AppColors.watchColor,
                               // fontSize2:isSpanish? 11:14,
-                            fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-
+                            // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom
+                        
+                        (
+defaultSize: 14
+,smallSize: 10
+                        ),
                               icon: Icons.watch_later,
                            text1: "phase3_implementation".tr, text2: "Upcoming • 25 min", text3: "pending".tr,
                               smallContainer: AppColors.watchColor,
@@ -507,15 +542,22 @@ onTap: () {
                             ),
                             SizedBox(height: 10),
                             CustomStratgyContainer(
-                                  width3: 70,
+                              fontSize3: 10,
+                          width3  :70,
+                                  // width3: 70,
                                 // width3: 54,
                         spaceHeight2: 20,
                         spaceHeight: 14,
                               width1: 207,
                                width2: 70,
                               iconContainer: AppColors.watchColor,
-                            fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-
+                            // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom
+                        
+                        (
+defaultSize: 14
+,smallSize: 10
+                        ),
                               icon: Icons.watch_later,
                             text1: "phase4_evaluation".tr,text2: "Upcoming • 15 min", text3: "pending".tr,
                               smallContainer: AppColors.watchColor,

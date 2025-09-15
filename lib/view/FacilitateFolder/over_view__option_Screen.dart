@@ -420,7 +420,7 @@ class OverViewOptionScreen extends StatelessWidget {
                             SizedBox(width: 8 * widthScaleFactor),
                             UseableContainer(
                               width: 70,
-                              text: "Active",
+                              text: "active".tr,
                               // height: 26,
                               color: AppColors.forwardColor,
                               fontSize: 10 * heightScaleFactor,

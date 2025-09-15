@@ -257,6 +257,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -310,6 +311,11 @@ class PlayerLoginScreen extends StatelessWidget {
                           ),
                         Center(
   child: BoldText(
+        fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 22,
+smallSize: 17
+
+                                  ),
     text: "player_login".tr,
     selectionColor: AppColors.blueColor,
   ),
@@ -326,11 +332,26 @@ class PlayerLoginScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 23 * heightScaleFactor),
-                    Center(child: LoginTextfield(text: "enter_full_name".tr)),
+                    Center(child: LoginTextfield(
+                      fontsize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize:21,
+                        smallSize: 19 
+                      ),
+                      text: "enter_full_name".tr)),
                     SizedBox(height: 9 * heightScaleFactor),
-                    Center(child: LoginTextfield(text: "enter_email".tr)),
+                    Center(child: LoginTextfield(
+                        fontsize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize:21,
+                        smallSize: 19 
+                      ),
+                      text: "enter_email".tr)),
                     SizedBox(height: 9 * heightScaleFactor),
-                    Center(child: LoginTextfield(text: "enter_password".tr)),
+                    Center(child: LoginTextfield(
+                        fontsize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize:21,
+                        smallSize: 19 
+                      ),
+                      text: "enter_password".tr)),
                     SizedBox(height: 9 * heightScaleFactor),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -351,7 +372,10 @@ class PlayerLoginScreen extends StatelessWidget {
                             SizedBox(width: 6 * widthScaleFactor),
                             MainText(
                               text: "remember_me".tr,
-                              fontSize: 14 * heightScaleFactor,
+                              fontSize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize:14,
+                        smallSize: 12
+                      ),
                               color: AppColors.languageTextColor,
                             ),
                           ],
@@ -359,7 +383,10 @@ class PlayerLoginScreen extends StatelessWidget {
                         MainText(
                           text: "forget_password".tr,
                           fontFamily: "gotham",
-                          fontSize: 14 * heightScaleFactor,
+                            fontSize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize:14,
+                        smallSize: 12
+                      ),
                           color: AppColors.selectLangugaeColor,
                         ),
                       ],
@@ -402,7 +429,10 @@ class PlayerLoginScreen extends StatelessWidget {
                     SizedBox(height: 18 * heightScaleFactor),
                     Center(
                       child: LoginButton(
-                        fontSize: 20,
+                        fontSize: ResponsiveFont.getFontSizeCustom(
+                          defaultSize: 20,
+                          smallSize: 17
+                        ),
                         text: "join_with_code".tr,
                         color: AppColors.forwardColor,
                       ),

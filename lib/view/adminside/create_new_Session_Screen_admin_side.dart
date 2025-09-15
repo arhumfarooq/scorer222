@@ -370,6 +370,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -424,8 +425,7 @@ class CreateNewSessionHeader extends StatelessWidget {
                                                        style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),
                                                        children: [
                               TextSpan(
-                               text: "Add Ne",
-                               
+                               text: "add_ne".tr,
                                style: TextStyle(
                                  color: AppColors.blueColor, // Dark Blue
                                ),
@@ -442,7 +442,7 @@ class CreateNewSessionHeader extends StatelessWidget {
                                    ),
                                  ),
                                  child:  Text(
-                                   "w",
+                                 "w_text".tr,
                                    style: TextStyle(
                                                 color: AppColors.blueColor, 
                                                 fontSize: 22 * scaleFactor,
@@ -464,7 +464,7 @@ class CreateNewSessionHeader extends StatelessWidget {
                                  child: Padding(
                                    padding:  EdgeInsets.only(left: 4.0, right: 10.0),
                                    child:  Text(
-                                                "Player",
+                                                "player".tr,
                                                 style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 22 * scaleFactor,
@@ -495,12 +495,12 @@ class CreateNewSessionHeader extends StatelessWidget {
 
                         // Textfields
                         LoginTextfield(
-                          text: "Enter Player Name",
+                        text: "enter_player_name".tr,
                           fontsize: 18 * scaleFactor,
                         ),
                         SizedBox(height: 9 * scaleFactor),
                         LoginTextfield(
-                          text: "Enter Player Email Address",
+                       text: "enter_player_email".tr,
                           fontsize: 18 * scaleFactor,
                         ),
                         SizedBox(height: 9 * scaleFactor),
@@ -525,13 +525,13 @@ class CreateNewSessionHeader extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 BoldText(
-                                  text: "Role",
+                                 text: "role".tr,
                                   fontSize: 18 * scaleFactor,
                                 ),
                                 Row(
                                   children: [
                                     BoldText(
-                                      text: "Facilitator",
+                                       text: "facilitator".tr,
                                       selectionColor: AppColors.blueColor,
                                       fontSize: 16 * scaleFactor,
                                     ),
@@ -552,7 +552,7 @@ class CreateNewSessionHeader extends StatelessWidget {
                         // Buttons
                         LoginButton(
                           fontSize: 20,
-                          text: "Save",
+                          text: "save".tr,
                           ishow: true,
                           image: Appimages.save,
                         ),
@@ -560,7 +560,7 @@ class CreateNewSessionHeader extends StatelessWidget {
                         LoginButton(
                           fontSize: 20,
 
-                          text: "Cancel",
+                          text: "cancel".tr,
                           color: AppColors.forwardColor,
                         ),
 

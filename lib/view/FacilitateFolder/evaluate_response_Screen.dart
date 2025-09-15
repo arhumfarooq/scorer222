@@ -182,6 +182,7 @@ import 'package:get/get.dart';
 import 'package:scorer/components/analysis_container.dart';
 import 'package:scorer/components/audio_container.dart';
 import 'package:scorer/components/feedback_container.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -383,7 +384,13 @@ CustomSloderRow(
   text: "feasibility".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
 CustomSloderRow(
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+  // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+fontSize:  ResponsiveFont.getFontSizeCustom(
+defaultSize:14 ,
+smallSize: 11
+
+
+),
   
   text: "innovation".tr, text2: "22/25"),
                             ],

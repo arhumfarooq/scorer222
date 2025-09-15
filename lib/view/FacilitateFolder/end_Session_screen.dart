@@ -333,6 +333,7 @@ import 'package:scorer/components/custom_session_container.dart';
 import 'package:scorer/components/custom_time_row.dart';
 import 'package:scorer/components/phase_breakdown_container.dart';
 import 'package:scorer/components/players_Row.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -543,7 +544,12 @@ class EndSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 30 * heightScaleFactor),
                       CreateContainer(
+                        fontsize2: ResponsiveFont.getFontSizeCustom(
+                          defaultSize: 13,
+                          smallSize: 9
+                        ),
                        text: "view_full_ranking".tr,
+                       
                         width: 148 * widthScaleFactor,
                       ),
                       SizedBox(height: 20 * heightScaleFactor),

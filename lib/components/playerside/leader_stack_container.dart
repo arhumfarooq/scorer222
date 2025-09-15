@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/main_text.dart';
@@ -25,7 +26,7 @@ class LeaderStackContainer extends StatelessWidget {
                   children: [
                     SvgPicture.asset(Appimages.king),
                     SizedBox(width: 3,),
-                    MainText(text: "Leaderboard",fontSize: 16,color: AppColors.whiteColor,)
+                    MainText(text: "leaderboard".tr,fontSize: 16,color: AppColors.whiteColor,)
                   ],
                 ),
               ),

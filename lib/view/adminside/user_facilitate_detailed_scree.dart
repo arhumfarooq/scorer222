@@ -612,6 +612,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -832,14 +833,24 @@ class UserFacilitateDetailedScree extends StatelessWidget {
                               children: [
                                 MainText(
                                                                   text:  "email".tr,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                ),
 
                                   // fontSize: 14 * widthScaleFactor,
                                 ),
                                 BoldText(
                                   text: "john.smith@company.com",
                                   // fontSize: 16 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                ),
 
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -853,14 +864,24 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                                                                    text:  "phone".tr,
 
                                   // fontSize: 14 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,\
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                ),
 
                                 ),
                                 BoldText(
                                   text: "+1 (555) 987-6543",
                                   // fontSize: 16 * widthScaleF
                                   // actor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                ),
 
                                   selectionColor: AppColors.blueColor,
                                 ),
@@ -874,14 +895,23 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                                                                   text: "join_date".tr,
 
                                   // fontSize: 14 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                ),
 
                                 ),
                                 BoldText(
                                   text: "September 8, 2024",
                                   // fontSize: 16 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
 
+                ),
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],
@@ -893,8 +923,12 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                                 MainText(
                                  text: "facilitator_level".tr,
                                   // fontSize: 14 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
 
+                ),
                                 ),
                                 CreateContainer(
                                   text: "Level 3",
@@ -957,9 +991,9 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                   ),
 
                   SizedBox(height: 20 * heightScaleFactor),
-LoginButton(text: "Delete Facilitator",ishow: true,image: Appimages.delete,fontSize: 20,color: AppColors.redColor,),
+LoginButton(text: "delete_facilitator".tr,ishow: true,image: Appimages.delete,fontSize: 20,color: AppColors.redColor,),
    SizedBox(height: 20 * heightScaleFactor),
-LoginButton(text: "Edit Facilitator",ishow: true,icon: Icons.edit,fontSize: 20,color: AppColors.forwardColor,),
+LoginButton(text: "edit_facilitator".tr,ishow: true,icon: Icons.edit,fontSize: 20,color: AppColors.forwardColor,),
                   SizedBox(height: 42 * heightScaleFactor),
                 ],
               ),

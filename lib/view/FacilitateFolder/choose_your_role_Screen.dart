@@ -182,6 +182,7 @@
 // }
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -232,12 +233,13 @@ class ChooseYourRoleScreen extends StatelessWidget {
                   children: [
                     SizedBox(height: 20 * heightScaleFactor),
                    Container(
-                    width: 100,
+                    // width: 100,
+                    // height: 100,
                      child: Stack(
                       clipBehavior: Clip.none,
                        children: [
                           Positioned(
-                            right: -45,
+                            right: 40,
   // top: screenHeight * 0.02,   // 2% from top
   // right: screenWidth * 0.18,  // 15% from right
   // right: 60,
@@ -250,9 +252,14 @@ class ChooseYourRoleScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                            children: [
                              BoldText(
+                                  fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 22,
+smallSize: 18
+
+                                  ),
                                text: "choose_your".tr,
                                selectionColor: AppColors.blueColor,
-                               fontSize: 24,
+                              //  fontSize: 24,
                              ),
                            ],
                          ),

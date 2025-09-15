@@ -43,7 +43,8 @@ class UseableTextrow extends StatelessWidget {
   final String? text1;
   final double?height;
   final bool ishow;
-  const UseableTextrow({super.key, required this.color, required this.text, this.text1, this.height,  this.ishow=false});
+  final double?fontsize11;
+  const UseableTextrow({super.key, required this.color, required this.text, this.text1, this.height,  this.ishow=false, this.fontsize11});
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +81,7 @@ class UseableTextrow extends StatelessWidget {
             MainText(
               text: text,
               color: AppColors.teamColor,
-              fontSize: fontSize,
+              fontSize:fontsize11?? fontSize,
               height:height?? 1,
             )
           ],

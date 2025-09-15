@@ -66,7 +66,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(height: 10 * heightScaleFactor),
+                  SizedBox(height: 5 * heightScaleFactor),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -87,7 +87,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(height: 10 * heightScaleFactor),
+                    SizedBox(height: 5 * heightScaleFactor),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -100,7 +100,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10 * heightScaleFactor),
+                    SizedBox(height: 5 * heightScaleFactor),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -113,7 +113,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                   SizedBox(height: 10 * heightScaleFactor),
+                      SizedBox(height: 5 * heightScaleFactor),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -128,7 +128,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                   SizedBox(height: 10 * heightScaleFactor),
+                    SizedBox(height: 5 * heightScaleFactor),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

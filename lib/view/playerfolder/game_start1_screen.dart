@@ -491,6 +491,7 @@ import 'package:get/get.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:scorer/components/adminside/admin_team_progress.dart';
 import 'package:scorer/components/playerside/leader_stack_container.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -651,7 +652,12 @@ class GameStart1Screen extends StatelessWidget {
                                                   width: 10 * widthScaleFactor),
                                               MainText(
                                                text: "strategy_building".tr,
-  fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11 : 14 
+  // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11 : 14 
+                                          fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 11
+
+                                          ),
                                               )
                                             ],
                                           )
@@ -1060,7 +1066,10 @@ MainText(
                           Obx(() {
                             return FilterUseableContainer(
                               isSelected: controller.gamevalue.value == 0,
-                              fontSze: 13 * heightScaleFactor,
+                          fontSze: ResponsiveFont.getFontSizeCustom(
+                                  defaultSize: 13,
+                                  smallSize: 10
+                                ),
                               text: "mountain_resort".tr,
                               onTap: () {
                                 controller.gameSelect(0);
@@ -1070,7 +1079,10 @@ MainText(
                           SizedBox(height: 10 * heightScaleFactor),
                           Obx(() => FilterUseableContainer(
                                 isSelected: controller.gamevalue.value == 1,
-                                fontSze: 13 * heightScaleFactor,
+                               fontSze: ResponsiveFont.getFontSizeCustom(
+                                  defaultSize: 13,
+                                  smallSize: 10
+                                ),
                                 text: "beach_hotel".tr,
                                 onTap: () {
                                   controller.gameSelect(1);
@@ -1079,7 +1091,12 @@ MainText(
                           SizedBox(height: 10 * heightScaleFactor),
                           Obx(() => FilterUseableContainer(
                                 isSelected: controller.gamevalue.value == 2,
-                                fontSze: 13 * heightScaleFactor,
+                                // fontSze: 13 * heightScaleFactor,
+                                fontSze: ResponsiveFont.getFontSizeCustom(
+                                  defaultSize: 13,
+                                  smallSize: 10
+                                ),
+                                
                                 text: "city_conference_center".tr,
                                 onTap: () {
                                   controller.gameSelect(2);
@@ -1149,7 +1166,11 @@ MainText(
                           children: [
                            CustomStratgyContainer(
                       // fontSize: isSpanish?2:14,
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+                      fontSize2: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 10
+                      ),
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
                       width3: 80,
                       iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
                     flex: 3,flex1: 0,
@@ -1159,8 +1180,11 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                              CustomStratgyContainer(
                       // fontSize2:isSpanish? 11:14,
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 10
+                      ),
 
                       // fontSize: 6,
                       // width3: 80,
@@ -1169,8 +1193,11 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                     )
                             else
                               CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 10
+                      ),
                                 iconContainer: AppColors.selectLangugaeColor,
                                 icon: Icons.play_arrow_sharp,
                                 text1: "phase2_strategy".tr ,
@@ -1182,8 +1209,11 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                             SizedBox(height: 10 * heightScaleFactor),
                             if (controller.currentPhase.value >= 2)
                               CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 10
+                      ),
                                 iconContainer: AppColors.forwardColor,
                                 icon: Icons.check,
                                 text1: "phase3_implementation".tr,
@@ -1196,8 +1226,11 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                               )
                             else
                               CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 10
+                      ),
                                 iconContainer: AppColors.watchColor,
                                 icon: Icons.watch_later,
                                 text1: "phase3_implementation".tr,
@@ -1211,8 +1244,11 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                             SizedBox(height: 10 * heightScaleFactor),
                             if (controller.currentPhase.value >= 2)
                               CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 10
+                      ),
                                 iconContainer: AppColors.selectLangugaeColor,
                                 icon: Icons.play_arrow_sharp,
                               text1: "phase4_evaluation".tr,
@@ -1223,8 +1259,11 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                               )
                             else
                               CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+   fontSize2: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 10
+                      ),
                                 iconContainer: AppColors.watchColor,
                                 icon: Icons.watch_later,
                                text1: "phase4_evaluation".tr,

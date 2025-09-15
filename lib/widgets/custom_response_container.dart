@@ -118,6 +118,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/login_button.dart';
@@ -217,7 +218,7 @@ class CustomResponseContainer extends StatelessWidget {
                           UseableContainer(
                             text: text ?? "pending".tr,
                             height: 28 * scaleHeight,
-                            width: 70 * scaleWidth,
+                            width: 75 * scaleWidth,
                             color: color1 ?? AppColors.yellowColor,
                             textColor: textColor ?? AppColors.languageTextColor,
                             fontSize:isSpanish?10: 12 * scaleWidth, // Assuming a base font size
@@ -236,11 +237,16 @@ class CustomResponseContainer extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 17 * scaleHeight),
-                  MainText(
-                    text: "Our primary objective is to increase customer satisfaction by 25% through Improved service delivery.",
-                    fontSize: 14 * scaleWidth,
-                    height: 1.5,
-                  ),
+                MainText(
+  text: "primary_objective".tr,
+  // fontSize: 14 * scaleWidth,
+  fontSize: ResponsiveFont.getFontSizeCustom(
+    defaultSize: 14,
+    smallSize: 9
+  ),
+  height: 1.5,
+),
+
                   const Spacer(),
                   if (ishow1)
                     LoginButton(

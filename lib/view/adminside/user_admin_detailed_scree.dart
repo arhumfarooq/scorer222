@@ -305,6 +305,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -529,14 +530,23 @@ class UserAdminDetailedScree extends StatelessWidget {
                                                                                                  text:  "email".tr,
 
                                   // fontSize: 14 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+  fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
+
+                ),
 
                                 ),
                                 BoldText(
                                   text: "john.smith@company.com",
                                   // fontSize: 16 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
 
+                ),
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],
@@ -549,14 +559,22 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                                                                                                   text:  "phone".tr,
 
                                   // fontSize: 14 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
 
+                ),
                                 ),
                                 BoldText(
                                   text: "+1 (555) 987-6543",
                                   // fontSize: 16 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
 
+                ),
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],
@@ -568,14 +586,22 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                                 MainText(
                                text: "join_date".tr,
                                   // fontSize: 14 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
 
+                ),
                                 ),
                                 BoldText(
                                   text: "September 8, 2024",
                                   // fontSize: 16 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
 
+                ),
                                   selectionColor: AppColors.blueColor,
                                 ),
                               ],
@@ -587,8 +613,12 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                                 MainText(
                                   text: "Facilitator Level",
                                   // fontSize: 14 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 12
 
+                ),
                                 ),
                                 CreateContainer(
                                   text: "Level 3",
@@ -618,7 +648,7 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
 SizedBox(height: 20,),
-MainText(text: "Recent Activity",fontSize: 14,),
+MainText(text: "recent_activity".tr,fontSize: 14,),
 SizedBox(height: 10,),
 // UseAbleGameRow(text1: text1, text2: text2)
  UseableTextrow(
@@ -657,23 +687,23 @@ SizedBox(height: 10,),
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
 SizedBox(height: 20,),
-MainText(text: "Current Permissions",fontSize: 14,),
+MainText(text:  "current_permissions".tr,fontSize: 14,),
 SizedBox(height: 10,),
 // UseAbleGameRow(text1: text1, text2: text2)
  UseableTextrow(
                            ishow: true,         height: 1,
                     color: AppColors.forwardColor,
-                    text: "Manage Users"),
+                     text: "manage_users".tr,),
                     SizedBox(height: 7,),
                      UseableTextrow(ishow: true,
                                     height: 1,
                     color: AppColors.forwardColor2,
-                    text: "Create Sessions"),
+                   text: "create_sessions".tr,),
                       SizedBox(height: 7,),
                      UseableTextrow(ishow: true,
                                     height: 1,
                     color: AppColors.forwardColor3,
-                    text: "View Analytics"),
+                     text: "view_analytics".tr,),
 
 
                           

@@ -193,6 +193,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/adminside/admin_team_progress.dart';
 import 'package:scorer/components/playerside/leader_stack_container.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -408,10 +409,13 @@ Center(
                       child: Column(
                         children: [
                           CustomStratgyContainer(
-                            width3: 81 * scaleFactor,
+fontSize2:  ResponsiveFont.getFontSize(),
+
+                           fontSize3: 10,
+                            width3: 68 * scaleFactor,
                             iconContainer: AppColors.forwardColor,
                             icon: Icons.check,
-                            text1: "Phase 1 Strategy Building",
+                            text1:"phase1_strategy".tr, 
                             text2: "Completed • 20 min",
                             text3: "completed".tr,
                             smallContainer: AppColors.forwardColor,
@@ -421,10 +425,12 @@ Center(
                           ),
                           SizedBox(height: 10 * scaleFactor),
                           CustomStratgyContainer(
-                            width3: 81 * scaleFactor,
+fontSize2:  ResponsiveFont.getFontSize(),
+fontSize3: 10,
+                            width3: 68 * scaleFactor,
                             iconContainer: AppColors.forwardColor,
                             icon: Icons.check,
-                            text1: "Phase 2 Strategy Building",
+                            text1:  "phase2_strategy".tr,
                             text2: "Active • 30 min",
                           text3: "completed".tr,
                             smallContainer: AppColors.forwardColor,
@@ -434,9 +440,12 @@ Center(
                           ),
                           SizedBox(height: 10 * scaleFactor),
                           CustomStratgyContainer(
+fontSize2:  ResponsiveFont.getFontSize(),
+fontSize3: 10,
+                            width3: 68 * scaleFactor,
                             iconContainer: AppColors.watchColor,
                             icon: Icons.watch_later,
-                            text1: "Phase 3: Implementation",
+                            text1:  "phase3_implementation".tr,
                             text2: "Upcoming • 15 min",
                             text3: "pending".tr,
                             smallContainer: AppColors.watchColor,
@@ -446,9 +455,12 @@ Center(
                           ),
                           SizedBox(height: 10 * scaleFactor),
                           CustomStratgyContainer(
+fontSize2:  ResponsiveFont.getFontSize(),fontSize3: 10,
+                            width3: 68 * scaleFactor,
+
                             iconContainer: AppColors.watchColor,
                             icon: Icons.watch_later,
-                            text1: "Phase 4: Evaluation",
+                            text1: "phase4_evaluation".tr,
                             text2: "Upcoming • 15 min",
                             text3: "pending".tr,
                             smallContainer: AppColors.watchColor,

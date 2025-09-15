@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/analysis_container.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -42,8 +43,11 @@ class ViewScoreScreen extends StatelessWidget {
                                       height: 20,
                                     ),
                                     BoldText(
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 20:22,
-                                      text: "View Score",
+  fontSize:ResponsiveFont.getFontSizeCustom(
+    defaultSize: 22,
+    smallSize: 20
+  ),
+                                      text: "view_score".tr,
                                       selectionColor: AppColors.blueColor,
                                       // fontSize: 24,
                                     ),
@@ -129,7 +133,7 @@ class ViewScoreScreen extends StatelessWidget {
                                 AnalysisContainer(height: 550,ishow: true,),
                                 // SizedBox(height: 30,),
                                  SizedBox(height: 90,),
-                            BoldText(text: "Relevance threshold: >80%",fontSize: 16,selectionColor: AppColors.forwardColor,),
+                            BoldText(text: "relevance_threshold".tr,fontSize: 16,selectionColor: AppColors.forwardColor,),
                            SizedBox(height: 22,),
                            Container(
             height: 700,
@@ -194,7 +198,10 @@ class ViewScoreScreen extends StatelessWidget {
           ),
           SizedBox(height: 26,),
           LoginButton(
-            fontSize: 18,
+             fontSize:ResponsiveFont.getFontSizeCustom(
+              defaultSize:  18,
+              smallSize: 15
+            ),
             onTap: () {
             Get.toNamed(RouteName.overViewOptionScreen);
           },
@@ -203,17 +210,27 @@ class ViewScoreScreen extends StatelessWidget {
           // LoginButton(text: "Accept AI Score (85)",color: AppColors.forwardColor,image: Appimages.ai2,ishow: true,imageHeight: 38,imageWidth: 32,height: 74,),
     SizedBox(height: 15,),
           LoginButton(
-            fontSize: 18,
+            fontSize:ResponsiveFont.getFontSizeCustom(
+              defaultSize:  18,
+              smallSize: 15
+            ),
             text: "Share Responses",color: AppColors.forwardColor,image: Appimages.move,ishow: true,imageHeight: 26,imageWidth: 30,),
           
           // LoginButton(text: "Move to Next Stage",ishow: true,imageHeight: 22,imageWidth: 26,icon: Icons.fast_forward,height: 74,),
        SizedBox(height: 15,),
           LoginButton(
-            fontSize: 18,
+             fontSize:ResponsiveFont.getFontSizeCustom(
+              defaultSize:  18,
+              smallSize: 15
+            ),
             text: "export_pdf".tr,ishow: true,imageHeight: 18,imageWidth: 18,image: Appimages.export,color: AppColors.redColor ,),
           SizedBox(height: 15,),
           LoginButton(
-            fontSize: 18,
+            
+            fontSize:ResponsiveFont.getFontSizeCustom(
+              defaultSize:  18,
+              smallSize: 15
+            ),
              text: "edit_score_feedback".tr,ishow: true,imageHeight: 22,imageWidth: 22,icon: Icons.edit,color: AppColors.orangeColor ,),
           
                                 SizedBox(height: 39,)

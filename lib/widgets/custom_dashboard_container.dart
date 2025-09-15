@@ -168,6 +168,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/export.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/add_one_Container.dart';
@@ -279,7 +280,7 @@ class CustomDashboardContainer extends StatelessWidget {
               children: [
                 UseableContainer(
                   height: height1,
-                  width: width,
+                  width: width??70,
                   text: text1,
                   color: color1 ?? AppColors.orangeColor,
                 ),
@@ -356,7 +357,11 @@ class CustomDashboardContainer extends StatelessWidget {
                         Expanded(
                           child: PauseContainer(
                             height: 35,
-                          fontSize:13 ,
+                          fontSize:ResponsiveFont.getFontSizeCustom(
+defaultSize: 13,
+smallSize: 11
+
+                          ),
                             text: text3 ?? "",
                             icon: icon1,
                           ),
@@ -364,7 +369,11 @@ class CustomDashboardContainer extends StatelessWidget {
                         SizedBox(width: 10 * widthScaleFactor),
                         Expanded(
                           child: PauseContainer(
-                            fontSize: 13,
+                              fontSize:ResponsiveFont.getFontSizeCustom(
+defaultSize: 13,
+smallSize: 11
+
+                          ),
                             height: 35,
                             color: AppColors.forwardColor,
                             text: text4 ?? "",

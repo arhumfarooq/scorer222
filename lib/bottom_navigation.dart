@@ -735,7 +735,7 @@ class BottomNavigation extends StatelessWidget {
                   _buildNavItem(
                     context,
                     icon: Appimages.house1,
-                    label: "Home",
+                    label:"home".tr,
                     index: 0,
                     scaleFactor: scaleFactor,
                   ),
@@ -744,7 +744,7 @@ class BottomNavigation extends StatelessWidget {
                   _buildCreateItem(
                     context,
                     icon: Appimages.buttonplus,
-                    label: "Create",
+                    label: "create".tr,
                     index: 1,
                     scaleFactor: scaleFactor,
                   ),
@@ -753,7 +753,7 @@ class BottomNavigation extends StatelessWidget {
                   _buildNavItem(
                     context,
                     icon: Appimages.game,
-                    label: "Game",
+                    label:  "game".tr,
                     index: 2,
                     scaleFactor: scaleFactor,
                   ),
@@ -762,7 +762,7 @@ class BottomNavigation extends StatelessWidget {
                   _buildNavItem(
                     context,
                     icon: Appimages.group,
-                    label: "Users",
+                    label:"users".tr,
                     index: 3,
                     scaleFactor: scaleFactor,
                   ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/widgets/main_text.dart';
@@ -57,8 +58,11 @@ class PhaseContainer extends StatelessWidget {
                       SizedBox(width: screenWidth * 0.02),
                      MainText(
   text: "strategy_building".tr,
-  fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11 : 14 
-),
+  fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 11
+  )
+                     ),
                     ],
                   ),
                   UseableContainer(

@@ -67,6 +67,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart' show Appimages, aa;
 import 'package:scorer/constants/routename.dart';
@@ -133,12 +134,20 @@ class PlayerLoginPlaySide extends StatelessWidget {
                 SizedBox(height: 23 * heightScaleFactor),
                
 LoginTextfield(
+  fontsize: ResponsiveFont.getFontSizeCustom(
+    defaultSize: 21,
+    smallSize: 18
+  ),
   text: "enter_nickname".tr,
 ),
 
 SizedBox(height: 9 * heightScaleFactor),
 
 LoginTextfield(
+  fontsize: ResponsiveFont.getFontSizeCustom(
+    defaultSize: 21,
+    smallSize: 18
+  ),
   text: "enter_team_nickname".tr,
 ),               SizedBox(height: 23 * heightScaleFactor),
                 LoginButton(

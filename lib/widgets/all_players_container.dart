@@ -56,6 +56,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/widgets/main_text.dart';
 import 'package:scorer/widgets/useable_container.dart';
@@ -138,7 +139,11 @@ class AllPlayersContainer extends StatelessWidget {
                 ],
               ),
               UseableContainer(
-                
+                fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 12,
+smallSize: 10
+
+                ),
                 text: text3 ?? "active".tr,
                 height: 22* scaleFactor,
                 width: width ?? 65 * scaleFactor, // Scale width

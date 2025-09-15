@@ -105,6 +105,7 @@ class CreateContainer extends StatelessWidget {
   final double? width;
   final double? right;
   final double? top;
+  final double?fontsize2;
 
   final bool ishow;
   const CreateContainer({
@@ -116,7 +117,7 @@ class CreateContainer extends StatelessWidget {
     this.containerColor,
     this.textColor,
     this.right,
-    this.ishow = true, this.top,
+    this.ishow = true, this.top, this.fontsize2,
   });
 
   @override
@@ -148,7 +149,7 @@ class CreateContainer extends StatelessWidget {
 text ?? "create".tr,
     style: TextStyle(
       fontFamily: "gotham",
-      fontSize: 13 * heightScaleFactor,
+      fontSize:fontsize2?? 13 * heightScaleFactor,
       color: textColor ?? AppColors.createBorderColor,
     ),
   ),

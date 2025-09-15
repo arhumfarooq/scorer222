@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 // import 'package:scorer/view/startscreen/aa.dart';
@@ -40,9 +41,15 @@ class CustomSessionContainer extends StatelessWidget {
             ),
             SizedBox(height: 30 * heightScaleFactor),
             SessionUseableRow(
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:10,
-              fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontsize2: ResponsiveFont.getFontSizeCustom(
+  defaultSize: 10,
+  smallSize: 9
+),
+              // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontSize:ResponsiveFont.getFontSizeCustom(
+  defaultSize: 10,
+  smallSize: 9
+),
               iamge: Appimages.phone1,
               text: "average_score".tr,
               text2: "across_all_players".tr,
@@ -51,9 +58,16 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
-fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
-              
+// fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+              fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 10
+,smallSize: 9
+              ),
+                fontsize2: ResponsiveFont.getFontSizeCustom(
+defaultSize: 10
+,smallSize: 8
+              ),
               iamge: Appimages.phone2,
               text: "top_performer".tr,
               // fontSize: isSpanish?10:10,
@@ -63,9 +77,15 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
-fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
-
+fontsize2: ResponsiveFont.getFontSizeCustom(
+  defaultSize: 10,
+  smallSize: 9
+),
+              // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontSize:ResponsiveFont.getFontSizeCustom(
+  defaultSize: 10,
+  smallSize: 9
+),
               iamge: Appimages.phone3,
               text: "completion_rate".tr,
               text2: "players_finished".tr,
@@ -74,9 +94,15 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 8:10,
-fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontsize2: ResponsiveFont.getFontSizeCustom(
+  defaultSize: 10,
+  smallSize: 9
+),
+              // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+fontSize:ResponsiveFont.getFontSizeCustom(
+  defaultSize: 10,
+  smallSize: 9
+),
               iamge: Appimages.phone4,
               text: "participation_rate".tr,
               text2: "participation_rate".tr,

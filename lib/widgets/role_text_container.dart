@@ -22,6 +22,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/widgets/bold_text.dart';
 
@@ -43,7 +44,7 @@ class RoleTextContainer extends StatelessWidget {
 
     return Container(
       width: 80 * widthScaleFactor,
-      height: 37 * heightScaleFactor,
+      height: 30 * heightScaleFactor,
       decoration: BoxDecoration(
         color: AppColors.forwardColor,
         borderRadius: BorderRadius.circular(80),
@@ -52,7 +53,11 @@ class RoleTextContainer extends StatelessWidget {
         child: BoldText(
           text:"role".tr,
           selectionColor: AppColors.whiteColor,
-          fontSize: 20 * heightScaleFactor,
+            fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 20,
+smallSize: 17
+
+                                  ),
         ),
       ),
     );

@@ -5,6 +5,7 @@ import 'package:scorer/components/adminside/admin_Session_container.dart';
 import 'package:scorer/components/adminside/admin_realtime_monitoring_container.dart';
 import 'package:scorer/components/adminside/admin_team_progress.dart';
 import 'package:scorer/components/phases_container.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/components/stages_row.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -165,7 +166,9 @@ class AdminPhaseScreen extends StatelessWidget {
 SizedBox(height: 25,),
                      CustomStratgyContainer(
                       // fontSize: isSpanish?2:14,
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+fontSize2:  ResponsiveFont.getFontSize(),
+
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
                       width3: 80,
                       iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
                     flex: 3,flex1: 0,
@@ -174,7 +177,8 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                      CustomStratgyContainer(
                       // fontSize2:isSpanish? 11:14,
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+fontSize2:  ResponsiveFont.getFontSize(),
 
 
                       // fontSize: 6,
@@ -184,7 +188,8 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                     ),
                      SizedBox(height: 10,),
                      CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+fontSize2:  ResponsiveFont.getFontSize(),
 
                       width3: 80,
                       iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase3_implementation".tr, text2: "Upcoming • 25 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
@@ -192,7 +197,8 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                     ),
                          SizedBox(height: 10,),
                      CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+fontSize2:  ResponsiveFont.getFontSize(),
 
                       width3: 80,
                       iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase4_evaluation".tr,text2: "Upcoming • 15 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,

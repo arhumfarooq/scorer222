@@ -193,6 +193,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart' show RouteName;
@@ -246,6 +247,11 @@ class FacilLoginScreen extends StatelessWidget {
                           ),
                           Center(
                             child: BoldText(
+                                  fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 22,
+smallSize: 17
+
+                                  ),
                               text: "facilitator_login".tr,
                               selectionColor: AppColors.blueColor,
                             ),
@@ -259,11 +265,26 @@ class FacilLoginScreen extends StatelessWidget {
                       height: 180 * heightScaleFactor,
                     ),
                     SizedBox(height: 23 * heightScaleFactor),
-                    LoginTextfield(text: "enter_full_name".tr),
+                    LoginTextfield(
+                      fontsize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 21,
+                        smallSize: 19
+                      ),
+                      text: "enter_full_name".tr),
                     SizedBox(height: 9 * heightScaleFactor),
-                    LoginTextfield(text: "enter_email".tr),
+                    LoginTextfield(text: "enter_email".tr,
+                      fontsize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 21,
+                        smallSize: 19
+                      ),
+                    ),
                     SizedBox(height: 9 * heightScaleFactor),
-                    LoginTextfield(text: "enter_password".tr),
+                    LoginTextfield(text: "enter_password".tr,
+                      fontsize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 21,
+                        smallSize: 19
+                      ),
+                    ),
                     SizedBox(height: 9 * heightScaleFactor),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -284,7 +305,11 @@ class FacilLoginScreen extends StatelessWidget {
                             SizedBox(width: 6 * widthScaleFactor),
                             MainText(
                               text: "remember_me".tr,
-                              fontSize: 14 * heightScaleFactor,
+                              // fontSize: 14 * heightScaleFactor,
+                                fontSize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 11
+                      ),
                               color: AppColors.languageTextColor,
                             ),
                           ],
@@ -292,7 +317,10 @@ class FacilLoginScreen extends StatelessWidget {
                         MainText(
                           text: "forget_password".tr,
                           fontFamily: "gotham",
-                          fontSize: 14 * heightScaleFactor,
+                         fontSize: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 11
+                      ),
                           color: AppColors.selectLangugaeColor,
                         ),
                       ],

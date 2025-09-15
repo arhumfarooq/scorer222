@@ -315,6 +315,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -568,23 +569,39 @@ UseableContainer(
                           ),
                           SizedBox(height: 5 * scaleFactor),
                          CustomSloderRow(
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+  // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+  fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 11
 
+  ),
   text: "clarity_specificity".tr, text2: "22/25"),
                           SizedBox(height: 5 * scaleFactor),
                          CustomSloderRow(
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-  
+  // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+    fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 11
+
+  ),
   text: "strategic_thinking".tr, text2: "22/25"),
                           SizedBox(height: 5 * scaleFactor),
                          CustomSloderRow(
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-  
+  // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+    fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 11
+
+  ),
   text: "feasibility".tr, text2: "22/25"),
                           SizedBox(height: 5 * scaleFactor),
                         CustomSloderRow(
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-  
+  // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+  fontSize: ResponsiveFont.getFontSizeCustom(
+defaultSize: 14,
+smallSize: 11
+
+  ),
   text: "innovation".tr, text2: "22/25"),
                         ],
                       ),
@@ -628,12 +645,22 @@ BoldText(
                           SizedBox(height: 28 * scaleFactor),
                          
 UseableTextrow(
+  // fontsize11:ResponsiveFont.getFontSize() ,
+  fontsize11:ResponsiveFont.getFontSizeCustom(
+    smallSize: 9,
+defaultSize: 13
+  ) ,
   height: 1.4,
   color: AppColors.forwardColor,
   text: "tip_contingency".tr,
 ),
                           SizedBox(height: 20 * scaleFactor),
                         UseableTextrow(
+  fontsize11:ResponsiveFont.getFontSizeCustom(
+    smallSize: 9,
+defaultSize: 13
+  ) ,
+
   height: 1.4,
   color: AppColors.forwardColor,
   text: "tip_stakeholder".tr,
@@ -642,6 +669,10 @@ UseableTextrow(
                         
 UseableTextrow(
   height: 1.4,
+  fontsize11:ResponsiveFont.getFontSizeCustom(
+    smallSize: 9,
+defaultSize: 13
+  ) ,
   color: AppColors.forwardColor,
   text: "tip_quantify".tr,
 ),
@@ -656,9 +687,11 @@ UseableTextrow(
                   child: Column(
                     children: [
                       CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+fontSize2:  ResponsiveFont.getFontSize(),
 
-                        width3: 81 * scaleFactor,
+                        fontSize3: 10,
+                            width3: 68 * scaleFactor,
                         iconContainer: AppColors.forwardColor,
                         icon: Icons.check,
                          text1: "phase1_strategy".tr,
@@ -671,9 +704,11 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+fontSize2:  ResponsiveFont.getFontSize(),
 
-                        width3: 81 * scaleFactor,
+                       fontSize3: 10,
+                            width3: 68 * scaleFactor,
                         iconContainer: AppColors.forwardColor,
                         icon: Icons.check,
                          text1: "phase2_strategy".tr,
@@ -686,8 +721,10 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-
+fontSize2:  ResponsiveFont.getFontSize(),
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+fontSize3: 10,
+                            width3: 68 * scaleFactor,
                         iconContainer: AppColors.watchColor,
                         icon: Icons.watch_later,
                         text1: "phase3_implementation".tr, 
@@ -700,9 +737,11 @@ fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       CustomStratgyContainer(
-fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+fontSize2:  ResponsiveFont.getFontSize(),
                         
-                        iconContainer: AppColors.watchColor,
+                     fontSize3: 10,
+                            width3: 68 * scaleFactor,   iconContainer: AppColors.watchColor,
                         icon: Icons.watch_later,
                        text1: "phase4_evaluation".tr,
                         text2: "Upcoming • 15 min",

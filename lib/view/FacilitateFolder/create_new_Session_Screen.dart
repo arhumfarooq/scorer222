@@ -36,6 +36,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -566,7 +567,14 @@ class CreateNewSessionScreen extends StatelessWidget {
 
                               child: RichText(
                                                      text: TextSpan(
-                                                       style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),
+                                                       style:  TextStyle(
+                                                        
+                                                        
+                                                      fontSize: ResponsiveFont.getFontSizeCustom(
+                                                        defaultSize: 22,
+                                                        smallSize: 17
+                                                      ),  
+                                                       fontWeight: FontWeight.bold),
                                                        children: [
                               TextSpan(
                                text: "create_ne".tr,   // "Create Ne"
@@ -590,7 +598,10 @@ class CreateNewSessionScreen extends StatelessWidget {
                                   "w".tr,    
                                    style: TextStyle(
                                                 color: AppColors.blueColor, 
-                                                fontSize: 22 * scaleFactor,
+                                                fontSize: ResponsiveFont.getFontSizeCustom(
+                                                        defaultSize: 22,
+                                                        smallSize: 17
+                                                      ),  
                                                 fontWeight: FontWeight.bold,
                                    ),
                                  ),
@@ -612,7 +623,10 @@ class CreateNewSessionScreen extends StatelessWidget {
                                                "session".tr,
                                                 style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 22 * scaleFactor,
+                                                   fontSize: ResponsiveFont.getFontSizeCustom(
+                                                        defaultSize: 22,
+                                                        smallSize: 17
+                                                      ),  
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                    ),
@@ -696,14 +710,15 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                       SizedBox(height: 30 * scaleFactor),
                       GameSelectUseableContainer(
                         // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
+fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13,smallSize: 10),
                        text1: "odyssee_des_okr".tr,
   text2: "strategic_goal_workshop".tr,
                         isSelected: isSelected,
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       GameSelectUseableContainer(
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
+fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13,smallSize: 10),
 
                       text1: "feedloop".tr,
   text2: "feedback_collab_game".tr,
@@ -711,7 +726,9 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       GameSelectUseableContainer(
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
+// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
+
+fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13,smallSize: 10),
 
                       text1: "innovation_challenge".tr,
   text2: "creative_problem_workshop".tr,
@@ -820,7 +837,9 @@ CustomPhaseContainer(text1: "duration".tr, text2: "15 min"),
   fontSize: 16 * scaleFactor,
 ),
                       SizedBox(height: 25 * scaleFactor),
-FilterUseableContainer(isSelected: true, text: "mcq".tr, onTap: () {}),
+FilterUseableContainer(
+  
+  isSelected: true, text: "mcq".tr, onTap: () {}),
                       SizedBox(height: 10 * scaleFactor),
 FilterUseableContainer(isSelected: false, text: "open_ended".tr, onTap: () {}),
                       SizedBox(height: 10 * scaleFactor),
@@ -975,11 +994,32 @@ BoldText(
   fontSize: 16 * scaleFactor,
 ),
                       SizedBox(height: 20 * scaleFactor),
-FilterUseableContainer(isSelected: true, text: 'allow_late_joiners'.tr, onTap: () {}),
+FilterUseableContainer(
+   fontSze: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 12
+
+
+                      ),
+  isSelected: true, text: 'allow_late_joiners'.tr, onTap: () {}),
                       SizedBox(height: 10 * scaleFactor),
-FilterUseableContainer(isSelected: false, text: 'send_email_invitations'.tr, onTap: () {}),
+FilterUseableContainer(
+   fontSze: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 12
+
+
+                      ),
+  isSelected: false, text: 'send_email_invitations'.tr, onTap: () {}),
                       SizedBox(height: 10 * scaleFactor),
-                     FilterUseableContainer(isSelected: false, text: 'record_session_review'.tr, onTap: () {}),
+                     FilterUseableContainer(
+                      fontSze: ResponsiveFont.getFontSizeCustom(
+                        defaultSize: 14,
+                        smallSize: 12
+
+
+                      ),
+                      isSelected: false, text: 'record_session_review'.tr, onTap: () {}),
                       SizedBox(height: 30 * scaleFactor),
                       LoginButton(
                 fontSize: 19,
