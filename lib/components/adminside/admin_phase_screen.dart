@@ -49,7 +49,11 @@ class AdminPhaseScreen extends StatelessWidget {
               // SizedBox(height: verticalSpacing),
  Center(
                 child: CircularPercentIndicator(
-                  radius: 60*widthScaleFactor,
+                  radius: ResponsiveFont.getFontSizeCustom(
+defaultSize: 60*widthScaleFactor,
+smallSize:55 *widthScaleFactor,
+
+                     ),
                   lineWidth: 5.0, // border ki thickness
                   percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
                   animation: true,
@@ -60,13 +64,19 @@ class AdminPhaseScreen extends StatelessWidget {
                   center: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-             BoldText(
+              BoldText(
                   text: "12:32",
-                  fontSize: screenWidth * 0.05,
+                  fontSize: ResponsiveFont.getFontSizeCustom(
+                    defaultSize: 20,
+smallSize: 18
+                  ),
                   selectionColor: AppColors.blueColor),
               MainText(
                   text: "remaining".tr,
-                  fontSize: screenWidth * 0.036,
+  fontSize: ResponsiveFont.getFontSizeCustom(
+                    defaultSize: 14,
+smallSize: 12
+                  ),
                   height: 1),
           ],
                   ),

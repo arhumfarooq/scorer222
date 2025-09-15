@@ -979,7 +979,7 @@ class PhasesScreen extends StatelessWidget {
                 child: CircularPercentIndicator(
              radius:  ResponsiveFont.getFontSizeCustom(
 defaultSize: 60*widthScaleFactor,
-// smallSize: *widthScaleFactor,
+smallSize:55 *widthScaleFactor,
 
                      ),
                   lineWidth: 5.0, // border ki thickness
@@ -994,11 +994,17 @@ defaultSize: 60*widthScaleFactor,
           children: [
              BoldText(
                   text: "12:32",
-                  fontSize: screenWidth * 0.055,
+                  fontSize: ResponsiveFont.getFontSizeCustom(
+                    defaultSize: 20,
+smallSize: 18
+                  ),
                   selectionColor: AppColors.blueColor),
               MainText(
                   text: "remaining".tr,
-                  fontSize: screenWidth * 0.036,
+  fontSize: ResponsiveFont.getFontSizeCustom(
+                    defaultSize: 14,
+smallSize: 12
+                  ),
                   height: 1),
           ],
                   ),

@@ -575,14 +575,17 @@ BoldText(
                       SizedBox(height: 26 * heightScaleFactor),
                       LoginButton(
                         onTap: () {
-                  Get.toNamed(RouteName.viewScoreScreen);
+                  Get.toNamed(RouteName.evaluateResponseScreen);
                 },
                         text:  "accept_ai_score".tr,
                         color: AppColors.forwardColor,
                         image: Appimages.ai2,
                         ishow: true,
                         // fontSize: 18,
-  fontSize: isSpanish? 16:18,
+  fontSize:ResponsiveFont.getFontSizeCustom(
+    defaultSize: 18,
+    smallSize: 16,
+  ),
 
                           
                         imageHeight: 38 * heightScaleFactor,
@@ -602,7 +605,11 @@ BoldText(
                         icon: Icons.fast_forward,
                         // height: 74 * heightScaleFactor,
                         // fontSize: 18,
-  fontSize: isSpanish? 16:18,
+  fontSize:ResponsiveFont.getFontSizeCustom(
+    defaultSize: 18,
+    smallSize: 16,
+  ),
+
 
 
                           
@@ -610,8 +617,12 @@ BoldText(
                       SizedBox(height: 23 * heightScaleFactor),
                       LoginButton(
                         // fontSize: 18,\
-  fontSize: isSpanish? 16:18,
+  // fontSize: isSpanish? 16:18,
 
+  fontSize:ResponsiveFont.getFontSizeCustom(
+    defaultSize: 18,
+    smallSize: 16,
+  ),
 
                           
                       text: "export_pdf".tr,
@@ -626,7 +637,11 @@ BoldText(
                       LoginButton(
                      text: "edit_score_feedback".tr,
                         // fontSize: 18,
-   fontSize: isSpanish? 15:18,
+  //  fontSize: isSpanish? 15:18,
+  fontSize:ResponsiveFont.getFontSizeCustom(
+    defaultSize: 18,
+    smallSize: 16,
+  ),
 
 
                         ishow: true,
@@ -636,7 +651,12 @@ BoldText(
                         // height: 74 * heightScaleFactor,
                         color: AppColors.orangeColor,
                       ),
-                      SizedBox(height: 100 * heightScaleFactor)
+                         Text("version 2.0"),
+                      SizedBox(height: 100 * heightScaleFactor),
+
+
+                   
+
                     ],
                   ),
                 ),

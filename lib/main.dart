@@ -158,7 +158,7 @@ class MyApp extends StatelessWidget {
       locale: locale,
       getPages: AppRoutes.getAppRoutes(),
       fallbackLocale: const Locale('en', 'US'),
-      home: LeaderBoeardScreen(),
+      home: SplashScreen(),
     );
   }
 }
