@@ -99,6 +99,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scorer/bottom_navigation.dart';
+import 'package:scorer/components/adminside/admin_leader_board_screen.dart';
 import 'package:scorer/components/phases_Screen.dart';
 import 'package:scorer/constants/approutes.dart';
 import 'package:scorer/localization/app_translation.dart';
@@ -156,7 +157,7 @@ class MyApp extends StatelessWidget {
       locale: locale,
       getPages: AppRoutes.getAppRoutes(),
       fallbackLocale: const Locale('en', 'US'),
-      home: AdminOverviewOptionScreens(),
+      home: AdminLeaderBoardScreen(),
     );
   }
 }
