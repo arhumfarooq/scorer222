@@ -49,7 +49,7 @@ class AdminPhaseScreen extends StatelessWidget {
               // SizedBox(height: verticalSpacing),
  Center(
                 child: CircularPercentIndicator(
-                  radius: screenWidth * 0.15, //  circle ka size
+                  radius: 60*widthScaleFactor,
                   lineWidth: 5.0, // border ki thickness
                   percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
                   animation: true,
@@ -66,7 +66,7 @@ class AdminPhaseScreen extends StatelessWidget {
                   selectionColor: AppColors.blueColor),
               MainText(
                   text: "remaining".tr,
-                  fontSize: screenWidth * 0.04,
+                  fontSize: screenWidth * 0.036,
                   height: 1),
           ],
                   ),

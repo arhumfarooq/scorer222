@@ -977,7 +977,11 @@ class PhasesScreen extends StatelessWidget {
               SizedBox(height: verticalSpacing),
               Center(
                 child: CircularPercentIndicator(
-                  radius: 60.0, // circle ka size
+             radius:  ResponsiveFont.getFontSizeCustom(
+defaultSize: 60*widthScaleFactor,
+// smallSize: *widthScaleFactor,
+
+                     ),
                   lineWidth: 5.0, // border ki thickness
                   percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
                   animation: true,
@@ -990,11 +994,11 @@ class PhasesScreen extends StatelessWidget {
           children: [
              BoldText(
                   text: "12:32",
-                  fontSize: screenWidth * 0.06,
+                  fontSize: screenWidth * 0.055,
                   selectionColor: AppColors.blueColor),
               MainText(
                   text: "remaining".tr,
-                  fontSize: screenWidth * 0.04,
+                  fontSize: screenWidth * 0.036,
                   height: 1),
           ],
                   ),
