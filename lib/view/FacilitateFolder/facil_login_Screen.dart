@@ -248,8 +248,8 @@ class FacilLoginScreen extends StatelessWidget {
                           Center(
                             child: BoldText(
                                   fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 22,
-smallSize: 17
+defaultSize: 22*widthScaleFactor,
+smallSize: 17*widthScaleFactor
 
                                   ),
                               text: "facilitator_login".tr,
@@ -267,22 +267,22 @@ smallSize: 17
                     SizedBox(height: 23 * heightScaleFactor),
                     LoginTextfield(
                       fontsize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 21,
-                        smallSize: 19
+                        defaultSize: 21*widthScaleFactor,
+                        smallSize: 19*widthScaleFactor
                       ),
                       text: "enter_full_name".tr),
                     SizedBox(height: 9 * heightScaleFactor),
                     LoginTextfield(text: "enter_email".tr,
                       fontsize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 21,
-                        smallSize: 19
+                        defaultSize: 21*widthScaleFactor,
+                        smallSize: 19*widthScaleFactor
                       ),
                     ),
                     SizedBox(height: 9 * heightScaleFactor),
                     LoginTextfield(text: "enter_password".tr,
                       fontsize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 21,
-                        smallSize: 19
+                        defaultSize: 21*widthScaleFactor,
+                        smallSize: 19*widthScaleFactor
                       ),
                     ),
                     SizedBox(height: 9 * heightScaleFactor),
@@ -307,8 +307,8 @@ smallSize: 17
                               text: "remember_me".tr,
                               // fontSize: 14 * heightScaleFactor,
                                 fontSize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 11
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 11*widthScaleFactor
                       ),
                               color: AppColors.languageTextColor,
                             ),
@@ -318,8 +318,8 @@ smallSize: 17
                           text: "forget_password".tr,
                           fontFamily: "gotham",
                          fontSize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 11
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 11*widthScaleFactor
                       ),
                           color: AppColors.selectLangugaeColor,
                         ),

@@ -281,14 +281,15 @@ class CustomDashboardContainer extends StatelessWidget {
                 UseableContainer(
                   height: height1,
                   width: width??70,
+                  fontSize: 10,
                   text: text1,
                   color: color1 ?? AppColors.orangeColor,
                 ),
                 SizedBox(width: 6 * widthScaleFactor),
                 UseableContainer(
-                  fontSize:isSpanish?10:12 ,
+                  fontSize:10 ,
                   height: height2,
-                  width: width2,
+                  width: width2??70,
                   text: text2,
                   color: color2 ?? AppColors.forwardColor,
                 ),
@@ -358,8 +359,8 @@ class CustomDashboardContainer extends StatelessWidget {
                           child: PauseContainer(
                             height: 35,
                           fontSize:ResponsiveFont.getFontSizeCustom(
-defaultSize: 13,
-smallSize: 11
+defaultSize: 13*widthScaleFactor,
+smallSize: 11*widthScaleFactor
 
                           ),
                             text: text3 ?? "",
@@ -370,8 +371,8 @@ smallSize: 11
                         Expanded(
                           child: PauseContainer(
                               fontSize:ResponsiveFont.getFontSizeCustom(
-defaultSize: 13,
-smallSize: 11
+defaultSize: 13*widthScaleFactor,
+smallSize: 11*widthScaleFactor
 
                           ),
                             height: 35,

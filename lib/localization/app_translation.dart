@@ -75,6 +75,9 @@ class AppTranslations extends Translations {
   'join_link': "Join Link",
   'started': "Started",
   'duration': "Duration",
+  "total": "Total",
+"phases": "Phases",
+"time": "Time",
   'current_phase': "Current Phase",
   'strategy_building': "Strategy Building",
   'remaining': "Remaining",
@@ -133,7 +136,7 @@ class AppTranslations extends Translations {
   "export_pdf": "Export PDF",
   "session_completed": "Session completed successfully",
   "time_duration": "Time\\nDuration",
-  "active_players": "Active\\nPlayers",
+  // "active_players": "Active\\nPlayers",
   "total_phases": "Total\\nPhases",
   "rewards_unlocked": "Rewards Unlocked",
   "strategic_thinker": "Strategic Thinker",
@@ -366,6 +369,9 @@ class AppTranslations extends Translations {
 
 
         'es_ES':{
+          "total": "Total",
+"phases": "Fases",
+"time": "Tiempo",
   "live_updates": "Actualizaciones en vivo...",
   "overall": "General",
   "players": "Jugadores",
@@ -673,6 +679,9 @@ class AppTranslations extends Translations {
   "players": "Joueurs",
   "teams": "Équipes",
   "use_filter": "Utiliser le filtre",
+  "total": "Total",
+"phases": "Phases",
+"time": "Temps",
   "end_session": "Terminer la session",
   "share_results": "Partager les résultats",
   "stage1": "Étape 1",
@@ -914,6 +923,9 @@ class AppTranslations extends Translations {
 
 
         'de_DE':{
+          "total": "Gesamt",
+"phases": "Phasen",
+"time": "Zeit",
   "live_updates": "Live-Updates...",
   "overall": "Gesamt",
   "players": "Spieler",
@@ -1263,6 +1275,9 @@ class AppTranslations extends Translations {
 
 
         'it_IT': {
+          "total": "Totale",
+"phases": "Fasi",
+"time": "Tempo",
   "live_updates": "Aggiornamenti in tempo reale...",
   "overall": "Generale",
   "players": "Giocatori",
@@ -1637,6 +1652,9 @@ class AppTranslations extends Translations {
   "phase2_strategy": "المرحلة 2: بناء الاستراتيجية",
   "active": "نشط",
   "pending": "قيد الانتظار",
+  "total": "المجموع",
+"phases": "المراحل",
+"time": "الوقت",
   "phase3_implementation": "المرحلة 3: التنفيذ",
   "phase4_evaluation": "المرحلة 4: التقييم",
   "real_time_monitoring": "مراقبة في الوقت الفعلي",
@@ -1966,6 +1984,9 @@ class AppTranslations extends Translations {
 
 
         'af_ZA':{
+          "total": "Totaal",
+"phases": "Fases",
+"time": "Tyd",
   "live_updates": "Regstreekse opdaterings...",
   "overall": "Algeheel",
   "players": "Spelers",

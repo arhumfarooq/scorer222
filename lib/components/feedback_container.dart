@@ -213,7 +213,7 @@ text: "ai_feedback".tr,
                 children: [
                   BoldText(
                     text: "89/100",
-                    fontSize: 38 * scaleWidth,
+                    fontSize: 30 * scaleWidth,
                     selectionColor: AppColors.createBorderColor,
                   ),
                   SizedBox(height: 4 * scaleHeight),

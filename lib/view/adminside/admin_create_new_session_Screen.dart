@@ -440,10 +440,21 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+       final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    final safeAreaTop = MediaQuery.of(context).padding.top;
+    final safeAreaBottom = MediaQuery.of(context).padding.bottom;
+
+    // A more direct way to get scaling factors
+    final double baseHeight = 812.0;  double baseWidth = 375.0; // Base width for design
+    // final double baseWidth = 414.0;
+    final double heightScaleFactor = screenHeight / baseHeight;
+    final double widthScaleFactor = screenWidth / baseWidth;
+
     // Get screen dimensions to use for adaptive scaling
     final Size screenSize = MediaQuery.of(context).size;
-    final double screenWidth = screenSize.width;
-    const double baseWidth = 375.0; // Base width for design
+    // final double screenWidth = screenSize.width;
+    // const double baseWidth = 375.0; // Base width for design
     final double scaleFactor = screenWidth / baseWidth;
 
     return GradientBackground(
@@ -469,8 +480,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                                                         
                                                         
                                                       fontSize: ResponsiveFont.getFontSizeCustom(
-                                                        defaultSize: 22,
-                                                        smallSize: 17
+                                                        defaultSize: 22*widthScaleFactor,
+                                                        smallSize: 17*widthScaleFactor,
                                                       ),  
                                                        fontWeight: FontWeight.bold),
                                                        children: [
@@ -497,8 +508,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                                    style: TextStyle(
                                                 color: AppColors.blueColor, 
                                                 fontSize: ResponsiveFont.getFontSizeCustom(
-                                                        defaultSize: 22,
-                                                        smallSize: 17
+                                                        defaultSize: 22*widthScaleFactor,
+                                                        smallSize: 17*widthScaleFactor,
                                                       ),  
                                                 fontWeight: FontWeight.bold,
                                    ),
@@ -522,8 +533,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                                                 style: TextStyle(
                                                   color: Colors.white,
                                                    fontSize: ResponsiveFont.getFontSizeCustom(
-                                                        defaultSize: 22,
-                                                        smallSize: 17
+                                                        defaultSize: 22*widthScaleFactor,
+                                                        smallSize: 17*widthScaleFactor,
                                                       ),  
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -593,8 +604,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                       // fontSize: 20 * scaleFactor,
                 // fontSize:(Get.locale?.langu/ageCode == 'fr' || Get.locale?.languageCode == 'es')? 16:22,
                 fontSize: ResponsiveFont.getFontSizeCustom(
-                  defaultSize: 22,
-                  smallSize: 16
+                  defaultSize: 22*widthScaleFactor,
+                  smallSize: 16*widthScaleFactor,
                 ),
                       fontWeight: FontWeight.w600,
                       color: AppColors.languageTextColor
@@ -633,8 +644,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                       GameSelectUseableContainer(
                 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
                    fontSize: ResponsiveFont.getFontSizeCustom(
-                  defaultSize: 13,
-                  smallSize: 9
+                  defaultSize: 13*widthScaleFactor,
+                  smallSize: 9*widthScaleFactor,
                 ),
                         text1: "odyssee_des_okr".tr,
                         
@@ -645,8 +656,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                       GameSelectUseableContainer(
                 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
                    fontSize: ResponsiveFont.getFontSizeCustom(
-                  defaultSize: 13,
-                   smallSize: 9
+                  defaultSize: 13*widthScaleFactor,
+                   smallSize: 9*widthScaleFactor,
                 ),
                           text1: "feedloop".tr,
                   text2: "feedback_collab_game".tr,
@@ -656,8 +667,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                       GameSelectUseableContainer(
                 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
                    fontSize: ResponsiveFont.getFontSizeCustom(
-                  defaultSize: 13,
-                  smallSize: 9
+                  defaultSize: 13*widthScaleFactor,
+                  smallSize: 9*widthScaleFactor,
                 ),
                          text1: "innovation_challenge".tr,
                   text2: "creative_problem_workshop".tr,
@@ -906,7 +917,7 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                 
                                   // MainText(text: "AI Scoring", fontSize: 14 * scaleFactor),
                 MainText(text: "enable_ai_scoring".tr, fontSize:ResponsiveFont.getFontSizeCustom(
-                  defaultSize: 11,smallSize: 9
+                  defaultSize: 11*widthScaleFactor,smallSize: 9*widthScaleFactor,
                 ), color: AppColors.teamColor, height: 1.2),
                             
                                   // MainText(text: "Enable automatic scoring using AI", fontSize: 11 * scaleFactor, color: AppColors.teamColor, height: 1.2),
@@ -935,8 +946,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                    SizedBox(height: 20 * scaleFactor),
                 FilterUseableContainer(
                   fontSze: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor,
 
 
                       ),
@@ -944,8 +955,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                           SizedBox(height: 10 * scaleFactor),
                 FilterUseableContainer(
                   fontSze: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor,
 
 
                       ),
@@ -953,8 +964,8 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                           SizedBox(height: 10 * scaleFactor),
                          FilterUseableContainer(
                           fontSze: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor,
 
 
                       ),

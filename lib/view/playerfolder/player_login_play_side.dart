@@ -135,8 +135,8 @@ class PlayerLoginPlaySide extends StatelessWidget {
                
 LoginTextfield(
   fontsize: ResponsiveFont.getFontSizeCustom(
-    defaultSize: 21,
-    smallSize: 18
+    defaultSize: 21*widthScaleFactor,
+    smallSize: 18*widthScaleFactor
   ),
   text: "enter_nickname".tr,
 ),
@@ -145,8 +145,8 @@ SizedBox(height: 9 * heightScaleFactor),
 
 LoginTextfield(
   fontsize: ResponsiveFont.getFontSizeCustom(
-    defaultSize: 21,
-    smallSize: 18
+    defaultSize: 21*widthScaleFactor,
+    smallSize: 18*widthScaleFactor
   ),
   text: "enter_team_nickname".tr,
 ),               SizedBox(height: 23 * heightScaleFactor),

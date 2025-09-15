@@ -98,6 +98,7 @@ class UserAdministrateSide extends StatelessWidget {
             text2: "john.smith@company.com",
             image: Appimages.prince2,
           ),
+          SizedBox(height: 30,)
           
           
 

@@ -267,7 +267,10 @@ class EvaluateResponseScreen extends StatelessWidget {
                       SizedBox(height: 12 * heightScaleFactor),
                       AudioContainer(),
                       SizedBox(height: 12 * heightScaleFactor),
-                      AnalysisContainer(),
+                      AnalysisContainer(
+// height: 400,
+
+                      ),
                       SizedBox(height: 12 * heightScaleFactor),
                       Container(
                         height: 700 * heightScaleFactor,
@@ -350,7 +353,7 @@ BoldText(
                       ),
                       SizedBox(height: 12 * heightScaleFactor),
                       Container(
-                        height: 236 * heightScaleFactor,
+                        height: 210 * heightScaleFactor,
                         width: 336 * widthScaleFactor,
                         decoration: BoxDecoration(
                           border: Border.all(color: AppColors.greyColor, width: 1.7 * widthScaleFactor),
@@ -369,25 +372,33 @@ BoldText(
 ),
                               SizedBox(height: 31 * heightScaleFactor),
 CustomSloderRow(
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+  fontSize: ResponsiveFont.getFontSizeCustom(
+    defaultSize: 13*widthScaleFactor,
+    smallSize: 11*widthScaleFactor
+  ),
 
   text: "clarity_specificity".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
 CustomSloderRow(
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+ fontSize: ResponsiveFont.getFontSizeCustom(
+    defaultSize: 13*widthScaleFactor,
+    smallSize: 11*widthScaleFactor
+  ),
   
   text: "strategic_thinking".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
 CustomSloderRow(
-  fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-  
+  fontSize: ResponsiveFont.getFontSizeCustom(
+    defaultSize: 13*widthScaleFactor,
+    smallSize: 11*widthScaleFactor
+  ),
   text: "feasibility".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
 CustomSloderRow(
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
 fontSize:  ResponsiveFont.getFontSizeCustom(
-defaultSize:14 ,
-smallSize: 11
+defaultSize:14 *widthScaleFactor,
+smallSize: 11*widthScaleFactor
 
 
 ),
@@ -408,7 +419,7 @@ smallSize: 11
                         imageWidth: 32 * widthScaleFactor,
                         // height: 74 * heightScaleFactor,
                       ),
-                      SizedBox(height: 23 * heightScaleFactor),
+                      SizedBox(height: 15 * heightScaleFactor),
                       LoginButton(
                         fontSize: 18,
                           

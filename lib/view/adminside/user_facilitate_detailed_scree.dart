@@ -835,8 +835,8 @@ class UserFacilitateDetailedScree extends StatelessWidget {
                                                                   text:  "email".tr,
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                 ),
 
@@ -847,8 +847,8 @@ smallSize: 12
                                   // fontSize: 16 * widthScaleFactor,
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                 ),
 
@@ -866,8 +866,8 @@ smallSize: 12
                                   // fontSize: 14 * widthScaleFactor,
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,\
  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                 ),
 
@@ -878,8 +878,8 @@ smallSize: 12
                                   // actor,
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                 ),
 
@@ -897,8 +897,8 @@ smallSize: 12
                                   // fontSize: 14 * widthScaleFactor,
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                 ),
 
@@ -908,8 +908,8 @@ smallSize: 12
                                   // fontSize: 16 * widthScaleFactor,
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                 ),
                                   selectionColor: AppColors.blueColor,
@@ -925,8 +925,8 @@ smallSize: 12
                                   // fontSize: 14 * widthScaleFactor,
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                 ),
                                 ),

@@ -251,6 +251,7 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/get_utils/src/extensions/export.dart';
+import 'package:scorer/components/back_stack_container.dart';
 import 'package:scorer/components/players_Row.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -279,11 +280,12 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
               SingleChildScrollView(
                 child: Column(
                   children: [
+                    SizedBox(height: 13,),
                     Padding(
                       // Converted fixed horizontal padding to be responsive
                       padding: EdgeInsets.symmetric(
                         horizontal: screenWidth * 0.05,
-                        vertical: screenHeight * 0.02,
+                        // vertical: screenHeight * 0.02,
                       ),
                       child: Row(
                         children: [
@@ -297,7 +299,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: screenHeight * 0.06), // Converted fixed height to be responsive
+                    SizedBox(height: screenHeight * 0.03), // // Converted fixed height to be responsive
                     Obx(
                       () => Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -463,27 +465,7 @@ class PlayerLeaderBoardScreen2 extends StatelessWidget {
                 // Made top position, width, and height responsive
                 top: screenHeight * 0.25,
                 left: 0,
-                child: Container(
-                  width: screenWidth * 0.4,
-                  height: screenHeight * 0.07,
-                  decoration: BoxDecoration(
-                    color: AppColors.forwardColor,
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(80),
-                      bottomRight: Radius.circular(80),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.02),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        MainText(text: "back".tr, fontSize: 16, color: AppColors.whiteColor),
-                        Image.asset(Appimages.main),
-                      ],
-                    ),
-                  ),
-                ),
+                child:BackStackContainer()
               ),
             ],
           ),

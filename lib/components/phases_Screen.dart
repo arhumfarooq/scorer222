@@ -945,8 +945,19 @@ class PhasesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
+       final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
+    final safeAreaTop = MediaQuery.of(context).padding.top;
+    final safeAreaBottom = MediaQuery.of(context).padding.bottom;
+
+    // A more direct way to get scaling factors
+    final double baseHeight = 812.0;
+    final double baseWidth = 414.0;
+    final double heightScaleFactor = screenHeight / baseHeight;
+    final double widthScaleFactor = screenWidth / baseWidth;
+
+    // final screenWidth = MediaQuery.of(context).size.width;
+    // final screenHeight = MediaQuery.of(context).size.height;
 
     bool isSpanish = Get.locale?.languageCode == 'es';
     // Common scaling
@@ -1067,13 +1078,14 @@ class PhasesScreen extends StatelessWidget {
                       children: [
                         Expanded(
                             child: PauseContainer(
+                              height: 42,
                                 onTap: () =>
                                 
                                     controller.isCompleted.value = false,
                                  text: "back".tr,
                                  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor
 
                      ),
                                  
@@ -1091,10 +1103,11 @@ smallSize: 12
                   // ya phir koi bhi screen tumhari requirement ke hisaab se
                 }
               },
+              height: 42,
               text: "assign_score".tr,
               fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor
 
                      ),
               icon: Icons.fast_forward,

@@ -17,6 +17,7 @@ import 'package:scorer/widgets/custom_stratgy_container.dart';
 import 'package:scorer/widgets/login_button.dart';
 import 'package:scorer/widgets/main_text.dart';
 import 'package:scorer/widgets/pause_container.dart';
+import 'package:scorer/widgets/useable_textrow.dart';
 
 class AdminPhaseScreen extends StatelessWidget {
   final StageController controller = Get.put(StageController());
@@ -31,6 +32,8 @@ class AdminPhaseScreen extends StatelessWidget {
     final verticalSpacing = screenHeight * 0.02;
     final horizontalPadding = screenWidth * 0.05;
     final contentWidth = screenWidth * 0.9;
+     const double baseWidth = 414.0;
+    final double widthScaleFactor = screenWidth / baseWidth;
 
     return Stack(
       children: [
@@ -204,7 +207,152 @@ fontSize2:  ResponsiveFont.getFontSize(),
                       iconContainer: AppColors.watchColor, icon: Icons.watch_later, text1: "phase4_evaluation".tr,text2: "Upcoming • 15 min", text3: "pending".tr, smallContainer: AppColors.watchColor, largeConatiner: AppColors.greyColor,flex: 4,flex1: 0,
              
                     ),
-                    SizedBox(height: 20,),
+
+
+
+                 
+                  ],
+                ),
+              ),
+
+
+SizedBox(height: 20,),
+            //   Padding(
+            //     padding: const EdgeInsets.symmetric(horizontal: 13),
+            //     child: Container(
+            //       width: 376,
+            //       height: 250,
+            //       decoration: BoxDecoration(
+            //         border: Border.all(color: AppColors.greyColor,width: 1.5),
+            //         borderRadius: BorderRadius.circular(24)
+            //       ),
+            //       child: Padding(
+            //         padding: const EdgeInsets.symmetric(horizontal: 20),
+            //         child: Column(
+            //           crossAxisAlignment: CrossAxisAlignment.start,
+            //           children: [
+            //             SizedBox(height: 31,),
+            //             BoldText(text: "Session Timeline",fontSize: 16,selectionColor: AppColors.blueColor,),
+            //             SizedBox(height: 20,),
+            //             UseableTextrow(color: AppColors.forwardColor, text: "Session Start: 12:20 PM"),
+            //             UseableTextrow(color: AppColors.forwardColor2, text: "Current Time: 1:00 PM"),
+            //             UseableTextrow(color: AppColors.forwardColor3, text: "Estimated End: 1:55 PM"),
+            //             SizedBox(height: 20,),
+            //              Row(
+            //   children: [
+            //     Expanded(
+            //       flex: 3,
+            //       child: Container(
+            //         height: 5,
+            //         // width: width1 ?? progressBarWidth,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(20),
+            //           color: AppColors.forwardColor,
+            //         ),
+            //       ),
+            //     ),
+            //     Expanded(
+            //       flex: 1,
+            //       child: Container(
+            //         height:5 ,
+            //         // width: width2 ?? 0,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(20),
+            //           color: AppColors.greyColor,
+            //         ),
+            //       ),
+            //     ),
+            //   ],
+            // ),
+            // SizedBox(height: 10,),
+            //   Row(
+            //   mainAxisAlignment:
+            //       MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     MainText(
+            //       // height: 1,
+            //         text:  "40% Complete".tr,
+            //         fontSize: screenWidth * 0.035),
+            //     BoldText(
+            //         text: "55 minutes remaining",
+            //         fontSize: screenWidth * 0.035,
+            //         selectionColor: AppColors.blueColor),
+            //   ],
+            // ),
+
+            //           ],
+            //         ),
+            //       ),
+            //     ),
+                
+            //   ),
+            Padding(
+      padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+      child: Container(
+        width: contentWidth,
+        height: screenHeight * 0.31, // A proportional height (approx. 250 on 812px height screen)
+        decoration: BoxDecoration(
+          border: Border.all(color: AppColors.greyColor, width: 1.5 * widthScaleFactor),
+          borderRadius: BorderRadius.circular(24 * widthScaleFactor),
+        ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20 * widthScaleFactor),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 31 * (screenHeight / 812.0)), // Scales based on the original design's height
+              BoldText(
+                text: "Session Timeline",
+                fontSize: 16 * widthScaleFactor,
+                selectionColor: AppColors.blueColor,
+              ),
+              SizedBox(height: 20 * (screenHeight / 812.0)),
+              UseableTextrow(color: AppColors.forwardColor, text: "Session Start: 12:20 PM"),
+              UseableTextrow(color: AppColors.forwardColor2, text: "Current Time: 1:00 PM"),
+              UseableTextrow(color: AppColors.forwardColor3, text: "Estimated End: 1:55 PM"),
+              SizedBox(height: 20 * (screenHeight / 812.0)),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      height: 5 * (screenHeight / 812.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20 * widthScaleFactor),
+                        color: AppColors.forwardColor,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 5 * (screenHeight / 812.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20 * widthScaleFactor),
+                        color: AppColors.greyColor,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10 * (screenHeight / 812.0)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MainText(text: "40% Complete", fontSize: screenWidth * 0.035),
+                  BoldText(
+                    text: "55 minutes remaining",
+                    fontSize: screenWidth * 0.035,
+                    selectionColor: AppColors.blueColor,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+                 SizedBox(height: 20,),
           
  Center(
                       child: LoginButton(
@@ -231,9 +379,6 @@ fontSize2:  ResponsiveFont.getFontSize(),
                       ),
                     ),
                     SizedBox(height: verticalSpacing * 2),
-                  ],
-                ),
-              ),
             ],
           ),
         ),

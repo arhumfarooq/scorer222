@@ -562,44 +562,50 @@ class GameStart1Screen extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        Stack(
-                          clipBehavior: Clip.none,
-                          children: [
-                            Image.asset(
+                      Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          SizedBox(
+                             height: 170 * heightScaleFactor,
+                              // width: 209 * widthScaleFactor,
+                            child: Image.asset(
                               Appimages.group,
-                              height: 181 * heightScaleFactor,
-                              width: 209 * widthScaleFactor,
+                             fit: BoxFit.contain,
                             ),
-                            Positioned(
-                              bottom: 15 * heightScaleFactor,
-                              right: 35 * widthScaleFactor,
-                              child: CreateContainer(
-                                text: "5 Phases",
-                                width: 84 * widthScaleFactor,
-                              ),
+                          ),
+                          Positioned(
+                            bottom: -2* heightScaleFactor,
+                            right: 15 * widthScaleFactor,
+                            child: CreateContainer(fontsize2: 12,
+                              text: "5 Phases",
+                              width: 90 * widthScaleFactor,
+                              height: 30 * heightScaleFactor, // Assuming a default height
+                              // fontSize: 14 * widthScaleFactor,
                             ),
-                          ],
-                        ),
-                     BoldText(
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 20*heightScaleFactor,),
+                      BoldText(
   text: "team_building_workshop".tr,
   fontSize: 16 * heightScaleFactor,
   selectionColor: AppColors.blueColor,
 ),
-                        SizedBox(height: 5 * heightScaleFactor),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              Appimages.person,
-                              height: 16 * heightScaleFactor,
-                            ),
-                            SizedBox(width: 8 * widthScaleFactor),
-                            MainText(
-                              text: "Facilitator: Sarah Johnson",
-                              fontSize: 14 * heightScaleFactor,
-                            )
-                          ],
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            Appimages.person,
+                            height: 18 * heightScaleFactor,
+                            width: 18 * widthScaleFactor,
+                          ),
+                          SizedBox(width: 8 * widthScaleFactor),
+                          MainText(
+                            text: "Facilitator: Sarah Johnson",
+                            fontSize: 14 * widthScaleFactor,
+                          )
+                        ],
+                      ),   SizedBox(height: 17*heightScaleFactor,),
                         Padding(
                           padding: EdgeInsets.symmetric(
                             horizontal: 13 * widthScaleFactor,
@@ -646,7 +652,7 @@ class GameStart1Screen extends StatelessWidget {
                                                 text: "Phase 2",
                                                 color: AppColors.orangeColor,
                                                 fontSize:
-                                                    12 * heightScaleFactor,
+                                                    10 * heightScaleFactor,
                                               ),
                                               SizedBox(
                                                   width: 10 * widthScaleFactor),
@@ -654,8 +660,8 @@ class GameStart1Screen extends StatelessWidget {
                                                text: "strategy_building".tr,
   // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11 : 14 
                                           fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 11
+defaultSize: 14*widthScaleFactor,
+smallSize: 11*widthScaleFactor
 
                                           ),
                                               )
@@ -964,11 +970,13 @@ smallSize: 11
                                     return Center(
                                       child: showBack
                                           ? PauseContainer(
+                                            width: double.infinity,
+                                            // width: 335*widthScaleFactor,
                                               onTap: () => controller.back(),
                                               text: "back".tr,
                                               color: AppColors.selectLangugaeColor,
-                                              height: 45 * heightScaleFactor,
-                                              width: double.infinity,
+                                              height: 35 * heightScaleFactor,
+                                              // width: double.infinity,
                                             )
                                           : Row(
                                               mainAxisAlignment:
@@ -979,8 +987,8 @@ smallSize: 11
                                                     onTap: () => controller.pause(),
                                                     text: "pause".tr,
                                                     color: AppColors.selectLangugaeColor,
-                                                    height: 45 * heightScaleFactor,
-                                                    width: 140 * widthScaleFactor,
+                                                    height: 35 * heightScaleFactor,
+                                                    // width: 140 * widthScaleFactor,
                                                   ),
                                                 ),
                                                 SizedBox(width: 20 * widthScaleFactor),
@@ -992,8 +1000,8 @@ smallSize: 11
                                                     color: controller.isCompleted.value
                                                         ? AppColors.forwardColor
                                                         : AppColors.assignColor,
-                                                    height: 45 * heightScaleFactor,
-                                                    width: 140 * widthScaleFactor,
+                                                    height: 35 * heightScaleFactor,
+                                                    // width: 140 * widthScaleFactor,
                                                   ),
                                                 ),
                                               ],
@@ -1007,6 +1015,7 @@ smallSize: 11
                         ),
                       ],
                     ),
+                    SizedBox(height: 17,),
                     Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 30 * widthScaleFactor,
@@ -1067,8 +1076,8 @@ MainText(
                             return FilterUseableContainer(
                               isSelected: controller.gamevalue.value == 0,
                           fontSze: ResponsiveFont.getFontSizeCustom(
-                                  defaultSize: 13,
-                                  smallSize: 10
+                                  defaultSize: 13*widthScaleFactor,
+                                  smallSize: 10*widthScaleFactor
                                 ),
                               text: "mountain_resort".tr,
                               onTap: () {
@@ -1080,8 +1089,8 @@ MainText(
                           Obx(() => FilterUseableContainer(
                                 isSelected: controller.gamevalue.value == 1,
                                fontSze: ResponsiveFont.getFontSizeCustom(
-                                  defaultSize: 13,
-                                  smallSize: 10
+                                  defaultSize: 13*widthScaleFactor,
+                                  smallSize: 10*widthScaleFactor
                                 ),
                                 text: "beach_hotel".tr,
                                 onTap: () {
@@ -1093,8 +1102,8 @@ MainText(
                                 isSelected: controller.gamevalue.value == 2,
                                 // fontSze: 13 * heightScaleFactor,
                                 fontSze: ResponsiveFont.getFontSizeCustom(
-                                  defaultSize: 13,
-                                  smallSize: 10
+                                  defaultSize: 13*widthScaleFactor,
+                                  smallSize: 10*widthScaleFactor
                                 ),
                                 
                                 text: "city_conference_center".tr,
@@ -1104,7 +1113,7 @@ MainText(
                               )),
                           SizedBox(height: 10 * heightScaleFactor),
                           Container(
-                            width: 334 * widthScaleFactor,
+                            width: double.infinity,
                             height: 202 * heightScaleFactor,
                             padding: EdgeInsets.all(12 * widthScaleFactor),
                             decoration: BoxDecoration(
@@ -1118,6 +1127,7 @@ MainText(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                SizedBox(height: 10,),
                                 BoldText(
                                   text:  "explain_reasoning".tr,
                                   fontSize: 16 * heightScaleFactor,
@@ -1146,6 +1156,7 @@ MainText(
                         ],
                       ),
                     ),
+                    SizedBox(height: 20,),
                     Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 13 * widthScaleFactor,
@@ -1157,6 +1168,7 @@ MainText(
                         verticalSpacing: screenHeight * 0.02,
                       ),
                     ),
+                    SizedBox(height: 17,),
                     Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 30 * widthScaleFactor,
@@ -1167,8 +1179,8 @@ MainText(
                            CustomStratgyContainer(
                       // fontSize: isSpanish?2:14,
                       fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor
                       ),
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
                       width3: 80,
@@ -1182,8 +1194,8 @@ MainText(
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
    fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor
                       ),
 
                       // fontSize: 6,
@@ -1195,8 +1207,8 @@ MainText(
                               CustomStratgyContainer(
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
    fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor
                       ),
                                 iconContainer: AppColors.selectLangugaeColor,
                                 icon: Icons.play_arrow_sharp,
@@ -1211,8 +1223,8 @@ MainText(
                               CustomStratgyContainer(
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
    fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor
                       ),
                                 iconContainer: AppColors.forwardColor,
                                 icon: Icons.check,
@@ -1228,8 +1240,8 @@ MainText(
                               CustomStratgyContainer(
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
    fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor
                       ),
                                 iconContainer: AppColors.watchColor,
                                 icon: Icons.watch_later,
@@ -1246,8 +1258,8 @@ MainText(
                               CustomStratgyContainer(
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
    fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor
                       ),
                                 iconContainer: AppColors.selectLangugaeColor,
                                 icon: Icons.play_arrow_sharp,
@@ -1261,8 +1273,8 @@ MainText(
                               CustomStratgyContainer(
 // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
    fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 10
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 10*widthScaleFactor
                       ),
                                 iconContainer: AppColors.watchColor,
                                 icon: Icons.watch_later,

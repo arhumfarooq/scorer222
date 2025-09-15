@@ -98,6 +98,7 @@ class UserFacilitateSide extends StatelessWidget {
             text2: "john.smith@company.com",
             image: Appimages.facil2,
           ),
+             SizedBox(height: 30,)
           
           
 

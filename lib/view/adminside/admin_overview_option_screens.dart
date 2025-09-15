@@ -91,7 +91,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
                                 height: 20,
                                 text: "Phase 2",
                                 color: AppColors.orangeColor,
-                                fontSize: 11 * heightScaleFactor,
+                                fontSize: 10 * heightScaleFactor,
                               ),
                               SizedBox(width: 8 * widthScaleFactor),
                               UseableContainer(
@@ -102,7 +102,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
           height: 20,
                                 text: "active".tr,
                                 color: AppColors.forwardColor,
-                                fontSize: 11 * heightScaleFactor,
+                                fontSize: 10 * heightScaleFactor,
                               ),
                             ],
                           ),

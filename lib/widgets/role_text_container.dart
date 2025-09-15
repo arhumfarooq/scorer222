@@ -54,8 +54,8 @@ class RoleTextContainer extends StatelessWidget {
           text:"role".tr,
           selectionColor: AppColors.whiteColor,
             fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 20,
-smallSize: 17
+defaultSize: 20*widthScaleFactor,
+smallSize: 17*widthScaleFactor
 
                                   ),
         ),

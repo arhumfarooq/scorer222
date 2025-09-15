@@ -231,7 +231,7 @@ class AnalysisContainer extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          height: height ?? 449 * scaleHeight,
+          height: height ?? 430 * scaleHeight,
           width: 330 * scaleWidth,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24 * scaleWidth),
@@ -428,6 +428,7 @@ class AnalysisContainer extends StatelessWidget {
           Positioned(
             bottom: -75 * scaleHeight,
             left: 57 * scaleWidth,
+            right: 57 * scaleWidth,
             child: Container(
               height: 181 * scaleWidth, // Use width scale to keep it circular
               width: 181 * scaleWidth,

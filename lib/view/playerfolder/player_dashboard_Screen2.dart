@@ -257,6 +257,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 10* heightScaleFactor,),
                 Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: 32 * widthScaleFactor,
@@ -266,23 +267,27 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                       Stack(
                         clipBehavior: Clip.none,
                         children: [
-                          Image.asset(
-                            Appimages.group,
-                            height: 181 * heightScaleFactor,
-                            width: 209 * widthScaleFactor,
+                          SizedBox(
+                             height: 170 * heightScaleFactor,
+                              // width: 209 * widthScaleFactor,
+                            child: Image.asset(
+                              Appimages.group,
+                             fit: BoxFit.contain,
+                            ),
                           ),
                           Positioned(
-                            bottom: 15 * heightScaleFactor,
-                            right: 35 * widthScaleFactor,
-                            child: CreateContainer(
+                            bottom: -2* heightScaleFactor,
+                            right: 15 * widthScaleFactor,
+                            child: CreateContainer(fontsize2: 12,
                               text: "5 Phases",
-                              width: 84 * widthScaleFactor,
+                              width: 90 * widthScaleFactor,
                               height: 30 * heightScaleFactor, // Assuming a default height
                               // fontSize: 14 * widthScaleFactor,
                             ),
                           ),
                         ],
                       ),
+                      SizedBox(height: 20*heightScaleFactor,),
                       BoldText(
   text: "team_building_workshop".tr,
   fontSize: 16 * heightScaleFactor,

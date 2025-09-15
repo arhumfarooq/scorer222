@@ -52,8 +52,8 @@ class NewSessionContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                      MainText(text: "session_code".tr, fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                      )),
                       Row(
@@ -76,8 +76,8 @@ smallSize: 12
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                      MainText(text: "join_link".tr,  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                      )),
 
@@ -86,8 +86,8 @@ smallSize: 12
                           BoldText(
                             text: "https:/www.score.com",
                            fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                      ),
                             selectionColor: AppColors.blueColor,
@@ -105,8 +105,8 @@ smallSize: 12
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                     MainText(text: "started".tr, fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                      )),
 
@@ -122,8 +122,8 @@ smallSize: 12
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       MainText(text: "duration".tr, fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 12
+defaultSize: 14*widthScaleFactor,
+smallSize: 12*widthScaleFactor,
 
                      )),
 
@@ -170,17 +170,18 @@ smallSize: 12
                               Row(
                                 children: [
                                   UseableContainer(
+                                    width: 70,
                                     text: "Phase 2",
                                     color: AppColors.orangeColor,
-                                    fontSize: 11 * heightScaleFactor,
-                                    height: 26,
+                                    fontSize: 10 * heightScaleFactor,
+                                    // height: 26,
                                   ),
                                   SizedBox(width: 7* widthScaleFactor),
                           MainText(
   text: "strategy_building".tr,
     fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 11
+defaultSize: 14*widthScaleFactor,
+smallSize: 11*widthScaleFactor,
 
                      ) // default for English
 )
@@ -191,8 +192,8 @@ smallSize: 11
                           ),
                         CircularPercentIndicator(
       radius:  ResponsiveFont.getFontSizeCustom(
-defaultSize: 40,
-smallSize: 34
+defaultSize: 40*widthScaleFactor,
+smallSize: 34*widthScaleFactor,
 
                      ),
         lineWidth: 4.0, // border ki thickness

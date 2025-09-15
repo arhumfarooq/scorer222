@@ -253,8 +253,8 @@ class ChooseYourRoleScreen extends StatelessWidget {
                            children: [
                              BoldText(
                                   fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 22,
-smallSize: 18
+defaultSize: 22*widthScaleFactor,
+smallSize: 18*widthScaleFactor,
 
                                   ),
                                text: "choose_your".tr,

@@ -191,6 +191,7 @@ class UserPlayerSide extends StatelessWidget {
             text2: "john.smith@company.com",
             image: Appimages.player2,
           ),
+          SizedBox(height: 30,)
         ],
       ),
     );

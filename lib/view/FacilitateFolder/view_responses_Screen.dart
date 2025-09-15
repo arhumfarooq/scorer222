@@ -249,9 +249,9 @@ final List<String> tabs = ["all".tr, "pending".tr, "scored".tr];
             text: "stage2_responses".tr,
             // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 20:22,
 fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 22
+defaultSize: 22*widthScaleFactor
 ,
-smallSize: 20
+smallSize: 20*widthScaleFactor
 ),
           selectionColor: AppColors.blueColor,
         ),
@@ -265,8 +265,8 @@ smallSize: 20
                         isshow: true,
                         mainHeight: 1.3,
                         fontSize: ResponsiveFont.getFontSizeCustom(
-                          defaultSize: 14,
-                          smallSize: 12
+                          defaultSize: 14*widthScaleFactor,
+                          smallSize: 12*widthScaleFactor
                         ),
                         containerHeight: 180,
                         width3: 54,
@@ -282,8 +282,8 @@ smallSize: 20
                         fontSize2: ResponsiveFont.getFontSizeCustom
                         
                         (
-defaultSize: 14
-,smallSize: 10
+defaultSize: 14*widthScaleFactor
+,smallSize: 10*widthScaleFactor
                         ),
                       //  fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
 
@@ -475,8 +475,8 @@ onTap: () {
    fontSize2: ResponsiveFont.getFontSizeCustom
                         
                         (
-defaultSize: 14
-,smallSize: 10
+defaultSize: 14*widthScaleFactor
+,smallSize: 10*widthScaleFactor
                         ),
                               iconContainer: AppColors.forwardColor,
                               icon: Icons.check,
@@ -507,8 +507,8 @@ fontSize3: 10,
    fontSize2: ResponsiveFont.getFontSizeCustom
                         
                         (
-defaultSize: 14
-,smallSize: 9
+defaultSize: 14*widthScaleFactor
+,smallSize: 9*widthScaleFactor
                         ),
               
                               iconContainer: AppColors.selectLangugaeColor,
@@ -532,8 +532,8 @@ defaultSize: 14
    fontSize2: ResponsiveFont.getFontSizeCustom
                         
                         (
-defaultSize: 14
-,smallSize: 10
+defaultSize: 14*widthScaleFactor
+,smallSize: 10*widthScaleFactor
                         ),
                               icon: Icons.watch_later,
                            text1: "phase3_implementation".tr, text2: "Upcoming • 25 min", text3: "pending".tr,
@@ -555,8 +555,8 @@ defaultSize: 14
    fontSize2: ResponsiveFont.getFontSizeCustom
                         
                         (
-defaultSize: 14
-,smallSize: 10
+defaultSize: 14*widthScaleFactor
+,smallSize: 10*widthScaleFactor
                         ),
                               icon: Icons.watch_later,
                             text1: "phase4_evaluation".tr,text2: "Upcoming • 15 min", text3: "pending".tr,

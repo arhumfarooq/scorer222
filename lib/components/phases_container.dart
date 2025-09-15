@@ -24,7 +24,18 @@ class PhaseContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isSpanish = Get.locale?.languageCode == 'es';
+       final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    final safeAreaTop = MediaQuery.of(context).padding.top;
+    final safeAreaBottom = MediaQuery.of(context).padding.bottom;
+
+    // A more direct way to get scaling factors
+    final double baseHeight = 812.0;
+    final double baseWidth = 414.0;
+    final double heightScaleFactor = screenHeight / baseHeight;
+    final double widthScaleFactor = screenWidth / baseWidth;
+
+    // bool isSpanish = Get.locale?.languageCode == 'es';
 
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
@@ -59,8 +70,8 @@ class PhaseContainer extends StatelessWidget {
                      MainText(
   text: "strategy_building".tr,
   fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 11
+defaultSize: 14*widthScaleFactor,
+smallSize: 11*widthScaleFactor,
   )
                      ),
                     ],

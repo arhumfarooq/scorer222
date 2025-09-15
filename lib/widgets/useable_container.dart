@@ -74,7 +74,7 @@ class UseableContainer extends StatelessWidget {
         child: MainText(
           text: text,
           fontFamily: fontFamily ?? "abz",
-          fontSize: (fontSize ?? 12) * heightScaleFactor,
+          fontSize: (fontSize ?? 10) * heightScaleFactor,
           color: textColor ?? AppColors.whiteColor,
         ),
       ),

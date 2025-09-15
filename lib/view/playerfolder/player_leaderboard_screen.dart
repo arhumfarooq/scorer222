@@ -243,14 +243,16 @@ class PlayerLeaderboardScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                SizedBox(height: 13,),
                 Padding(
                   // Converted fixed horizontal padding to be responsive
                   padding: EdgeInsets.symmetric(
                     horizontal: screenWidth * 0.05,
-                    vertical: screenHeight * 0.02,
+                    // vertical: screenHeight * 0.02,
                   ),
                   child: Row(
                     children: [
+                      
                       Image.asset(Appimages.player2, height: 63, width: 50),
                       Expanded(
                         child: Center(
@@ -261,7 +263,7 @@ class PlayerLeaderboardScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: screenHeight * 0.06), // Converted fixed height to be responsive
+                SizedBox(height: screenHeight * 0.03), // Converted fixed height to be responsive
                 Obx(
                   () => Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -323,7 +325,7 @@ class PlayerLeaderboardScreen extends StatelessWidget {
                     width: isTeamSelected.value ? screenWidth * 0.466 : screenWidth * 0.347,
                   ),
                 ),
-                SizedBox(height: screenHeight * 0.15), // Converted fixed height to be responsive
+                SizedBox(height: screenHeight * 0.10), // Converted fixed height to be responsive
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.08), // Converted fixed padding to be responsive
                   child: Column(

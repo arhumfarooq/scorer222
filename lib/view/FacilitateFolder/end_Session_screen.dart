@@ -423,13 +423,13 @@ class EndSessionScreen extends StatelessWidget {
                             children: [
                               BoldText(
                                 text: "export_by".tr,
-                                fontSize: 22 * widthScaleFactor,
+                                fontSize: 20 * widthScaleFactor,
                               ),
                               Row(
                                 children: [
                                   BoldText(
                                     text: "phase".tr,
-                                    fontSize: 22 * widthScaleFactor,
+                                    fontSize: 20 * widthScaleFactor,
                                   ),
                                   SizedBox(width: 7 * widthScaleFactor),
                                   Icon(
@@ -445,7 +445,7 @@ class EndSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 13 * heightScaleFactor),
                       LoginButton(
-                fontSize: 19,
+                fontSize: 20* widthScaleFactor,
 
                         text: "export_pdf".tr,
                         ishow: true,
@@ -506,7 +506,7 @@ class EndSessionScreen extends StatelessWidget {
                       CustomSessionContainer(heightScaleFactor: heightScaleFactor, widthScaleFactor: widthScaleFactor),
                       SizedBox(height: 100 * heightScaleFactor),
                       PlayersRow(isTeamSelected: false),
-                      SizedBox(height: 90 * heightScaleFactor),
+                      SizedBox(height: 25 * heightScaleFactor),
                       PlayersContainers(
                         text1: "2",
                         text2: "Sarah J.",
@@ -545,8 +545,8 @@ class EndSessionScreen extends StatelessWidget {
                       SizedBox(height: 30 * heightScaleFactor),
                       CreateContainer(
                         fontsize2: ResponsiveFont.getFontSizeCustom(
-                          defaultSize: 13,
-                          smallSize: 9
+                          defaultSize: 13*widthScaleFactor,
+                          smallSize: 9*widthScaleFactor
                         ),
                        text: "view_full_ranking".tr,
                        

@@ -37,7 +37,13 @@ class CustomTimeRow extends StatelessWidget {
                   fontSize: 24 * widthScaleFactor,
                 ),
                 BoldText(
-                   text: "time_duration".tr,
+                   text: "time".tr,
+                  fontSize: 16 * widthScaleFactor,
+                  selectionColor: AppColors.blueColor,
+                  textAlign: TextAlign.center,
+                ),
+                  BoldText(
+                   text: "duration".tr,
                   fontSize: 16 * widthScaleFactor,
                   selectionColor: AppColors.blueColor,
                   textAlign: TextAlign.center,
@@ -67,7 +73,14 @@ class CustomTimeRow extends StatelessWidget {
                   fontSize: 24 * widthScaleFactor,
                 ),
                 BoldText(
-                  text: "active_players".tr,
+                  text: "active".tr,
+                  textAlign: TextAlign.center,
+
+                  fontSize: 16 * widthScaleFactor,
+                  selectionColor: AppColors.blueColor,
+                ),
+                 BoldText(
+                  text: "players".tr,
                   textAlign: TextAlign.center,
 
                   fontSize: 16 * widthScaleFactor,
@@ -98,7 +111,14 @@ class CustomTimeRow extends StatelessWidget {
                   fontSize: 24 * widthScaleFactor,
                 ),
                 BoldText(
-                 text: "total_phases".tr,
+                 text: "total".tr,
+                  textAlign: TextAlign.center,
+
+                  fontSize: 16 * widthScaleFactor,
+                  selectionColor: AppColors.blueColor,
+                ),
+                  BoldText(
+                 text: "phases".tr,
                   textAlign: TextAlign.center,
 
                   fontSize: 16 * widthScaleFactor,

@@ -542,9 +542,21 @@ class CreateNewSessionScreen extends StatelessWidget {
     final Size screenSize = MediaQuery.of(context).size;
     final double screenWidth = screenSize.width;
     final double screenHeight = screenSize.height;
+    //    final screenWidth = MediaQuery.of(context).size.width;
+    // final screenHeight = MediaQuery.of(context).size.height;
+    final safeAreaTop = MediaQuery.of(context).padding.top;
+    final safeAreaBottom = MediaQuery.of(context).padding.bottom;
+
+    // A more direct way to get scaling factors
+    final double baseHeight = 812.0;
+     double baseWidth = 375.0;
+    // final double baseWidth = 414.0;
+    final double heightScaleFactor = screenHeight / baseHeight;
+    final double widthScaleFactor = screenWidth / baseWidth;
+
 
     // Define a base width for scaling, assuming a typical phone screen width of 375.
-    const double baseWidth = 375.0;
+    
     final double scaleFactor = screenWidth / baseWidth;
 
     return Scaffold(
@@ -571,8 +583,8 @@ class CreateNewSessionScreen extends StatelessWidget {
                                                         
                                                         
                                                       fontSize: ResponsiveFont.getFontSizeCustom(
-                                                        defaultSize: 22,
-                                                        smallSize: 17
+                                                        defaultSize: 22*widthScaleFactor,
+                                                        smallSize: 17*widthScaleFactor
                                                       ),  
                                                        fontWeight: FontWeight.bold),
                                                        children: [
@@ -599,8 +611,8 @@ class CreateNewSessionScreen extends StatelessWidget {
                                    style: TextStyle(
                                                 color: AppColors.blueColor, 
                                                 fontSize: ResponsiveFont.getFontSizeCustom(
-                                                        defaultSize: 22,
-                                                        smallSize: 17
+                                                        defaultSize: 22*widthScaleFactor,
+                                                        smallSize: 17*widthScaleFactor
                                                       ),  
                                                 fontWeight: FontWeight.bold,
                                    ),
@@ -624,8 +636,8 @@ class CreateNewSessionScreen extends StatelessWidget {
                                                 style: TextStyle(
                                                   color: Colors.white,
                                                    fontSize: ResponsiveFont.getFontSizeCustom(
-                                                        defaultSize: 22,
-                                                        smallSize: 17
+                                                        defaultSize: 22*widthScaleFactor,
+                                                        smallSize: 17*widthScaleFactor
                                                       ),  
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -710,7 +722,7 @@ fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')?
                       SizedBox(height: 30 * scaleFactor),
                       GameSelectUseableContainer(
                         // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
-fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13,smallSize: 10),
+fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13*widthScaleFactor,smallSize: 10*widthScaleFactor),
                        text1: "odyssee_des_okr".tr,
   text2: "strategic_goal_workshop".tr,
                         isSelected: isSelected,
@@ -718,7 +730,7 @@ fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13,smallSize: 10),
                       SizedBox(height: 10 * scaleFactor),
                       GameSelectUseableContainer(
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
-fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13,smallSize: 10),
+fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13*widthScaleFactor,smallSize: 10*widthScaleFactor),
 
                       text1: "feedloop".tr,
   text2: "feedback_collab_game".tr,
@@ -728,7 +740,7 @@ fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13,smallSize: 10),
                       GameSelectUseableContainer(
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:13,
 
-fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13,smallSize: 10),
+fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13*widthScaleFactor,smallSize: 10*widthScaleFactor),
 
                       text1: "innovation_challenge".tr,
   text2: "creative_problem_workshop".tr,
@@ -996,8 +1008,8 @@ BoldText(
                       SizedBox(height: 20 * scaleFactor),
 FilterUseableContainer(
    fontSze: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 12
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 12*widthScaleFactor
 
 
                       ),
@@ -1005,8 +1017,8 @@ FilterUseableContainer(
                       SizedBox(height: 10 * scaleFactor),
 FilterUseableContainer(
    fontSze: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 12
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 12*widthScaleFactor
 
 
                       ),
@@ -1014,8 +1026,8 @@ FilterUseableContainer(
                       SizedBox(height: 10 * scaleFactor),
                      FilterUseableContainer(
                       fontSze: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14,
-                        smallSize: 12
+                        defaultSize: 14*widthScaleFactor,
+                        smallSize: 12*widthScaleFactor
 
 
                       ),

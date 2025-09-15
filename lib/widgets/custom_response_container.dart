@@ -153,13 +153,23 @@ class CustomResponseContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get screen dimensions using MediaQuery
-    final double screenWidth = MediaQuery.of(context).size.width;
-    final double screenHeight = MediaQuery.of(context).size.height;
+     final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    final safeAreaTop = MediaQuery.of(context).padding.top;
+    final safeAreaBottom = MediaQuery.of(context).padding.bottom;
 
-    // Define a reference size for scaling (e.g., iPhone 11 Pro Max)
-    const double baseWidth = 414.0;
-    const double baseHeight = 896.0;
+    // A more direct way to get scaling factors
+    final double baseHeight = 896.0;
+    final double baseWidth = 414.0;
+    final double heightScaleFactor = screenHeight / baseHeight;
+    final double widthScaleFactor = screenWidth / baseWidth;
+    // Get screen dimensions using MediaQuery
+    // final double screenWidth = MediaQuery.of(context).size.width;
+    // final double screenHeight = MediaQuery.of(context).size.height;
+
+    // // Define a reference size for scaling (e.g., iPhone 11 Pro Max)
+    // const double baseWidth = 414.0;
+    // const double baseHeight = 896.0;
 
     // Calculate scale factors
     final double scaleWidth = screenWidth / baseWidth;
@@ -241,8 +251,8 @@ class CustomResponseContainer extends StatelessWidget {
   text: "primary_objective".tr,
   // fontSize: 14 * scaleWidth,
   fontSize: ResponsiveFont.getFontSizeCustom(
-    defaultSize: 14,
-    smallSize: 9
+    defaultSize: 14*widthScaleFactor,
+    smallSize: 9*widthScaleFactor
   ),
   height: 1.5,
 ),

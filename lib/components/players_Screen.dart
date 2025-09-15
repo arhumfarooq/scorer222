@@ -250,7 +250,7 @@ class PlayersScreen extends StatelessWidget {
     final sectionPadding = screenWidth * 0.08;
     final allPlayersContainerSpacing = screenHeight * 0.01;
     final teamDistributionBoxWidth = screenWidth * 0.9;
-    final teamDistributionBoxHeight = screenHeight * 0.24;
+    final teamDistributionBoxHeight = screenHeight * 0.22;
     final buttonHeight = screenHeight * 0.06;
     final positionedBoxWidth = screenWidth * 0.38;
     final positionedBoxHeight = screenHeight * 0.07;
@@ -293,7 +293,13 @@ class PlayersScreen extends StatelessWidget {
                           ),
                        BoldText(
                         textAlign: TextAlign.center,
-  text: "active_players".tr,
+  text: "active".tr,
+  fontSize: screenWidth * 0.04,
+  selectionColor: AppColors.blueColor,
+),
+  BoldText(
+                        textAlign: TextAlign.center,
+  text: "players".tr,
   fontSize: screenWidth * 0.04,
   selectionColor: AppColors.blueColor,
 ),
@@ -409,11 +415,12 @@ class PlayersScreen extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: screenWidth * 0.05,
-                        vertical: screenHeight * 0.02,
+                        vertical: screenHeight * 0.01,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          SizedBox(height: 10,),
                          BoldText(
   text: "team_distribution".tr,
   selectionColor: AppColors.blueColor,

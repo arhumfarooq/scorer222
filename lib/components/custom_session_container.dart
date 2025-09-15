@@ -18,7 +18,7 @@ class CustomSessionContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isSpanish = Get.locale?.languageCode == 'es';
+    // bool isSpanish = Get.locale?.languageCode == 'es';
     return Container(
       height: 355 * heightScaleFactor,
       width: 330 * widthScaleFactor,
@@ -42,13 +42,13 @@ class CustomSessionContainer extends StatelessWidget {
             SizedBox(height: 30 * heightScaleFactor),
             SessionUseableRow(
 fontsize2: ResponsiveFont.getFontSizeCustom(
-  defaultSize: 10,
-  smallSize: 9
+  defaultSize: 10 *widthScaleFactor,
+  smallSize: 9*widthScaleFactor
 ),
               // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
 fontSize:ResponsiveFont.getFontSizeCustom(
-  defaultSize: 10,
-  smallSize: 9
+  defaultSize: 10*widthScaleFactor,
+  smallSize: 9*widthScaleFactor,
 ),
               iamge: Appimages.phone1,
               text: "average_score".tr,
@@ -61,12 +61,12 @@ fontSize:ResponsiveFont.getFontSizeCustom(
 // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
 // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
               fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 10
-,smallSize: 9
+defaultSize: 10*widthScaleFactor
+,smallSize: 9*widthScaleFactor,
               ),
                 fontsize2: ResponsiveFont.getFontSizeCustom(
-defaultSize: 10
-,smallSize: 8
+defaultSize: 10*widthScaleFactor
+,smallSize: 8*widthScaleFactor,
               ),
               iamge: Appimages.phone2,
               text: "top_performer".tr,
@@ -78,13 +78,13 @@ defaultSize: 10
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
 fontsize2: ResponsiveFont.getFontSizeCustom(
-  defaultSize: 10,
-  smallSize: 9
+  defaultSize: 10*widthScaleFactor,
+  smallSize: 9*widthScaleFactor,
 ),
               // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
 fontSize:ResponsiveFont.getFontSizeCustom(
-  defaultSize: 10,
-  smallSize: 9
+  defaultSize: 10*widthScaleFactor,
+  smallSize: 9*widthScaleFactor,
 ),
               iamge: Appimages.phone3,
               text: "completion_rate".tr,
@@ -95,13 +95,13 @@ fontSize:ResponsiveFont.getFontSizeCustom(
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
 fontsize2: ResponsiveFont.getFontSizeCustom(
-  defaultSize: 10,
-  smallSize: 9
+  defaultSize: 10*widthScaleFactor,
+  smallSize: 9*widthScaleFactor,
 ),
               // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
 fontSize:ResponsiveFont.getFontSizeCustom(
-  defaultSize: 10,
-  smallSize: 9
+  defaultSize: 10*widthScaleFactor,
+  smallSize: 9*widthScaleFactor,
 ),
               iamge: Appimages.phone4,
               text: "participation_rate".tr,

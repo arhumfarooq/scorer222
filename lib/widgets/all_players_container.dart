@@ -91,6 +91,16 @@ class AllPlayersContainer extends StatelessWidget {
     final double screenWidth = screenSize.width;
     const double baseWidth = 375.0; // Base width for design
     final double scaleFactor = screenWidth / baseWidth;
+    //  final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    final safeAreaTop = MediaQuery.of(context).padding.top;
+    final safeAreaBottom = MediaQuery.of(context).padding.bottom;
+
+    // A more direct way to get scaling factors
+    final double baseHeight = 812.0;
+    // final double baseWidth = 414.0;
+    final double heightScaleFactor = screenHeight / baseHeight;
+    final double widthScaleFactor = screenWidth / baseWidth;
 
     return GestureDetector(
       onTap: onTap,
@@ -140,8 +150,8 @@ class AllPlayersContainer extends StatelessWidget {
               ),
               UseableContainer(
                 fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 12,
-smallSize: 10
+defaultSize: 12*widthScaleFactor,
+smallSize: 10*widthScaleFactor
 
                 ),
                 text: text3 ?? "active".tr,

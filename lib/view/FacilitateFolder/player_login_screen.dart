@@ -312,8 +312,8 @@ class PlayerLoginScreen extends StatelessWidget {
                         Center(
   child: BoldText(
         fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 22,
-smallSize: 17
+defaultSize: 22*widthScaleFactor,
+smallSize: 17*widthScaleFactor
 
                                   ),
     text: "player_login".tr,
@@ -334,22 +334,22 @@ smallSize: 17
                     SizedBox(height: 23 * heightScaleFactor),
                     Center(child: LoginTextfield(
                       fontsize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize:21,
-                        smallSize: 19 
+                        defaultSize:21*widthScaleFactor,
+                        smallSize: 19 *widthScaleFactor
                       ),
                       text: "enter_full_name".tr)),
                     SizedBox(height: 9 * heightScaleFactor),
                     Center(child: LoginTextfield(
                         fontsize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize:21,
-                        smallSize: 19 
+                        defaultSize:21*widthScaleFactor,
+                        smallSize: 19 *widthScaleFactor
                       ),
                       text: "enter_email".tr)),
                     SizedBox(height: 9 * heightScaleFactor),
                     Center(child: LoginTextfield(
                         fontsize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize:21,
-                        smallSize: 19 
+                        defaultSize:21*widthScaleFactor,
+                        smallSize: 19 *widthScaleFactor
                       ),
                       text: "enter_password".tr)),
                     SizedBox(height: 9 * heightScaleFactor),
@@ -373,8 +373,8 @@ smallSize: 17
                             MainText(
                               text: "remember_me".tr,
                               fontSize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize:14,
-                        smallSize: 12
+                        defaultSize:14*widthScaleFactor,
+                        smallSize: 12*widthScaleFactor
                       ),
                               color: AppColors.languageTextColor,
                             ),
@@ -384,8 +384,8 @@ smallSize: 17
                           text: "forget_password".tr,
                           fontFamily: "gotham",
                             fontSize: ResponsiveFont.getFontSizeCustom(
-                        defaultSize:14,
-                        smallSize: 12
+                        defaultSize:14*widthScaleFactor,
+                        smallSize: 12*widthScaleFactor
                       ),
                           color: AppColors.selectLangugaeColor,
                         ),
@@ -430,8 +430,8 @@ smallSize: 17
                     Center(
                       child: LoginButton(
                         fontSize: ResponsiveFont.getFontSizeCustom(
-                          defaultSize: 20,
-                          smallSize: 17
+                          defaultSize: 20*widthScaleFactor,
+                          smallSize: 17*widthScaleFactor
                         ),
                         text: "join_with_code".tr,
                         color: AppColors.forwardColor,

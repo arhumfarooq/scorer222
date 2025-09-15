@@ -338,6 +338,16 @@ class SubmitResponseScreen2 extends StatelessWidget {
 
     // Use a base width to calculate a scaling factor.
     const double baseWidth = 375.0; 
+      //  final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    final safeAreaTop = MediaQuery.of(context).padding.top;
+    final safeAreaBottom = MediaQuery.of(context).padding.bottom;
+
+    // A more direct way to get scaling factors
+    final double baseHeight = 812.0;
+    // final double baseWidth = 414.0;
+    final double heightScaleFactor = screenHeight / baseHeight;
+    final double widthScaleFactor = screenWidth / baseWidth;
     final double scaleFactor = screenWidth / baseWidth;
 
     return Scaffold(
@@ -521,7 +531,7 @@ UseableContainer(
                                 children: [
                                   BoldText(
                                     text: "89/100",
-                                    fontSize: 35 * scaleFactor,
+                                    fontSize: 30 * scaleFactor,
                                     selectionColor: AppColors.createBorderColor,
                                   ),
                                   SizedBox(height: 4 * scaleFactor),
@@ -544,7 +554,7 @@ UseableContainer(
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30 * scaleFactor),
                   child: Container(
-                    height: 236 * scaleFactor,
+                    height: 215 * scaleFactor,
                     width: 336 * scaleFactor,
                     decoration: BoxDecoration(
                       border: Border.all(
@@ -571,8 +581,8 @@ UseableContainer(
                          CustomSloderRow(
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
   fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 11
+defaultSize: 14*widthScaleFactor,
+smallSize: 11*widthScaleFactor
 
   ),
   text: "clarity_specificity".tr, text2: "22/25"),
@@ -580,8 +590,8 @@ smallSize: 11
                          CustomSloderRow(
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
     fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 11
+defaultSize: 14*widthScaleFactor,
+smallSize: 11*widthScaleFactor
 
   ),
   text: "strategic_thinking".tr, text2: "22/25"),
@@ -589,8 +599,8 @@ smallSize: 11
                          CustomSloderRow(
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
     fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 11
+defaultSize: 14*widthScaleFactor,
+smallSize: 11*widthScaleFactor
 
   ),
   text: "feasibility".tr, text2: "22/25"),
@@ -598,8 +608,8 @@ smallSize: 11
                         CustomSloderRow(
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
   fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14,
-smallSize: 11
+defaultSize: 14*widthScaleFactor,
+smallSize: 11*widthScaleFactor
 
   ),
   text: "innovation".tr, text2: "22/25"),
@@ -608,7 +618,7 @@ smallSize: 11
                     ),
                   ),
                 ),
-                SizedBox(height: 29 * scaleFactor),
+                SizedBox(height: 18* scaleFactor),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 13 * scaleFactor),
                   child: Container(
@@ -647,8 +657,8 @@ BoldText(
 UseableTextrow(
   // fontsize11:ResponsiveFont.getFontSize() ,
   fontsize11:ResponsiveFont.getFontSizeCustom(
-    smallSize: 9,
-defaultSize: 13
+    smallSize: 9*widthScaleFactor*widthScaleFactor,
+defaultSize: 13*widthScaleFactor*widthScaleFactor
   ) ,
   height: 1.4,
   color: AppColors.forwardColor,
@@ -657,8 +667,8 @@ defaultSize: 13
                           SizedBox(height: 20 * scaleFactor),
                         UseableTextrow(
   fontsize11:ResponsiveFont.getFontSizeCustom(
-    smallSize: 9,
-defaultSize: 13
+    smallSize: 9*widthScaleFactor,
+defaultSize: 13*widthScaleFactor
   ) ,
 
   height: 1.4,
@@ -670,8 +680,8 @@ defaultSize: 13
 UseableTextrow(
   height: 1.4,
   fontsize11:ResponsiveFont.getFontSizeCustom(
-    smallSize: 9,
-defaultSize: 13
+    smallSize: 9*widthScaleFactor,
+defaultSize: 13*widthScaleFactor
   ) ,
   color: AppColors.forwardColor,
   text: "tip_quantify".tr,
@@ -681,7 +691,7 @@ defaultSize: 13
                     ),
                   ),
                 ),
-                SizedBox(height: 29 * scaleFactor),
+                SizedBox(height: 18 * scaleFactor),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30 * scaleFactor),
                   child: Column(

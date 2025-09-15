@@ -287,6 +287,7 @@ class EvaluateResponseScreen2 extends StatelessWidget {
 
     return Scaffold(
       body: GradientBackground(
+        
         child: SafeArea(
           child: Stack(
             children: [
@@ -435,8 +436,8 @@ CustomSloderRow(
    fontSize: ResponsiveFont.getFontSizeCustom
                         
                         (
-defaultSize: 14
-,smallSize: 11
+defaultSize: 14 * widthScaleFactor
+,smallSize: 11 * widthScaleFactor,
                         ),
   text: "clarity_specificity".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
@@ -447,8 +448,8 @@ CustomSloderRow(
    fontSize: ResponsiveFont.getFontSizeCustom
                         
                         (
-defaultSize: 14
-,smallSize: 11
+defaultSize: 14 * widthScaleFactor
+,smallSize: 11 * widthScaleFactor,
                         ),
   text: "strategic_thinking".tr, text2: "22/25"),
                               SizedBox(height: 5 * heightScaleFactor),
@@ -457,8 +458,8 @@ CustomSloderRow(
  fontSize: ResponsiveFont.getFontSizeCustom
                         
                         (
-defaultSize: 14
-,smallSize: 11
+defaultSize: 14 * widthScaleFactor
+,smallSize: 11 * widthScaleFactor,
                         ),
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
 
@@ -471,8 +472,8 @@ CustomSloderRow(
  fontSize: ResponsiveFont.getFontSizeCustom
                         
                         (
-defaultSize: 14
-,smallSize: 11
+defaultSize: 14 * widthScaleFactor
+,smallSize: 11 * widthScaleFactor,
                         ),
   
   text: "innovation".tr, text2: "22/25"),
@@ -486,7 +487,7 @@ defaultSize: 14
                       ),
                       SizedBox(height: 12 * heightScaleFactor),
                       Container(
-                        height: 700 * heightScaleFactor,
+                        height: 600 * heightScaleFactor,
                         width: 330 * widthScaleFactor,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(24 * widthScaleFactor),

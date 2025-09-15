@@ -63,6 +63,7 @@ class AdminActiveSession extends StatelessWidget {
               color2: AppColors.yellowColor,
           color1: AppColors.redColor,
           heading: "Team Building Workshop",
+          
           text1: "Phase 1",
           height: 10,
           text2: "Phase 1",
