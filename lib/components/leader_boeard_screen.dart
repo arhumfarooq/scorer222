@@ -415,7 +415,7 @@ class LeaderBoeardScreen extends StatelessWidget {
             ),
             SizedBox(height: screenHeight * 0.1),
             Obx(() => PlayersRow(isTeamSelected: isTeamSelected.value)),
-            SizedBox(height: screenHeight * 0.09),
+            SizedBox(height: screenHeight * 0.04),
             Obx(
               () => PlayersContainers(
                 text1: "1",
