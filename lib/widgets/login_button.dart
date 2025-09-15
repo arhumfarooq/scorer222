@@ -168,6 +168,7 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/widgets/bold_text.dart';
@@ -244,8 +245,8 @@ class LoginButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: (height ?? 65) * heightScaleFactor,
-        width: (width ?? 337) * widthScaleFactor,
+        height: (height ?? 65).h,
+        width: (width ?? 337) .w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular((radius ?? 25) * heightScaleFactor),
           color: color ?? AppColors.selectLangugaeColor,

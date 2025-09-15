@@ -65,6 +65,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/responsive_fonts.dart';
@@ -108,12 +109,18 @@ class PlayerLoginPlaySide extends StatelessWidget {
                     children: [
                       Align(
                         alignment: Alignment.centerLeft,
-                        child: SvgPicture.asset(
-                          Appimages.arrowback,
-                          colorFilter: ColorFilter.mode(AppColors.forwardColor, BlendMode.srcIn),
-                          width: 24 * widthScaleFactor,
-                          height: 20 * heightScaleFactor,
-                        ),
+                        child: InkWell(
+                              onTap: () {
+                                Get.back();
+                              },
+                              child: SvgPicture.asset(
+                                Appimages.arrowback,
+                                colorFilter: ColorFilter.mode(
+                                    AppColors.forwardColor, BlendMode.srcIn),
+                                width: 24 .w,
+                                height: 20 .h,
+                              ),
+                            ),
                       ),
                      Center(
   child: BoldText(

@@ -304,7 +304,9 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -348,12 +350,18 @@ class UserPlayerDetailedScree extends StatelessWidget {
                         Positioned(
                           left: 0,
                           top: 20 * heightScaleFactor,
-                          child: SvgPicture.asset(
-                            Appimages.arrowback,
-                            colorFilter: ColorFilter.mode(AppColors.forwardColor, BlendMode.srcIn),
-                            width: 24 * widthScaleFactor,
-                            height: 20 * heightScaleFactor,
-                          ),
+                          child: InkWell(
+                              onTap: () {
+                                Get.back();
+                              },
+                              child: SvgPicture.asset(
+                                Appimages.arrowback,
+                                colorFilter: ColorFilter.mode(
+                                    AppColors.forwardColor, BlendMode.srcIn),
+                                width: 24 .w,
+                                height: 20 .h,
+                              ),
+                            ),
                         ),
                         Center(
                           child: Image.asset(

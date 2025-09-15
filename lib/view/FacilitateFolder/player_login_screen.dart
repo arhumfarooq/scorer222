@@ -255,6 +255,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/responsive_fonts.dart';
@@ -301,12 +302,17 @@ class PlayerLoginScreen extends StatelessWidget {
                         children: [
                           Align(
                             alignment: Alignment.centerLeft,
-                            child: SvgPicture.asset(
-                              Appimages.arrowback,
-                              colorFilter: ColorFilter.mode(
-                                  AppColors.forwardColor, BlendMode.srcIn),
-                              width: 24 * widthScaleFactor,
-                              height: 20 * heightScaleFactor,
+                            child: InkWell(
+                              onTap: () {
+                                Get.back();
+                              },
+                              child: SvgPicture.asset(
+                                Appimages.arrowback,
+                                colorFilter: ColorFilter.mode(
+                                    AppColors.forwardColor, BlendMode.srcIn),
+                                width: 24 .w,
+                                height: 20 .h,
+                              ),
                             ),
                           ),
                         Center(
@@ -395,7 +401,7 @@ smallSize: 17*widthScaleFactor
                     Center(
                       child: LoginButton(
                         text: "login".tr,
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         onTap: () {
                           Get.toNamed(RouteName.playerDashboard);
                         },
@@ -430,8 +436,8 @@ smallSize: 17*widthScaleFactor
                     Center(
                       child: LoginButton(
                         fontSize: ResponsiveFont.getFontSizeCustom(
-                          defaultSize: 20*widthScaleFactor,
-                          smallSize: 17*widthScaleFactor
+                          defaultSize: 19.sp,
+                          smallSize: 17.sp
                         ),
                         text: "join_with_code".tr,
                         color: AppColors.forwardColor,

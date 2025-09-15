@@ -165,6 +165,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/export.dart';
@@ -388,8 +389,8 @@ smallSize: 11*widthScaleFactor
                     padding: EdgeInsets.symmetric(horizontal: 17 * widthScaleFactor),
                     child: PauseContainer(
                       onTap: onTap,
-                      height: 35 * heightScaleFactor,
-                      width: 300 * widthScaleFactor,
+                      height: 35.h,
+                      width: 300 .w,
                       color: color3,
                       text: text7 ?? "",
                       icon: icon3,

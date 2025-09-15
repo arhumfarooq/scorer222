@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -20,8 +21,8 @@ class CustomSessionContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     // bool isSpanish = Get.locale?.languageCode == 'es';
     return Container(
-      height: 355 * heightScaleFactor,
-      width: 330 * widthScaleFactor,
+      height: 355 .h,
+      width: 330 .w,
       decoration: BoxDecoration(
         border: Border.all(
           color: AppColors.greyColor,

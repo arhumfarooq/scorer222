@@ -263,6 +263,7 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/analysis_container.dart';
@@ -308,12 +309,18 @@ class ViewScoreScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SvgPicture.asset(
-                            Appimages.arrowback,
-                            color: AppColors.forwardColor,
-                            width: 24 * widthScaleFactor,
-                            height: 20 * heightScaleFactor,
-                          ),
+                        InkWell(
+                              onTap: () {
+                                Get.back();
+                              },
+                              child: SvgPicture.asset(
+                                Appimages.arrowback,
+                                colorFilter: ColorFilter.mode(
+                                    AppColors.forwardColor, BlendMode.srcIn),
+                                width: 24 .w,
+                                height: 20 .h,
+                              ),
+                            ),
                           BoldText(
                             fontSize: ResponsiveFont.getFontSizeCustom(
                               defaultSize: 22 * widthScaleFactor,
@@ -511,54 +518,54 @@ class ViewScoreScreen extends StatelessWidget {
                       SizedBox(height: 26 * heightScaleFactor),
                       LoginButton(
                         fontSize: ResponsiveFont.getFontSizeCustom(
-                          defaultSize: 18 * widthScaleFactor,
-                          smallSize: 15 * widthScaleFactor,
+                          defaultSize: 18 .sp,
+                          smallSize: 15 .sp,
                         ),
                         onTap: () {
                           Get.toNamed(RouteName.overViewOptionScreen);
                         },
                         text: "move_next_stage".tr,
                         ishow: true,
-                        imageHeight: 22 * heightScaleFactor,
-                        imageWidth: 26 * widthScaleFactor,
+                        imageHeight: 22 .h,
+                        imageWidth: 26 .w,
                         icon: Icons.fast_forward,
                       ),
                       SizedBox(height: 15 * heightScaleFactor),
                       LoginButton(
                         fontSize: ResponsiveFont.getFontSizeCustom(
-                          defaultSize: 18 * widthScaleFactor,
-                          smallSize: 15 * widthScaleFactor,
+                          defaultSize: 18 .sp,
+                          smallSize: 15 .sp,
                         ),
                         text: "Share Responses",
                         color: AppColors.forwardColor,
                         image: Appimages.move,
                         ishow: true,
-                        imageHeight: 26 * heightScaleFactor,
-                        imageWidth: 30 * widthScaleFactor,
+                        imageHeight: 26 .h,
+                        imageWidth: 30 .w,
                       ),
                       SizedBox(height: 15 * heightScaleFactor),
                       LoginButton(
                         fontSize: ResponsiveFont.getFontSizeCustom(
-                          defaultSize: 18 * widthScaleFactor,
-                          smallSize: 15 * widthScaleFactor,
+                          defaultSize: 18 .sp,
+                          smallSize: 15 .sp,
                         ),
                         text: "export_pdf".tr,
                         ishow: true,
-                        imageHeight: 18 * heightScaleFactor,
-                        imageWidth: 18 * widthScaleFactor,
+                        imageHeight: 18 .h,
+                        imageWidth: 18 .w,
                         image: Appimages.export,
                         color: AppColors.redColor,
                       ),
                       SizedBox(height: 15 * heightScaleFactor),
                       LoginButton(
                         fontSize: ResponsiveFont.getFontSizeCustom(
-                          defaultSize: 18 * widthScaleFactor,
-                          smallSize: 15 * widthScaleFactor,
+                          defaultSize: 18.sp,
+                          smallSize: 15 .sp,
                         ),
                         text: "edit_score_feedback".tr,
                         ishow: true,
-                        imageHeight: 22 * heightScaleFactor,
-                        imageWidth: 22 * widthScaleFactor,
+                        imageHeight: 22.h,
+                        imageWidth: 22 .w,
                         icon: Icons.edit,
                         color: AppColors.orangeColor,
                       ),

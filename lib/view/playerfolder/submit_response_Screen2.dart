@@ -313,6 +313,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/responsive_fonts.dart';
@@ -531,13 +532,13 @@ UseableContainer(
                                 children: [
                                   BoldText(
                                     text: "89/100",
-                                    fontSize: 30 * scaleFactor,
+                                    fontSize: 30 .sp,
                                     selectionColor: AppColors.createBorderColor,
                                   ),
                                   SizedBox(height: 4 * scaleFactor),
                                  BoldText(
   text: "final_score".tr,
-  fontSize: 16 * scaleFactor,
+  fontSize: 16.sp,
   selectionColor: AppColors.blueColor,
 ),
 
@@ -554,8 +555,8 @@ UseableContainer(
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30 * scaleFactor),
                   child: Container(
-                    height: 215 * scaleFactor,
-                    width: 336 * scaleFactor,
+                    height: 215 .h,
+                    width: 336 .w,
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: AppColors.greyColor,
@@ -575,14 +576,15 @@ UseableContainer(
                           BoldText(
                            text: "scoring_breakdown".tr,
                             selectionColor: AppColors.blueColor,
-                            fontSize: 16 * scaleFactor,
+                            fontSize: 16 .sp,
                           ),
                           SizedBox(height: 5 * scaleFactor),
                          CustomSloderRow(
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
   fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 11*widthScaleFactor
+defaultSize: 14.sp,
+smallSize: 11.sp
+
 
   ),
   text: "clarity_specificity".tr, text2: "22/25"),
@@ -590,8 +592,9 @@ smallSize: 11*widthScaleFactor
                          CustomSloderRow(
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
     fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 11*widthScaleFactor
+defaultSize: 14.sp,
+smallSize: 11.sp
+
 
   ),
   text: "strategic_thinking".tr, text2: "22/25"),
@@ -599,8 +602,8 @@ smallSize: 11*widthScaleFactor
                          CustomSloderRow(
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
     fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 11*widthScaleFactor
+defaultSize: 14.sp,
+smallSize: 11.sp
 
   ),
   text: "feasibility".tr, text2: "22/25"),
@@ -608,8 +611,9 @@ smallSize: 11*widthScaleFactor
                         CustomSloderRow(
   // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
   fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 11*widthScaleFactor
+defaultSize: 14.sp,
+smallSize: 11.sp
+
 
   ),
   text: "innovation".tr, text2: "22/25"),
@@ -763,36 +767,36 @@ fontSize2:  ResponsiveFont.getFontSize(),
                       ),
                       SizedBox(height: 30 * scaleFactor),
                       LoginButton(
-                        fontSize: 19,
+                        fontSize: 19.sp,
 
                         text: "move_to_phase_3".tr,
                         color: AppColors.forwardColor,
                         ishow: true,
                         image: Appimages.submit,
-                        imageHeight: 32 * scaleFactor,
-                        imageWidth: 32 * scaleFactor,
+                        imageHeight: 32 .h,
+                        imageWidth: 32 .w,
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       LoginButton(
-                        fontSize: 19,
+                        fontSize: 19.sp,
                         onTap: () => Get.toNamed(RouteName.playerLeaderboardScreen),
 
                         text:"live_leaderboard".tr,
                         ishow: true,
                         image: Appimages.tropy1,
-                        imageHeight: 32 * scaleFactor,
-                        imageWidth: 32 * scaleFactor,
+                        imageHeight: 32 .h,
+                        imageWidth: 32 .w,
                       ),
                       SizedBox(height: 10 * scaleFactor),
                       LoginButton(
                         // onTap: () => Get.toNamed(RouteName.submitResponseScreen2),
-                        fontSize: 19,
+                        fontSize: 19.sp,
                         text: "export_pdf".tr,
                         ishow: true,
                         color: AppColors.redColor,
                         image: Appimages.export,
-                        imageHeight: 32 * scaleFactor,
-                        imageWidth: 32 * scaleFactor,
+                        imageHeight: 32 .h,
+                        imageWidth: 32 .w,
                       ),
                       SizedBox(height: 40 * scaleFactor),
                     ],

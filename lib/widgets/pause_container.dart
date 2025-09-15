@@ -164,6 +164,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/widgets/main_text.dart';
@@ -201,8 +202,9 @@ class PauseContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: (height ?? 45) * heightScaleFactor,
-        width: (width ?? 140) * widthScaleFactor,
+      height: (height ?? 45).h,
+
+        width: (width ?? 140).w,
         decoration: BoxDecoration(
           color: color ?? AppColors.selectLangugaeColor,
           borderRadius: BorderRadius.circular(12 * widthScaleFactor),
@@ -213,8 +215,8 @@ class PauseContainer extends StatelessWidget {
             if (svgPath != null) ...[
               SvgPicture.asset(
                 svgPath!,
-                height: 16 * heightScaleFactor,
-                width: 16 * widthScaleFactor,
+                height: 16 .h,
+                width: 16 .w,
                 color: AppColors.whiteColor,
               ),
               SizedBox(width: 8 * widthScaleFactor),
@@ -229,7 +231,7 @@ class PauseContainer extends StatelessWidget {
             MainText(
               text: text,
               color: AppColors.whiteColor,
-              fontSize:fontSize?? 14 * heightScaleFactor,
+              fontSize:fontSize?? 14.sp,
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -50,7 +51,7 @@ class EngagementContainer extends StatelessWidget {
                         BoldText(
                           text: "12",
                           selectionColor: AppColors.forwardColor,
-                          fontSize: 22 * heightScaleFactor,
+                          fontSize: 22 .sp,
                         ),
                         SizedBox(width: 8 * widthScaleFactor),
                         Container(
@@ -70,7 +71,7 @@ Expanded(
     child: BoldText(
       text: "active_players".tr,
       selectionColor: AppColors.blueColor,
-      fontSize: 16 * heightScaleFactor,
+      fontSize: 16 .sp,
     ),
   ),
 ),
@@ -84,7 +85,7 @@ Expanded(
                         BoldText(
                           text: "89%",
                           selectionColor: AppColors.forwardColor,
-                          fontSize: 22 * heightScaleFactor,
+                          fontSize: 22 .sp,
                         ),
                         SizedBox(width: 6 * widthScaleFactor),
                         Container(
@@ -103,7 +104,7 @@ Expanded(
     child: BoldText(
       text: "engagement".tr,
       selectionColor: AppColors.blueColor,
-      fontSize: 16 * heightScaleFactor,
+      fontSize: 16 .sp,
     ),
   ),
 ),

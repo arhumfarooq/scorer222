@@ -327,6 +327,7 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/custom_session_container.dart';
@@ -387,7 +388,7 @@ class EndSessionScreen extends StatelessWidget {
                           UseableContainer(
                             text: "completed".tr,
                             color: AppColors.forwardColor,
-                            width: 85 * widthScaleFactor,
+                            width: 85 .w,
                           ),
                         ],
                       ),
@@ -423,13 +424,13 @@ class EndSessionScreen extends StatelessWidget {
                             children: [
                               BoldText(
                                 text: "export_by".tr,
-                                fontSize: 20 * widthScaleFactor,
+                                fontSize: 20 .sp,
                               ),
                               Row(
                                 children: [
                                   BoldText(
                                     text: "phase".tr,
-                                    fontSize: 20 * widthScaleFactor,
+                                    fontSize: 20 .sp,
                                   ),
                                   SizedBox(width: 7 * widthScaleFactor),
                                   Icon(
@@ -445,7 +446,7 @@ class EndSessionScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 13 * heightScaleFactor),
                       LoginButton(
-                fontSize: 20* widthScaleFactor,
+                fontSize: 20.sp,
 
                         text: "export_pdf".tr,
                         ishow: true,
@@ -561,16 +562,16 @@ class EndSessionScreen extends StatelessWidget {
 },
                         text: "create_new_session".tr,
                         ishow: true,
-                        fontSize: 19,
+                        fontSize: 19.sp,
 
                         color: AppColors.redColor,
                         icon: Icons.add,
-                        imageHeight: 35 * heightScaleFactor,
-                        imageWidth: 35 * widthScaleFactor,
+                        imageHeight: 35 .h,
+                        imageWidth: 35 .w,
                       ),
                       SizedBox(height: 13 * heightScaleFactor),
                       LoginButton(
-                        fontSize: 19,
+                        fontSize: 19.sp,
                         text: "share_results".tr,
                         color: AppColors.forwardColor,
                         image: Appimages.move,

@@ -369,7 +369,10 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -413,13 +416,18 @@ class CreateNewSessionHeader extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              SvgPicture.asset(
+                             InkWell(
+                              onTap: () {
+                                Get.back();
+                              },
+                              child: SvgPicture.asset(
                                 Appimages.arrowback,
                                 colorFilter: ColorFilter.mode(
                                     AppColors.forwardColor, BlendMode.srcIn),
-                                width: 24 * scaleFactor,
-                                height: 20 * scaleFactor,
+                                width: 24 .w,
+                                height: 20 .h,
                               ),
+                            ),
                                   RichText(
                                                      text: TextSpan(
                                                        style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),

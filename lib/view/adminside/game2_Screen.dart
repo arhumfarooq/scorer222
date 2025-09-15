@@ -398,6 +398,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
@@ -440,13 +441,18 @@ class Game2Screen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SvgPicture.asset(
-                          Appimages.arrowback,
-                          colorFilter: ColorFilter.mode(
-                              AppColors.forwardColor, BlendMode.srcIn),
-                          width: 24 * scaleFactor,
-                          height: 20 * scaleFactor,
-                        ),
+                      InkWell(
+                              onTap: () {
+                                Get.back();
+                              },
+                              child: SvgPicture.asset(
+                                Appimages.arrowback,
+                                colorFilter: ColorFilter.mode(
+                                    AppColors.forwardColor, BlendMode.srcIn),
+                                width: 24 .w,
+                                height: 20 .h,
+                              ),
+                            ),
                       RichText(
                                                      text: TextSpan(
                                                        style:  TextStyle(fontSize: 22* scaleFactor, fontWeight: FontWeight.bold),
@@ -614,6 +620,7 @@ class Game2Screen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  SizedBox(height: 20 * scaleFactor,),
                   Container(
                     width: 336 * scaleFactor,
                     height: 256 * scaleFactor,
@@ -654,7 +661,9 @@ class Game2Screen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  SizedBox(height: 20*scaleFactor,),
                   LoginButton(
+                    fontSize: 19.sp,
                     text: "add_phase".tr,
                     ishow: true,
                     icon: Icons.add,
@@ -663,7 +672,7 @@ class Game2Screen extends StatelessWidget {
                   ),
                   SizedBox(height: 34 * scaleFactor),
                   BoldText(
-                    text: "Challenge Types",
+                   text: "challenge_types".tr,
                     selectionColor: AppColors.blueColor,
                     fontSize: 16 * scaleFactor,
                   ),
@@ -748,14 +757,14 @@ FilterUseableContainer(isSelected: false, text: "simulation".tr, onTap: () {}),
                     text1: "badge_name".tr,
 
                     text2:  "gold_achiever".tr,
-                    fontSize: 16 * scaleFactor,
+                    fontSize: 16.sp,
                     color: AppColors.forwardColor,
                   ),
                   SizedBox(height: 8 * scaleFactor),
                   CustomPhaseContainer(
                     text1:"required_score".tr,
                     text2: "90+",
-                    fontSize: 16 * scaleFactor,
+                    fontSize: 16 .sp,
                     color: AppColors.forwardColor,
                   ),
                   SizedBox(height: 16 * scaleFactor),
@@ -764,7 +773,7 @@ FilterUseableContainer(isSelected: false, text: "simulation".tr, onTap: () {}),
                     height: 45 * scaleFactor,
                     color: AppColors.forwardColor,
                     radius: 12 * scaleFactor,
-                    fontSize: 14 * scaleFactor,
+                    fontSize: 14.sp,
                     fontFamily: "refsan",
                   ),
                   SizedBox(height: 18 * scaleFactor),
@@ -813,14 +822,15 @@ FilterUseableContainer(isSelected: false, text: "simulation".tr, onTap: () {}),
                       screenWidth: screenWidth, scaleFactor: scaleFactor),
                   SizedBox(height: 43 * scaleFactor),
                   LoginButton(
-                    fontSize: 20,
+                    fontSize: 20.sp,
                       text: "save".tr,
                       ishow: true,
                       image: Appimages.save,
                       ),
                   SizedBox(height: 10 * scaleFactor),
                   LoginButton(
-                    fontSize: 20,
+                    fontSize: 20.sp
+                    ,
                       text: "cancel".tr,
                       color: AppColors.forwardColor,
                       ),
@@ -841,7 +851,7 @@ class GameRow extends StatelessWidget {
   final double screenWidth;
   final double scaleFactor;
 
-  const GameRow({
+  const   GameRow({
     super.key,
     required this.screenHeight,
     required this.screenWidth,
@@ -855,7 +865,7 @@ class GameRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         MainText(
-          text: text ?? "Enable Leaderboard",
+          text: text ?? "enable_leaderboard".tr,
           fontSize: 14 * scaleFactor,
         ),
         FlutterSwitch(

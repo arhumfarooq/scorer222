@@ -363,6 +363,28 @@ class AppTranslations extends Translations {
             "primary_objective": "Our primary objective is to increase customer satisfaction by 25% through improved service delivery.",
 
 
+
+ "enter_game_name": "Enter Game Name",
+  "description": "Description",
+  "game_logic_setup": "Game Logic Setup",
+  "challenge_types": "Challenge Types",
+  "default_time_limit_per_phase": "Default Time Limit per Phase",
+  "points_per_correct_answer": "Points per Correct Answer",
+  "penalty_for_wrong_answers": "Penalty for Wrong Answers",
+  "enable_leaderboard": "Enable Leaderboard",
+  "allow_team_mode": "Allow Team Mode",
+  "auto_start_sessions": "Auto Start Sessions",
+   "easy": "Easy",
+  "medium": "Medium",
+  "hard": "Hard",
+  "add_phase": "Add Phase",
+  "manual": "Manual",
+"ai": "AI",
+"mixed": "Mixed",
+
+
+
+
         },
 
 

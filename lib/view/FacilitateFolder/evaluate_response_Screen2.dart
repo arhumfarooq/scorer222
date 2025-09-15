@@ -249,6 +249,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/analysis_container.dart';
@@ -305,12 +306,18 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                     children: [
                       Align(
                         alignment: Alignment.centerLeft,
-                        child: SvgPicture.asset(
-                          Appimages.arrowback,
-                          colorFilter: ColorFilter.mode(AppColors.forwardColor, BlendMode.srcIn),
-                          width: 24 * widthScaleFactor,
-                          height: 20 * heightScaleFactor,
-                        ),
+                        child: InkWell(
+                              onTap: () {
+                                Get.back();
+                              },
+                              child: SvgPicture.asset(
+                                Appimages.arrowback,
+                                colorFilter: ColorFilter.mode(
+                                    AppColors.forwardColor, BlendMode.srcIn),
+                                width: 24 .w,
+                                height: 20 .h,
+                              ),
+                            ),
                       ),
                       Center(
                         child: BoldText(
@@ -487,8 +494,8 @@ defaultSize: 14 * widthScaleFactor
                       ),
                       SizedBox(height: 12 * heightScaleFactor),
                       Container(
-                        height: 600 * heightScaleFactor,
-                        width: 330 * widthScaleFactor,
+                        height: 640.h,
+                        width: 330 .w,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(24 * widthScaleFactor),
                           border: Border.all(color: AppColors.greyColor, width: 1.5 * widthScaleFactor),
@@ -498,7 +505,7 @@ defaultSize: 14 * widthScaleFactor
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SizedBox(height: 20 * heightScaleFactor),
+                              SizedBox(height: 30.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
@@ -583,16 +590,17 @@ BoldText(
                         ishow: true,
                         // fontSize: 18,
   fontSize:ResponsiveFont.getFontSizeCustom(
-    defaultSize: 18,
-    smallSize: 16,
+    defaultSize: 18.sp,
+    smallSize: 16.sp,
   ),
 
                           
-                        imageHeight: 38 * heightScaleFactor,
-                        imageWidth: 32 * widthScaleFactor,
+                        imageHeight: 38 .h,
+                        imageWidth: 32 .w,
                         // height: 74 * heightScaleFactor,
                       ),
-                      SizedBox(height: 23 * heightScaleFactor),
+                                          SizedBox(height: 20.h),
+
                       LoginButton(
                         onTap: () {
                   Get.toNamed(RouteName.overViewOptionScreen);
@@ -600,53 +608,54 @@ BoldText(
                        text: "move_next_stage".tr,
                         ishow: true,
                           
-                        imageHeight: 22 * heightScaleFactor,
-                        imageWidth: 26 * widthScaleFactor,
+                        imageHeight: 22 .h,
+                        imageWidth: 26 .w,
                         icon: Icons.fast_forward,
                         // height: 74 * heightScaleFactor,
                         // fontSize: 18,
   fontSize:ResponsiveFont.getFontSizeCustom(
-    defaultSize: 18,
-    smallSize: 16,
+    defaultSize: 18.sp,
+    smallSize: 16.sp,
   ),
 
 
 
                           
                       ),
-                      SizedBox(height: 23 * heightScaleFactor),
+                      SizedBox(height: 20.h),
                       LoginButton(
                         // fontSize: 18,\
   // fontSize: isSpanish? 16:18,
 
   fontSize:ResponsiveFont.getFontSizeCustom(
-    defaultSize: 18,
-    smallSize: 16,
+    defaultSize: 18.sp,
+    smallSize: 16.sp,
   ),
 
                           
                       text: "export_pdf".tr,
                         ishow: true,
-                        imageHeight: 18 * heightScaleFactor,
-                        imageWidth: 18 * widthScaleFactor,
+                        imageHeight: 18 .h,
+                        imageWidth: 18 .w,
                         image: Appimages.export,
                         // height: 74 * heightScaleFactor,
                         color: AppColors.redColor,
                       ),
-                      SizedBox(height: 23 * heightScaleFactor),
+                                           SizedBox(height: 20.h),
+
                       LoginButton(
                      text: "edit_score_feedback".tr,
                         // fontSize: 18,
   //  fontSize: isSpanish? 15:18,
   fontSize:ResponsiveFont.getFontSizeCustom(
-    defaultSize: 18,
-    smallSize: 16,
+    defaultSize: 18.sp,
+    smallSize: 16.sp,
   ),
 
 
                         ishow: true,
-                        imageHeight: 22 * heightScaleFactor,
-                        imageWidth: 22 * widthScaleFactor,
+                        imageHeight: 22.h,
+                        imageWidth: 22 .w,
                         icon: Icons.edit,
                         // height: 74 * heightScaleFactor,
                         color: AppColors.orangeColor,

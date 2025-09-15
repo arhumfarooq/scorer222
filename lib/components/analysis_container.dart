@@ -200,6 +200,7 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -231,8 +232,8 @@ class AnalysisContainer extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          height: height ?? 430 * scaleHeight,
-          width: 330 * scaleWidth,
+          height: height ?? 430 .h,
+          width: 330 .w,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24 * scaleWidth),
             border: Border.all(color: AppColors.greyColor, width: 1.7 * scaleWidth),
@@ -249,11 +250,11 @@ class AnalysisContainer extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 20 * scaleHeight),
+                    SizedBox(height: 20 .h),
                     Center(
                       child: BoldText(
                         text:  "ai_analysis_suggestion".tr,
-                        fontSize: 16 * scaleWidth,
+                        fontSize: 16 .sp,
                         selectionColor: AppColors.blueColor,
                       ),
                     ),
@@ -261,8 +262,8 @@ class AnalysisContainer extends StatelessWidget {
                     Center(
                       child: Image.asset(
                         Appimages.ai2,
-                        width: 46 * scaleWidth,
-                        height: 46 * scaleHeight,
+                        width: 46 .w,
+                        height: 46 .h,
                       ),
                     ),
                     SizedBox(height: 20 * scaleHeight),
@@ -272,12 +273,12 @@ class AnalysisContainer extends StatelessWidget {
                         BoldText(
                         text: "relevance_to_question".tr,
                           selectionColor: AppColors.blueColor,
-                          fontSize: 16 * scaleWidth,
+                          fontSize: 16 .sp,
                         ),
                         BoldText(
                           text: "95%",
                           selectionColor: AppColors.blueColor,
-                          fontSize: 16 * scaleWidth,
+                          fontSize: 16 .sp,
                         ),
                       ],
                     ),
@@ -287,8 +288,8 @@ class AnalysisContainer extends StatelessWidget {
                         Expanded(
                           flex: 3,
                           child: Container(
-                            width: 220 * scaleWidth,
-                            height: 6 * scaleHeight,
+                            width: 220 .w,
+                            height: 6 .h,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20 * scaleWidth),
@@ -301,8 +302,8 @@ class AnalysisContainer extends StatelessWidget {
                         Expanded(
                           flex: 1,
                           child: Container(
-                            width: 44 * scaleWidth,
-                            height: 6 * scaleHeight,
+                            width: 44 .w,
+                            height: 6 .h,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomRight: Radius.circular(20 * scaleWidth),
@@ -321,7 +322,7 @@ class AnalysisContainer extends StatelessWidget {
                         BoldText(
                           text: "strategic_depth".tr,
                           selectionColor: AppColors.blueColor,
-                          fontSize: 16 * scaleWidth,
+                          fontSize: 16 .sp,
                         ),
                         BoldText(
                           text: "85%",
@@ -336,8 +337,8 @@ class AnalysisContainer extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Container(
-                            width: 180 * scaleWidth,
-                            height: 6 * scaleHeight,
+                            width: 180 .w,
+                            height: 6 .h,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20 * scaleWidth),
@@ -350,8 +351,8 @@ class AnalysisContainer extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Container(
-                            width: 84 * scaleWidth,
-                            height: 6 * scaleHeight,
+                            width: 84 .w,
+                            height: 6 .h,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomRight: Radius.circular(20 * scaleWidth),
@@ -370,12 +371,12 @@ class AnalysisContainer extends StatelessWidget {
                         BoldText(
                          text: "implementation_clarity".tr,
                           selectionColor: AppColors.blueColor,
-                          fontSize: 16 * scaleWidth,
+                          fontSize: 16 .sp,
                         ),
                         BoldText(
                           text: "42%",
                           selectionColor: AppColors.blueColor,
-                          fontSize: 16 * scaleWidth,
+                          fontSize: 16 .sp,
                         ),
                       ],
                     ),
@@ -385,8 +386,8 @@ class AnalysisContainer extends StatelessWidget {
                         Expanded(
                           flex: 1,
                           child: Container(
-                            width: 130 * scaleWidth,
-                            height: 6 * scaleHeight,
+                            width: 130 .w,
+                            height: 6 .h,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20 * scaleWidth),
@@ -399,8 +400,8 @@ class AnalysisContainer extends StatelessWidget {
                         Expanded(
                           flex: 3,
                           child: Container(
-                            width: 134 * scaleWidth,
-                            height: 6 * scaleHeight,
+                            width: 134 .w,
+                            height: 6 .h,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 bottomRight: Radius.circular(20 * scaleWidth),
@@ -415,7 +416,7 @@ class AnalysisContainer extends StatelessWidget {
                     SizedBox(height: 25 * scaleHeight),
                   MainText(
   text: "ai_suggested_score".tr,
-  fontSize: 14 * scaleWidth,
+  fontSize: 14 .sp,
   height: 1.2,
 ),
                   ],
@@ -430,8 +431,8 @@ class AnalysisContainer extends StatelessWidget {
             left: 57 * scaleWidth,
             right: 57 * scaleWidth,
             child: Container(
-              height: 181 * scaleWidth, // Use width scale to keep it circular
-              width: 181 * scaleWidth,
+              height: 181 .h, // Use width scale to keep it circular
+              width: 181 .w,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
@@ -454,14 +455,14 @@ class AnalysisContainer extends StatelessWidget {
                   children: [
                     BoldText(
                       text: "89/100",
-                      fontSize: 35 * scaleWidth,
+                      fontSize: 30.sp,
                       selectionColor: AppColors.createBorderColor,
                     ),
                     SizedBox(height: 4 * scaleHeight),
                     BoldText(
                        text: "final_score".tr,
 
-                      fontSize: 16 * scaleWidth,
+                      fontSize: 16 .sp,
                       selectionColor: AppColors.blueColor,
                     )
                   ],

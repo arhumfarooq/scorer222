@@ -324,6 +324,7 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/leader_boeard_screen.dart';
 import 'package:scorer/components/over_view_Screen.dart';
@@ -412,19 +413,19 @@ class OverViewOptionScreen extends StatelessWidget {
                           Row(
                             children: [
                               UseableContainer(
-                                width: 70,
+                                width: 70.w,
                                 text: "Phase 2",
                                 color: AppColors.orangeColor,
-                                fontSize: 10 * heightScaleFactor,
+                                fontSize: 10.sp,
                                 // height: 26,
                               ),
                               SizedBox(width: 8 * widthScaleFactor),
                               UseableContainer(
-                                width: 70,
+                                width: 70.w,
                                 text: "active".tr,
                                 // height: 26,
                                 color: AppColors.forwardColor,
-                                fontSize: 10 * heightScaleFactor,
+                                fontSize: 10.sp,
                               ),
                             ],
                           ),

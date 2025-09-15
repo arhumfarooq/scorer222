@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -52,15 +53,15 @@ class NewSessionContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                      MainText(text: "session_code".tr, fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
+defaultSize: 14.sp,
+smallSize: 12.sp,
 
                      )),
                       Row(
                         children: [
                           BoldText(
                             text: "ABC123",
-                            fontSize: 14 * heightScaleFactor,
+                            fontSize: 14 .sp,
                             selectionColor: AppColors.blueColor,
                           ),
                           SizedBox(width: 10 * widthScaleFactor),
@@ -76,8 +77,8 @@ smallSize: 12*widthScaleFactor,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                      MainText(text: "join_link".tr,  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
+defaultSize: 14.sp,
+smallSize: 12.sp,
 
                      )),
 
@@ -86,9 +87,8 @@ smallSize: 12*widthScaleFactor,
                           BoldText(
                             text: "https:/www.score.com",
                            fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
-
+defaultSize: 14.sp,
+smallSize: 12.sp,
                      ),
                             selectionColor: AppColors.blueColor,
                           ),
@@ -105,14 +105,14 @@ smallSize: 12*widthScaleFactor,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                     MainText(text: "started".tr, fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
+defaultSize: 14.sp,
+smallSize: 12.sp,
 
                      )),
 
                       BoldText(
                         text: "2:30 PM",
-                        fontSize: 14 * heightScaleFactor,
+                        fontSize: 14.sp,
                         selectionColor: AppColors.blueColor,
                       ),
                     ],
@@ -122,14 +122,14 @@ smallSize: 12*widthScaleFactor,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       MainText(text: "duration".tr, fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
+defaultSize: 14.sp,
+smallSize: 12.sp,
 
                      )),
 
                       BoldText(
                         text: "45 minutes",
-                        fontSize: 14 * heightScaleFactor,
+                        fontSize: 14 .sp,
                         selectionColor: AppColors.blueColor,
                       ),
                     ],
@@ -170,18 +170,18 @@ smallSize: 12*widthScaleFactor,
                               Row(
                                 children: [
                                   UseableContainer(
-                                    width: 70,
+                                    width: 70.w,
                                     text: "Phase 2",
                                     color: AppColors.orangeColor,
-                                    fontSize: 10 * heightScaleFactor,
+                                    fontSize: 10 .sp,
                                     // height: 26,
                                   ),
                                   SizedBox(width: 7* widthScaleFactor),
                           MainText(
   text: "strategy_building".tr,
     fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 11*widthScaleFactor,
+defaultSize: 14.sp,
+smallSize: 12.sp,
 
                      ) // default for English
 )
@@ -251,7 +251,7 @@ smallSize: 34*widthScaleFactor,
                             child: PauseContainer(
   text: "pause".tr,
   // height: 45 * heightScaleFactor,
-  width: 140 * widthScaleFactor,
+  width: 140.w,
 ),
                           ),
                           SizedBox(width: 20 * widthScaleFactor),
@@ -261,7 +261,7 @@ smallSize: 34*widthScaleFactor,
                               icon: Icons.fast_forward,
                               color: AppColors.forwardColor,
                               // height: 45 * heightScaleFactor,
-                              width: 140 * widthScaleFactor,
+                              width: 140 .w,
                             ),
                           ),
                         ],

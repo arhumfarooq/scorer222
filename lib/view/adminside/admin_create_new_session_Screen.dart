@@ -420,6 +420,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/responsive_fonts.dart';
@@ -877,14 +878,14 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                       CustomPhaseContainer(
                         text1: "badge_name".tr,
                   text2: "gold_achiever".tr,
-                        fontSize: 16 * scaleFactor,
+                        fontSize: 16.sp,
                         color: AppColors.forwardColor,
                       ),
                       SizedBox(height: 8 * scaleFactor),
                       CustomPhaseContainer(
                         text1:"required_score".tr,
                         text2: "90+",
-                        fontSize: 16 * scaleFactor,
+                        fontSize: 16.sp,
                         color: AppColors.forwardColor,
                       ),
                       SizedBox(height: 16 * scaleFactor),
@@ -893,7 +894,7 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                         height: 45 * scaleFactor,
                         color: AppColors.forwardColor,
                         radius: 12 * scaleFactor,
-                        fontSize: 14 * scaleFactor,
+                        fontSize: 14.sp,
                         fontFamily: "refsan",
                       ),
                       SizedBox(height: 18 * scaleFactor),

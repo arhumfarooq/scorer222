@@ -31,6 +31,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/widgets/main_text.dart';
 
@@ -64,8 +65,8 @@ class UseableContainer extends StatelessWidget {
     final double widthScaleFactor = screenSize.width / baseWidth;
 
     return Container(
-      width: (width ?? 64) * widthScaleFactor,
-      height: (height ?? 20) * heightScaleFactor,
+      width: (width ?? 64.w) * widthScaleFactor,
+      height: (height ?? 20.h) * heightScaleFactor,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(80 * widthScaleFactor),
         color: color,
