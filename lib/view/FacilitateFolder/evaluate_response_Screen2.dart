@@ -660,7 +660,7 @@ BoldText(
                         // height: 74 * heightScaleFactor,
                         color: AppColors.orangeColor,
                       ),
-                         Text("version 2.0"),
+                         Text("version 3.0"),
                       SizedBox(height: 100 * heightScaleFactor),
 
 
