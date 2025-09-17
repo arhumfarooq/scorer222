@@ -18,7 +18,7 @@ class EngagementContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        // left: 8 * widthScaleFactor,
+        
         right: 23* widthScaleFactor,
       ),
       child: Row(
@@ -39,7 +39,7 @@ class EngagementContainer extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.only(
-                  // vertical: 20 * heightScaleFactor,
+                  
                   left: 10 * widthScaleFactor,
                 ),
                 child: Column(
@@ -116,80 +116,80 @@ Expanded(
             ),
           )
         
-    //             Container(
-    //   width: widthScaleFactor * 0.5, // 50% of screen width, responsive
-    //   height: 116 * heightScaleFactor,
-    //   decoration: BoxDecoration(
-    //     border: Border.all(color: AppColors.greyColor, width: 1.5),
-    //     borderRadius: BorderRadius.circular(24 * widthScaleFactor),
-    //   ),
-    //   padding: EdgeInsets.symmetric(
-    //     vertical: 20 * heightScaleFactor,
-    //     horizontal: 14 * widthScaleFactor,
-    //   ),
-    //   child: Column(
-    //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //     children: [
-    //       /// Row 1
-    //       Row(
-    //         children: [
-    //           BoldText(
-    //             text: "12",
-    //             selectionColor: AppColors.forwardColor,
-    //             fontSize: 22 * heightScaleFactor,
-    //           ),
-    //           SizedBox(width: 6 * widthScaleFactor),
     
-    //           Expanded(
-    //             child: Container(
-    //               height: 2,
-    //               decoration: BoxDecoration(
-    //                 color: AppColors.orangeColor,
-    //                 borderRadius: BorderRadius.circular(2),
-    //               ),
-    //             ),
-    //           ),
-    //           SizedBox(width: 6 * widthScaleFactor),
     
-    //           BoldText(
-    //             text: "Active Players",
-    //             selectionColor: AppColors.blueColor,
-    //             fontSize: 14 * heightScaleFactor,
-    //           ),
-    //         ],
-    //       ),
     
-    //       /// Row 2
-    //       Row(
-    //         children: [
-    //           BoldText(
-    //             text: "89%",
-    //             selectionColor: AppColors.forwardColor,
-    //             fontSize: 22 * heightScaleFactor,
-    //           ),
-    //           SizedBox(width: 6 * widthScaleFactor),
     
-    //           Expanded(
-    //             child: Container(
-    //               height: 2,
-    //               decoration: BoxDecoration(
-    //                 color: AppColors.orangeColor,
-    //                 borderRadius: BorderRadius.circular(2),
-    //               ),
-    //             ),
-    //           ),
-    //           SizedBox(width: 6 * widthScaleFactor),
     
-    //           BoldText(
-    //             text: "Engagement",
-    //             selectionColor: AppColors.blueColor,
-    //             fontSize: 14 * heightScaleFactor,
-    //           ),
-    //         ],
-    //       ),
-    //     ],
-    //   ),
-    // )
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
         ],
       ),

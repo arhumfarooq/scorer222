@@ -37,7 +37,7 @@ class PlayersRow extends StatelessWidget {
                       
                     ),
                      Positioned(
-  // top: 85,
+  
   bottom: -18,
   left: 25,
   child: Container(
@@ -46,12 +46,12 @@ class PlayersRow extends StatelessWidget {
   decoration: BoxDecoration(
     shape: BoxShape.circle,
     color: AppColors.newggrey,
-    border: Border.all(color: AppColors.newborder, width: 3), // thoda patla border rakho
+    border: Border.all(color: AppColors.newborder, width: 3), 
   ),
   child: Center(
     child: MainText(
       text: "2",
-      fontSize: 14, // 30 ke circle ke liye best fit
+      fontSize: 14, 
     ),
   ),
 )
@@ -67,7 +67,7 @@ class PlayersRow extends StatelessWidget {
 
               ],
             ),
-            // SizedBox(width: 10,),
+            
 
             Column(
               children: [
@@ -88,7 +88,7 @@ class PlayersRow extends StatelessWidget {
                     ),
                     
     Positioned(
-  // top: 105,
+  
   bottom: -16,
   left: 48,
   child: Container(
@@ -97,12 +97,12 @@ class PlayersRow extends StatelessWidget {
   decoration: BoxDecoration(
     shape: BoxShape.circle,
     color: AppColors.yellowColor,
-    border: Border.all(color: AppColors.newborder, width: 3), // thoda patla border rakho
+    border: Border.all(color: AppColors.newborder, width: 3), 
   ),
   child: Center(
     child: MainText(
       text: "1",
-      fontSize: 14, // 30 ke circle ke liye best fit
+      fontSize: 14, 
     ),
   ),
 )
@@ -125,7 +125,7 @@ class PlayersRow extends StatelessWidget {
                 
               ],
             ),
-            // SizedBox(width: 10),
+            
              Column(
                children: [
                  Stack(
@@ -144,7 +144,7 @@ class PlayersRow extends StatelessWidget {
                                  ),
                                  
   Positioned(
-  // top: 10,
+  
   bottom: -18,
   left: 25,
   child: Container(
@@ -153,12 +153,12 @@ class PlayersRow extends StatelessWidget {
   decoration: BoxDecoration(
     shape: BoxShape.circle,
     color: AppColors.orangeColor,
-    border: Border.all(color: AppColors.newborder, width: 3), // thoda patla border rakho
+    border: Border.all(color: AppColors.newborder, width: 3), 
   ),
   child: Center(
     child: MainText(
       text: "3",
-      fontSize: 14, // 30 ke circle ke liye best fit
+      fontSize: 14, 
     ),
   ),
 )
@@ -178,35 +178,35 @@ class PlayersRow extends StatelessWidget {
         ),
        
 
-// Positioned(
-//   top: 125,
-//   child: Column(
-//   children: [
-//     BoldText(text:isTeamSelected?"Team Rock": "Sarah J.",selectionColor: AppColors.blueColor,fontSize: 16,),
-//     BoldText(text: "2,450 pts",selectionColor: AppColors.forwardColor,fontSize: 18,)
 
-//   ],
-// )),
-// Positioned(
-//   top: 145,
-//   left: 110,
-//   child: Column(
-//   children: [
-//     BoldText(text:isTeamSelected?"Team Alpha": "Alex M.",selectionColor: AppColors.blueColor,fontSize: 16,),
-//     BoldText(text: "2,890 pts",selectionColor: AppColors.forwardColor,fontSize: 18,)
 
-//   ],
-// )),
-// Positioned(
-//   top: 125,
-//   left: 220,
-//   child: Column(
-//   children: [
-//     BoldText(text:isTeamSelected?"Team Beta": "Mike C.",selectionColor: AppColors.blueColor,fontSize: 16,),
-//     BoldText(text: "2,450 pts",selectionColor: AppColors.forwardColor,fontSize: 18,)
 
-//   ],
-// )),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       ],

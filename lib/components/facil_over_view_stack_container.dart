@@ -36,7 +36,7 @@ class FacilOverViewStackContainer extends StatelessWidget {
         ),
         child: Stack(
           children: [
-                /// highlight background
+                
                 AnimatedAlign(
     alignment: Alignment(
       (controller.selectedIndex.value / (tabCount - 1)) * 2 - 1, 
@@ -58,7 +58,7 @@ class FacilOverViewStackContainer extends StatelessWidget {
     ),
                 ),
                 
-                /// tabs row
+                
                 Row(
     children: List.generate(tabCount, (index) {
       return Expanded(

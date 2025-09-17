@@ -188,16 +188,16 @@ class AdminNewSessionScreen extends StatelessWidget {
                                   text: "strategy_building".tr,
   fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')
       ? 11 * heightScaleFactor
-      : 14 * heightScaleFactor, // default for English
+      : 14 * heightScaleFactor, 
                                   )
                                 ],
                               )
                             ],
                           ),
                          CircularPercentIndicator(
-       radius: 40.0 * heightScaleFactor,// circle ka size
-        lineWidth: 4.0, // border ki thickness
-        percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
+       radius: 40.0 * heightScaleFactor,
+        lineWidth: 4.0, 
+        percent: 0.7, 
         animation: true,
         animationDuration: 500,
         circularStrokeCap: CircularStrokeCap.round,
@@ -251,7 +251,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                               text: "pause".tr,
                               height: 45 * heightScaleFactor,
                               width: 140 * widthScaleFactor,
-                              // fontSize: 14 * heightScaleFactor,
+                              
                             ),
                           ),
                           SizedBox(width: 20 * widthScaleFactor),
@@ -262,7 +262,7 @@ class AdminNewSessionScreen extends StatelessWidget {
                               color: AppColors.forwardColor,
                               height: 45 * heightScaleFactor,
                               width: 140 * widthScaleFactor,
-                              // fontSize: 14 * heightScaleFactor,
+                              
                             ),
                           )
                         ],
@@ -276,25 +276,25 @@ class AdminNewSessionScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                // Positioned(
-                //   top: 36 * heightScaleFactor,
-                //   left: 280 * widthScaleFactor,
-                //   child: Column(
-                //     mainAxisAlignment: MainAxisAlignment.center,
-                //     children: [
-                //       BoldText(
-                //         text: "12:32",
-                //         fontSize: 16 * heightScaleFactor,
-                //         selectionColor: AppColors.blueColor,
-                //       ),
-                //       MainText(
-                //         text: "Remaining",
-                //         fontSize: 10 * heightScaleFactor,
-                //         height: 1,
-                //       )
-                //     ],
-                //   ),
-                // )
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
               ],
             ),
           ),

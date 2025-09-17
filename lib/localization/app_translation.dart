@@ -68,7 +68,7 @@ class AppTranslations extends Translations {
   'active': "Active",
   'session_info': "Session Information",
   'session_description': "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
-  // 'active_players': "Active Players",
+  
   'engagement_percentage': "89%",
   'engagement': "Engagement",
   'session_code': "Session Code",
@@ -122,8 +122,8 @@ class AppTranslations extends Translations {
    "filter": "Filter",
   "cancel": "Cancel",
   "by_phase": "By Phase",
-  // "phase_1": "Phase 1",
-  // "phase_2": "Phase 2",
+  
+  
   "phase_3": "Phase 3",
   "by_stage": "By Stage",
   "stage_1": "Stage 1",
@@ -136,7 +136,7 @@ class AppTranslations extends Translations {
   "export_pdf": "Export PDF",
   "session_completed": "Session completed successfully",
   "time_duration": "Time\\nDuration",
-  // "active_players": "Active\\nPlayers",
+  
   "total_phases": "Total\\nPhases",
   "rewards_unlocked": "Rewards Unlocked",
   "strategic_thinker": "Strategic Thinker",
@@ -247,8 +247,8 @@ class AppTranslations extends Translations {
 "current_phase": "Current Phase",
 "next_stage": "Next Stage",
 "real_time_monitoring_stage2": "Real-Time Monitoring (Stage 2)",
-// "player_engagement": "Player Engagement",
-// "recent_activity": "Recent Activity",
+
+
 "add_phases": "Add Phases",
 "session": "Session",
 'create_ne': 'Create Ne',

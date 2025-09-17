@@ -38,8 +38,8 @@ class EvaluateResponseScoreBreakContainer extends StatelessWidget {
     ),
            SizedBox(height: 31 * heightScaleFactor),
     CustomSloderRow(
-      // fontSize: isSpanish? 11:14,
-      // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+      
+      
        fontSize: ResponsiveFont.getFontSizeCustom
                             
                             (
@@ -49,8 +49,8 @@ class EvaluateResponseScoreBreakContainer extends StatelessWidget {
       text: "clarity_specificity".tr, text2: "22/25"),
     SizedBox(height: 5 * heightScaleFactor),
     CustomSloderRow(
-      // fontSize: isSpanish? 11:14,
-      // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+      
+      
     
        fontSize: ResponsiveFont.getFontSizeCustom
                             
@@ -61,21 +61,21 @@ class EvaluateResponseScoreBreakContainer extends StatelessWidget {
       text: "strategic_thinking".tr, text2: "22/25"),
     SizedBox(height: 5 * heightScaleFactor),
     CustomSloderRow(
-      // fontSize: isSpanish? 11:14,
+      
      fontSize: ResponsiveFont.getFontSizeCustom
                             
                             (
     defaultSize: 14 * widthScaleFactor
     ,smallSize: 11 * widthScaleFactor,
                             ),
-      // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+      
     
       
       text: "feasibility".tr, text2: "22/25"),
     SizedBox(height: 5 * heightScaleFactor),
     CustomSloderRow(
-      // fontSize: isSpanish? 11:14,
-      // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+      
+      
      fontSize: ResponsiveFont.getFontSizeCustom
                             
                             (

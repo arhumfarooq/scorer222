@@ -11,7 +11,7 @@ class AdminScheduleSession extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get screen dimensions for scaling
+    
     final Size screenSize = MediaQuery.of(context).size;
     final double baseHeight = 812.0;
     final double heightScaleFactor = screenSize.height / baseHeight;
@@ -22,10 +22,10 @@ class AdminScheduleSession extends StatelessWidget {
         CustomDashboardContainer(
           onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
   width: 70,
-            // width2:70 ,
-            // height2: 22,
+            
+            
           height1:22 ,
-          // height: 0,
+          
           height2: 20,
           width2: 80,
           color2: AppColors.scheColor,
@@ -35,7 +35,7 @@ class AdminScheduleSession extends StatelessWidget {
           text2: "scheduled".tr,
           description: "Leadership Assessment strengthens teamwork through interactive activities.",
 
-          // description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
+          
           text3: "Pause",
         text7: "start_early".tr,
           icon3: Icons.fast_forward,
@@ -47,7 +47,7 @@ class AdminScheduleSession extends StatelessWidget {
         CustomDashboardContainer(
           onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
   width: 70,
-            // width2:70 ,
+            
             height2: 22,
           height1:22 ,
           height: 10,

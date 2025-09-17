@@ -49,8 +49,8 @@ class AccountInfoClumn extends StatelessWidget {
                     MainText(
                                                                                      text:  "email".tr,
     
-                      // fontSize: 14 * widthScaleFactor,
-    // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+                      
+    
       fontSize: ResponsiveFont.getFontSizeCustom(
     defaultSize: 14*widthScaleFactor,
     smallSize: 12*widthScaleFactor,
@@ -60,8 +60,8 @@ class AccountInfoClumn extends StatelessWidget {
                     ),
                     BoldText(
                       text: "john.smith@company.com",
-                      // fontSize: 16 * widthScaleFactor,
-    // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+                      
+    
      fontSize: ResponsiveFont.getFontSizeCustom(
     defaultSize: 14*widthScaleFactor,
     smallSize: 12*widthScaleFactor,
@@ -78,8 +78,8 @@ class AccountInfoClumn extends StatelessWidget {
                     MainText(
                                                                                       text:  "phone".tr,
     
-                      // fontSize: 14 * widthScaleFactor,
-    // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+                      
+    
      fontSize: ResponsiveFont.getFontSizeCustom(
     defaultSize: 14*widthScaleFactor,
     smallSize: 12*widthScaleFactor,
@@ -88,8 +88,8 @@ class AccountInfoClumn extends StatelessWidget {
                     ),
                     BoldText(
                       text: "+1 (555) 987-6543",
-                      // fontSize: 16 * widthScaleFactor,
-    // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+                      
+    
      fontSize: ResponsiveFont.getFontSizeCustom(
     defaultSize: 14*widthScaleFactor,
     smallSize: 12*widthScaleFactor,
@@ -105,8 +105,8 @@ class AccountInfoClumn extends StatelessWidget {
                   children: [
                     MainText(
                    text: "join_date".tr,
-                      // fontSize: 14 * widthScaleFactor,
-    // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+                      
+    
      fontSize: ResponsiveFont.getFontSizeCustom(
     defaultSize: 14*widthScaleFactor,
     smallSize: 12*widthScaleFactor,
@@ -115,8 +115,8 @@ class AccountInfoClumn extends StatelessWidget {
                     ),
                     BoldText(
                       text: "September 8, 2024",
-                      // fontSize: 16 * widthScaleFactor,
-    // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+                      
+    
      fontSize: ResponsiveFont.getFontSizeCustom(
     defaultSize: 14*widthScaleFactor,
     smallSize: 12*widthScaleFactor,
@@ -132,8 +132,8 @@ class AccountInfoClumn extends StatelessWidget {
                   children: [
                     MainText(
                       text: text?? "Facilitator Level",
-                      // fontSize: 14 * widthScaleFactor,
-    // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
+                      
+    
      fontSize: ResponsiveFont.getFontSizeCustom(
     defaultSize: 14*widthScaleFactor,
     smallSize: 12*widthScaleFactor,

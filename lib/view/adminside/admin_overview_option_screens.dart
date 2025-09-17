@@ -7,7 +7,7 @@ import 'package:scorer/components/leader_boeard_screen.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/controllers/overview_controller.dart';
-// import 'package:scorer/view/startscreen/aa.dart';
+
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 
 import 'package:scorer/widgets/bold_text.dart';
@@ -28,7 +28,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
     LeaderBoeardScreen()
   ];
 
-  /// ✅ Calculate tab width (text + padding)
+  
   double getTabWidth(String text, double fontSize, BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
     const double baseHeight = 812.0;
@@ -45,7 +45,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
       textDirection: TextDirection.ltr,
     )..layout();
 
-    // text width + horizontal padding (10 left + 10 right)
+    
     return textPainter.width + (20 * widthScaleFactor);
   }
 
@@ -67,7 +67,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  /// 🔹 Top Section
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -97,9 +97,9 @@ class AdminOverviewOptionScreens extends StatelessWidget {
                                 SizedBox(width: 8 * widthScaleFactor),
                                 UseableContainer(
                                     width: 70,
-            //   width2:70 ,
-            //   height2: 22,
-            // height1:22 ,
+            
+            
+            
             height: 20,
                                   text: "active".tr,
                                   color: AppColors.forwardColor,
@@ -124,84 +124,84 @@ class AdminOverviewOptionScreens extends StatelessWidget {
                   SizedBox(height: 12 * heightScaleFactor),
               
                 
-              // /// 🔹 Tabs with Highlight
-              // Obx(() {
-              //   // total tabs
-              //   int tabCount = tabs.length;
               
-              //   // container ka width
-              //   double containerWidth = screenSize.width - (42 * widthScaleFactor);
               
-              //   // har tab ka equal width
-              //   double tabWidth = containerWidth / tabCount;
               
-              //   // left offset current index ke hisaab se
-              //   double left = (controller.selectedIndex.value * tabWidth) + 6 * widthScaleFactor;
               
-              //   return Padding(
-              //     padding: EdgeInsets.symmetric(horizontal: 21 * widthScaleFactor),
-              //     child: Container(
-              //       height: 53 * heightScaleFactor,
-              //       width: containerWidth,
-              //       decoration: BoxDecoration(
-              //         color: AppColors.settingColor,
-              //         borderRadius: BorderRadius.circular(12 * widthScaleFactor),
-              //       ),
-              //       child: Stack(
-              //         children: [
-              //           /// background highlight (green)
-              //           AnimatedPositioned(
-              //             duration: const Duration(milliseconds: 250),
-              //             curve: Curves.easeInOut,
-              //             left: left,
-              //             top: 5.5 * heightScaleFactor,
-              //             child: Container(
-              //               height: 42 * heightScaleFactor,
-              //               width: tabWidth - (12 * widthScaleFactor), // thoda gap ke liye
-              //               decoration: BoxDecoration(
-              //                 color: AppColors.forwardColor,
-              //                 borderRadius: BorderRadius.circular(12 * widthScaleFactor),
-              //               ),
-              //             ),
-              //           ),
               
-              //           /// tabs row
-              //           Row(
-              //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //             children: List.generate(tabs.length, (index) {
-              //               return GestureDetector(
-              //                 onTap: () => controller.changeTab(index),
-              //                 child: SizedBox(
-              //                   width: tabWidth,
-              //                   child: Center(
-              //                     child: Text(
-              //                       tabs[index],
-              //                       style: TextStyle(
-              //                         fontSize: 14 * heightScaleFactor,
-              //                         color: controller.selectedIndex.value == index
-              //                             ? AppColors.whiteColor
-              //                             : AppColors.languageColor,
-              //                       ),
-              //                     ),
-              //                   ),
-              //                 ),
-              //               );
-              //             }),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   );
-              // }),
               
-              /// 🔹 Tabs with Highlight
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
               Obx(() {
                 int tabCount = tabs.length;
               
-                // container ka width
+                
                 double containerWidth = screenSize.width - (0 * widthScaleFactor);
               
-                // har tab ka equal width
+                
                 double tabWidth = containerWidth / tabCount;
               
                 return Padding(
@@ -215,7 +215,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
                     ),
                     child: Stack(
                       children: [
-              /// highlight background
+              
               AnimatedAlign(
                 alignment: Alignment(
                   (controller.selectedIndex.value / (tabCount - 1)) * 2 - 1, 
@@ -237,7 +237,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
                 ),
               ),
               
-              /// tabs row
+              
               Row(
                 children: List.generate(tabCount, (index) {
                   return Expanded(
@@ -270,7 +270,7 @@ class AdminOverviewOptionScreens extends StatelessWidget {
               
                   SizedBox(height: 12 * heightScaleFactor),
               
-                  /// 🔹 Tab Screens
+                  
                   Obx(() => screens[controller.selectedIndex.value]),
                 ],
               ),

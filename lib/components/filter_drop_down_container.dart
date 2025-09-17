@@ -8,7 +8,7 @@ import 'package:scorer/widgets/login_button.dart';
 import 'package:scorer/widgets/main_text.dart';
 
 class FilterDropDownContainer extends StatelessWidget {
-  final controller = Get.put(FilterController()); // ✅ Controller inject
+  final controller = Get.put(FilterController()); 
 
   FilterDropDownContainer({super.key});
 
@@ -25,7 +25,7 @@ class FilterDropDownContainer extends StatelessWidget {
         children: [
           const SizedBox(height: 23),
 
-          // drag indicator
+          
           Container(
             width: 112,
             height: 5,
@@ -44,7 +44,7 @@ class FilterDropDownContainer extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // header
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -77,7 +77,7 @@ class FilterDropDownContainer extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // Phase filters
+                  
                   Obx(() => FilterUseableContainer(
                         onTap: () => controller.select(0),
                         isSelected: controller.selectedIndex.value == 0,
@@ -108,7 +108,7 @@ class FilterDropDownContainer extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // Stage filters
+                  
                   Obx(() => FilterUseableContainer(
                         onTap: () => controller.selectStage(0),
                         isSelected: controller.selectedstage.value == 0,
@@ -130,7 +130,7 @@ class FilterDropDownContainer extends StatelessWidget {
 
                   const SizedBox(height: 40),
 
-                  // buttons
+                  
                   Center(
                     child: LoginButton(
                       fontSize: 18,

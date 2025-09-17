@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
-// import 'package:scorer/view/startscreen/aa.dart';
+
 import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer/widgets/session_useable_row.dart';
 class CustomSessionContainer extends StatelessWidget {
@@ -19,7 +19,7 @@ class CustomSessionContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // bool isSpanish = Get.locale?.languageCode == 'es';
+    
     return Container(
       height: 355 .h,
       width: 330 .w,
@@ -46,7 +46,7 @@ fontsize2: ResponsiveFont.getFontSizeCustom(
   defaultSize: 10 *widthScaleFactor,
   smallSize: 9*widthScaleFactor
 ),
-              // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+              
 fontSize:ResponsiveFont.getFontSizeCustom(
   defaultSize: 10*widthScaleFactor,
   smallSize: 9*widthScaleFactor,
@@ -59,8 +59,8 @@ fontSize:ResponsiveFont.getFontSizeCustom(
             ),
             SizedBox(height: 25 * heightScaleFactor),
             SessionUseableRow(
-// fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+
+
               fontSize: ResponsiveFont.getFontSizeCustom(
 defaultSize: 10*widthScaleFactor
 ,smallSize: 9*widthScaleFactor,
@@ -71,7 +71,7 @@ defaultSize: 10*widthScaleFactor
               ),
               iamge: Appimages.phone2,
               text: "top_performer".tr,
-              // fontSize: isSpanish?10:10,
+              
               text2: "highest_scoring_player".tr,
               tex3: "Alex M.",
               tex4: "2890 points",
@@ -82,7 +82,7 @@ fontsize2: ResponsiveFont.getFontSizeCustom(
   defaultSize: 10*widthScaleFactor,
   smallSize: 9*widthScaleFactor,
 ),
-              // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+              
 fontSize:ResponsiveFont.getFontSizeCustom(
   defaultSize: 10*widthScaleFactor,
   smallSize: 9*widthScaleFactor,
@@ -99,7 +99,7 @@ fontsize2: ResponsiveFont.getFontSizeCustom(
   defaultSize: 10*widthScaleFactor,
   smallSize: 9*widthScaleFactor,
 ),
-              // fontsize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 9:10,
+              
 fontSize:ResponsiveFont.getFontSizeCustom(
   defaultSize: 10*widthScaleFactor,
   smallSize: 9*widthScaleFactor,

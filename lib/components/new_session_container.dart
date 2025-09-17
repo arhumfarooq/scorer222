@@ -174,7 +174,7 @@ smallSize: 12.sp,
                                     text: "Phase 2",
                                     color: AppColors.orangeColor,
                                     fontSize: 10 .sp,
-                                    // height: 26,
+                                    
                                   ),
                                   SizedBox(width: 7* widthScaleFactor),
                           MainText(
@@ -183,7 +183,7 @@ smallSize: 12.sp,
 defaultSize: 14.sp,
 smallSize: 12.sp,
 
-                     ) // default for English
+                     ) 
 )
 
                                 ],
@@ -196,8 +196,8 @@ defaultSize: 40*widthScaleFactor,
 smallSize: 34*widthScaleFactor,
 
                      ),
-        lineWidth: 4.0, // border ki thickness
-        percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
+        lineWidth: 4.0, 
+        percent: 0.7, 
         animation: true,
         animationDuration: 500,
         circularStrokeCap: CircularStrokeCap.round,
@@ -250,7 +250,7 @@ smallSize: 34*widthScaleFactor,
                           Expanded(
                             child: PauseContainer(
   text: "pause".tr,
-  // height: 45 * heightScaleFactor,
+  
   width: 140.w,
 ),
                           ),
@@ -260,7 +260,7 @@ smallSize: 34*widthScaleFactor,
                               text: "next_phase".tr,
                               icon: Icons.fast_forward,
                               color: AppColors.forwardColor,
-                              // height: 45 * heightScaleFactor,
+                              
                               width: 140 .w,
                             ),
                           ),
@@ -269,25 +269,25 @@ smallSize: 34*widthScaleFactor,
                     ],
                   ),
                 ),
-                // Positioned(
-                //   top: 36 * heightScaleFactor,
-                //   left: 280 * widthScaleFactor,
-                //   child: Column(
-                //     mainAxisAlignment: MainAxisAlignment.center,
-                //     children: [
-                //       BoldText(
-                //         text: "12:32",
-                //         fontSize: 16 * heightScaleFactor,
-                //         selectionColor: AppColors.blueColor,
-                //       ),
-                //       MainText(
-                //         text: "Remaining",
-                //         fontSize: 10 * heightScaleFactor,
-                //         height: 1,
-                //       )
-                //     ],
-                //   ),
-                // )
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
               ],
             ),
           ),

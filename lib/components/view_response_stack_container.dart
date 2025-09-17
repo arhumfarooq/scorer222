@@ -30,7 +30,7 @@ class ViewResponseStackContainer extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          // Highlight bar
+          
           AnimatedPositioned(
             duration: Duration(milliseconds: 250),
             curve: Curves.easeInOut,
@@ -38,7 +38,7 @@ class ViewResponseStackContainer extends StatelessWidget {
             top: 5.5,
             child: Container(
                       height: 42,
-             width: tabWidth - 8, // 👈 dono side se 4-4 px kam
+             width: tabWidth - 8, 
                       decoration: BoxDecoration(
     color: AppColors.forwardColor,
     borderRadius: BorderRadius.circular(12),
@@ -46,7 +46,7 @@ class ViewResponseStackContainer extends StatelessWidget {
             ),
           ),
                       
-          // Tabs
+          
           Row(
             children: List.generate(tabs.length, (index) {
                       return SizedBox(

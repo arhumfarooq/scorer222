@@ -28,7 +28,7 @@ class AdminPhaseScreen extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
-    // Common scaling
+    
     final verticalSpacing = screenHeight * 0.02;
     final horizontalPadding = screenWidth * 0.05;
     final contentWidth = screenWidth * 0.9;
@@ -37,7 +37,7 @@ class AdminPhaseScreen extends StatelessWidget {
 
     return Stack(
       children: [
-        /// Scrollable Content
+        
         SingleChildScrollView(
           child: Column(
             children: [
@@ -46,7 +46,7 @@ class AdminPhaseScreen extends StatelessWidget {
                   text: "current_phase".tr, width: screenWidth * 0.3),
               SizedBox(height: verticalSpacing),
              
-              // SizedBox(height: verticalSpacing),
+              
  Center(
                 child: CircularPercentIndicator(
                   radius: ResponsiveFont.getFontSizeCustom(
@@ -54,8 +54,8 @@ defaultSize: 60*widthScaleFactor,
 smallSize:55 *widthScaleFactor,
 
                      ),
-                  lineWidth: 5.0, // border ki thickness
-                  percent: 0.7, // yaha aap progress set karoge (0.0 to 1.0)
+                  lineWidth: 5.0, 
+                  percent: 0.7, 
                   animation: true,
                   animationDuration: 500,
                   circularStrokeCap: CircularStrokeCap.round,
@@ -84,7 +84,7 @@ smallSize: 12
               ),
               SizedBox(height: verticalSpacing),
 
-              /// Example Content
+              
               PhaseContainer(horizontalPadding: horizontalPadding, contentWidth: contentWidth, screenHeight: screenHeight, screenWidth: screenWidth),
               Icon(Icons.arrow_downward_sharp,
                   color: AppColors.forwardColor, size: screenWidth * 0.08),
@@ -93,7 +93,7 @@ smallSize: 12
               StagesRow(),
               SizedBox(height: verticalSpacing),
 
-              /// Progress Bar
+              
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
                 child: Column(
@@ -141,7 +141,7 @@ smallSize: 12
                 
                     SizedBox(height: verticalSpacing),
 
-                    /// Buttons
+                    
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -165,43 +165,43 @@ smallSize: 12
                     ),
                     SizedBox(height: verticalSpacing),
 
-                    /// Team Progress
+                    
                     AdminTeamProgress(contentWidth: contentWidth, screenHeight: screenHeight, screenWidth: screenWidth, verticalSpacing: verticalSpacing,),
                     SizedBox(height: verticalSpacing),
                     
 
 
 
-                    /// Real-Time Monitoring
+                    
                     AdminRealtimeMonitoringContainer(contentWidth: contentWidth, screenHeight: screenHeight, screenWidth: screenWidth, verticalSpacing: verticalSpacing),
                     SizedBox(height: verticalSpacing),
                       BoldText( text: "all_phases".tr,fontSize: 16,selectionColor: AppColors.blueColor,),
 SizedBox(height: 25,),
                      CustomStratgyContainer(
-                      // fontSize: isSpanish?2:14,
+                      
 fontSize2:  ResponsiveFont.getFontSize(),
 
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
                       width3: 80,
                       iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
                     flex: 3,flex1: 0,
                     ),
                     SizedBox(height: 10,),
                      CustomStratgyContainer(
-                      // fontSize2:isSpanish? 11:14,
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+                      
+
+
 fontSize2:  ResponsiveFont.getFontSize(),
 
 
-                      // fontSize: 6,
-                      // width3: 80,
+                      
+                      
                       iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr, smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
              
                     ),
                      SizedBox(height: 10,),
                      CustomStratgyContainer(
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
 fontSize2:  ResponsiveFont.getFontSize(),
 
                       width3: 80,
@@ -210,7 +210,7 @@ fontSize2:  ResponsiveFont.getFontSize(),
                     ),
                          SizedBox(height: 10,),
                      CustomStratgyContainer(
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+
 fontSize2:  ResponsiveFont.getFontSize(),
 
                       width3: 80,
@@ -227,80 +227,80 @@ fontSize2:  ResponsiveFont.getFontSize(),
 
 
 SizedBox(height: 20,),
-            //   Padding(
-            //     padding: const EdgeInsets.symmetric(horizontal: 13),
-            //     child: Container(
-            //       width: 376,
-            //       height: 250,
-            //       decoration: BoxDecoration(
-            //         border: Border.all(color: AppColors.greyColor,width: 1.5),
-            //         borderRadius: BorderRadius.circular(24)
-            //       ),
-            //       child: Padding(
-            //         padding: const EdgeInsets.symmetric(horizontal: 20),
-            //         child: Column(
-            //           crossAxisAlignment: CrossAxisAlignment.start,
-            //           children: [
-            //             SizedBox(height: 31,),
-            //             BoldText(text: "Session Timeline",fontSize: 16,selectionColor: AppColors.blueColor,),
-            //             SizedBox(height: 20,),
-            //             UseableTextrow(color: AppColors.forwardColor, text: "Session Start: 12:20 PM"),
-            //             UseableTextrow(color: AppColors.forwardColor2, text: "Current Time: 1:00 PM"),
-            //             UseableTextrow(color: AppColors.forwardColor3, text: "Estimated End: 1:55 PM"),
-            //             SizedBox(height: 20,),
-            //              Row(
-            //   children: [
-            //     Expanded(
-            //       flex: 3,
-            //       child: Container(
-            //         height: 5,
-            //         // width: width1 ?? progressBarWidth,
-            //         decoration: BoxDecoration(
-            //           borderRadius: BorderRadius.circular(20),
-            //           color: AppColors.forwardColor,
-            //         ),
-            //       ),
-            //     ),
-            //     Expanded(
-            //       flex: 1,
-            //       child: Container(
-            //         height:5 ,
-            //         // width: width2 ?? 0,
-            //         decoration: BoxDecoration(
-            //           borderRadius: BorderRadius.circular(20),
-            //           color: AppColors.greyColor,
-            //         ),
-            //       ),
-            //     ),
-            //   ],
-            // ),
-            // SizedBox(height: 10,),
-            //   Row(
-            //   mainAxisAlignment:
-            //       MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     MainText(
-            //       // height: 1,
-            //         text:  "40% Complete".tr,
-            //         fontSize: screenWidth * 0.035),
-            //     BoldText(
-            //         text: "55 minutes remaining",
-            //         fontSize: screenWidth * 0.035,
-            //         selectionColor: AppColors.blueColor),
-            //   ],
-            // ),
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
-            //           ],
-            //         ),
-            //       ),
-            //     ),
+            
+            
+            
+            
                 
-            //   ),
+            
             Padding(
       padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
       child: Container(
         width: contentWidth,
-        height: screenHeight * 0.31, // A proportional height (approx. 250 on 812px height screen)
+        height: screenHeight * 0.31, 
         decoration: BoxDecoration(
           border: Border.all(color: AppColors.greyColor, width: 1.5 * widthScaleFactor),
           borderRadius: BorderRadius.circular(24 * widthScaleFactor),
@@ -310,7 +310,7 @@ SizedBox(height: 20,),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 31 * (screenHeight / 812.0)), // Scales based on the original design's height
+              SizedBox(height: 31 * (screenHeight / 812.0)), 
               BoldText(
                 text: "Session Timeline",
                 fontSize: 16 * widthScaleFactor,
@@ -369,15 +369,15 @@ SizedBox(height: 20,),
                       fontSize: 20,
 
                         text:  "add_phases".tr,
-                        // color: AppColors.forwardColor,
+                        
                         ishow: true,
-                        // image: Appimages.eye,
+                        
                         icon: Icons.add,
                       ),
                     ),
                     SizedBox(height: verticalSpacing ),
 
-                    /// View Responses Button
+                    
                     Center(
                       child: LoginButton(
                       fontSize: 20,
@@ -393,17 +393,17 @@ SizedBox(height: 20,),
           ),
         ),
 
-        /// Fixed Overlay Timer
+        
         
 
-        /// Fixed Overlay "Team Alpha"
+        
        Positioned(
           right: 0,
           top: screenHeight * 0.2,
           child: TeamAlphaContainer(screenWidth: screenWidth, screenHeight: screenHeight),
         ),
 
-        /// Player Image
+        
        
  
       ],

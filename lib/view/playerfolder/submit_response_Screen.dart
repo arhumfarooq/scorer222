@@ -22,8 +22,8 @@ class SubmitResponseScreen extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
-    // Use a base width to calculate a scaling factor.
-    // A common base width for mobile is around 375 logical pixels.
+    
+    
     const double baseWidth = 375.0; 
     final double scaleFactor = screenWidth / baseWidth;
 
@@ -134,7 +134,7 @@ class SubmitResponseScreen extends StatelessWidget {
                               SizedBox(height: 10 * scaleFactor),
                               MainText(
                                 text: "mountain_resort_reason".tr,
-                                // text: "The mountain resort offers the best balance of cost-effectiveness and team-building opportunities. The outdoor activities will help strengthen team bonds...",
+                                
                                 fontSize: 13 * scaleFactor,
                                 height: 1.5,
                               ),
@@ -151,8 +151,8 @@ class SubmitResponseScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 20 * scaleFactor),
-                    // Assuming AdminTeamProgress, LeaderStackContainer, and other custom widgets are
-                    // also made adaptive by adjusting their internal values.
+                    
+                    
                     AdminTeamProgress(
                       contentWidth: screenWidth * 0.9,
                       screenHeight: screenHeight,

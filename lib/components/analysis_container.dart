@@ -1,204 +1,204 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_svg/svg.dart';
-// import 'package:scorer/constants/appcolors.dart';
-// import 'package:scorer/constants/appimages.dart';
-// import 'package:scorer/widgets/bold_text.dart';
-// import 'package:scorer/widgets/main_text.dart';
 
-// class AnalysisContainer extends StatelessWidget {
-//   final double?height;
-//   final bool ishow;
-//   const AnalysisContainer({super.key, this.height, this.ishow=false});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Stack(
-//       clipBehavior: Clip.none,
-//       children: [
-//         Container(height:height?? 449,
-//                        width: 330,
-//                        decoration: BoxDecoration(
-//                         borderRadius: BorderRadius.circular(24),
-//                         border: Border.all(color: AppColors.greyColor,width: 1.7)
-//                        ),
-//                        child: Stack(
-//                          children: [
-//         Positioned(
-//           top: 62,right: 110,
-//           child: SvgPicture.asset(Appimages.arrowdown)),
-//                           // Image.asset(Appimages.ai2),
-//                            Padding(
-//                              padding: const EdgeInsets.symmetric(horizontal: 16),
-//                              child: Column(
-//                               crossAxisAlignment: CrossAxisAlignment.start,
-//                               children: [
-//                                 SizedBox(height: 20,),
-//                                 Center(child: BoldText(text: "AI Analysis & Suggestion",fontSize: 16,selectionColor: AppColors.blueColor,))
-//                                                   , 
-//                                                   SizedBox(height: 28,),
-//                                                   Center(child: Image.asset(Appimages.ai2,width: 46,height: 46,)),
-//                                                   SizedBox(height: 20,),
-//                                                   Row(
-//                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                                                    children: [
-//                               BoldText(text: "Relevance to Question",selectionColor: AppColors.blueColor,fontSize: 16,),
-//                               BoldText(text: "95%",selectionColor: AppColors.blueColor,fontSize: 16,),
-//                                                    ],
-//                                                   ),
-//                                                   SizedBox(height: 10,),
-//                                                   Row(
-//                                                     children: [
-//                                                       Container( width: 220,height: 6,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                       
-//                                                       decoration: BoxDecoration(
-//                                                      borderRadius: BorderRadius.only(
-//                                                   bottomLeft: Radius.circular(20),
-//                                                   topLeft: Radius.circular(20)
-//                                                 ),
-//                                                         color: AppColors.forwardColor
-//                                                       ),
-//                                                        ),
-//                                                        Container( width: 44,height: 6,
+
+
+
+
+
+
+
+
+
                                                       
-//                                                       decoration: BoxDecoration(
-//                                                      borderRadius: BorderRadius.only(
-//                                                   bottomRight: Radius.circular(20),
-//                                                   topRight: Radius.circular(20)
-//                                                 ),
+
+
+
+
+
                                                   
-//                                                         color: AppColors.greyColor
-//                                                       ),
-//                                                        )
-//                                                     ],
-//                                                   ),
-//                                                   SizedBox(height: 30,),
-//                                                    Row(
-//                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                                                    children: [
-//                               BoldText(text: "Strategic Depth",selectionColor: AppColors.blueColor,fontSize: 16,),
-//                               BoldText(text: "85%",selectionColor: AppColors.blueColor,fontSize: 16,),
-//                                                    ],
-//                                                   ),
-//                                                   SizedBox(height: 10,),
-//                                                   Row(
-//                                                     children: [
-//                                                       Container( width: 180,height: 6,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                       
-//                                                       decoration: BoxDecoration(
-//                                                      borderRadius: BorderRadius.only(
-//                                                   bottomLeft: Radius.circular(20),
-//                                                   topLeft: Radius.circular(20)
-//                                                 ),
-//                                                         color: AppColors.percenColor
-//                                                       ),
-//                                                        ),
-//                                                        Container( width: 84,height: 6,
+
+
+
+
+
+
+
+
+
                                                       
-//                                                       decoration: BoxDecoration(
-//                                                      borderRadius: BorderRadius.only(
-//                                                   bottomRight: Radius.circular(20),
-//                                                   topRight: Radius.circular(20)
-//                                                 ),
+
+
+
+
+
                                                   
-//                                                         color: AppColors.greyColor
-//                                                       ),
-//                                                        )
-//                                                     ],
-//                                                   ),
-//                                                   SizedBox(height: 30,),
-//                                                    Row(
-//                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                                                    children: [
-//                               BoldText(text: "Implementation Clarity",selectionColor: AppColors.blueColor,fontSize: 16,),
-//                               BoldText(text: "42%",selectionColor: AppColors.blueColor,fontSize: 16,),
-//                                                    ],
-//                                                   ),
-//                                                   SizedBox(height: 10,),
-//                                                   Row(
-//                                                     children: [
-//                                                       Container( width: 130,height: 6,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                       
-//                                                       decoration: BoxDecoration(
-//                                                      borderRadius: BorderRadius.only(
-//                                                   bottomLeft: Radius.circular(20),
-//                                                   topLeft: Radius.circular(20)
-//                                                 ),
-//                                                         color: AppColors.orangeColor
-//                                                       ),
-//                                                        ),
-//                                                        Container( width:134,height: 6,
+
+
+
+
+
+
+
+
+
                                                       
-//                                                       decoration: BoxDecoration(
-//                                                      borderRadius: BorderRadius.only(
-//                                                   bottomRight: Radius.circular(20),
-//                                                   topRight: Radius.circular(20)
-//                                                 ),
+
+
+
+
+
                                                   
-//                                                         color: AppColors.greyColor
-//                                                       ),
-//                                                        )
-//                                                     ],
-//                                                   ),
-//         SizedBox(height: 25,),
-//                                                   MainText(text: "AI Suggested Score: 9.1/10 - Comprehensive response with clear objectives, well-defined strategies, and realistic implementation timeline.",height: 1.2,fontSize: 14,)
+
+
+
+
+
+
+
                               
                               
-//                               ],
-//                              ),
-//                            ),
-//                                                     ],
-//                        ),
-//                        ),
-//                       ishow? Positioned(
-//                             bottom:-75 ,
-//                             left:57,
-//                              child: Container(
-//                                height: 181,
-//                                width: 181,
-//                                decoration: BoxDecoration(
-//                                  shape: BoxShape.circle,
-//                                  gradient: LinearGradient(
-//                                    colors: [
-//                                      AppColors.forwardColor, // upar halka green
-//                                      Colors.grey.shade200,
-//                                      // // neeche halka grey
-//                                      // AppColors.forwardColor, // upar halka green
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                    
-//                                    ],
-//                                    begin: Alignment.topCenter,
-//                                    end: Alignment.bottomCenter,
-//                                  ),
-//                                ),
-//                                child: Container(
-//                                  margin: EdgeInsets.all(3), // border ki thickness
-//                                  decoration: BoxDecoration(
-//                                    shape: BoxShape.circle,
-//                                    color: const Color.fromARGB(255, 202, 202, 202), // andar ka background
-//                                  ),
-//                                  child: Column(
-//                                    mainAxisAlignment: MainAxisAlignment.center,
-//                                    children: [
-//                                      // Text(
-//                                      //   "89/100",
-//                                      //   style: TextStyle(
-//                                      //     fontSize: 22,
-//                                      //     fontWeight: FontWeight.bold,
-//                                      //     color: Colors.blue.shade700,
-//                                      //   ),
-//                                      // ),
-//                                      BoldText(text: "89/100",fontSize: 38,selectionColor: AppColors.createBorderColor,),
-//                                      SizedBox(height: 4),
-//                                      BoldText(text: "Final Score",fontSize: 16,selectionColor: AppColors.blueColor,)
-//                                    ],
-//                                  ),
-//                                ),
-//                              ),
-//                            )
-// :SizedBox()
-//       ],
-//     );
-//   }
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -216,15 +216,15 @@ class AnalysisContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get screen dimensions using MediaQuery
+    
     final double screenWidth = MediaQuery.of(context).size.width;
     final double screenHeight = MediaQuery.of(context).size.height;
 
-    // Define a reference size for scaling (e.g., iPhone 11 Pro Max)
+    
     const double baseWidth = 414.0;
     const double baseHeight = 896.0;
 
-    // Calculate scale factors
+    
     final double scaleWidth = screenWidth / baseWidth;
     final double scaleHeight = screenHeight / baseHeight;
 
@@ -431,7 +431,7 @@ class AnalysisContainer extends StatelessWidget {
             left: 57 * scaleWidth,
             right: 57 * scaleWidth,
             child: Container(
-              height: 181 .h, // Use width scale to keep it circular
+              height: 181 .h, 
               width: 181 .w,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,

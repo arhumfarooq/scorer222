@@ -32,7 +32,7 @@ class UserManagementStackContainer extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          // Highlight bar
+          
           AnimatedPositioned(
             duration: const Duration(milliseconds: 250),
             curve: Curves.easeInOut,
@@ -47,7 +47,7 @@ class UserManagementStackContainer extends StatelessWidget {
               ),
             ),
           ),
-          // Tabs
+          
           Row(
             children: List.generate(tabs.length, (index) {
               return SizedBox(

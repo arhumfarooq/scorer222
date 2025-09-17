@@ -7,7 +7,7 @@ import 'package:scorer/components/adminside/admin_schedule_session.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/controllers/facil_dashboard_controller.dart';
-// import 'package:scorer/view/startscreen/aa.dart';
+
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 
 import 'package:scorer/widgets/bold_text.dart';
@@ -25,12 +25,12 @@ class AdminDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get the screen dimensions for scaling
+    
     final Size screenSize = MediaQuery.of(context).size;
     final double screenHeight = screenSize.height;
     final double screenWidth = screenSize.width;
 
-    // A base height and width to scale from, e.g., a common phone (iPhone 11)
+    
     const double baseHeight = 812.0;
     const double baseWidth = 414.0;
     final double heightScaleFactor = screenHeight / baseHeight;

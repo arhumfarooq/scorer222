@@ -36,20 +36,20 @@ class AdminActiveSession extends StatelessWidget {
           icon2: Icons.square,
         ),
         SizedBox(height: 12 * heightScaleFactor),
-        // CustomDashboardContainer(
         
-        //   heading: "Team Building Workshop",
-        //   text1: "Phase 1",
-        //   height: 27,
-        //   text2: "Paused",
-        //   description: "Team Building Workshop strengthens teamwork through interactive activities.",
-        //   text3: "Resume",
-        //   text4: "End",
-        //   icon1: Icons.play_arrow,
-        //   text5: "15 Players",
-        //   text6: "Paused",
-        //   icon2: Icons.square,
-        // ),
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 
           CustomDashboardContainer(
@@ -57,7 +57,7 @@ class AdminActiveSession extends StatelessWidget {
             height2: 22,
                width: 70,
           height1:22 ,
-            // arrowshow: true,
+            
           onTap: () => Get.toNamed(RouteName.adminOverviewOptionScreens),
 
               color2: AppColors.yellowColor,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
-// import 'package:scorer/view/startscreen/aa.dart';
+
 import 'package:scorer/widgets/bold_text.dart';
 class CustomTimeRow extends StatelessWidget {
   const CustomTimeRow({

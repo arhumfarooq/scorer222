@@ -191,8 +191,8 @@ Future<T?> showCustomBottomSheet<T>({
       double screenHeight = MediaQuery.of(context).size.height;
       double screenWidth = MediaQuery.of(context).size.width;
       return Container(
-        height: screenHeight * 0.89, // 750/844 = 0.888
-        width: screenWidth * 1.12, // 440/390 = 1.128
+        height: screenHeight * 0.89, 
+        width: screenWidth * 1.12, 
         decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: const BorderRadius.only(

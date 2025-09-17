@@ -1,184 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_svg/svg.dart';
-// import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-// import 'package:get/instance_manager.dart';
-// import 'package:scorer/constants/appcolors.dart';
-// import 'package:scorer/constants/appimages.dart';
-// import 'package:scorer/controllers/stage_controllers.dart';
-// import 'package:scorer/view/startscreen/aa.dart';
-// import 'package:scorer/widgets/bold_text.dart';
-// import 'package:scorer/widgets/create_container.dart';
-// import 'package:scorer/widgets/custom_stratgy_container.dart';
-
-// class ViewResponsesScreen extends StatelessWidget {
-//   final StageController controller = Get.put(StageController());
-//   ViewResponsesScreen({super.key});
-//      final List<String> tabs = ["Overview", "Phases", "Players",];
-// double getTextWidth(String text, double fontSize) {
-//   final TextPainter textPainter = TextPainter(
-//     text: TextSpan(
-//       text: text,
-//       style: TextStyle(fontSize: fontSize),
-//     ),
-//     maxLines: 1,
-//     textDirection: TextDirection.ltr,
-//   )..layout();
-
-//   return textPainter.width + 22; // +20 padding left-right
-// }
-
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: GradientBackground(child:SafeArea(
-//         child: Padding(
-//           padding:  EdgeInsets.symmetric(horizontal: 30),
-//           child: Column(
-//             children: [
-//                  Row(
-//                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                 children: [
-//                   SvgPicture.asset(Appimages.arrowback,color: AppColors.forwardColor,width: 24,height: 20,)
-//                 //  SizedBox(width: 32,)
-//                  , BoldText(text: "Stage 2 Responses",selectionColor: AppColors.blueColor,fontSize: 24,),
-//                  Text("")
-//                 ],
-//               ),
-
-//                CustomStratgyContainer(
-//                 isshow: true,
-//                 mainHeight: 1.3,
-//                 fontSize: 14,
-//                 containerHeight: 180,
-//                 width3: 54,
-//                 spaceHeight2: 20,
-//                 spaceHeight: 14,
-//                 extra: "Define your team's primary objective for the next quarter and identify three key strategies to achieve it.",
-//                           width1: 150,
-//                           width2: 126,
-//                           iconContainer: AppColors.selectLangugaeColor,
-//                           icon: Icons.play_arrow_rounded,
-//                           text1: "Phase 2 Strategy Building",
-//                           text2: 'Completed • 20 min',
-//                           text3: 'Active',
-//                           smallContainer: AppColors.selectLangugaeColor,
-//                           largeConatiner: AppColors.selectLangugaeColor,
-//                         ),
-//                         SizedBox(height: 31,),
-//                         CreateContainer(text: "Stage 2 Scoring",width: 134,),
-//                         Row(
-//                           children: [
-//                             Expanded(
-//                               child: Container(width: 157,height: 51,
-//                               decoration: BoxDecoration(
-//                                 border: Border.all(color: AppColors.greyColor,width: 1.5),
-//                                 borderRadius: BorderRadius.circular(12)
-//                               ),
-//                               child: Row(
-//                                 mainAxisAlignment: MainAxisAlignment.center,
-//                                 children: [
-//                                   BoldText(text: "08",selectionColor: AppColors.redColor,fontSize: 24,),
-//                                   SizedBox(width: 11,),
-//                                   BoldText(text: "Scored",selectionColor: AppColors.blueColor,fontSize: 16,)
-                              
-//                                 ],
-//                               ),
-//                               ),
-//                             ),
-//                             SizedBox(width: 15,),
-//                             Expanded(
-//                               child: Container(width: 157,height: 51,
-//                               decoration: BoxDecoration(
-//                                 border: Border.all(color: AppColors.greyColor,width: 1.5),
-//                                 borderRadius: BorderRadius.circular(12)
-//                               ),
-//                               child: Row(
-//                                 mainAxisAlignment: MainAxisAlignment.center,
-//                                 children: [
-//                                   BoldText(text: "04",selectionColor: AppColors.redColor,fontSize: 24,),
-//                                   SizedBox(width: 11,),
-//                                   BoldText(text: "Pending",selectionColor: AppColors.blueColor,fontSize: 16,)
-                              
-//                                 ],
-//                               ),
-//                               ),
-//                             )
-//                           ],
-//                         ),
-
-//                          Obx(() {
-//           double left = 6; 
-//           for (int i = 0; i < controller.selectedIndex.value; i++) {
-//             left += getTextWidth(tabs[i], 14);
-//           }
-        
-//           double currentWidth = getTextWidth(
-//             tabs[controller.selectedIndex.value], 14);
-        
-//           return Container(
-//             height: 53,
-//             width: 336,
-//             decoration: BoxDecoration(
-//         color: AppColors.settingColor,
-//         borderRadius: BorderRadius.circular(12),
-//             ),
-//             child: Stack(
-//         children: [
-//           // Highlight bar
-//           AnimatedPositioned(
-//             duration: Duration(milliseconds: 250),
-//             curve: Curves.easeInOut,
-//             left: left,
-//             top: 5.5,
-//             child: Container(
-//               height: 42,
-//               width: currentWidth,
-//               decoration: BoxDecoration(
-//                 color: AppColors.forwardColor,
-//                 borderRadius: BorderRadius.circular(12),
-//               ),
-//             ),
-//           ),
-        
-//           // Tabs
-//           Row(
-//              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//             children: List.generate(tabs.length, (index) {
-//               return GestureDetector(
-//                 onTap: () => controller.changeTab(index),
-//                 child: Container(
-//                   alignment: Alignment.center,
-//                   padding: EdgeInsets.only(left: 10,right: 12),
-//                   child: Text(
-//                     tabs[index],
-//                     style: TextStyle(
-//                       fontSize: 14,
-//                       color: controller.selectedIndex.value == index
-//                           ? AppColors.whiteColor
-//                           : AppColors.languageColor,
-//                     ),
-//                   ),
-//                 ),
-//               );
-//             }),
-//           )
-//         ],
-//             ),
-//           );
-//         }),
-//         //  Obx(
-//                   // () => screens[controller.selectedIndex.value])
-        
-       
-          
-//             ],
-//           ),
-//         ),
-//       ) ),
-//     );
-// }}
-
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -191,7 +10,7 @@ import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
 import 'package:scorer/controllers/stage_controllers.dart';
-// import 'package:scorer/view/startscreen/aa.dart';
+
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 
 import 'package:scorer/widgets/bold_text.dart';
@@ -213,7 +32,7 @@ final List<String> tabs = ["all".tr, "pending".tr, "scored".tr];
     final double screenHeight = screenSize.height;
     final double screenWidth = screenSize.width;
 
-    // A base height and width to scale from, e.g., a common phone (iPhone 11)
+    
     const double baseHeight = 812.0;
     const double baseWidth = 414.0;
     final double heightScaleFactor = screenHeight / baseHeight;
@@ -231,7 +50,7 @@ final List<String> tabs = ["all".tr, "pending".tr, "scored".tr];
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      // SizedBox(height: 23,),
+                      
                        SizedBox(
   height: 50,
   child: Stack(
@@ -255,7 +74,7 @@ final List<String> tabs = ["all".tr, "pending".tr, "scored".tr];
       Center(
         child: BoldText(
             text: "stage2_responses".tr,
-            // fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 20:22,
+            
 fontSize: ResponsiveFont.getFontSizeCustom(
 defaultSize: 22*widthScaleFactor
 ,
@@ -293,7 +112,7 @@ smallSize: 20*widthScaleFactor
 defaultSize: 14*widthScaleFactor
 ,smallSize: 10*widthScaleFactor
                         ),
-                      //  fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+                      
 
                         text2: 'Completed • 20 min',
                         text3: 'active'.tr,
@@ -365,10 +184,10 @@ defaultSize: 14*widthScaleFactor
                   
                       SizedBox(height: 20),
                   
-                      /// ✅ Tabs with Equal Width Highlight
+                      
                      Obx(() {
                     double totalWidth = MediaQuery.of(context).size.width - 60; 
-                    // 60 = left (30) + right (30) padding
+                    
                     double tabWidth = totalWidth / tabs.length;
                     double left = controller.selectedIndex.value * tabWidth;
                   
@@ -421,16 +240,16 @@ onTap: () {
                                 fontSize: 16,
                                 selectionColor: AppColors.blueColor),
                             CustomStratgyContainer(
-                                // width3: 73,
+                                
                         spaceHeight2: 20,
 
                         spaceHeight: 14,
                         
-                        // fontSize3:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:12,
-                              // width1: 207,
-                              //  width2: 70,
-                              // fontSize2:isSpanish? 11:14,
-                            // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+                        
+                              
+                              
+                              
+                            
    fontSize2: ResponsiveFont.getFontSizeCustom
                         
                         (
@@ -441,7 +260,7 @@ defaultSize: 14*widthScaleFactor
                               icon: Icons.check,
                               width1: 277,
                             text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr,
-                                // width3: 70,
+                                
                               smallContainer: AppColors.forwardColor,
                               largeConatiner: AppColors.forwardColor,
                               fontSize3: 10,
@@ -451,18 +270,18 @@ defaultSize: 14*widthScaleFactor
                             CustomStratgyContainer(
                                 mainHeight: 1.3,
                         fontSize: 14,
-                        // containerHeight: 180,
-                        //   :(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-                        // width3: 54,
-                          // width3  :(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 50:54,
+                        
+                        
+                        
+                          
 fontSize3: 10,
                           width3  :70,
                         spaceHeight2: 20,
                         spaceHeight: 14,
                               width1: 207,
                                width2: 70,
-                              //  fontSize2:isSpanish? 11:14,
-                            // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
+                              
+                            
    fontSize2: ResponsiveFont.getFontSizeCustom
                         
                         (
@@ -480,14 +299,14 @@ defaultSize: 14*widthScaleFactor
                             CustomStratgyContainer(
                               fontSize3: 10,
                           width3  :70,
-                              // width3: 70,
+                              
                         spaceHeight2: 20,
                         spaceHeight: 14,
                               width1: 207,
                                width2: 70,
                               iconContainer: AppColors.watchColor,
-                              // fontSize2:isSpanish? 11:14,
-                            // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+                              
+                            
    fontSize2: ResponsiveFont.getFontSizeCustom
                         
                         (
@@ -503,14 +322,14 @@ defaultSize: 14*widthScaleFactor
                             CustomStratgyContainer(
                               fontSize3: 10,
                           width3  :70,
-                                  // width3: 70,
-                                // width3: 54,
+                                  
+                                
                         spaceHeight2: 20,
                         spaceHeight: 14,
                               width1: 207,
                                width2: 70,
                               iconContainer: AppColors.watchColor,
-                            // fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
+                            
    fontSize2: ResponsiveFont.getFontSizeCustom
                         
                         (
@@ -527,21 +346,21 @@ defaultSize: 14*widthScaleFactor
                             
                   
                   
-                  // SizedBox(height: 20,)
+                  
                     ],
                   ),
                 ),
               ),
 
               
-        /// Fixed Overlay "Team Alpha"
+        
          Positioned(
           right: 0,
           top: screenHeight * 0.2,
           child: TeamAlphaContainer(screenWidth: screenWidth, screenHeight: screenHeight),
         ),
 
-        /// Player Image
+        
        
       
             ],

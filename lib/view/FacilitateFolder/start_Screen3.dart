@@ -1,4 +1,4 @@
-// import 'dart:ffi';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
-// import 'package:scorer/view/startscreen/aa.dart';
+
 import 'package:scorer/view/FacilitateFolder/aa.dart';
 
 import 'package:scorer/widgets/bold_text.dart';
@@ -35,7 +35,7 @@ class StartScreen3 extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // SizedBox(height: 20,),
+                    
                     SvgPicture.asset(
                       Appimages.splash,
                       width: constraints.maxWidth * 0.2,
@@ -49,15 +49,15 @@ class StartScreen3 extends StatelessWidget {
                                             
                                        ),
                      ),
-                    //  SizedBox(height: 20,),
-                    // SizedBox(height: screenHeight * 0.1),
+                    
+                    
              
                     
                    Center(
   child: BoldText(
     height: 1.2,
     selectionColor: AppColors.blueColor,
-    text: "platform_title".tr,   // 👈 key banayi
+    text: "platform_title".tr,   
     textAlign: TextAlign.center,
     fontSize: titleFontSize,
   ),
@@ -65,7 +65,7 @@ class StartScreen3 extends StatelessWidget {
 SizedBox(height: screenHeight * 0.01),
 Center(
   child: MainText(
-    text: "platform_description".tr,  // 👈 key banayi
+    text: "platform_description".tr,  
     textAlign: TextAlign.center,
     fontSize: descriptionFontSize,
     height: 1.24,
@@ -81,7 +81,7 @@ Center(
                         Get.back();
                       },
                          ),
-                        // SizedBox(width: constraints.maxWidth * 0.2),
+                        
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

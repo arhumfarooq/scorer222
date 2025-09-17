@@ -19,7 +19,7 @@ class AdminPlayerScreen extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
-    // Converted fixed values to proportional values based on screen size
+    
     final activeInactiveBoxWidth = screenWidth * 0.28;
     final activeInactiveBoxHeight = screenHeight * 0.14;
     final topBoxSpacing = screenWidth * 0.03;
@@ -181,7 +181,7 @@ class AdminPlayerScreen extends StatelessWidget {
                       width: screenWidth * 0.25,
                       text: "team_alpha".tr
                     ),
-                    // SizedBox(height: ,)
+                    
                     SizedBox(height: allPlayersContainerSpacing * 2),
 
                     Container(
@@ -261,7 +261,7 @@ class AdminPlayerScreen extends StatelessWidget {
           child: TeamAlphaContainer(screenWidth: screenWidth, screenHeight: screenHeight),
         ),
 
-        /// Player Image
+        
        
  
       ],
