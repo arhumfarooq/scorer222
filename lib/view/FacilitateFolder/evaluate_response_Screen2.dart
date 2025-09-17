@@ -254,6 +254,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/analysis_container.dart';
 import 'package:scorer/components/audio_container.dart';
+import 'package:scorer/components/evaluate_response__team_progress_container.dart';
+import 'package:scorer/components/evaluate_response_score_break_container.dart';
 import 'package:scorer/components/feedback_container.dart';
 import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
@@ -418,161 +420,13 @@ class EvaluateResponseScreen2 extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(height: 15 * heightScaleFactor),
-                              Container(
-                                height: 220 * heightScaleFactor,
-                                width: 336 * widthScaleFactor,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: AppColors.greyColor, width: 1.7 * widthScaleFactor),
-                                  borderRadius: BorderRadius.circular(24 * widthScaleFactor),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.only(left: 17 * widthScaleFactor, right: 15 * widthScaleFactor),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(height: 20 * heightScaleFactor),
-                                      BoldText(
-  text: "scoring_breakdown".tr,
-  fontSize: 16 * widthScaleFactor,
-  selectionColor: AppColors.blueColor,
-),
-                                     SizedBox(height: 31 * heightScaleFactor),
-CustomSloderRow(
-  // fontSize: isSpanish? 11:14,
-  // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-   fontSize: ResponsiveFont.getFontSizeCustom
-                        
-                        (
-defaultSize: 14 * widthScaleFactor
-,smallSize: 11 * widthScaleFactor,
-                        ),
-  text: "clarity_specificity".tr, text2: "22/25"),
-                              SizedBox(height: 5 * heightScaleFactor),
-CustomSloderRow(
-  // fontSize: isSpanish? 11:14,
-  // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-
-   fontSize: ResponsiveFont.getFontSizeCustom
-                        
-                        (
-defaultSize: 14 * widthScaleFactor
-,smallSize: 11 * widthScaleFactor,
-                        ),
-  text: "strategic_thinking".tr, text2: "22/25"),
-                              SizedBox(height: 5 * heightScaleFactor),
-CustomSloderRow(
-  // fontSize: isSpanish? 11:14,
- fontSize: ResponsiveFont.getFontSizeCustom
-                        
-                        (
-defaultSize: 14 * widthScaleFactor
-,smallSize: 11 * widthScaleFactor,
-                        ),
-  // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-
-  
-  text: "feasibility".tr, text2: "22/25"),
-                              SizedBox(height: 5 * heightScaleFactor),
-CustomSloderRow(
-  // fontSize: isSpanish? 11:14,
-  // fontSize: (Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
- fontSize: ResponsiveFont.getFontSizeCustom
-                        
-                        (
-defaultSize: 14 * widthScaleFactor
-,smallSize: 11 * widthScaleFactor,
-                        ),
-  
-  text: "innovation".tr, text2: "22/25"),
-                                    ],
-                                  ),
-                                ),
-                              ),
+                              EvaluateResponseScoreBreakContainer(heightScaleFactor: heightScaleFactor, widthScaleFactor: widthScaleFactor),
                             ],
                           ),
                         ),
                       ),
                       SizedBox(height: 12 * heightScaleFactor),
-                      Container(
-                        height: 640.h,
-                        width: 330 .w,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(24 * widthScaleFactor),
-                          border: Border.all(color: AppColors.greyColor, width: 1.5 * widthScaleFactor),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 17 * widthScaleFactor),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(height: 30.h),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  BoldText(
-                                   text: "team_response".tr,
-                                    fontSize: 16 * widthScaleFactor,
-                                    selectionColor: AppColors.blueColor,
-                                  ),
-                                  SizedBox(height: 25 * heightScaleFactor),
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        Appimages.timeout2,
-                                        height: 19 * heightScaleFactor,
-                                        width: 19 * widthScaleFactor,
-                                      ),
-                                      MainText(
-                                        text: "2 min read",
-                                        fontSize: 14 * widthScaleFactor,
-                                        color: AppColors.teamColor,
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                              SizedBox(height: 20 * heightScaleFactor),
-                              MainText(
-                                text: "Primary Objective: Our primary objective is to increase customer satisfaction by 25% through improved service delivery and enhanced user experience across all touchpoints.",
-                                fontSize: 14 * widthScaleFactor,
-                                height: 1.2,
-                              ),
-                              SizedBox(height: 20 * heightScaleFactor),
-                                                       
-BoldText(
-  text: "key_strategies".tr,
-  fontSize: 16 * widthScaleFactor,
-  selectionColor: AppColors.blueColor,
-),
-                              SizedBox(height: 20 * heightScaleFactor),
-                             MainText(
-  text: "feedback_system".tr,
-  fontSize: 14 * widthScaleFactor,
-  height: 1.2,
-),
-                              SizedBox(height: 20 * heightScaleFactor),
-                             MainText(
-  text: "reduce_response_time".tr,
-  fontSize: 14 * widthScaleFactor,
-  height: 1.2,
-),
-                              SizedBox(height: 20 * heightScaleFactor),
-                             MainText(
-  text: "enhance_self_service".tr,
-  fontSize: 14 * widthScaleFactor,
-  height: 1.2,
-),
-                              SizedBox(height: 20 * heightScaleFactor),
-                              MainText(
-  text: "alignment".tr,
-  fontSize: 14 * widthScaleFactor,
-  height: 1.2,
-),
-  
-                            ],
-                          ),
-                        ),
-                      ),
+                      EvaluateResponseTeamProgressContainer(widthScaleFactor: widthScaleFactor, heightScaleFactor: heightScaleFactor),
                       SizedBox(height: 200 * heightScaleFactor),
                       FeedbackContainer(ishow: true),
                       SizedBox(height: 12 * heightScaleFactor),

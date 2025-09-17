@@ -490,8 +490,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:scorer/components/adminside/admin_team_progress.dart';
+import 'package:scorer/components/complete_session_row.dart';
+import 'package:scorer/components/phases_strategy_column.dart';
 import 'package:scorer/components/playerside/leader_stack_container.dart';
 import 'package:scorer/components/responsive_fonts.dart';
+import 'package:scorer/components/scenerio_container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -828,117 +831,7 @@ smallSize: 11*widthScaleFactor
   final double baseWidth = 414.0;
   final double widthScaleFactor = screenWidth / baseWidth;
 
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      // First circle
-      Container(
-        height: 20 * widthScaleFactor,
-        width: 20 * widthScaleFactor,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: AppColors.forwardColor,
-        ),
-        child: Center(
-          child: Icon(
-            Icons.check,
-            size: 17 * widthScaleFactor,
-            color: AppColors.whiteColor,
-          ),
-        ),
-      ),
-      SizedBox(width: 7 * widthScaleFactor),
-      // First line
-      Container(
-        width: 120 * widthScaleFactor,
-        height: 4,
-        decoration: BoxDecoration(
-          color: AppColors.forwardColor,
-          borderRadius: BorderRadius.circular(20),
-        ),
-      ),
-      SizedBox(width: 7 * widthScaleFactor),
-
-      // Second circle
-      controller.currentPhase.value >= 1
-          ? Container(
-              height: 20 * widthScaleFactor,
-              width: 20 * widthScaleFactor,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.forwardColor,
-              ),
-              child: Center(
-                child: Icon(
-                  Icons.check,
-                  size: 17 * widthScaleFactor,
-                  color: AppColors.whiteColor,
-                ),
-              ),
-            )
-          : Container(
-              height: 20 * widthScaleFactor,
-              width: 20 * widthScaleFactor,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.orangeColor,
-              ),
-              child: Center(
-                child: MainText(
-                  text: "2",
-                  color: AppColors.whiteColor,
-                  fontSize: 11 * widthScaleFactor,
-                ),
-              ),
-            ),
-      SizedBox(width: 7 * widthScaleFactor),
-      // Second line
-      Container(
-        width: 120 * widthScaleFactor,
-        height: 4,
-        decoration: BoxDecoration(
-          color: controller.currentPhase.value >= 2
-              ? AppColors.forwardColor
-              : AppColors.greyColor,
-          borderRadius: BorderRadius.circular(20),
-        ),
-      ),
-      SizedBox(width: 7 * widthScaleFactor),
-
-      // Third circle
-      controller.currentPhase.value >= 2
-          ? Container(
-              height: 20 * widthScaleFactor,
-              width: 20 * widthScaleFactor,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.forwardColor,
-              ),
-              child: Center(
-                child: Icon(
-                  Icons.check,
-                  size: 17 * widthScaleFactor,
-                  color: AppColors.whiteColor,
-                ),
-              ),
-            )
-          : Container(
-              height: 20 * widthScaleFactor,
-              width: 20 * widthScaleFactor,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.greyColor,
-              ),
-              child: Center(
-                child: MainText(
-                  text: "3",
-                  color: AppColors.whiteColor,
-                  fontSize: 11 * widthScaleFactor,
-                ),
-              ),
-            ),
-    ],
-  );
+  return CompleteSessionRow(widthScaleFactor: widthScaleFactor, controller: controller);
 }),
           
                                   SizedBox(height: 16 * heightScaleFactor),
@@ -1022,55 +915,7 @@ smallSize: 11*widthScaleFactor
                       ),
                       child: Column(
                         children: [
-                          Container(
-                            height: 347 * heightScaleFactor,
-                            width: 338 * widthScaleFactor,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: AppColors.greyColor,
-                                width: 1.5,
-                              ),
-                              borderRadius:
-                                  BorderRadius.circular(24 * widthScaleFactor),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 20 * widthScaleFactor,
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(height: 30 * heightScaleFactor),
-                                  BoldText(
-                                   text: "scenario".tr,
-                                    selectionColor: AppColors.blueColor,
-                                    fontSize: 16 * heightScaleFactor,
-                                  ),
-                                  SizedBox(height: 15 * heightScaleFactor),
-                                
-MainText(
-  height: 1.5,
-  text: "scenario_description".tr,
-  fontSize: 13 * heightScaleFactor,
-),
-                                  SizedBox(height: 15 * heightScaleFactor),
-                                  
-BoldText(
-  text: "question".tr,
-  selectionColor: AppColors.redColor,
-  fontSize: 16 * heightScaleFactor,
-),
-                                  SizedBox(height: 10 * heightScaleFactor),
-                                 
-MainText(
-  text: "question_description".tr,
-  fontSize: 13 * heightScaleFactor,
-  height: 1.5,
-),
-                                ],
-                              ),
-                            ),
-                          ),
+                          ScenerioContainer(heightScaleFactor: heightScaleFactor, widthScaleFactor: widthScaleFactor),
                           SizedBox(height: 20 * heightScaleFactor),
                           Obx(() {
                             return FilterUseableContainer(
@@ -1176,116 +1021,7 @@ MainText(
                       child: Obx(
                         () => Column(
                           children: [
-                           CustomStratgyContainer(
-                      // fontSize: isSpanish?2:14,
-                      fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 10*widthScaleFactor
-                      ),
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-                      width3: 80,
-                      iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
-                    flex: 3,flex1: 0,
-                    ),
-                            SizedBox(height: 10 * heightScaleFactor),
-                            if (controller.currentPhase.value >= 1)
-                             CustomStratgyContainer(
-                      // fontSize2:isSpanish? 11:14,
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 11:14,
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-   fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 10*widthScaleFactor
-                      ),
-
-                      // fontSize: 6,
-                      // width3: 80,
-                      iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr, smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
-             
-                    )
-                            else
-                              CustomStratgyContainer(
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-   fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 10*widthScaleFactor
-                      ),
-                                iconContainer: AppColors.selectLangugaeColor,
-                                icon: Icons.play_arrow_sharp,
-                                text1: "phase2_strategy".tr ,
-                                text2: "Upcoming • 25 min",
-                                text3: "Active",
-                                smallContainer: AppColors.selectLangugaeColor,
-                                largeConatiner: AppColors.selectLangugaeColor,
-                              ),
-                            SizedBox(height: 10 * heightScaleFactor),
-                            if (controller.currentPhase.value >= 2)
-                              CustomStratgyContainer(
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-   fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 10*widthScaleFactor
-                      ),
-                                iconContainer: AppColors.forwardColor,
-                                icon: Icons.check,
-                                text1: "phase3_implementation".tr,
-                                text2: "Completed • 20 min",
-                                text3: "Completed",
-                                smallContainer: AppColors.forwardColor,
-                                largeConatiner: AppColors.forwardColor,
-                                flex: 4,
-                                flex1: 0,
-                              )
-                            else
-                              CustomStratgyContainer(
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-   fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 10*widthScaleFactor
-                      ),
-                                iconContainer: AppColors.watchColor,
-                                icon: Icons.watch_later,
-                                text1: "phase3_implementation".tr,
-                                text2: "Upcoming • 25 min",
-                                text3: "Pending",
-                                smallContainer: AppColors.watchColor,
-                                largeConatiner: AppColors.greyColor,
-                                flex: 4,
-                                flex1: 0,
-                              ),
-                            SizedBox(height: 10 * heightScaleFactor),
-                            if (controller.currentPhase.value >= 2)
-                              CustomStratgyContainer(
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-   fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 10*widthScaleFactor
-                      ),
-                                iconContainer: AppColors.selectLangugaeColor,
-                                icon: Icons.play_arrow_sharp,
-                              text1: "phase4_evaluation".tr,
-                                text2: "Upcoming • 15 min",
-                                text3: "Active",
-                                smallContainer: AppColors.selectLangugaeColor,
-                                largeConatiner: AppColors.selectLangugaeColor,
-                              )
-                            else
-                              CustomStratgyContainer(
-// fontSize2:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 10:14,
-   fontSize2: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 10*widthScaleFactor
-                      ),
-                                iconContainer: AppColors.watchColor,
-                                icon: Icons.watch_later,
-                               text1: "phase4_evaluation".tr,
-                                text2: "Upcoming • 15 min",
-                                text3: "Pending",
-                                smallContainer: AppColors.watchColor,
-                                largeConatiner: AppColors.greyColor,
-                                flex: 4,
-                                flex1: 0,
-                              ),
+                         PhaseStrategyColumn(widthScaleFactor: widthScaleFactor, heightScaleFactor: heightScaleFactor, controller: controller),
                             SizedBox(height: 43 * heightScaleFactor),
                             if (controller.currentPhase.value >= 2)
                               LoginButton(
@@ -1326,45 +1062,7 @@ MainText(
     );
   }
 
-  Widget _buildPhaseCircle({
-    required bool isCompleted,
-    required int phaseNumber,
-    required double widthScaleFactor,
-  }) {
-    return Container(
-      height: 20 * widthScaleFactor,
-      width: 20 * widthScaleFactor,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: isCompleted ? AppColors.forwardColor : AppColors.greyColor,
-      ),
-      child: Center(
-        child: isCompleted
-            ? Icon(
-                Icons.check,
-                size: 17 * widthScaleFactor,
-                color: AppColors.whiteColor,
-              )
-            : MainText(
-                text: "$phaseNumber",
-                color: AppColors.whiteColor,
-                fontSize: 11 * widthScaleFactor,
-              ),
-      ),
-    );
-  }
+ 
 
-  Widget _buildPhaseLine({
-    required bool isCompleted,
-    required double widthScaleFactor,
-  }) {
-    return Container(
-      width: 100 * widthScaleFactor,
-      height: 4,
-      decoration: BoxDecoration(
-        color: isCompleted ? AppColors.forwardColor : AppColors.greyColor,
-        borderRadius: BorderRadius.circular(20),
-      ),
-    );
-  }
+ 
 }

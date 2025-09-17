@@ -309,6 +309,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:scorer/components/account_info_column.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -507,102 +508,9 @@ class UserPlayerDetailedScree extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 33 * heightScaleFactor),
-                  BoldText(
-                    text: "account_information".tr,
-                    selectionColor: AppColors.blueColor,
-                    fontSize: 16 * widthScaleFactor,
-                  ),
-                  SizedBox(height: 20 * heightScaleFactor),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 12 * widthScaleFactor),
-                    child: Container(
-                      height: 177 * heightScaleFactor,
-                      width: 376 * widthScaleFactor,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24 * widthScaleFactor),
-                        border: Border.all(color: AppColors.greyColor, width: 1.5 * widthScaleFactor),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20 * widthScaleFactor),
-                        child: Column(
-                          children: [
-                            SizedBox(height: 15 * heightScaleFactor),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                MainText(
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
-
-                                  text:  "email".tr,
-                                  // fontSize: 14 * widthScaleFactor,
-                                ),
-                                BoldText(
-                                  text: "john.smith@company.com",
-                                  // fontSize: 16 * widthScaleFactor,
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
-
-                                  selectionColor: AppColors.blueColor,
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10 * heightScaleFactor),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                MainText(
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
-
-                                  text:  "phone".tr,
-                                  // fontSize: 14 * widthScaleFactor,
-                                ),
-                                BoldText(
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
-
-                                  text: "+1 (555) 987-6543",
-                                  // fontSize: 16 * widthScaleFactor,
-                                  selectionColor: AppColors.blueColor,
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10 * heightScaleFactor),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                MainText(
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
-
-                                  text: "join_date".tr,
-                                  // fontSize: 14 * widthScaleFactor,
-                                ),
-                                BoldText(
-fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
-
-                                  text: "September 8, 2024",
-                                  // fontSize: 16 * widthScaleFactor,
-                                  selectionColor: AppColors.blueColor,
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10 * heightScaleFactor),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                MainText(
-                                  text: "player_level".tr,
-                                  fontSize: 14 * widthScaleFactor,
-                                ),
-                                CreateContainer(
-                                  text: "Level 3",
-                                  top: 7,
-                                  right: -19,
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                AccountInfoClumn(widthScaleFactor: widthScaleFactor, heightScaleFactor: heightScaleFactor,
+                text: "Player Level",
+                ),
                   SizedBox(height: 20 * heightScaleFactor),
 
 

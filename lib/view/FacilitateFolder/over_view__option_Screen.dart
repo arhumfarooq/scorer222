@@ -326,6 +326,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/facil_over_view_stack_container.dart';
 import 'package:scorer/components/leader_boeard_screen.dart';
 import 'package:scorer/components/over_view_Screen.dart';
 import 'package:scorer/components/phases_Screen.dart';
@@ -526,68 +527,7 @@ class OverViewOptionScreen extends StatelessWidget {
               // har tab ka equal width
               double tabWidth = containerWidth / tabCount;
             
-              return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 21 * widthScaleFactor),
-                child: Container(
-                  height: 53 * heightScaleFactor,
-                  width: containerWidth,
-                  decoration: BoxDecoration(
-                    color: AppColors.settingColor,
-                    borderRadius: BorderRadius.circular(12 * widthScaleFactor),
-                  ),
-                  child: Stack(
-                    children: [
-            /// highlight background
-            AnimatedAlign(
-              alignment: Alignment(
-                (controller.selectedIndex.value / (tabCount - 1)) * 2 - 1, 
-                0,
-              ),
-              duration: const Duration(milliseconds: 250),
-              curve: Curves.easeInOut,
-              child: Container(
-                margin: EdgeInsets.symmetric(
-                  horizontal: 4 * widthScaleFactor,
-                  vertical: 5.5 * heightScaleFactor,
-                ),
-                height: 42 * heightScaleFactor,
-                width: tabWidth - (18 * widthScaleFactor),
-                decoration: BoxDecoration(
-                  color: AppColors.forwardColor,
-                  borderRadius: BorderRadius.circular(12 * widthScaleFactor),
-                ),
-              ),
-            ),
-            
-            /// tabs row
-            Row(
-              children: List.generate(tabCount, (index) {
-                return Expanded(
-                  child: GestureDetector(
-                    onTap: () => controller.changeTab(index),
-                    child: Center(
-                      child:FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                tabs[index],
-                style: TextStyle(
-                  fontSize: 13 * heightScaleFactor,
-                  color: controller.selectedIndex.value == index
-            ? AppColors.whiteColor
-            : AppColors.languageColor,
-                ),
-              ),
-            )
-            
-                    ),
-                  ),
-                );
-              }),
-            ),
-                    ],
-                  ),
-                ),
-              );
+              return FacilOverViewStackContainer(widthScaleFactor: widthScaleFactor, heightScaleFactor: heightScaleFactor, containerWidth: containerWidth, controller: controller, tabCount: tabCount, tabWidth: tabWidth, tabs: tabs);
             }),
             
                 SizedBox(height: 12 * heightScaleFactor),

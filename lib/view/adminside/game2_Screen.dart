@@ -402,6 +402,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/adminside/custom_Container.dart';
+import 'package:scorer/components/adminside/default_time_container.dart';
+import 'package:scorer/components/adminside/game_logic_setup_container.dart';
+import 'package:scorer/components/count_container_row.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/view/FacilitateFolder/aa.dart';
@@ -551,116 +555,9 @@ class Game2Screen extends StatelessWidget {
                     fontSize: 15 * scaleFactor,
                   ),
                   SizedBox(height: 29 * scaleFactor),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          height: 116 * scaleFactor,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                color: AppColors.minus2, width: 1.5 * scaleFactor),
-                            borderRadius: BorderRadius.circular(24 * scaleFactor),
-                          ),
-                          child: Center(
-                            child: Container(
-                              width: 36.5 * scaleFactor,
-                              height: 36.5 * scaleFactor,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10 * scaleFactor),
-                                color: AppColors.minus,
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.remove,
-                                  color: AppColors.whiteColor,
-                                  size: 24 * scaleFactor,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: SizedBox(
-                          height: 116 * scaleFactor,
-                          child: Center(
-                            child: BoldText(
-                              text: "03",
-                              fontSize: 40 * scaleFactor,
-                              selectionColor: AppColors.blueColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          height: 116 * scaleFactor,
-                          decoration: BoxDecoration(
-                            color: AppColors.forwardColor,
-                            borderRadius: BorderRadius.circular(24 * scaleFactor),
-                          ),
-                          child: Center(
-                            child: Container(
-                              width: 36.5 * scaleFactor,
-                              height: 36.5 * scaleFactor,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10 * scaleFactor),
-                                color: AppColors.whiteColor,
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.add,
-                                  color: AppColors.forwardColor,
-                                  size: 24 * scaleFactor,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  CountContainerRow(scaleFactor: scaleFactor),
                   SizedBox(height: 20 * scaleFactor,),
-                  Container(
-                    width: 336 * scaleFactor,
-                    height: 256 * scaleFactor,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                          color: AppColors.greyColor, width: 1.5 * scaleFactor),
-                      borderRadius: BorderRadius.circular(24 * scaleFactor),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 15 * scaleFactor),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(height: 28 * scaleFactor),
-                          BoldText(
-                              text: "game_logic_setup".tr,
-                              fontSize: 16 * scaleFactor,
-                              selectionColor: AppColors.blueColor),
-                          SizedBox(height: 19 * scaleFactor),
-                          UseAbleGameRow(
-                            text1: 'Phase 1 - Strategy',
-                            text2: '3 Stage - 1h 12 minutes',
-                           
-                          ),
-                          SizedBox(height: 12 * scaleFactor),
-                          UseAbleGameRow(
-                            text1: 'Phase 2 - Strategy',
-                            text2: '3 Stage - 1h 12 minutes',
-                        
-                          ),
-                          SizedBox(height: 12 * scaleFactor),
-                          UseAbleGameRow(
-                            text1: 'Phase 3 - Strategy',
-                            text2: '3 Stage - 1h 12 minutes',
-                            // scaleFactor: scaleFactor,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  GameLOgicSetupContainer(scaleFactor: scaleFactor),
                   SizedBox(height: 20*scaleFactor,),
                   LoginButton(
                     fontSize: 19.sp,
@@ -689,55 +586,7 @@ FilterUseableContainer(isSelected: false, text: "simulation".tr, onTap: () {}),
                   SizedBox(height: 10 * scaleFactor),
                   CustomContainer(scaleFactor: scaleFactor),
                   SizedBox(height: 24 * scaleFactor),
-                  Container(
-                    height: 236 * scaleFactor,
-                    width: 336 * scaleFactor,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                          color: AppColors.greyColor, width: 1.7 * scaleFactor),
-                      borderRadius: BorderRadius.circular(24 * scaleFactor),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 23 * scaleFactor),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(height: 20 * scaleFactor),
-                          BoldText(
-                            text:"default_time_limit_per_phase".tr,
-                            selectionColor: AppColors.blueColor,
-                            fontSize: 16 * scaleFactor,
-                          ),
-                          SizedBox(height: 31 * scaleFactor),
-                          CustomSloderRow(
-                              text: "Phase 1",
-                              text2: "easy".tr,
-                              value: 15,
-                              width: 82 * scaleFactor,
-                              fontSize: 16 * scaleFactor,
-                              width1: 10 * scaleFactor),
-                          SizedBox(height: 5 * scaleFactor),
-                          CustomSloderRow(
-                              width1: 10 * scaleFactor,
-                              text: "Phase 2",
-                              text2:"medium".tr,
-                              value: 20,
-                              color: AppColors.orangeColor,
-                              width: 82 * scaleFactor,
-                              fontSize: 16 * scaleFactor),
-                          SizedBox(height: 5 * scaleFactor),
-                          CustomSloderRow(
-                              width1: 10 * scaleFactor,
-                              text: "Phase 3",
-                              text2:"hard".tr,
-                              value: 30,
-                              color: AppColors.redColor,
-                              width: 82 * scaleFactor,
-                              fontSize: 16 * scaleFactor),
-                        ],
-                      ),
-                    ),
-                  ),
+                  DefaultTimeContainer(scaleFactor: scaleFactor),
                   SizedBox(height: 16 * scaleFactor),
 
                   Center(
@@ -845,84 +694,3 @@ FilterUseableContainer(isSelected: false, text: "simulation".tr, onTap: () {}),
   }
 }
 
-class GameRow extends StatelessWidget {
-  final String? text;
-  final double screenHeight;
-  final double screenWidth;
-  final double scaleFactor;
-
-  const   GameRow({
-    super.key,
-    required this.screenHeight,
-    required this.screenWidth,
-    this.text,
-    required this.scaleFactor,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        MainText(
-          text: text ?? "enable_leaderboard".tr,
-          fontSize: 14 * scaleFactor,
-        ),
-        FlutterSwitch(
-          value: true,
-          onToggle: (val) {},
-          height: screenHeight * 0.03,
-          width: screenWidth * 0.13,
-          activeColor: AppColors.forwardColor,
-          inactiveColor: AppColors.forwardColor,
-        )
-      ],
-    );
-  }
-}
-
-class CustomContainer extends StatelessWidget {
-  final String? text1;
-  final String? text2;
-  final Color? color;
-  final double scaleFactor;
-
-  const CustomContainer({
-    super.key,
-    this.text1,
-    this.text2,
-    this.color,
-    required this.scaleFactor,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 50 * scaleFactor,
-      width: 334 * scaleFactor,
-      decoration: BoxDecoration(
-        border:
-            Border.all(color: AppColors.greyColor, width: 1.5 * scaleFactor),
-        borderRadius: BorderRadius.circular(12 * scaleFactor),
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 23 * scaleFactor),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            MainText(
-              text: text1 ?? "Default Time Limit per Phase",
-              fontSize: 14 * scaleFactor,
-              color: AppColors.teamColor,
-            ),
-            MainText(
-              text: text2 ?? "20m",
-              fontSize: 14 * scaleFactor,
-              color: color ?? AppColors.teamColor,
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}

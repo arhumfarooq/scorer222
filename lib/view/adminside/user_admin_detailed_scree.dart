@@ -306,6 +306,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/account_info_column.dart';
 import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -509,137 +510,7 @@ class UserAdminDetailedScree extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 33 * heightScaleFactor),
-                  BoldText(
-                                                        text: "account_information".tr,
-
-                    selectionColor: AppColors.blueColor,
-                    fontSize: 16 * widthScaleFactor,
-                  ),
-                  SizedBox(height: 20 * heightScaleFactor),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 12 * widthScaleFactor),
-                    child: Container(
-                      height: 177 * heightScaleFactor,
-                      width: 376 * widthScaleFactor,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24 * widthScaleFactor),
-                        border: Border.all(color: AppColors.greyColor, width: 1.5 * widthScaleFactor),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20 * widthScaleFactor),
-                        child: Column(
-                          children: [
-                            SizedBox(height: 15 * heightScaleFactor),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                MainText(
-                                                                                                 text:  "email".tr,
-
-                                  // fontSize: 14 * widthScaleFactor,
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
-  fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
-
-                ),
-
-                                ),
-                                BoldText(
-                                  text: "john.smith@company.com",
-                                  // fontSize: 16 * widthScaleFactor,
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
- fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
-
-                ),
-                                  selectionColor: AppColors.blueColor,
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10 * heightScaleFactor),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                MainText(
-                                                                                                  text:  "phone".tr,
-
-                                  // fontSize: 14 * widthScaleFactor,
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
- fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
-
-                ),
-                                ),
-                                BoldText(
-                                  text: "+1 (555) 987-6543",
-                                  // fontSize: 16 * widthScaleFactor,
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
- fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
-
-                ),
-                                  selectionColor: AppColors.blueColor,
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10 * heightScaleFactor),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                MainText(
-                               text: "join_date".tr,
-                                  // fontSize: 14 * widthScaleFactor,
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
- fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
-
-                ),
-                                ),
-                                BoldText(
-                                  text: "September 8, 2024",
-                                  // fontSize: 16 * widthScaleFactor,
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
- fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
-
-                ),
-                                  selectionColor: AppColors.blueColor,
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10 * heightScaleFactor),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                MainText(
-                                  text: "Facilitator Level",
-                                  // fontSize: 14 * widthScaleFactor,
-// fontSize:(Get.locale?.languageCode == 'fr' || Get.locale?.languageCode == 'es')? 12:14,
- fontSize: ResponsiveFont.getFontSizeCustom(
-defaultSize: 14*widthScaleFactor,
-smallSize: 12*widthScaleFactor,
-
-                ),
-                                ),
-                                CreateContainer(
-                                  text: "Level 3",
-                                  top: 7,
-                                  right: -19,
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20 * heightScaleFactor),
+                AccountInfoClumn(widthScaleFactor: widthScaleFactor, heightScaleFactor: heightScaleFactor) , SizedBox(height: 20 * heightScaleFactor),
 
 
                   Container(

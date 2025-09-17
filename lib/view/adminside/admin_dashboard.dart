@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/adminside/admin_Container_tack_container.dart';
 import 'package:scorer/components/adminside/admin_active_Session.dart';
 import 'package:scorer/components/adminside/admin_schedule_session.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -97,65 +98,7 @@ text: "welcome_admin".tr,                        fontSize: 14 * heightScaleFacto
                       ),
                       SizedBox(height: 23 * heightScaleFactor),
                       Obx(
-                        () => Container(
-                          height: 53 * heightScaleFactor,
-                          width: 336 * widthScaleFactor,
-                          decoration: BoxDecoration(
-                            color: AppColors.settingColor,
-                            borderRadius: BorderRadius.circular(12 * widthScaleFactor),
-                          ),
-                          child: Stack(
-                            children: [
-                              AnimatedAlign(
-                                alignment: controller.selectedIndex.value == 0
-                                    ? Alignment.centerLeft
-                                    : Alignment.centerRight,
-                                duration: const Duration(milliseconds: 250),
-                                child: Container(
-                                  height: 42 * heightScaleFactor,
-                                  width: 150 * widthScaleFactor,
-                                  margin: EdgeInsets.symmetric(horizontal: 6 * widthScaleFactor),
-                                  decoration: BoxDecoration(
-                                    color: AppColors.forwardColor,
-                                    borderRadius: BorderRadius.circular(12 * widthScaleFactor),
-                                  ),
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: Center(
-                                      child: MainText(
-                                        onTap: () {
-                                          controller.changeTab(0);
-                                        },
-                                          text:   "active_sessions".tr,
-                                        color: controller.selectedIndex.value == 0
-                                            ? AppColors.whiteColor
-                                            : AppColors.languageColor,
-                                        fontSize: 14 * heightScaleFactor,
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Center(
-                                      child: MainText(
-                                        text:  "scheduled".tr,
-                                        fontSize: 14 * heightScaleFactor,
-                                        color: controller.selectedIndex.value == 0
-                                            ? AppColors.languageColor
-                                            : AppColors.whiteColor,
-                                        onTap: () {
-                                          controller.changeTab(1);
-                                        },
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
+                        () => AdminContainerStackContainer(heightScaleFactor: heightScaleFactor, widthScaleFactor: widthScaleFactor, controller: controller),
                       ),
                     ],
                   ),

@@ -186,6 +186,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/components/team_Alpha_Container.dart';
+import 'package:scorer/components/view_response_stack_container.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -371,56 +372,7 @@ defaultSize: 14*widthScaleFactor
                     double tabWidth = totalWidth / tabs.length;
                     double left = controller.selectedIndex.value * tabWidth;
                   
-                    return Container(
-                      height: 53,
-                      width: totalWidth,
-                      decoration: BoxDecoration(
-                        color: AppColors.settingColor,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Stack(
-                        children: [
-                          // Highlight bar
-                          AnimatedPositioned(
-                            duration: Duration(milliseconds: 250),
-                            curve: Curves.easeInOut,
-                            left: left+4,
-                            top: 5.5,
-                            child: Container(
-                  height: 42,
-                             width: tabWidth - 8, // 👈 dono side se 4-4 px kam
-                  decoration: BoxDecoration(
-                    color: AppColors.forwardColor,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                            ),
-                          ),
-                  
-                          // Tabs
-                          Row(
-                            children: List.generate(tabs.length, (index) {
-                  return SizedBox(
-                    width: tabWidth,
-                    child: GestureDetector(
-                      onTap: () => controller.changeTab(index),
-                      child: Center(
-                        child: Text(
-                          tabs[index],
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: controller.selectedIndex.value == index
-                                ? AppColors.whiteColor
-                                : AppColors.languageColor,
-                          ),
-                        ),
-                      ),
-                    ),
-                  );
-                            }),
-                          )
-                        ],
-                      ),
-                    );
+                    return ViewResponseStackContainer(totalWidth: totalWidth, left: left, tabWidth: tabWidth, tabs: tabs, controller: controller);
                   }),
                   
                   SizedBox(height: 13,),

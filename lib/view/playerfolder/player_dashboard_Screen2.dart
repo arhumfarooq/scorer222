@@ -197,6 +197,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/abcd_container.dart';
+import 'package:scorer/components/device_connect_note.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
 import 'package:scorer/constants/routename.dart';
@@ -309,60 +311,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 30 * heightScaleFactor),
-                      Container(
-                        width: 330 * widthScaleFactor,
-                        height: 64 * heightScaleFactor,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: AppColors.forwardColor,
-                            width: 2 * widthScaleFactor,
-                          ),
-                          borderRadius: BorderRadius.circular(60 * widthScaleFactor),
-                          color: AppColors.forwardColor.withOpacity(0.1),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 20 * widthScaleFactor,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                             BoldText(
-  text: "team_code".tr,
-  fontSize: 16 * widthScaleFactor,
-  selectionColor: AppColors.blueColor,
-),
-                              Row(
-                                children: [
-                                  MainText(
-                                    text: "ABC123",
-                                    color: AppColors.forwardColor,
-                                    fontSize: 24 * widthScaleFactor,
-                                    fontFamily: "gotham",
-                                  ),
-                                  SizedBox(width: 10 * widthScaleFactor),
-                                  Container(
-                                    width: 32 * widthScaleFactor,
-                                    height: 32 * heightScaleFactor,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: AppColors.forwardColor,
-                                    ),
-                                    child: Center(
-                                      child: SvgPicture.asset(
-                                        Appimages.copy,
-                                        color: AppColors.whiteColor,
-                                        height: 16 * heightScaleFactor,
-                                        width: 16 * widthScaleFactor,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                      ABCDContainer(widthScaleFactor: widthScaleFactor, heightScaleFactor: heightScaleFactor),
                       SizedBox(height: 30 * heightScaleFactor),
                       Row(
                         children: [
@@ -429,43 +378,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                         // scaleFactor: widthScaleFactor,
                       ),
                       SizedBox(height: 15 * heightScaleFactor),
-                      Container(
-                        width: 338 * widthScaleFactor,
-                        height: 113 * heightScaleFactor,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: AppColors.greyColor,
-                            width: 1.5 * widthScaleFactor,
-                          ),
-                          borderRadius: BorderRadius.circular(24 * widthScaleFactor),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 18 * widthScaleFactor,
-                            vertical: 29 * heightScaleFactor,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SvgPicture.asset(
-                                Appimages.bulb,
-                                height: 24 * heightScaleFactor,
-                                width: 24 * widthScaleFactor,
-                              ),
-                              SizedBox(width: 10 * widthScaleFactor),
-                              Expanded(
-                                child: MainText(
-  height: 1.6,
-  text: "device_connection_notice".tr,
-  fontSize: 13 * widthScaleFactor,
-  textAlign: TextAlign.start,
-),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      DeviceConnectNote(widthScaleFactor: widthScaleFactor, heightScaleFactor: heightScaleFactor),
                       SizedBox(height: 15 * heightScaleFactor),
                       LoginButton(
                         onTap: ()=>Get.toNamed(RouteName.gameStart1Screen),

@@ -205,6 +205,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scorer/components/adminside/user_administrate_side.dart';
 import 'package:scorer/components/adminside/user_facilitate_side.dart';
+import 'package:scorer/components/adminside/user_managemnet_stack_container.dart';
 import 'package:scorer/components/adminside/user_player_Side.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -337,55 +338,7 @@ class UserManagementScreen extends StatelessWidget {
                           double tabWidth = totalWidth / tabs.length;
                           double left = controller.selectedIndex.value * tabWidth;
                           
-                          return Container(
-                            height: 53 * scaleFactor,
-                            width: totalWidth,
-                            decoration: BoxDecoration(
-                              color: AppColors.settingColor,
-                              borderRadius: BorderRadius.circular(12 * scaleFactor),
-                            ),
-                            child: Stack(
-                              children: [
-                                // Highlight bar
-                                AnimatedPositioned(
-                                  duration: const Duration(milliseconds: 250),
-                                  curve: Curves.easeInOut,
-                                  left: left + (4 * scaleFactor),
-                                  top: 5.5 * scaleFactor,
-                                  child: Container(
-                                    height: 42 * scaleFactor,
-                                    width: tabWidth - (8 * scaleFactor),
-                                    decoration: BoxDecoration(
-                                      color: AppColors.forwardColor,
-                                      borderRadius: BorderRadius.circular(12 * scaleFactor),
-                                    ),
-                                  ),
-                                ),
-                                // Tabs
-                                Row(
-                                  children: List.generate(tabs.length, (index) {
-                                    return SizedBox(
-                                      width: tabWidth,
-                                      child: GestureDetector(
-                                        onTap: () => controller.changeTab(index),
-                                        child: Center(
-                                          child: Text(
-                                            tabs[index],
-                                            style: TextStyle(
-                                              fontSize: 14 * scaleFactor,
-                                              color: controller.selectedIndex.value == index
-                                                  ? AppColors.whiteColor
-                                                  : AppColors.languageColor,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    );
-                                  }),
-                                )
-                              ],
-                            ),
-                          );
+                          return UserManagementStackContainer(scaleFactor: scaleFactor, totalWidth: totalWidth, left: left, tabWidth: tabWidth, tabs: tabs, controller: controller);
                         }),
                       ],
                     ),

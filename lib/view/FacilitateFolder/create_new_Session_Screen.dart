@@ -36,6 +36,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
+import 'package:scorer/components/additional_setting_colum.dart';
+import 'package:scorer/components/count_container_row.dart';
 import 'package:scorer/components/responsive_fonts.dart';
 import 'package:scorer/constants/appcolors.dart';
 import 'package:scorer/constants/appimages.dart';
@@ -762,74 +764,7 @@ fontSize:ResponsiveFont.getFontSizeCustom(defaultSize: 13*widthScaleFactor,small
                         fontSize: 15 * scaleFactor,
                       ),
                       SizedBox(height: 29 * scaleFactor),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              height: 116 * scaleFactor,
-                              decoration: BoxDecoration(
-                                border: Border.all(color: AppColors.minus2, width: 1.5 * scaleFactor),
-                                borderRadius: BorderRadius.circular(24 * scaleFactor),
-                              ),
-                              child: Center(
-                                child: Container(
-                                  width: 36.5 * scaleFactor,
-                                  height: 36.5 * scaleFactor,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10 * scaleFactor),
-                                    color: AppColors.minus,
-                                  ),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.remove,
-                                      color: AppColors.whiteColor,
-                                      size: 24 * scaleFactor,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: SizedBox(
-                              height: 116 * scaleFactor,
-                              child: Center(
-                                child: BoldText(
-                                  text: "03",
-                                  fontSize: 40 * scaleFactor,
-                                  selectionColor: AppColors.blueColor,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Container(
-                              height: 116 * scaleFactor,
-                              decoration: BoxDecoration(
-                                color: AppColors.forwardColor,
-                                borderRadius: BorderRadius.circular(24 * scaleFactor),
-                              ),
-                              child: Center(
-                                child: Container(
-                                  width: 36.5 * scaleFactor,
-                                  height: 36.5 * scaleFactor,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10 * scaleFactor),
-                                    color: AppColors.whiteColor,
-                                  ),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.add,
-                                      color: AppColors.forwardColor,
-                                      size: 24 * scaleFactor,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      CountContainerRow(scaleFactor: scaleFactor),
                       SizedBox(height: 30 * scaleFactor),
                       BoldText(
                         text: "enter_details_phase_1".tr,
@@ -999,40 +934,7 @@ MainText(text: "enable_ai_scoring".tr, fontSize: 11 * scaleFactor, color: AppCol
                         ),
                       ),
                       SizedBox(height: 30 * scaleFactor),
-                    
-BoldText(
-  text: "additional_settings".tr,
-  selectionColor: AppColors.blueColor,
-  fontSize: 16 * scaleFactor,
-),
-                      SizedBox(height: 20 * scaleFactor),
-FilterUseableContainer(
-   fontSze: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 12*widthScaleFactor
-
-
-                      ),
-  isSelected: true, text: 'allow_late_joiners'.tr, onTap: () {}),
-                      SizedBox(height: 10 * scaleFactor),
-FilterUseableContainer(
-   fontSze: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 12*widthScaleFactor
-
-
-                      ),
-  isSelected: false, text: 'send_email_invitations'.tr, onTap: () {}),
-                      SizedBox(height: 10 * scaleFactor),
-                     FilterUseableContainer(
-                      fontSze: ResponsiveFont.getFontSizeCustom(
-                        defaultSize: 14*widthScaleFactor,
-                        smallSize: 12*widthScaleFactor
-
-
-                      ),
-                      isSelected: false, text: 'record_session_review'.tr, onTap: () {}),
-                      SizedBox(height: 30 * scaleFactor),
+AdditionalSettingColumn(scaleFactor: scaleFactor, widthScaleFactor: widthScaleFactor),                      SizedBox(height: 30 * scaleFactor),
                       LoginButton(
                 fontSize: 19,
                         
@@ -1063,3 +965,4 @@ FilterUseableContainer(
     );
   }
 }
+
