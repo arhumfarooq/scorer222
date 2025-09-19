@@ -1,41 +1,41 @@
-// import 'package:flutter/material.dart';
-// import 'package:scorer/constants/appcolors.dart';
 
-// class SettingContainer extends StatelessWidget {
-//   final bool ishow;
-//   final IconData icons;
-//   const SettingContainer({super.key, this.ishow= false, required this.icons});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Stack(
-//       children: [
-//         Container(
-//                             height: 44,
-//                             width: 44,
-//                             decoration: BoxDecoration(
-//                               shape: BoxShape.circle,
-//                               color: AppColors.settingColor.withOpacity(0.8)
-//                             ),
-//                             child: Icon(icons,color: AppColors.forwardColor,),
-//                           ),
-//                         ishow?  Positioned(
-//                 top: -0.1,
-//                 right: -0.1,
-//                 child: Container(
-//                   height: 12,
-//                   width: 12,
-//                   decoration: BoxDecoration(
-//                     color: AppColors.selectLangugaeColor, // dark green
-//                     shape: BoxShape.circle,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                    
-//                   ),
-//                 ),
-//               ): SizedBox()
-//       ],
-//     );
-//   }
-// }
+
+
+
+
+
+
+
 
 import 'package:flutter/material.dart';
 import 'package:scorer/constants/appcolors.dart';
@@ -47,12 +47,12 @@ class SettingContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get the screen dimensions for scaling
+    
     final Size screenSize = MediaQuery.of(context).size;
     final double screenHeight = screenSize.height;
     final double screenWidth = screenSize.width;
 
-    // A base height and width to scale from, e.g., a common phone (iPhone 11)
+    
     const double baseHeight = 812.0;
     const double baseWidth = 414.0;
     final double heightScaleFactor = screenHeight / baseHeight;
